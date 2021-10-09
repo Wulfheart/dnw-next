@@ -44,4 +44,12 @@ class Game extends Model
     {
         return $this->belongsTo(\App\Models\Variant::class);
     }
+
+    public function noAdjudicationDays(){
+        return $this->hasMany(NoAdjudication::class);
+    }
+
+    public function powers(){
+        return $this->hasMany(Power::class);
+    }
 }

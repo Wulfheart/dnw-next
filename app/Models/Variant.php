@@ -31,4 +31,9 @@ class Variant extends Model
         'default_scs_to_win' => 'integer',
         'total_scs' => 'integer',
     ];
+
+    public function basePowers(): \Illuminate\Database\Eloquent\Relations\HasMany
+    {
+        return $this->hasMany(BasePower::class);
+    }
 }

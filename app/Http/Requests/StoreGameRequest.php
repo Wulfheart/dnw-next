@@ -25,13 +25,12 @@ class StoreGameRequest extends FormRequest
     {
         return [
             'name' => ['required', 'string', 'unique:games'],
-            'variant_id' => ['required', 'string', 'exists:variants.id'],
+            'variant_id' => ['required', 'string', 'exists:variants,id'],
             'phase_length' => ['integer', 'gte:5'],
-            'no_adjudication.*' => ['integer', 'between:1,7'],
-            'start_when_ready' => ['boolean'],
-            'join_phase_length' => ['required', 'gte:5', 'integer']
-
-
+            'no_adjudication' => ['array'],
+            'no_adjudication.*' => ['boolean', 'accepted'],
+            // 'start_when_ready' => ['boolean'],
+            // 'join_phase_length' => ['required', 'gte:5', 'integer']
         ];
     }
 }

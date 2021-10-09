@@ -20,10 +20,10 @@ class CreateGamesTable extends Migration
             $table->string('name');
             $table->foreignId('variant_id')->constrained();
             $table->unsignedInteger('phase_length');
-            $table->boolean('is_paused');
-            $table->unsignedInteger('scs_to_win');
-            $table->unsignedInteger('join_phase_length');
-            $table->boolean('start_when_ready');
+            $table->boolean('is_paused')->default(false);
+            $table->unsignedInteger('scs_to_win')->nullable();
+            $table->unsignedInteger('join_phase_length')->nullable();
+            $table->boolean('start_when_ready')->nullable();
             $table->timestamps();
         });
 

@@ -17,6 +17,7 @@ class Power extends Model
     protected $fillable = [
         'base_power_id',
         'user_id',
+        'game_id',
         'is_defeated',
         'is_winner',
     ];
@@ -30,6 +31,7 @@ class Power extends Model
         'id' => 'integer',
         'base_power_id' => 'integer',
         'user_id' => 'integer',
+        'game_id' => 'integer',
         'is_defeated' => 'boolean',
         'is_winner' => 'boolean',
     ];
@@ -43,5 +45,9 @@ class Power extends Model
     public function user()
     {
         return $this->belongsTo(\App\Models\User::class);
+    }
+
+    public function game(){
+        return $this->belongsTo(Game::class);
     }
 }

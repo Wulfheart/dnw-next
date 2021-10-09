@@ -46,8 +46,15 @@ namespace App\Models{
  * @property int $variant_id
  * @property int $phase_length
  * @property bool $is_paused
+ * @property int|null $scs_to_win
+ * @property int|null $join_phase_length
+ * @property bool|null $start_when_ready
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\NoAdjudication[] $noAdjudicationDays
+ * @property-read int|null $no_adjudication_days_count
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\Power[] $powers
+ * @property-read int|null $powers_count
  * @property-read \App\Models\Variant $variant
  * @method static \Database\Factories\GameFactory factory(...$parameters)
  * @method static \Illuminate\Database\Eloquent\Builder|Game newModelQuery()
@@ -56,8 +63,11 @@ namespace App\Models{
  * @method static \Illuminate\Database\Eloquent\Builder|Game whereCreatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Game whereId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Game whereIsPaused($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Game whereJoinPhaseLength($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Game whereName($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Game wherePhaseLength($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Game whereScsToWin($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Game whereStartWhenReady($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Game whereUpdatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Game whereVariantId($value)
  */
@@ -208,6 +218,7 @@ namespace App\Models{
  * @property int $supply_center_count
  * @property int $unit_count
  * @property bool $orders_needed
+ * @property bool $ready_for_adjudication
  * @property string $orders
  * @property string $applied_orders
  * @property \Illuminate\Support\Carbon|null $created_at
@@ -226,6 +237,7 @@ namespace App\Models{
  * @method static \Illuminate\Database\Eloquent\Builder|PhasePowerData whereOrdersNeeded($value)
  * @method static \Illuminate\Database\Eloquent\Builder|PhasePowerData wherePhaseId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|PhasePowerData wherePowerId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|PhasePowerData whereReadyForAdjudication($value)
  * @method static \Illuminate\Database\Eloquent\Builder|PhasePowerData whereSupplyCenterCount($value)
  * @method static \Illuminate\Database\Eloquent\Builder|PhasePowerData whereUnitCount($value)
  * @method static \Illuminate\Database\Eloquent\Builder|PhasePowerData whereUpdatedAt($value)
@@ -245,6 +257,7 @@ namespace App\Models{
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
  * @property-read \App\Models\BasePower $basePower
+ * @property-read \App\Models\Game $game
  * @property-read \App\Models\User $user
  * @method static \Database\Factories\PowerFactory factory(...$parameters)
  * @method static \Illuminate\Database\Eloquent\Builder|Power newModelQuery()
@@ -271,8 +284,12 @@ namespace App\Models{
  * @property \Illuminate\Support\Carbon|null $email_verified_at
  * @property string $password
  * @property string|null $remember_token
+ * @property int|null $current_team_id
+ * @property string|null $profile_photo_path
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
+ * @property string|null $two_factor_secret
+ * @property string|null $two_factor_recovery_codes
  * @property-read string $profile_photo_url
  * @property-read \Illuminate\Notifications\DatabaseNotificationCollection|\Illuminate\Notifications\DatabaseNotification[] $notifications
  * @property-read int|null $notifications_count
@@ -283,12 +300,16 @@ namespace App\Models{
  * @method static \Illuminate\Database\Eloquent\Builder|User newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|User query()
  * @method static \Illuminate\Database\Eloquent\Builder|User whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|User whereCurrentTeamId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|User whereEmail($value)
  * @method static \Illuminate\Database\Eloquent\Builder|User whereEmailVerifiedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|User whereId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|User whereName($value)
  * @method static \Illuminate\Database\Eloquent\Builder|User wherePassword($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|User whereProfilePhotoPath($value)
  * @method static \Illuminate\Database\Eloquent\Builder|User whereRememberToken($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|User whereTwoFactorRecoveryCodes($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|User whereTwoFactorSecret($value)
  * @method static \Illuminate\Database\Eloquent\Builder|User whereUpdatedAt($value)
  */
 	class User extends \Eloquent {}
@@ -302,8 +323,11 @@ namespace App\Models{
  * @property string $api_name
  * @property string $name
  * @property int $default_scs_to_win
+ * @property int $total_scs
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\BasePower[] $basePowers
+ * @property-read int|null $base_powers_count
  * @method static \Database\Factories\VariantFactory factory(...$parameters)
  * @method static \Illuminate\Database\Eloquent\Builder|Variant newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Variant newQuery()
@@ -313,6 +337,7 @@ namespace App\Models{
  * @method static \Illuminate\Database\Eloquent\Builder|Variant whereDefaultScsToWin($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Variant whereId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Variant whereName($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Variant whereTotalScs($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Variant whereUpdatedAt($value)
  */
 	class Variant extends \Eloquent {}
