@@ -1,0 +1,52 @@
+models:
+  Game:
+    name: string
+    variant_id: id foreign
+    phase_length: unsignedInteger
+    is_paused: boolean
+  NoAdjudication:
+    game_id: id foreign
+    iso_weekday: unsignedInteger
+  Variant:
+    api_name: string
+    name: string
+    default_scs_to_win: unsignedInteger
+  BasePower:
+    color: string
+    name: string
+    api_name: string
+    variant_id: id foreign
+  Power:
+    base_power_id: id foreign
+    user_id: id foreign
+    is_defeated: boolean default:false
+    is_winner: boolean default:false
+  MessageRoom:
+    name: string
+    is_group: boolean
+  MessageRoomMembership:
+    power_id: id foreign
+    message_room_id: id foreign
+    joined_at: datetime
+    last_visited_at: datetime
+  Message:
+    sender_id: id foreign:power,id
+    text: longtext
+  Phase:
+    type: enum:MOVE,ADJUSTMENT,RETREAT,NON_PLAYING
+    previous_phase_id: id foreign:phase nullable
+    svg_adjudicated: longtext
+    svg_with_orders: longtext
+    phase_name_long: string
+    phase_name_short: string
+    adjudication_at: datetime nullable
+    adjudicated_at: dateime nullable
+  PhasePowerData:
+    phase_id: id foreign
+    power_id: id foreign
+    home_center_count: unsignedInteger
+    supply_center_count: unsignedInteger
+    unit_count: unsignedInteger
+    orders_needed: boolean
+    orders: text
+    applied_orders: text
