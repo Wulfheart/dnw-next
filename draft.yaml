@@ -1,4 +1,8 @@
 models:
+  Variant:
+    api_name: string
+    name: string
+    default_scs_to_win: unsignedInteger
   Game:
     name: string
     variant_id: id foreign
@@ -7,10 +11,6 @@ models:
   NoAdjudication:
     game_id: id foreign
     iso_weekday: unsignedInteger
-  Variant:
-    api_name: string
-    name: string
-    default_scs_to_win: unsignedInteger
   BasePower:
     color: string
     name: string
@@ -30,13 +30,14 @@ models:
     joined_at: datetime
     last_visited_at: datetime
   Message:
-    sender_id: id foreign:power,id
+    sender_id: id foreign:powers.id
     text: longtext
   Phase:
     type: enum:MOVE,ADJUSTMENT,RETREAT,NON_PLAYING
     previous_phase_id: id foreign:phase nullable
     svg_adjudicated: longtext
     svg_with_orders: longtext
+    state_encoded: longtext
     phase_name_long: string
     phase_name_short: string
     adjudication_at: datetime nullable
