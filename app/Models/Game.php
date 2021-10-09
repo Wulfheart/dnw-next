@@ -19,6 +19,9 @@ class Game extends Model
         'variant_id',
         'phase_length',
         'is_paused',
+        'scs_to_win',
+        'join_phase_length',
+        'start_when_ready'
     ];
 
     /**
@@ -31,6 +34,9 @@ class Game extends Model
         'variant_id' => 'integer',
         'phase_length' => 'integer',
         'is_paused' => 'boolean',
+        'scs_to_win' => 'integer',
+        'join_phase_length' => 'integer',
+        'start_when_ready' => 'boolean',
     ];
 
 

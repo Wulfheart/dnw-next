@@ -23,6 +23,7 @@ class PhasePowerData extends Model
         'orders_needed',
         'orders',
         'applied_orders',
+        'ready_for_adjudication',
     ];
 
     /**
@@ -38,6 +39,7 @@ class PhasePowerData extends Model
         'supply_center_count' => 'integer',
         'unit_count' => 'integer',
         'orders_needed' => 'boolean',
+        'ready_for_adjudication' => 'boolean',
     ];
 
 

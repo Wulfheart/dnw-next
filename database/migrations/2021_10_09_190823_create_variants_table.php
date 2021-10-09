@@ -15,9 +15,10 @@ class CreateVariantsTable extends Migration
     {
         Schema::create('variants', function (Blueprint $table) {
             $table->id();
-            $table->string('api_name');
-            $table->string('name');
+            $table->string('api_name')->unique();
+            $table->string('name')->unique();
             $table->unsignedInteger('default_scs_to_win');
+            $table->unsignedInteger('total_scs');
             $table->timestamps();
         });
     }

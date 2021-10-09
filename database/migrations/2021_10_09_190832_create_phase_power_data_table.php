@@ -23,6 +23,7 @@ class CreatePhasePowerDataTable extends Migration
             $table->unsignedInteger('supply_center_count');
             $table->unsignedInteger('unit_count');
             $table->boolean('orders_needed');
+            $table->boolean('ready_for_adjudication');
             $table->text('orders');
             $table->text('applied_orders');
             $table->timestamps();

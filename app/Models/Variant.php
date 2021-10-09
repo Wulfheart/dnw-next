@@ -18,6 +18,7 @@ class Variant extends Model
         'api_name',
         'name',
         'default_scs_to_win',
+        'total_scs',
     ];
 
     /**
@@ -28,5 +29,6 @@ class Variant extends Model
     protected $casts = [
         'id' => 'integer',
         'default_scs_to_win' => 'integer',
+        'total_scs' => 'integer',
     ];
 }

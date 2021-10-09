@@ -1,0 +1,320 @@
+<?php
+
+// @formatter:off
+/**
+ * A helper file for your Eloquent Models
+ * Copy the phpDocs from this file to the correct Model,
+ * And remove them from this file, to prevent double declarations.
+ *
+ * @author Barry vd. Heuvel <barryvdh@gmail.com>
+ */
+
+
+namespace App\Models{
+/**
+ * App\Models\BasePower
+ *
+ * @property int $id
+ * @property string $color
+ * @property string $name
+ * @property string $api_name
+ * @property int $variant_id
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
+ * @property-read \App\Models\Variant $variant
+ * @method static \Database\Factories\BasePowerFactory factory(...$parameters)
+ * @method static \Illuminate\Database\Eloquent\Builder|BasePower newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|BasePower newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|BasePower query()
+ * @method static \Illuminate\Database\Eloquent\Builder|BasePower whereApiName($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|BasePower whereColor($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|BasePower whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|BasePower whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|BasePower whereName($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|BasePower whereUpdatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|BasePower whereVariantId($value)
+ */
+	class BasePower extends \Eloquent {}
+}
+
+namespace App\Models{
+/**
+ * App\Models\Game
+ *
+ * @property int $id
+ * @property string $name
+ * @property int $variant_id
+ * @property int $phase_length
+ * @property bool $is_paused
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
+ * @property-read \App\Models\Variant $variant
+ * @method static \Database\Factories\GameFactory factory(...$parameters)
+ * @method static \Illuminate\Database\Eloquent\Builder|Game newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|Game newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|Game query()
+ * @method static \Illuminate\Database\Eloquent\Builder|Game whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Game whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Game whereIsPaused($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Game whereName($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Game wherePhaseLength($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Game whereUpdatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Game whereVariantId($value)
+ */
+	class Game extends \Eloquent {}
+}
+
+namespace App\Models{
+/**
+ * App\Models\Message
+ *
+ * @property int $id
+ * @property int $sender_id
+ * @property string $text
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
+ * @property-read \App\Models\Power $sender
+ * @method static \Database\Factories\MessageFactory factory(...$parameters)
+ * @method static \Illuminate\Database\Eloquent\Builder|Message newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|Message newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|Message query()
+ * @method static \Illuminate\Database\Eloquent\Builder|Message whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Message whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Message whereSenderId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Message whereText($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Message whereUpdatedAt($value)
+ */
+	class Message extends \Eloquent {}
+}
+
+namespace App\Models{
+/**
+ * App\Models\MessageRoom
+ *
+ * @property int $id
+ * @property string $name
+ * @property bool $is_group
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
+ * @method static \Database\Factories\MessageRoomFactory factory(...$parameters)
+ * @method static \Illuminate\Database\Eloquent\Builder|MessageRoom newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|MessageRoom newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|MessageRoom query()
+ * @method static \Illuminate\Database\Eloquent\Builder|MessageRoom whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|MessageRoom whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|MessageRoom whereIsGroup($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|MessageRoom whereName($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|MessageRoom whereUpdatedAt($value)
+ */
+	class MessageRoom extends \Eloquent {}
+}
+
+namespace App\Models{
+/**
+ * App\Models\MessageRoomMembership
+ *
+ * @property int $id
+ * @property int $power_id
+ * @property int $message_room_id
+ * @property \Illuminate\Support\Carbon $joined_at
+ * @property \Illuminate\Support\Carbon $last_visited_at
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
+ * @property-read \App\Models\MessageRoom $messageRoom
+ * @property-read \App\Models\Power $power
+ * @method static \Database\Factories\MessageRoomMembershipFactory factory(...$parameters)
+ * @method static \Illuminate\Database\Eloquent\Builder|MessageRoomMembership newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|MessageRoomMembership newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|MessageRoomMembership query()
+ * @method static \Illuminate\Database\Eloquent\Builder|MessageRoomMembership whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|MessageRoomMembership whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|MessageRoomMembership whereJoinedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|MessageRoomMembership whereLastVisitedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|MessageRoomMembership whereMessageRoomId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|MessageRoomMembership wherePowerId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|MessageRoomMembership whereUpdatedAt($value)
+ */
+	class MessageRoomMembership extends \Eloquent {}
+}
+
+namespace App\Models{
+/**
+ * App\Models\NoAdjudication
+ *
+ * @property int $id
+ * @property int $game_id
+ * @property int $iso_weekday
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
+ * @property-read \App\Models\Game $game
+ * @method static \Database\Factories\NoAdjudicationFactory factory(...$parameters)
+ * @method static \Illuminate\Database\Eloquent\Builder|NoAdjudication newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|NoAdjudication newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|NoAdjudication query()
+ * @method static \Illuminate\Database\Eloquent\Builder|NoAdjudication whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|NoAdjudication whereGameId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|NoAdjudication whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|NoAdjudication whereIsoWeekday($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|NoAdjudication whereUpdatedAt($value)
+ */
+	class NoAdjudication extends \Eloquent {}
+}
+
+namespace App\Models{
+/**
+ * App\Models\Phase
+ *
+ * @property int $id
+ * @property string $type
+ * @property int|null $previous_phase_id
+ * @property string $svg_adjudicated
+ * @property string $svg_with_orders
+ * @property string $state_encoded
+ * @property string $phase_name_long
+ * @property string $phase_name_short
+ * @property \Illuminate\Support\Carbon|null $adjudication_at
+ * @property string|null $adjudicated_at
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
+ * @property-read Phase|null $previousPhase
+ * @method static \Database\Factories\PhaseFactory factory(...$parameters)
+ * @method static \Illuminate\Database\Eloquent\Builder|Phase newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|Phase newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|Phase query()
+ * @method static \Illuminate\Database\Eloquent\Builder|Phase whereAdjudicatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Phase whereAdjudicationAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Phase whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Phase whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Phase wherePhaseNameLong($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Phase wherePhaseNameShort($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Phase wherePreviousPhaseId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Phase whereStateEncoded($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Phase whereSvgAdjudicated($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Phase whereSvgWithOrders($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Phase whereType($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Phase whereUpdatedAt($value)
+ */
+	class Phase extends \Eloquent {}
+}
+
+namespace App\Models{
+/**
+ * App\Models\PhasePowerData
+ *
+ * @property int $id
+ * @property int $phase_id
+ * @property int $power_id
+ * @property int $home_center_count
+ * @property int $supply_center_count
+ * @property int $unit_count
+ * @property bool $orders_needed
+ * @property string $orders
+ * @property string $applied_orders
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
+ * @property-read \App\Models\Phase $phase
+ * @property-read \App\Models\Power $power
+ * @method static \Database\Factories\PhasePowerDataFactory factory(...$parameters)
+ * @method static \Illuminate\Database\Eloquent\Builder|PhasePowerData newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|PhasePowerData newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|PhasePowerData query()
+ * @method static \Illuminate\Database\Eloquent\Builder|PhasePowerData whereAppliedOrders($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|PhasePowerData whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|PhasePowerData whereHomeCenterCount($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|PhasePowerData whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|PhasePowerData whereOrders($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|PhasePowerData whereOrdersNeeded($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|PhasePowerData wherePhaseId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|PhasePowerData wherePowerId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|PhasePowerData whereSupplyCenterCount($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|PhasePowerData whereUnitCount($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|PhasePowerData whereUpdatedAt($value)
+ */
+	class PhasePowerData extends \Eloquent {}
+}
+
+namespace App\Models{
+/**
+ * App\Models\Power
+ *
+ * @property int $id
+ * @property int $base_power_id
+ * @property int $user_id
+ * @property bool $is_defeated
+ * @property bool $is_winner
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
+ * @property-read \App\Models\BasePower $basePower
+ * @property-read \App\Models\User $user
+ * @method static \Database\Factories\PowerFactory factory(...$parameters)
+ * @method static \Illuminate\Database\Eloquent\Builder|Power newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|Power newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|Power query()
+ * @method static \Illuminate\Database\Eloquent\Builder|Power whereBasePowerId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Power whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Power whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Power whereIsDefeated($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Power whereIsWinner($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Power whereUpdatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Power whereUserId($value)
+ */
+	class Power extends \Eloquent {}
+}
+
+namespace App\Models{
+/**
+ * App\Models\User
+ *
+ * @property int $id
+ * @property string $name
+ * @property string $email
+ * @property \Illuminate\Support\Carbon|null $email_verified_at
+ * @property string $password
+ * @property string|null $remember_token
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
+ * @property-read string $profile_photo_url
+ * @property-read \Illuminate\Notifications\DatabaseNotificationCollection|\Illuminate\Notifications\DatabaseNotification[] $notifications
+ * @property-read int|null $notifications_count
+ * @property-read \Illuminate\Database\Eloquent\Collection|\Laravel\Sanctum\PersonalAccessToken[] $tokens
+ * @property-read int|null $tokens_count
+ * @method static \Database\Factories\UserFactory factory(...$parameters)
+ * @method static \Illuminate\Database\Eloquent\Builder|User newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|User newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|User query()
+ * @method static \Illuminate\Database\Eloquent\Builder|User whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|User whereEmail($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|User whereEmailVerifiedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|User whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|User whereName($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|User wherePassword($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|User whereRememberToken($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|User whereUpdatedAt($value)
+ */
+	class User extends \Eloquent {}
+}
+
+namespace App\Models{
+/**
+ * App\Models\Variant
+ *
+ * @property int $id
+ * @property string $api_name
+ * @property string $name
+ * @property int $default_scs_to_win
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
+ * @method static \Database\Factories\VariantFactory factory(...$parameters)
+ * @method static \Illuminate\Database\Eloquent\Builder|Variant newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|Variant newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|Variant query()
+ * @method static \Illuminate\Database\Eloquent\Builder|Variant whereApiName($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Variant whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Variant whereDefaultScsToWin($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Variant whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Variant whereName($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Variant whereUpdatedAt($value)
+ */
+	class Variant extends \Eloquent {}
+}
+

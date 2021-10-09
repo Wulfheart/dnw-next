@@ -21,6 +21,9 @@ class CreateGamesTable extends Migration
             $table->foreignId('variant_id')->constrained();
             $table->unsignedInteger('phase_length');
             $table->boolean('is_paused');
+            $table->unsignedInteger('scs_to_win');
+            $table->unsignedInteger('join_phase_length');
+            $table->boolean('start_when_ready');
             $table->timestamps();
         });
 
