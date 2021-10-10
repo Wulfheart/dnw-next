@@ -23,10 +23,12 @@ class CreatePhasePowerDataTable extends Migration
             $table->unsignedInteger('supply_center_count');
             $table->unsignedInteger('unit_count');
             $table->boolean('orders_needed');
-            $table->boolean('ready_for_adjudication');
-            $table->text('orders');
-            $table->text('applied_orders');
+            $table->boolean('ready_for_adjudication')->default(false);
+            $table->text('orders')->nullable();
+            $table->text('applied_orders')->nullable();
             $table->timestamps();
+
+            $table->unique(['phase_id', 'power_id']);
         });
 
         Schema::enableForeignKeyConstraints();

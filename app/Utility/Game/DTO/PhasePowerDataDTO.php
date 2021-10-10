@@ -6,7 +6,7 @@ use Spatie\DataTransferObject\Attributes\Strict;
 use Spatie\DataTransferObject\DataTransferObject;
 
 #[Strict]
-class PhasePowerDataDTO extends DataTransferObject
+class PhasePowerDataDTO extends BaseDTO
 {
     public int $home_center_count;
     public string $power;

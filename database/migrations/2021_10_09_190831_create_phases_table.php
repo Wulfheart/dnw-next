@@ -17,10 +17,11 @@ class CreatePhasesTable extends Migration
 
         Schema::create('phases', function (Blueprint $table) {
             $table->id();
-            $table->enum('type', ["MOVE","ADJUSTMENT","RETREAT","NON_PLAYING"]);
+            $table->enum('type', ["MOVEMENT","ADJUSTMENT","RETREAT","NON_PLAYING"]);
             $table->foreignId('previous_phase_id')->nullable()->constrained('phases');
+            $table->foreignId('game_id')->constrained('games');
             $table->longText('svg_adjudicated');
-            $table->longText('svg_with_orders');
+            $table->longText('svg_with_orders')->nullable();
             $table->longText('state_encoded');
             $table->string('phase_name_long');
             $table->string('phase_name_short');

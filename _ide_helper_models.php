@@ -51,6 +51,7 @@ namespace App\Models{
  * @property bool|null $start_when_ready
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
+ * @property-read \App\Models\Phase|null $currentPhase
  * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\NoAdjudication[] $noAdjudicationDays
  * @property-read int|null $no_adjudication_days_count
  * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\Power[] $powers
@@ -177,6 +178,7 @@ namespace App\Models{
  * @property int $id
  * @property string $type
  * @property int|null $previous_phase_id
+ * @property int $game_id
  * @property string $svg_adjudicated
  * @property string $svg_with_orders
  * @property string $state_encoded
@@ -186,6 +188,8 @@ namespace App\Models{
  * @property string|null $adjudicated_at
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\PhasePowerData[] $phasePowerData
+ * @property-read int|null $phase_power_data_count
  * @property-read Phase|null $previousPhase
  * @method static \Database\Factories\PhaseFactory factory(...$parameters)
  * @method static \Illuminate\Database\Eloquent\Builder|Phase newModelQuery()
@@ -194,6 +198,7 @@ namespace App\Models{
  * @method static \Illuminate\Database\Eloquent\Builder|Phase whereAdjudicatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Phase whereAdjudicationAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Phase whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Phase whereGameId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Phase whereId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Phase wherePhaseNameLong($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Phase wherePhaseNameShort($value)
@@ -251,20 +256,22 @@ namespace App\Models{
  *
  * @property int $id
  * @property int $base_power_id
- * @property int $user_id
+ * @property int|null $user_id
+ * @property int $game_id
  * @property bool $is_defeated
  * @property bool $is_winner
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
  * @property-read \App\Models\BasePower $basePower
  * @property-read \App\Models\Game $game
- * @property-read \App\Models\User $user
+ * @property-read \App\Models\User|null $user
  * @method static \Database\Factories\PowerFactory factory(...$parameters)
  * @method static \Illuminate\Database\Eloquent\Builder|Power newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Power newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Power query()
  * @method static \Illuminate\Database\Eloquent\Builder|Power whereBasePowerId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Power whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Power whereGameId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Power whereId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Power whereIsDefeated($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Power whereIsWinner($value)

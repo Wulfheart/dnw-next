@@ -52,4 +52,8 @@ class Game extends Model
     public function powers(){
         return $this->hasMany(Power::class);
     }
+
+    public function currentPhase(){
+        return $this->hasOne(Phase::class)->latestOfMany();
+    }
 }

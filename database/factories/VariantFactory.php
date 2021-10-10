@@ -26,6 +26,7 @@ class VariantFactory extends Factory
             'api_name' => $this->faker->word,
             'name' => $this->faker->name,
             'default_scs_to_win' => $this->faker->randomNumber(),
+            'total_scs' => $this->faker->randomNumber()
         ];
     }
 }

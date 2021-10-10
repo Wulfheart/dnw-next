@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class PhasePowerData extends Model
 {
@@ -43,12 +44,12 @@ class PhasePowerData extends Model
     ];
 
 
-    public function phase()
+    public function phase(): BelongsTo
     {
         return $this->belongsTo(\App\Models\Phase::class);
     }
 
-    public function power()
+    public function power(): BelongsTo
     {
         return $this->belongsTo(\App\Models\Power::class);
     }

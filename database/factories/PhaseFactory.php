@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\Game;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Str;
 use App\Models\Phase;
@@ -31,7 +32,8 @@ class PhaseFactory extends Factory
             'phase_name_long' => $this->faker->word,
             'phase_name_short' => $this->faker->word,
             'adjudication_at' => $this->faker->dateTime(),
-            'adjudicated_at' => $this->faker->word,
+            'adjudicated_at' => $this->faker->dateTime(),
+            'game_id' => Game::factory(),
         ];
     }
 }
