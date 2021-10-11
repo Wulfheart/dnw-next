@@ -57,6 +57,8 @@ namespace App\Models{
  * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\Power[] $powers
  * @property-read int|null $powers_count
  * @property-read \App\Models\Variant $variant
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\Power[] $winners
+ * @property-read int|null $winners_count
  * @method static \Database\Factories\GameFactory factory(...$parameters)
  * @method static \Illuminate\Database\Eloquent\Builder|Game newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Game newQuery()
@@ -180,7 +182,7 @@ namespace App\Models{
  * @property int|null $previous_phase_id
  * @property int $game_id
  * @property string $svg_adjudicated
- * @property string $svg_with_orders
+ * @property string|null $svg_with_orders
  * @property string $state_encoded
  * @property string $phase_name_long
  * @property string $phase_name_short
@@ -224,8 +226,8 @@ namespace App\Models{
  * @property int $unit_count
  * @property bool $orders_needed
  * @property bool $ready_for_adjudication
- * @property string $orders
- * @property string $applied_orders
+ * @property string|null $orders
+ * @property string|null $applied_orders
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
  * @property-read \App\Models\Phase $phase

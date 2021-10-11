@@ -4,6 +4,9 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\HasOne;
 
 class Game extends Model
 {
@@ -40,20 +43,28 @@ class Game extends Model
     ];
 
 
-    public function variant()
+    public function variant(): BelongsTo
     {
         return $this->belongsTo(\App\Models\Variant::class);
     }
 
-    public function noAdjudicationDays(){
+    public function noAdjudicationDays(): HasMany
+    {
         return $this->hasMany(NoAdjudication::class);
     }
 
-    public function powers(){
+    public function powers(): HasMany
+    {
         return $this->hasMany(Power::class);
     }
 
-    public function currentPhase(){
+    public function currentPhase(): HasOne
+    {
         return $this->hasOne(Phase::class)->latestOfMany();
+    }
+
+    public function winners(): HasMany
+    {
+        return $this->hasMany(Power::class)->where('is_winner');
     }
 }
