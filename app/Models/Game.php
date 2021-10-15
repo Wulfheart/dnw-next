@@ -63,6 +63,10 @@ class Game extends Model
         return $this->hasOne(Phase::class)->latestOfMany();
     }
 
+    public function phases(): HasMany {
+        return $this->hasMany(Phase::class)->orderByDesc('created_at');
+    }
+
     public function winners(): HasMany
     {
         return $this->hasMany(Power::class)->where('is_winner');

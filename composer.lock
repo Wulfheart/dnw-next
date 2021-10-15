@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b062b139287341738acc5dca10c24aba",
+    "content-hash": "c84b273a8ce11e2a009032d21ad520ea",
     "packages": [
         {
             "name": "andreiio/blade-remix-icon",
@@ -318,6 +318,64 @@
                 }
             ],
             "time": "2021-08-15T20:50:18+00:00"
+        },
+        {
+            "name": "calebporzio/awesome-helpers",
+            "version": "v2.5.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/calebporzio/awesome-helpers.git",
+                "reference": "63d39c24fe151fce53e9dac99d5637fa231cb7dd"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/calebporzio/awesome-helpers/zipball/63d39c24fe151fce53e9dac99d5637fa231cb7dd",
+                "reference": "63d39c24fe151fce53e9dac99d5637fa231cb7dd",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.3"
+            },
+            "require-dev": {
+                "fakerphp/faker": "^1.12",
+                "illuminate/support": "5.7.*|5.8.*|^6.0|^7.0|^8.0",
+                "mockery/mockery": "dev-master",
+                "phpunit/phpunit": "^8.0|^9.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Calebporzio\\AwesomeHelpers\\AwesomeHelpersServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Calebporzio\\AwesomeHelpers\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Caleb Porzio",
+                    "email": "calebporzio@gmail.com"
+                }
+            ],
+            "description": "Helper functions I find super-duper handy",
+            "homepage": "https://github.com/calebporzio/awesome-helpers",
+            "keywords": [
+                "awesome-helpers",
+                "calebporzio"
+            ],
+            "support": {
+                "issues": "https://github.com/calebporzio/awesome-helpers/issues",
+                "source": "https://github.com/calebporzio/awesome-helpers/tree/v2.5.0"
+            },
+            "time": "2021-01-20T17:40:59+00:00"
         },
         {
             "name": "dasprid/enum",

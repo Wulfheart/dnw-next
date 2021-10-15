@@ -15633,6 +15633,42 @@
      *
      */ 
         class Str {
+                    /**
+         * 
+         *
+         * @see \Calebporzio\AwesomeHelpers\StrMacros::extract()
+         * @param mixed $string
+         * @param mixed $pattern
+         * @static 
+         */ 
+        public static function extract($string, $pattern)
+        {
+                        return \Illuminate\Support\Str::extract($string, $pattern);
+        }
+                    /**
+         * 
+         *
+         * @see \Calebporzio\AwesomeHelpers\StrMacros::validate()
+         * @param mixed $data
+         * @param mixed $rules
+         * @static 
+         */ 
+        public static function validate($data, $rules)
+        {
+                        return \Illuminate\Support\Str::validate($data, $rules);
+        }
+                    /**
+         * 
+         *
+         * @see \Calebporzio\AwesomeHelpers\StrMacros::wrap()
+         * @param mixed $value
+         * @param mixed $cap
+         * @static 
+         */ 
+        public static function wrap($value, $cap)
+        {
+                        return \Illuminate\Support\Str::wrap($value, $cap);
+        }
          
     }
             /**

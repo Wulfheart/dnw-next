@@ -50,9 +50,9 @@ class AdjudicateGameJob implements ShouldQueue
                 orders: $game->currentPhase->phasePowerData->map(
                     fn(PhasePowerData $ppd) => new OrderDTO(
                         power: $ppd->power->basePower->api_name,
-                        instructions: Str::of($ppd->orders)->split('/\r\n|\n|\r/')
+                        instructions: Str::of($ppd->orders)->split('/\r\n|\n|\r/')->toArray()
                     )
-                ),
+                )->toArray(),
                 scs_to_win: $game->scs_to_win,
             ));
 
@@ -97,7 +97,7 @@ class AdjudicateGameJob implements ShouldQueue
                         fn($item) => count($item->possible_orders) > 0
                     )->count() > 0;
                 PhasePowerData::create([
-                    'phase_id' => $currentPhase->id,
+                    'phase_id' => $newPhase->id,
                     'power_id' => $power->id,
                     'supply_center_count' => $ppd->supply_center_count,
                     'home_center_count' => $ppd->home_center_count,

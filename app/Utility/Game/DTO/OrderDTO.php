@@ -11,6 +11,6 @@ class OrderDTO extends BaseDTO
 {
     public string $power;
 
-    /** @var string[] */
+    /** @var string[] $instructions */
     public array $instructions;
 }

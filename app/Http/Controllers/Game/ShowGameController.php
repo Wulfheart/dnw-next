@@ -4,24 +4,31 @@ namespace App\Http\Controllers\Game;
 
 use App\Http\Controllers\Controller;
 use App\Models\Game;
+use App\Models\Phase;
 use Illuminate\Http\Request;
+use Illuminate\Support\Collection;
 
 class ShowGameController extends Controller
 {
-    /**
-     * @throws \Illuminate\Auth\Access\AuthorizationException
-     */
     public function __invoke(Request $request, Game $game)
     {
         // $this->authorize('view', $game);
 
-        $game->load(['currentPhase.phasePowerData', 'powers.basePower', 'winners']);
+        $game->load(['phases.phasePowerData.power.basePower', 'powers.basePower', 'winners']);
 
-        return view('game.show');
-        if($game->currentPhase == null){
+        $phase_keys = $game->phases->map(fn(Phase $phase) =>
+        collect([])
+            ->when(!is_null($phase->svg_with_orders), fn(Collection $c) => $c->put($phase->phase_name_short . "_with_orders", $phase))
+            ->when(!is_null($phase->svg_adjudicated), fn(Collection $c) => $c->put($phase->phase_name_short . "_adjudicated", $phase))
+        )->flatMap(fn($values) => $values);
+        dd($phase_keys);
 
-        } else {
 
-        }
+        return view('game.show', [
+            'is_still_creating' => is_null($game->currentPhase),
+            'phase_keys' => $game->phases()->pluck('id')->toArray(),
+            'game' => $game
+        ]);
+
     }
 }

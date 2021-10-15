@@ -54,6 +54,8 @@ namespace App\Models{
  * @property-read \App\Models\Phase|null $currentPhase
  * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\NoAdjudication[] $noAdjudicationDays
  * @property-read int|null $no_adjudication_days_count
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\Phase[] $phases
+ * @property-read int|null $phases_count
  * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\Power[] $powers
  * @property-read int|null $powers_count
  * @property-read \App\Models\Variant $variant

@@ -12,6 +12,9 @@
 
         <!-- Styles -->
         <link rel="stylesheet" href="{{ mix('css/app.css') }}">
+        <style>
+            [x-cloak] { display: none !important; }
+        </style>
 
         @livewireStyles
 
