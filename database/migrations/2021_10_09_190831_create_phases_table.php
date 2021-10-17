@@ -20,14 +20,17 @@ class CreatePhasesTable extends Migration
             $table->enum('type', ["MOVEMENT","ADJUSTMENT","RETREAT","NON_PLAYING"]);
             $table->foreignId('previous_phase_id')->nullable()->constrained('phases');
             $table->foreignId('game_id')->constrained('games');
-            $table->longText('svg_adjudicated');
-            $table->longText('svg_with_orders')->nullable();
+            $table->string('svg_adjudicated');
+            $table->string('svg_with_orders')->nullable();
             $table->longText('state_encoded');
             $table->string('phase_name_long');
             $table->string('phase_name_short');
             $table->dateTime('adjudication_at')->nullable();
             $table->string('adjudicated_at')->nullable();
             $table->timestamps();
+
+            $table->unique('svg_adjudicated');
+            $table->unique('svg_with_orders');
         });
 
         Schema::enableForeignKeyConstraints();

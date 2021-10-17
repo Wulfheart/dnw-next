@@ -18,6 +18,7 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
+use Ramsey\Uuid\Uuid;
 
 class InitializeGameJob implements ShouldQueue
 {
@@ -44,6 +45,9 @@ class InitializeGameJob implements ShouldQueue
                 Storage::drive('gamedata')->put(Str::of($game->name . $game->id)->remove(" ")->lower() .  "/0_{$gameResponse->phase_short}.json", $gameResponse->json);
             }
 
+            $path = "maps/". Uuid::uuid4() .".svg";
+            Storage::drive('public')->put($path, $gameResponse->svg_adjudicated);
+
             $phase = Phase::create([
                 'adjudicated_at' => now(),
                 'phase_name_long' => $gameResponse->phase_long,
@@ -55,7 +59,7 @@ class InitializeGameJob implements ShouldQueue
                     '-' => 'NON_PLAYING'
                 },
                 'state_encoded' => $gameResponse->current_state_encoded,
-                'svg_adjudicated' => $gameResponse->svg_adjudicated,
+                'svg_adjudicated' => $path,
                 'game_id' => $game->id,
             ]);
 

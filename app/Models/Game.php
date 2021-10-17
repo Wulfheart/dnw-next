@@ -71,4 +71,8 @@ class Game extends Model
     {
         return $this->hasMany(Power::class)->where('is_winner');
     }
+
+    public function phasePowerData(){
+        return $this->hasManyThrough(PhasePowerData::class, Phase::class);
+    }
 }

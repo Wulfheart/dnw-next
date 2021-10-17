@@ -21,6 +21,7 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 use Illuminate\Testing\Fluent\Concerns\Has;
+use Ramsey\Uuid\Uuid;
 
 class AdjudicateGameJob implements ShouldQueue
 {
@@ -64,8 +65,12 @@ class AdjudicateGameJob implements ShouldQueue
                 Storage::drive('gamedata')->put(Str::of($game->name . $game->id)->remove(" ")->lower() . "/{$game->phases()->count()}_{$gameResponse->phase_short}.json", $gameResponse->json);
             }
 
+
+            $path = "maps/". Uuid::uuid4() .".svg";
+            Storage::drive('public')->put($path, $gameResponse->svg_with_orders);
+
             $currentPhase->update([
-                'svg_with_orders' => $gameResponse->svg_with_orders
+                'svg_with_orders' => $path
             ]);
 
             foreach ($gameResponse->applied_orders as $applied_order){
@@ -76,6 +81,9 @@ class AdjudicateGameJob implements ShouldQueue
                     ->update(['applied_orders' => collect($applied_order->orders)->implode('\n')]);
             }
 
+
+            $path = "maps/". Uuid::uuid4() .".svg";
+            Storage::drive('public')->put($path, $gameResponse->svg_adjudicated);
 
             $newPhase = Phase::create([
                 'game_id' => $game->id,
@@ -90,7 +98,7 @@ class AdjudicateGameJob implements ShouldQueue
                     'R' => 'RETREAT',
                     '-' => 'NON_PLAYING'
                 },
-                'svg_adjudicated' => $gameResponse->svg_adjudicated,
+                'svg_adjudicated' => $path,
             ]);
 
             /** @var Power $power */
@@ -114,7 +122,7 @@ class AdjudicateGameJob implements ShouldQueue
                     'orders_needed' => $orders_needed,
                 ]);
 
-                if($phasePowerData->supply_center_count + $phasePowerData->home_center_count + $phasePowerData->unit_count === 0){
+                if($phasePowerData->supply_center_count + $phasePowerData->unit_count === 0){
                     $power->update(['is_defeated' => true]);
                 }
             }

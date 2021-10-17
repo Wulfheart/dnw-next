@@ -5,8 +5,10 @@ namespace App\Http\Controllers\Game;
 use App\Http\Controllers\Controller;
 use App\Models\Game;
 use App\Models\Phase;
+use Illuminate\Database\Query\Builder;
 use Illuminate\Http\Request;
 use Illuminate\Support\Collection;
+use Illuminate\Support\Facades\Schema;
 
 class ShowGameController extends Controller
 {
@@ -14,7 +16,9 @@ class ShowGameController extends Controller
     {
         // $this->authorize('view', $game);
 
-        $game->load(['phases', 'powers.basePower', 'winners']);
+        $game->load(['powers.basePower', 'winners', 'phases' => function ($query) {
+            $query->select(collect(Schema::getColumnListing(app(Phase::class)->getTable()))->reject(fn(string $v) => $v === 'state_encoded')->toArray());
+        }]);
 
         $phase_keys = $game->phases->map(fn(Phase $phase) =>
         collect([])

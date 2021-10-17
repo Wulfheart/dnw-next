@@ -17,13 +17,13 @@
 
         <div>
             <?php /** @var \App\Models\Phase $phase */?>
-{{--            @foreach($game->phases as $phase)--}}
-{{--                <div >--}}
-{{--                    {{$phase->phase_name_long}}--}}
-{{--                    <img src='data:image/svg+xml;base64,{{base64_encode($phase->svg_adjudicated)}}' alt="">--}}
-{{--                    <img src='data:image/svg+xml;base64,{{base64_encode($phase->svg_with_orders)}}' alt="">--}}
-{{--                </div>--}}
-{{--            @endforeach--}}
+            @foreach($game->phases as $phase)
+
+                <div {{ $phase->id != $game->currentPhase->id ? 'x-cloak' : '' }}>
+                    <img src='{{ asset($phase->svg_with_orders) }}' alt="">
+                    <img src='{{ asset($phase->svg_adjudicated) }}' alt="">
+                </div>
+            @endforeach
         </div>
     </x-container.large>
 </x-app-layout>
