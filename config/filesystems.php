@@ -40,6 +40,11 @@ return [
             'root' => storage_path('data'),
         ],
 
+        'gameseed' => [
+            'driver' => 'local',
+            'root' => storage_path('seeddata'),
+        ],
+
         'public' => [
             'driver' => 'local',
             'root' => storage_path('app/public'),
