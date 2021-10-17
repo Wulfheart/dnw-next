@@ -19,8 +19,10 @@ class WebAdjudicatorImplementation implements AdjudicatorService
     {
         $response = Http::baseUrl(config('diplomacy.adjudicator.base_url'))->get('variants');
         $response->throw();
+        $dto = new VariantsResponseDTO($response->json());
+        $dto->json = $response->body();
 
-        return new VariantsResponseDTO($response->json());
+        return $dto;
     }
 
     /**
@@ -32,7 +34,10 @@ class WebAdjudicatorImplementation implements AdjudicatorService
         $response = Http::baseUrl(config('diplomacy.adjudicator.base_url'))->get(implode('/', ['adjudicate', $variant]));
         $response->throw();
 
-        return new AdjudicateGameResponseDTO($response->json());
+        $dto = new AdjudicateGameResponseDTO($response->json());
+        $dto->json = $response->body();
+
+        return $dto;
     }
 
     /**
@@ -44,7 +49,10 @@ class WebAdjudicatorImplementation implements AdjudicatorService
         $response = Http::baseUrl(config('diplomacy.adjudicator.base_url'))->post('adjudicate', $request->toArray());
         $response->throw();
 
-        return new AdjudicateGameResponseDTO($response->json());
+        $dto = new AdjudicateGameResponseDTO($response->json());
+        $dto->json = $response->body();
+
+        return $dto;
     }
 
     /**
@@ -56,6 +64,9 @@ class WebAdjudicatorImplementation implements AdjudicatorService
         $response = Http::baseUrl(config('diplomacy.adjudicator.base_url'))->post('dumbbot', $request->toArray());
         $response->throw();
 
-        return new DumbbotResponseDTO($response->json());
+        $dto = new DumbbotResponseDTO($response->json());
+        $dto->json = $response->body();
+
+        return $dto;
     }
 }

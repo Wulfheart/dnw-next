@@ -21,7 +21,6 @@ class ShowGameController extends Controller
             ->when(!is_null($phase->svg_with_orders), fn(Collection $c) => $c->put($phase->phase_name_short . "_with_orders", $phase))
             ->when(!is_null($phase->svg_adjudicated), fn(Collection $c) => $c->put($phase->phase_name_short . "_adjudicated", $phase))
         )->flatMap(fn($values) => $values);
-        dd($phase_keys);
 
 
         return view('game.show', [

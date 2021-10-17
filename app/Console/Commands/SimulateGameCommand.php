@@ -46,7 +46,7 @@ class SimulateGameCommand extends Command
             'base_power_id' => $b->id,
             'game_id' => $game->id,
         ]));
-        dispatch_sync(new InitializeGameJob($game->id));
+        dispatch_sync(new InitializeGameJob($game->id, true));
         $this->info("Finished game id $game->id setup");
 
         $bar = $this->output->createProgressBar($this->option('phases'));
@@ -64,7 +64,7 @@ class SimulateGameCommand extends Command
                 $phasePowerData->orders = collect($res->orders)->implode("\n");
                 $phasePowerData->save();
             }
-            dispatch_sync(new AdjudicateGameJob($game->id));
+            dispatch_sync(new AdjudicateGameJob($game->id, true));
             $bar->advance();
         }
         $bar->finish();

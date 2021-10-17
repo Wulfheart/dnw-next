@@ -15,13 +15,17 @@ use Illuminate\Foundation\Bus\Dispatchable;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Str;
 
 class InitializeGameJob implements ShouldQueue
 {
     use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
 
     public function __construct(
-        public int $game_id
+        public int $game_id,
+        public bool $save_response = false,
     )
     {
     }
@@ -35,6 +39,10 @@ class InitializeGameJob implements ShouldQueue
             /** @var Game $game */
             $game = Game::with(['variant', 'powers.basePower'])->findOrFail($this->game_id);
             $gameResponse = $adjudicator->initializeGame($game->variant->api_name);
+
+            if($this->save_response){
+                Storage::drive('gamedata')->put(Str::of($game->name . $game->id)->remove(" ")->lower() .  "/0_{$gameResponse->phase_short}.json", $gameResponse->json);
+            }
 
             $phase = Phase::create([
                 'adjudicated_at' => now(),

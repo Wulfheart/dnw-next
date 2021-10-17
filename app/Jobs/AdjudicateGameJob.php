@@ -17,7 +17,10 @@ use Illuminate\Foundation\Bus\Dispatchable;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
+use Illuminate\Testing\Fluent\Concerns\Has;
 
 class AdjudicateGameJob implements ShouldQueue
 {
@@ -29,7 +32,8 @@ class AdjudicateGameJob implements ShouldQueue
      * @return void
      */
     public function __construct(
-        public int $game_id
+        public int $game_id,
+        public bool $save_response = false,
     ) {
     }
 
@@ -55,6 +59,10 @@ class AdjudicateGameJob implements ShouldQueue
                 )->toArray(),
                 scs_to_win: $game->scs_to_win,
             ));
+
+            if($this->save_response){
+                Storage::drive('gamedata')->put(Str::of($game->name . $game->id)->remove(" ")->lower() . "/{$game->phases()->count()}_{$gameResponse->phase_short}.json", $gameResponse->json);
+            }
 
             $currentPhase->update([
                 'svg_with_orders' => $gameResponse->svg_with_orders
@@ -96,7 +104,8 @@ class AdjudicateGameJob implements ShouldQueue
                     )->first()->units->filter(
                         fn($item) => count($item->possible_orders) > 0
                     )->count() > 0;
-                PhasePowerData::create([
+                /** @var PhasePowerData $phasePowerData */
+                $phasePowerData = PhasePowerData::create([
                     'phase_id' => $newPhase->id,
                     'power_id' => $power->id,
                     'supply_center_count' => $ppd->supply_center_count,
@@ -104,7 +113,14 @@ class AdjudicateGameJob implements ShouldQueue
                     'unit_count' => $ppd->unit_count,
                     'orders_needed' => $orders_needed,
                 ]);
+
+                if($phasePowerData->supply_center_count + $phasePowerData->home_center_count + $phasePowerData->unit_count === 0){
+                    $power->update(['is_defeated' => true]);
+                }
             }
+
+            $game->powers->filter(fn(Power $p) => collect($gameResponse->winners)->contains($p->basePower->api_name))
+                ->each(fn(Power $p) => $p->update(['is_winner' => true]));
         });
 
     }
