@@ -14,7 +14,7 @@ class ShowGameController extends Controller
     {
         // $this->authorize('view', $game);
 
-        $game->load(['phases.phasePowerData.power.basePower', 'powers.basePower', 'winners']);
+        $game->load(['phases', 'powers.basePower', 'winners']);
 
         $phase_keys = $game->phases->map(fn(Phase $phase) =>
         collect([])
@@ -25,7 +25,7 @@ class ShowGameController extends Controller
 
         return view('game.show', [
             'is_still_creating' => is_null($game->currentPhase),
-            'phase_keys' => $game->phases()->pluck('id')->toArray(),
+            'phase_keys' => $phase_keys,
             'game' => $game
         ]);
 

@@ -6,24 +6,24 @@
         <div class="mt-1 flex flex-col sm:flex-row sm:flex-wrap sm:mt-0 sm:space-x-6">
             <div class="mt-2 flex items-center text-sm text-gray-500">
                 <x-ri-treasure-map-line class="flex-shrink-0 mr-1.5 h-5 w-5 text-gray-400 fill-current"/>
-                Standard
+                {{ $game->variant->name }}
             </div>
             <div class="mt-2 flex items-center text-sm text-gray-500">
                 <x-ri-focus-line class="flex-shrink-0 mr-1.5 h-5 w-5 text-gray-400 fill-current"/>
-                MOVEMENT 1234 Summer
+                {{ $game->currentPhase->phase_name_long }}
             </div>
         </div>
 
 
         <div>
             <?php /** @var \App\Models\Phase $phase */?>
-            @foreach($game->phases as $phase)
-                <div >
-                    {{$phase->phase_name_long}}
-                    <img src='data:image/svg+xml;base64,{{base64_encode($phase->svg_adjudicated)}}' alt="">
-                    <img src='data:image/svg+xml;base64,{{base64_encode($phase->svg_with_orders)}}' alt="">
-                </div>
-            @endforeach
+{{--            @foreach($game->phases as $phase)--}}
+{{--                <div >--}}
+{{--                    {{$phase->phase_name_long}}--}}
+{{--                    <img src='data:image/svg+xml;base64,{{base64_encode($phase->svg_adjudicated)}}' alt="">--}}
+{{--                    <img src='data:image/svg+xml;base64,{{base64_encode($phase->svg_with_orders)}}' alt="">--}}
+{{--                </div>--}}
+{{--            @endforeach--}}
         </div>
     </x-container.large>
 </x-app-layout>

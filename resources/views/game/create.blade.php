@@ -6,7 +6,7 @@
     </x-slot>
 
     <x-form :action="route('games.store')">
-        <x-container>
+        <x-container.index>
             <div class="grid grid-cols-6 gap-6">
                 <div class="col-span-6 sm:col-span-6">
                     <x-jet-label for="name" value="Name" />
@@ -58,7 +58,7 @@
                     <x-jet-button>Spiel erstellen</x-jet-button>
                 </div>
             </div>
-        </x-container>
+        </x-container.index>
 
     </x-form>
 

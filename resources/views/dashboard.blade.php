@@ -5,7 +5,7 @@
         </x-header.text>
     </x-slot>
 
-    <x-container>
+    <x-container.index>
         <x-jet-welcome></x-jet-welcome>
-    </x-container>
+    </x-container.index>
 </x-app-layout>
