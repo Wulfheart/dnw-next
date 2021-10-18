@@ -54,6 +54,8 @@ namespace App\Models{
  * @property-read \App\Models\Phase|null $currentPhase
  * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\NoAdjudication[] $noAdjudicationDays
  * @property-read int|null $no_adjudication_days_count
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\PhasePowerData[] $phasePowerData
+ * @property-read int|null $phase_power_data_count
  * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\Phase[] $phases
  * @property-read int|null $phases_count
  * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\Power[] $powers
@@ -181,7 +183,7 @@ namespace App\Models{
  *
  * @property int $id
  * @property string $type
- * @property int|null $previous_phase_id
+ * @property int $number
  * @property int $game_id
  * @property string $svg_adjudicated
  * @property string|null $svg_with_orders
@@ -194,7 +196,7 @@ namespace App\Models{
  * @property \Illuminate\Support\Carbon|null $updated_at
  * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\PhasePowerData[] $phasePowerData
  * @property-read int|null $phase_power_data_count
- * @property-read Phase|null $previousPhase
+ * @property-read Phase $previousPhase
  * @method static \Database\Factories\PhaseFactory factory(...$parameters)
  * @method static \Illuminate\Database\Eloquent\Builder|Phase newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Phase newQuery()
@@ -204,9 +206,9 @@ namespace App\Models{
  * @method static \Illuminate\Database\Eloquent\Builder|Phase whereCreatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Phase whereGameId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Phase whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Phase whereNumber($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Phase wherePhaseNameLong($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Phase wherePhaseNameShort($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Phase wherePreviousPhaseId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Phase whereStateEncoded($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Phase whereSvgAdjudicated($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Phase whereSvgWithOrders($value)

@@ -50,6 +50,7 @@ class InitializeGameJob implements ShouldQueue
 
             $phase = Phase::create([
                 'adjudicated_at' => now(),
+                'number' => 0,
                 'phase_name_long' => $gameResponse->phase_long,
                 'phase_name_short' => $gameResponse->phase_short,
                 'type' => match($gameResponse->phase_type) {

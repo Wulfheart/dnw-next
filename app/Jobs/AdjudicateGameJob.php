@@ -87,10 +87,10 @@ class AdjudicateGameJob implements ShouldQueue
 
             $newPhase = Phase::create([
                 'game_id' => $game->id,
-                'previous_phase_id' => $currentPhase->id,
+                'number' => $currentPhase->number + 1,
                 'state_encoded' => $gameResponse->current_state_encoded,
                 'adjudicated_at' => now(),
-                'phase_name_long' => $gameResponse->phase_long,
+                'phase_name_long' => Str::of($gameResponse->phase_long)->contains('?') ? $gameResponse->phase_short : $gameResponse->phase_long,
                 'phase_name_short' => $gameResponse->phase_short,
                 'type' => match($gameResponse->phase_type) {
                     'M' => 'MOVEMENT',

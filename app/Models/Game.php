@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\HasOne;
+use Nette\NotImplementedException;
 
 class Game extends Model
 {
@@ -60,11 +61,11 @@ class Game extends Model
 
     public function currentPhase(): HasOne
     {
-        return $this->hasOne(Phase::class)->latestOfMany();
+        return $this->hasOne(Phase::class)->ofMany('number', 'max');
     }
 
     public function phases(): HasMany {
-        return $this->hasMany(Phase::class)->orderByDesc('created_at');
+        return $this->hasMany(Phase::class)->orderByDesc('number');
     }
 
     public function winners(): HasMany

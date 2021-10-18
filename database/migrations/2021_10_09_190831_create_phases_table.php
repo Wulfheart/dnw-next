@@ -18,7 +18,7 @@ class CreatePhasesTable extends Migration
         Schema::create('phases', function (Blueprint $table) {
             $table->id();
             $table->enum('type', ["MOVEMENT","ADJUSTMENT","RETREAT","NON_PLAYING"]);
-            $table->foreignId('previous_phase_id')->nullable()->constrained('phases');
+            $table->unsignedInteger('number');
             $table->foreignId('game_id')->constrained('games');
             $table->string('svg_adjudicated');
             $table->string('svg_with_orders')->nullable();
@@ -31,6 +31,7 @@ class CreatePhasesTable extends Migration
 
             $table->unique('svg_adjudicated');
             $table->unique('svg_with_orders');
+            $table->unique(['id', 'number']);
         });
 
         Schema::enableForeignKeyConstraints();

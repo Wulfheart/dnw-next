@@ -25,15 +25,20 @@ class GameRecreatorSeeder extends Seeder
     public function run()
     {
         $fs = Storage::drive('gameseed');
+        $directories = $fs->directories();
         $sequence = Http::fakeSequence();
-        foreach ($fs->directories() as $directory) {
+        $directories = ['5ddc2830-fa23-4a0d-9a78-ccb06ccab2bb', '6fb1ad6e-a126-4b56-aa40-19ecac627d7d'];
+        foreach ($directories as $directory) {
             $files = $fs->allFiles($directory);
+            $files = collect($files)->sortBy(fn(string $f) => $f, SORT_NATURAL)->toArray();
             foreach ($files as $file){
                 $sequence->pushFile($fs->path($file));
             }
         }
-        foreach ($fs->directories() as $directory) {
+        foreach ($directories as $directory) {
             $files = $fs->allFiles($directory);
+            $file_count = count($files);
+            $basetime = now();
             var_dump($directory);
             $variant = Variant::first();
 
@@ -50,11 +55,13 @@ class GameRecreatorSeeder extends Seeder
                 'game_id' => $game->id,
             ]));
             dispatch_sync(new InitializeGameJob($game->id));
+            $game->currentPhase()->update(['created_at' => $basetime->subDays($file_count)]);
 
 
-            for($i = 0; $i < count($files) - 1; $i++){
-                $game->load('currentPhase.phasePowerData.power.basePower');
+            for($i = 0; $i < $file_count - 1; $i++){
                 dispatch_sync(new AdjudicateGameJob($game->id));
+                $game->currentPhase()->update(['created_at' => $basetime->subDays($file_count - $i)]);
+
             }
 
             DB::statement("UPDATE phase_power_data SET orders = applied_orders where phase_id IN (SELECT distinct p.id FROM phase_power_data INNER JOIN phases p on phase_power_data.phase_id = p.id WHERE game_id = $game->id)");
