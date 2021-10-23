@@ -22,13 +22,13 @@ class VariantSeeder extends Seeder
         ]);
 
         $powers = [
-            ['name' => 'Deutschland', 'api_name' => 'GERMANY', 'color' => '#A28A75'],
-            ['name' => 'England', 'api_name' => 'ENGLAND', 'color' => '#B400D1'],
-            ['name' => 'Russland', 'api_name' => 'RUSSIA', 'color' => '#76798F'],
-            ['name' => 'Italien', 'api_name' => 'ITALY', 'color' => '#0D1117'],
-            ['name' => 'Frankreich', 'api_name' => 'FRANCE', 'color' => '#6338DF'],
-            ['name' => 'Türkei', 'api_name' => 'TURKEY', 'color' => '#BFDFE9'],
-            ['name' => 'Österreich', 'api_name' => 'AUSTRIA', 'color' => '#FBEDD7'],
+            ['name' => 'Deutschland', 'api_name' => 'GERMANY', 'color' => 'dimgray'],
+            ['name' => 'England', 'api_name' => 'ENGLAND', 'color' => 'darkviolet'],
+            ['name' => 'Russland', 'api_name' => 'RUSSIA', 'color' => '#757d91'],
+            ['name' => 'Italien', 'api_name' => 'ITALY', 'color' => 'forestgreen'],
+            ['name' => 'Frankreich', 'api_name' => 'FRANCE', 'color' => 'royalblue'],
+            ['name' => 'Türkei', 'api_name' => 'TURKEY', 'color' => '#b9a61c'],
+            ['name' => 'Österreich', 'api_name' => 'AUSTRIA', 'color' => 'red'],
         ];
 
         $variant->basePowers()->createMany($powers);

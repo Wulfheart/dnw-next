@@ -1,5 +1,5 @@
 <x-app-layout>
-    <x-container.index x-data="{ current: 0, max_index: {{ $phases->count() - 1 }}}">
+    <x-container x-data="{ current: 0, max_index: {{ $phases->count() - 1 }}}">
         <h2 class="text-2xl font-bold leading-7 text-gray-900 sm:text-3xl sm:truncate">
             Kriegsspiele
         </h2>
@@ -54,5 +54,17 @@
             <livewire:order-submission/>
         </div>
         @endcan
-    </x-container.index>
+
+        <?php /** @var \App\Models\PhasePowerData $phasePowerData */ ?>
+        <ul class="divide-y divide-gray-200 mt-6">
+        @foreach($game->currentPhase->phasePowerData as $phasePowerData)
+            <li class="grid grid-cols-3 py-4">
+                <div style="color:{{ $phasePowerData->power->basePower->color }}" class="font-medium">{{ $phasePowerData->power->basePower->name }}</div>
+                <div>{{ $phasePowerData->power->user->name }}</div>
+                <div class="grid place-items-end italic text-sm">{{ $phasePowerData->supply_center_count }} VZs, {{ $phasePowerData->unit_count }} Einheiten</div>
+            </li>
+        @endforeach
+
+        </ul>
+    </x-container>
 </x-app-layout>
