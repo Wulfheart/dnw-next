@@ -45,4 +45,8 @@ class GamePolicy
     {
         return $game->powers()->whereNull('user_id')->exists();
     }
+
+    public function indexMessages(User $user, Game $game){
+        return $game->powers()->where('user_id', $user->id)->exists();
+    }
 }

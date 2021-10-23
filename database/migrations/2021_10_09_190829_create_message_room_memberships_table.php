@@ -19,8 +19,8 @@ class CreateMessageRoomMembershipsTable extends Migration
             $table->id();
             $table->foreignId('power_id')->constrained();
             $table->foreignId('message_room_id')->constrained();
-            $table->dateTime('joined_at');
-            $table->dateTime('last_visited_at');
+            $table->dateTime('joined_at')->useCurrent();
+            $table->dateTime('last_visited_at')->useCurrent();
             $table->timestamps();
         });
 

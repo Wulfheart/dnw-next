@@ -9,9 +9,9 @@ class GameBuilder extends Builder
 {
     public function whereActive(): static
     {
-        $this->whereHas('powers', fn(Builder $query) => $query->whereNotNull('user_id'))
+        $this->whereDoesntHave('powers', fn(Builder $query) => $query->whereNull('user_id'))
             ->whereDoesntHave('powers', fn(Builder $query) => $query->where('is_winner', true))
-            ->has('phases', '>=', 2);
+            ;
         return $this;
     }
 
@@ -23,7 +23,8 @@ class GameBuilder extends Builder
 
     public function whereNew(): static
     {
-        $this->whereHas('powers', fn(Builder $query) => $query->whereNull('user_id'));
+        $this->whereHas('powers', fn(Builder $query) => $query->whereNull('user_id'))
+        ->has('phases', '>=', 1);
         return $this;
     }
 

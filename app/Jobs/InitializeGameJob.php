@@ -3,6 +3,8 @@
 namespace App\Jobs;
 
 use App\Models\Game;
+use App\Models\MessageRoom;
+use App\Models\MessageRoomMembership;
 use App\Models\Phase;
 use App\Models\PhasePowerData;
 use App\Models\Power;
@@ -83,6 +85,35 @@ class InitializeGameJob implements ShouldQueue
                     'unit_count' => $ppd->unit_count,
                     'orders_needed' => $orders_needed,
                 ]);
+            }
+
+            // Message Rooms
+
+            MessageRoom::create([
+                'name' => 'Global',
+                'is_group' => true,
+            ])->memberships()->createMany(
+                $game->powers->pluck('id')->map(fn(int $item) => ['power_id' => $item])->toArray()
+            );
+
+
+            $c = $game->powers->count();
+            for($i = 0; $i < $c; $i++){
+                /** @var \App\Models\Power $power_1 */
+                $power_1 = $game->powers->get($i);
+                for($j = $i; $j < $c; $j++){
+                    if($i != $j){
+                        /** @var Power $power_2 */
+                        $power_2 = $game->powers->get($j);
+                        MessageRoom::create([
+                            'name' => $power_1->basePower->name . $power_2->basePower->name,
+                            'is_group' => false,
+                        ])->memberships()->createMany([
+                            ['power_id' => $power_1->id],
+                            ['power_id' => $power_2->id],
+                        ]);
+                    }
+                }
             }
         });
 

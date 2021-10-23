@@ -28,5 +28,7 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function(){
         Route::get('/', IndexGameController::class)->name('index');
         Route::post('/', \App\Http\Controllers\Game\StoreGameController::class)->name('store');
         Route::get('/{game}', \App\Http\Controllers\Game\ShowGameController::class)->name('show');
+        Route::get('/{game}/messages')->name('show.messages.index');
+        Route::get('/{game}/messages/test')->name('show.messages.show');
     });
 });

@@ -117,6 +117,10 @@ namespace App\Models{
  * @property bool $is_group
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\MessageRoomMembership[] $memberships
+ * @property-read int|null $memberships_count
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\Power[] $powers
+ * @property-read int|null $powers_count
  * @method static \Database\Factories\MessageRoomFactory factory(...$parameters)
  * @method static \Illuminate\Database\Eloquent\Builder|MessageRoom newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|MessageRoom newQuery()

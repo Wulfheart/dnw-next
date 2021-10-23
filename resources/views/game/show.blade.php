@@ -15,11 +15,22 @@
         </div>
 
 
+        <x-tabs distribute>
+            <a href="">
+                <x-tabs.item>Map</x-tabs.item>
+            </a>
+            <a href="">
+                <x-tabs.item>Messages</x-tabs.item>
+            </a>
+
+        </x-tabs>
+
+
         <div class="flex justify-center mt-5">
             <?php /** @var \App\DTO\Views\PhaseDTO $phase */?>
             @foreach($phases as $phase)
                 <div class="" x-show="current == {{ $loop->index }}" {{ !$loop->first ? 'x-cloak' : '' }}>
-                    <img class="object-cover max-h-[65vh]" x-bind:src="Math.abs({{ $loop->index }} - current) <= 5 || Math.abs(max_index - {{ $loop->index }}) <= 5 ? '{{ asset($phase->svg) }}' : ''" alt="{{ $phase->key }}">
+                    <img class="object-cover max-h-[65vh]" x-bind:src="Math.abs({{ $loop->index }} - current) <= 5 || Math.abs(max_index - {{ $loop->index }}) <= 5 ? '{{ asset('storage/'.$phase->svg) }}' : ''" alt="{{ $phase->key }}">
                 </div>
             @endforeach
         </div>

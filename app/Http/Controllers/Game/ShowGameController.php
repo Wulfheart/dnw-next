@@ -6,7 +6,6 @@ use App\DTO\Views\PhaseDTO;
 use App\Http\Controllers\Controller;
 use App\Models\Game;
 use App\Models\Phase;
-use Illuminate\Database\Query\Builder;
 use Illuminate\Http\Request;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Schema;
@@ -34,8 +33,6 @@ class ShowGameController extends Controller
                 )
             )
         )->flatMap(fn($values) => $values);
-
-
 
         return view('game.show', [
             'is_still_creating' => is_null($game->currentPhase),

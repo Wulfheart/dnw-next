@@ -10,7 +10,7 @@
         </x-tabs>
         <?php /** @var \App\Models\Game $game */ ?>
         @forelse($games as $game)
-            <div>{{ $game->name }}</div>
+            <div>{{ $game->name }}  {{ $game->id }}</div>
         @empty
 
         @endforelse
