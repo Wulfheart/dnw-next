@@ -47,6 +47,12 @@ class GamePolicy
     }
 
     public function indexMessages(User $user, Game $game){
-        return $game->powers()->where('user_id', $user->id)->exists();
+        $game->loadMissing('powers');
+        return $game->powers->pluck('user_id')->contains($user->id);
+    }
+
+    public function submitOrders(User $user, Game $game) {
+        $game->loadMissing(['powers']);
+        return $game->powers->pluck('user_id')->contains($user->id);
     }
 }

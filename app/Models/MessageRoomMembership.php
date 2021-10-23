@@ -36,12 +36,12 @@ class MessageRoomMembership extends Pivot
     ];
 
 
-    public function power()
+    public function power(): \Illuminate\Database\Eloquent\Relations\BelongsTo
     {
         return $this->belongsTo(\App\Models\Power::class);
     }
 
-    public function messageRoom()
+    public function messageRoom(): \Illuminate\Database\Eloquent\Relations\BelongsTo
     {
         return $this->belongsTo(\App\Models\MessageRoom::class);
     }

@@ -49,8 +49,10 @@
             </button>
         </div>
 
+        @can('submitOrders', $game)
         <div class="mt-5">
             <livewire:order-submission/>
         </div>
+        @endcan
     </x-container.index>
 </x-app-layout>
