@@ -6,18 +6,18 @@ use App\Http\Controllers\Controller;
 use App\Models\Game;
 use Illuminate\Http\Request;
 
-class JoinGameController extends Controller
+class LeaveGameController extends Controller
 {
+
     /**
      * @throws \Illuminate\Auth\Access\AuthorizationException
      */
     public function __invoke(Request $request, Game $game)
     {
-        $this->authorize('join', $game);
+        $this->authorize('leave', $game);
 
-        $game->powers()->whereNull('user_id')->inRandomOrder()->first()->update(['user_id' => auth()->user()->id]);
+        $game->powers()->where('user_id', auth()->user()->id)->update(['user_id' => null]);
 
-        return redirect()->route('games.show', ['game' => $game]);
-
+        return redirect();
     }
 }

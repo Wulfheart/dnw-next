@@ -1181,6 +1181,10 @@ select {
   margin-right: 0.25rem;
 }
 
+.-mb-px {
+  margin-bottom: -1px;
+}
+
 .block {
   display: block;
 }
@@ -1461,6 +1465,10 @@ select {
   overflow: hidden;
 }
 
+.overflow-x-auto {
+  overflow-x: auto;
+}
+
 .overflow-y-auto {
   overflow-y: auto;
 }
@@ -1472,6 +1480,10 @@ select {
 .truncate {
   overflow: hidden;
   text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.whitespace-nowrap {
   white-space: nowrap;
 }
 
@@ -1568,9 +1580,19 @@ select {
   border-color: rgb(52 211 153 / var(--tw-border-opacity));
 }
 
+.border-indigo-500 {
+  --tw-border-opacity: 1;
+  border-color: rgb(99 102 241 / var(--tw-border-opacity));
+}
+
 .border-gray-400 {
   --tw-border-opacity: 1;
   border-color: rgb(156 163 175 / var(--tw-border-opacity));
+}
+
+.border-primary-500 {
+  --tw-border-opacity: 1;
+  border-color: rgb(16 185 129 / var(--tw-border-opacity));
 }
 
 .bg-white {
@@ -1646,6 +1668,11 @@ select {
 .bg-primary-600 {
   --tw-bg-opacity: 1;
   background-color: rgb(5 150 105 / var(--tw-bg-opacity));
+}
+
+.bg-primary-100 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(209 250 229 / var(--tw-bg-opacity));
 }
 
 .bg-opacity-25 {
@@ -1749,6 +1776,21 @@ select {
 .py-10 {
   padding-top: 2.5rem;
   padding-bottom: 2.5rem;
+}
+
+.py-0\.5 {
+  padding-top: 0.125rem;
+  padding-bottom: 0.125rem;
+}
+
+.px-2\.5 {
+  padding-left: 0.625rem;
+  padding-right: 0.625rem;
+}
+
+.py-0 {
+  padding-top: 0px;
+  padding-bottom: 0px;
 }
 
 .pt-6 {
@@ -2654,6 +2696,10 @@ select {
 
   .md\:mt-0 {
     margin-top: 0px;
+  }
+
+  .md\:inline-block {
+    display: inline-block;
   }
 
   .md\:grid {

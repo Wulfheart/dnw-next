@@ -2,12 +2,12 @@
 
 namespace App\Models;
 
+use App\Builders\GameBuilder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\HasOne;
-use Nette\NotImplementedException;
 
 class Game extends Model
 {
@@ -42,6 +42,11 @@ class Game extends Model
         'join_phase_length' => 'integer',
         'start_when_ready' => 'boolean',
     ];
+
+    public function newEloquentBuilder($query): GameBuilder
+    {
+        return new GameBuilder($query);
+    }
 
 
     public function variant(): BelongsTo

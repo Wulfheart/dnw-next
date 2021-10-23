@@ -7,6 +7,7 @@ use App\Jobs\InitializeGameJob;
 use App\Models\BasePower;
 use App\Models\Game;
 use App\Models\Power;
+use App\Models\User;
 use App\Models\Variant;
 use App\Utility\Game\GameRecreator;
 use Carbon\Carbon;
@@ -27,7 +28,7 @@ class GameRecreatorSeeder extends Seeder
         $fs = Storage::drive('gameseed');
         $directories = $fs->directories();
         $sequence = Http::fakeSequence();
-        $directories = ['5ddc2830-fa23-4a0d-9a78-ccb06ccab2bb', '6fb1ad6e-a126-4b56-aa40-19ecac627d7d'];
+        $directories = ['9fe65a07-4a5c-4f7d-b3a0-8ce9cf932d80', 'f5874989-5a56-46b8-a8a0-80d7fa032c0c'];
         foreach ($directories as $directory) {
             $files = $fs->allFiles($directory);
             $files = collect($files)->sortBy(fn(string $f) => $f, SORT_NATURAL)->toArray();
@@ -53,6 +54,7 @@ class GameRecreatorSeeder extends Seeder
             $game->variant->basePowers()->each(fn (BasePower $b) => Power::create([
                 'base_power_id' => $b->id,
                 'game_id' => $game->id,
+                'user_id' => User::factory()->create()->id
             ]));
             dispatch_sync(new InitializeGameJob($game->id));
             $game->currentPhase()->update(['created_at' => $basetime->subDays($file_count)]);

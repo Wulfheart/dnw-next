@@ -37,5 +37,9 @@
                 <x-feathericon-chevrons-right/>
             </button>
         </div>
+
+        <div class="mt-5">
+            <livewire:order-submission/>
+        </div>
     </x-container.index>
 </x-app-layout>

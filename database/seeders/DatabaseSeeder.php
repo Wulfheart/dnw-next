@@ -24,6 +24,7 @@ class DatabaseSeeder extends Seeder
 
         $this->call([
             VariantSeeder::class,
+            GameSeeder::class,
             GameRecreatorSeeder::class,
         ]);
     }

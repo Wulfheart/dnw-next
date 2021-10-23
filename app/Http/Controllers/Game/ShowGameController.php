@@ -33,7 +33,6 @@ class ShowGameController extends Controller
                 PhaseDTO::factory()->setKey($phase->phase_name_short."_adjudicated")->setSvg($phase->svg_adjudicated)
                 )
             )
-
         )->flatMap(fn($values) => $values);
 
 
