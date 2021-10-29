@@ -15,7 +15,12 @@ mix.js('resources/js/app.js', 'public/js')
     .postCss('resources/css/app.css', 'public/css', [
         require('postcss-import'),
         require('tailwindcss'),
-    ]);
+    ])
+    .css('resources/css/gamepanel.css', 'public/css')
+    .css('resources/css/global.css', 'public/css')
+    .css('resources/css/home.css', 'public/css')
+    .copyDirectory('resources/icons', 'public/icons')
+;
 
 if (mix.inProduction()) {
     mix.version();

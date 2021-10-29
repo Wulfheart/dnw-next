@@ -26,7 +26,7 @@ class StoreGameRequest extends FormRequest
         return [
             'name' => ['required', 'string', 'unique:games'],
             'variant_id' => ['required', 'string', 'exists:variants,id'],
-            'phase_length' => ['integer', 'gte:5'],
+            'phase_length' => ['integer', 'gte:5', 'required'],
             'no_adjudication' => ['array'],
             'no_adjudication.*' => ['boolean', 'accepted'],
             // 'start_when_ready' => ['boolean'],

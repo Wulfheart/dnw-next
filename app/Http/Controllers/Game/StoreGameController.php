@@ -40,7 +40,7 @@ class StoreGameController extends Controller
         $power = $game->powers->random();
         $power->update(['user_id' => auth()->user()->id]);
 
-        $this->dispatch(new InitializeGameJob($game->id));
+        $this->dispatch(new InitializeGameJob($game->id, true));
 
         return redirect()->route('games.show', ['game' => $game]);
 
