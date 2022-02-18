@@ -36,16 +36,16 @@
         </div>
         <div class="flex justify-center mt-3 text-gray-500">
             <button x-on:click="current = max_index" x-bind:disabled="current == max_index" class="disabled:opacity-50">
-                <x-feathericon-chevrons-left />
+                <x-heroicon-o-chevron-double-left class="h-5 w-5"/>
             </button>
             <button x-on:click="current++" x-bind:disabled="current == max_index" class="disabled:opacity-50">
-                <x-feathericon-chevron-left/>
+                <x-heroicon-o-chevron-left class="h-5 w-5"/>
             </button>
             <button x-on:click="current--"  x-bind:disabled="current == 0" class="disabled:opacity-50">
-                <x-feathericon-chevron-right/>
+                <x-heroicon-o-chevron-right class="h-5 w-5"/>
             </button>
             <button x-on:click="current = 0"  x-bind:disabled="current == 0" class="disabled:opacity-50">
-                <x-feathericon-chevrons-right/>
+                <x-heroicon-o-chevron-double-right class="h-5 w-5"/>
             </button>
         </div>
 

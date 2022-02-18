@@ -1,18 +1,22 @@
 <x-app-layout>
-
-    <x-container.index>
-
-        <x-tabs>
-            <a href="{{ route('games.index', ['type' => 'player']) }}"><x-tabs.item :active="$tab == 'player'">Meine Spiele</x-tabs.item></a>
-            <a href="{{ route('games.index', ['type' => 'new']) }}"><x-tabs.item :active="$tab == 'new'">Neu</x-tabs.item></a>
-            <a href="{{ route('games.index', ['type' => 'active']) }}"><x-tabs.item :active="$tab == 'active'">Aktiv</x-tabs.item></a>
-            <a href="{{ route('games.index', ['type' => 'finished']) }}"><x-tabs.item :active="$tab == 'finished'">Beendet</x-tabs.item></a>
-        </x-tabs>
+    <x-container.large>
+        <div class="pb-5">
+            <div class="-ml-2 -mt-2 flex flex-wrap items-baseline">
+                <h2 class="ml-2 mt-2 text-2xl leading-6 font-medium text-gray-900">Neue Spiele</h2>
+                <p class="ml-2 mt-1 text-sm text-gray-500 truncate">Mehr anzeigen</p>
+            </div>
+        </div>
         <?php /** @var \App\Models\Game $game */ ?>
-        @forelse($games as $game)
-            <div>{{ $game->name }}  {{ $game->id }}</div>
-        @empty
+        <div class="grid grid-cols-3 gap-10">
+        @foreach($preview['new'] as $game)
+            <div class="h-full w-full rounded-xl bg-black/60 bg-blend-darken bg-center bg-cover p-5"
+                style="background-image: url('{{storage_asset($game->currentPhase->svg_adjudicated)}}')"
+            >
+                <h3 class="text-white font-bold text-xl line-clamp-2">{{$game->name}}</h3>
 
-        @endforelse
-    </x-container.index>
+            </div>
+        @endforeach
+
+
+    </x-container.large>
 </x-app-layout>

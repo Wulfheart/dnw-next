@@ -51,4 +51,6 @@ class Phase extends Model
     {
         return $this->hasMany(PhasePowerData::class);
     }
+
+    // public function
 }
