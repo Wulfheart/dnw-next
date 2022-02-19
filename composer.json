@@ -16,8 +16,10 @@
         "laravel/sanctum": "^2.11",
         "laravel/tinker": "^2.5",
         "livewire/livewire": "^2.5",
+        "lorisleiva/laravel-actions": "^2.3",
         "psr/log": "^1.0",
-        "spatie/data-transfer-object": "^3.7"
+        "spatie/data-transfer-object": "^3.7",
+        "wulfheart/laravel-actions-ide-helper": "^0.2.0"
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "^3.6",
@@ -67,7 +69,8 @@
             "@php artisan ide-helper:eloquent",
             "@php artisan ide-helper:generate",
             "@php artisan ide-helper:meta",
-            "@php artisan ide-helper:models -N --smart-reset"
+            "@php artisan ide-helper:models --write-mixin",
+            "@php artisan ide-helper:actions"
         ]
 
     },

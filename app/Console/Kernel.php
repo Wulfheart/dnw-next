@@ -2,8 +2,10 @@
 
 namespace App\Console;
 
+use App\Actions\Game\CreateGameAction;
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
+use Lorisleiva\Actions\Facades\Actions;
 
 class Kernel extends ConsoleKernel
 {
@@ -13,7 +15,7 @@ class Kernel extends ConsoleKernel
      * @var array
      */
     protected $commands = [
-        //
+        // CreateGameAction::class,
     ];
 
     /**
@@ -35,6 +37,7 @@ class Kernel extends ConsoleKernel
     protected function commands()
     {
         $this->load(__DIR__.'/Commands');
+        Actions::registerCommands();
 
         require base_path('routes/console.php');
     }

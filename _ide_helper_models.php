@@ -33,8 +33,9 @@ namespace App\Models{
  * @method static \Illuminate\Database\Eloquent\Builder|BasePower whereName($value)
  * @method static \Illuminate\Database\Eloquent\Builder|BasePower whereUpdatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|BasePower whereVariantId($value)
+ * @mixin \Eloquent
  */
-	class BasePower extends \Eloquent {}
+	class IdeHelperBasePower {}
 }
 
 namespace App\Models{
@@ -81,8 +82,9 @@ namespace App\Models{
  * @method static \App\Builders\GameBuilder|Game whereUpdatedAt($value)
  * @method static \App\Builders\GameBuilder|Game whereUserIsMember(\App\Models\User $user)
  * @method static \App\Builders\GameBuilder|Game whereVariantId($value)
+ * @mixin \Eloquent
  */
-	class Game extends \Eloquent {}
+	class IdeHelperGame {}
 }
 
 namespace App\Models{
@@ -104,8 +106,9 @@ namespace App\Models{
  * @method static \Illuminate\Database\Eloquent\Builder|Message whereSenderId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Message whereText($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Message whereUpdatedAt($value)
+ * @mixin \Eloquent
  */
-	class Message extends \Eloquent {}
+	class IdeHelperMessage {}
 }
 
 namespace App\Models{
@@ -130,8 +133,9 @@ namespace App\Models{
  * @method static \Illuminate\Database\Eloquent\Builder|MessageRoom whereIsGroup($value)
  * @method static \Illuminate\Database\Eloquent\Builder|MessageRoom whereName($value)
  * @method static \Illuminate\Database\Eloquent\Builder|MessageRoom whereUpdatedAt($value)
+ * @mixin \Eloquent
  */
-	class MessageRoom extends \Eloquent {}
+	class IdeHelperMessageRoom {}
 }
 
 namespace App\Models{
@@ -158,8 +162,9 @@ namespace App\Models{
  * @method static \Illuminate\Database\Eloquent\Builder|MessageRoomMembership whereMessageRoomId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|MessageRoomMembership wherePowerId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|MessageRoomMembership whereUpdatedAt($value)
+ * @mixin \Eloquent
  */
-	class MessageRoomMembership extends \Eloquent {}
+	class IdeHelperMessageRoomMembership {}
 }
 
 namespace App\Models{
@@ -181,8 +186,9 @@ namespace App\Models{
  * @method static \Illuminate\Database\Eloquent\Builder|NoAdjudication whereId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|NoAdjudication whereIsoWeekday($value)
  * @method static \Illuminate\Database\Eloquent\Builder|NoAdjudication whereUpdatedAt($value)
+ * @mixin \Eloquent
  */
-	class NoAdjudication extends \Eloquent {}
+	class IdeHelperNoAdjudication {}
 }
 
 namespace App\Models{
@@ -204,7 +210,7 @@ namespace App\Models{
  * @property \Illuminate\Support\Carbon|null $updated_at
  * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\PhasePowerData[] $phasePowerData
  * @property-read int|null $phase_power_data_count
- * @property-read Phase $previousPhase
+ * @property-read Phase|null $previousPhase
  * @method static \Database\Factories\PhaseFactory factory(...$parameters)
  * @method static \Illuminate\Database\Eloquent\Builder|Phase newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Phase newQuery()
@@ -222,8 +228,9 @@ namespace App\Models{
  * @method static \Illuminate\Database\Eloquent\Builder|Phase whereSvgWithOrders($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Phase whereType($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Phase whereUpdatedAt($value)
+ * @mixin \Eloquent
  */
-	class Phase extends \Eloquent {}
+	class IdeHelperPhase {}
 }
 
 namespace App\Models{
@@ -260,8 +267,9 @@ namespace App\Models{
  * @method static \Illuminate\Database\Eloquent\Builder|PhasePowerData whereSupplyCenterCount($value)
  * @method static \Illuminate\Database\Eloquent\Builder|PhasePowerData whereUnitCount($value)
  * @method static \Illuminate\Database\Eloquent\Builder|PhasePowerData whereUpdatedAt($value)
+ * @mixin \Eloquent
  */
-	class PhasePowerData extends \Eloquent {}
+	class IdeHelperPhasePowerData {}
 }
 
 namespace App\Models{
@@ -291,8 +299,9 @@ namespace App\Models{
  * @method static \Illuminate\Database\Eloquent\Builder|Power whereIsWinner($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Power whereUpdatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Power whereUserId($value)
+ * @mixin \Eloquent
  */
-	class Power extends \Eloquent {}
+	class IdeHelperPower {}
 }
 
 namespace App\Models{
@@ -332,8 +341,9 @@ namespace App\Models{
  * @method static \Illuminate\Database\Eloquent\Builder|User whereTwoFactorRecoveryCodes($value)
  * @method static \Illuminate\Database\Eloquent\Builder|User whereTwoFactorSecret($value)
  * @method static \Illuminate\Database\Eloquent\Builder|User whereUpdatedAt($value)
+ * @mixin \Eloquent
  */
-	class User extends \Eloquent {}
+	class IdeHelperUser {}
 }
 
 namespace App\Models{
@@ -360,7 +370,8 @@ namespace App\Models{
  * @method static \Illuminate\Database\Eloquent\Builder|Variant whereName($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Variant whereTotalScs($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Variant whereUpdatedAt($value)
+ * @mixin \Eloquent
  */
-	class Variant extends \Eloquent {}
+	class IdeHelperVariant {}
 }
 
