@@ -19,7 +19,8 @@
         "lorisleiva/laravel-actions": "^2.3",
         "psr/log": "^1.0",
         "sammyjo20/saloon-laravel": "^0.8.0",
-        "spatie/data-transfer-object": "^3.7"
+        "spatie/data-transfer-object": "^3.7",
+        "spatie/laravel-google-fonts": "^1.1"
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "^3.6",
@@ -44,7 +45,7 @@
             "Database\\Seeders\\": "database/seeders/"
         },
         "files": [
-            "app/Helpers/storage_asset.php"
+          "app/Helpers/helpers.php"
         ]
     },
     "autoload-dev": {
