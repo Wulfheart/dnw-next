@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Actions\Game\InitializeGameAction;
 use App\Jobs\AdjudicateGameJob;
 use App\Jobs\InitializeGameJob;
 use App\Models\BasePower;
@@ -56,7 +57,7 @@ class GameRecreatorSeeder extends Seeder
                 'game_id' => $game->id,
                 'user_id' => User::factory()->create()->id
             ]));
-            dispatch_sync(new InitializeGameJob($game->id));
+            InitializeGameAction::run($game->id, false);
             $game->currentPhase()->update(['created_at' => $basetime->subDays($file_count)]);
 
 

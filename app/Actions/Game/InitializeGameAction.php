@@ -2,6 +2,7 @@
 
 namespace App\Actions\Game;
 
+use App\Enums\PhaseTypeEnum;
 use App\Models\Game;
 use App\Models\MessageRoom;
 use App\Models\Phase;
@@ -41,13 +42,7 @@ class InitializeGameAction
                 'number' => 0,
                 'phase_name_long' => $gameResponse->phase_long,
                 'phase_name_short' => $gameResponse->phase_short,
-                'type' => match($gameResponse->phase_type) {
-                    // TODO: Backed enum
-                    'M' => 'MOVEMENT',
-                    'A' => 'ADJUSTMENT',
-                    'R' => 'RETREAT',
-                    '-' => 'NON_PLAYING'
-                },
+                'type' => PhaseTypeEnum::from($gameResponse->phase_type),
                 'state_encoded' => $gameResponse->current_state_encoded,
                 'svg_adjudicated' => $path,
                 'game_id' => $game->id,

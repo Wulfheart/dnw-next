@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Enums\PhaseTypeEnum;
 use App\Models\Game;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Str;
@@ -24,7 +25,7 @@ class PhaseFactory extends Factory
     public function definition()
     {
         return [
-            'type' => $this->faker->randomElement(["MOVE","ADJUSTMENT","RETREAT","NON_PLAYING"]),
+            'type' => $this->faker->randomElement(PhaseTypeEnum::cases()),
             'number' => $this->faker->randomNumber(),
             'svg_adjudicated' => $this->faker->text,
             'svg_with_orders' => $this->faker->text,

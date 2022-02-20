@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Enums\PhaseTypeEnum;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
@@ -43,6 +44,7 @@ class Phase extends Model
         'previous_phase_id' => 'integer',
         'game_id' => 'integer',
         'adjudication_at' => 'datetime',
+        'type' => PhaseTypeEnum::class,
     ];
 
 

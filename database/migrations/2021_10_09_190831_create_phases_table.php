@@ -17,7 +17,7 @@ class CreatePhasesTable extends Migration
 
         Schema::create('phases', function (Blueprint $table) {
             $table->id();
-            $table->enum('type', ["MOVEMENT","ADJUSTMENT","RETREAT","NON_PLAYING"]);
+            $table->string('type');
             $table->unsignedInteger('number');
             $table->foreignId('game_id')->constrained('games');
             $table->string('svg_adjudicated');
