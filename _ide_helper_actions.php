@@ -3,15 +3,15 @@
 namespace App\Actions\Game;
 
 /**
- * @method static \Lorisleiva\Actions\Decorators\JobDecorator|\Lorisleiva\Actions\Decorators\UniqueJobDecorator makeJob(int $game_id, bool $save_response)
- * @method static \Lorisleiva\Actions\Decorators\UniqueJobDecorator makeUniqueJob(int $game_id, bool $save_response)
- * @method static \Illuminate\Foundation\Bus\PendingDispatch dispatch(int $game_id, bool $save_response)
- * @method static \Illuminate\Foundation\Bus\PendingDispatch|\Illuminate\Support\Fluent dispatchIf(bool $boolean, int $game_id, bool $save_response)
- * @method static \Illuminate\Foundation\Bus\PendingDispatch|\Illuminate\Support\Fluent dispatchUnless(bool $boolean, int $game_id, bool $save_response)
- * @method static dispatchSync(int $game_id, bool $save_response)
- * @method static dispatchNow(int $game_id, bool $save_response)
- * @method static dispatchAfterResponse(int $game_id, bool $save_response)
- * @method static mixed run(int $game_id, bool $save_response)
+ * @method static \Lorisleiva\Actions\Decorators\JobDecorator|\Lorisleiva\Actions\Decorators\UniqueJobDecorator makeJob(int $game_id, bool $save_response = false)
+ * @method static \Lorisleiva\Actions\Decorators\UniqueJobDecorator makeUniqueJob(int $game_id, bool $save_response = false)
+ * @method static \Illuminate\Foundation\Bus\PendingDispatch dispatch(int $game_id, bool $save_response = false)
+ * @method static \Illuminate\Foundation\Bus\PendingDispatch|\Illuminate\Support\Fluent dispatchIf(bool $boolean, int $game_id, bool $save_response = false)
+ * @method static \Illuminate\Foundation\Bus\PendingDispatch|\Illuminate\Support\Fluent dispatchUnless(bool $boolean, int $game_id, bool $save_response = false)
+ * @method static dispatchSync(int $game_id, bool $save_response = false)
+ * @method static dispatchNow(int $game_id, bool $save_response = false)
+ * @method static dispatchAfterResponse(int $game_id, bool $save_response = false)
+ * @method static mixed run(int $game_id, bool $save_response = false)
  */
 class AdjudicateGameAction
 {

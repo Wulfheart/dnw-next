@@ -23,7 +23,7 @@ class AdjudicateGameAction
 
     public function __construct(public AdjudicatorService $adjudicator){}
 
-    public function handle(int $game_id, bool $save_response)
+    public function handle(int $game_id, bool $save_response = false)
     {
         $adjudicator = $this->adjudicator;
         DB::transaction(function() use ($adjudicator, $game_id, $save_response){

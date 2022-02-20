@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Actions\Game\InitializeGameAction;
 use App\Jobs\AdjudicateGameJob;
 use App\Jobs\InitializeGameJob;
 use App\Models\BasePower;
@@ -43,7 +44,7 @@ class GameSeeder extends Seeder
             $powers->each(fn(Power $p) => $p->update(['user_id' => User::factory()->create()->id]));
 
 
-            dispatch_sync(new InitializeGameJob($game->id));
+            InitializeGameAction::run($game->id);
         }
 
     }

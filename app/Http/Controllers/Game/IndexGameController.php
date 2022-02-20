@@ -14,11 +14,14 @@ class IndexGameController extends Controller
     {
         $preview = collect([
             'player' => Game::whereUserIsMember(auth()->user()),
-            'new' => Game::whereNew(),
+            'new' => Game::whereNew()->with([
+                'powers' => fn($b) => $b->whereNotNull('user_id'),
+                'variant.basePowers'
+            ]),
             'finished' => Game::whereFinished(),
             'active' => Game::whereActive()
         ])->map(fn(Builder $builder) =>
-            $builder->with('currentPhase.phasePowerData.power.basePower')->limit(5)->get()
+            $builder->with(['currentPhase.phasePowerData.power.basePower'])->limit(5)->get()
         );
 
         return view('game.index', [
