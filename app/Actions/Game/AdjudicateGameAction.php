@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Jobs;
+namespace App\Actions\Game;
 
 use App\Enums\PhaseTypeEnum;
 use App\Models\Game;
@@ -11,43 +11,24 @@ use App\Utility\Game\AdjudicatorService;
 use App\Utility\Game\DTO\AdjudicateGameRequestDTO;
 use App\Utility\Game\DTO\OrderDTO;
 use App\Utility\Game\DTO\PhasePowerDataDTO;
-use Illuminate\Bus\Queueable;
-use Illuminate\Contracts\Queue\ShouldBeUnique;
-use Illuminate\Contracts\Queue\ShouldQueue;
-use Illuminate\Foundation\Bus\Dispatchable;
-use Illuminate\Queue\InteractsWithQueue;
-use Illuminate\Queue\SerializesModels;
 use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
-use Illuminate\Testing\Fluent\Concerns\Has;
+use Lorisleiva\Actions\Concerns\AsAction;
 use Ramsey\Uuid\Uuid;
 
-class AdjudicateGameJob implements ShouldQueue
+class AdjudicateGameAction
 {
-    use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
+    use AsAction;
 
-    /**
-     * Create a new job instance.
-     *
-     * @return void
-     */
-    public function __construct(
-        public int $game_id,
-        public bool $save_response = false,
-    ) {
-    }
+    public function __construct(public AdjudicatorService $adjudicator){}
 
-
-    /**
-     * @throws \Throwable
-     */
-    public function handle(AdjudicatorService $adjudicator)
+    public function handle(int $game_id, bool $save_response)
     {
-        DB::transaction(function() use ($adjudicator){
+        $adjudicator = $this->adjudicator;
+        DB::transaction(function() use ($adjudicator, $game_id, $save_response){
             /** @var Game $game */
-            $game = Game::with(['variant', 'powers.basePower', 'currentPhase.phasePowerData.power.basePower'])->findOrFail($this->game_id);
+            $game = Game::with(['variant', 'powers.basePower', 'currentPhase.phasePowerData.power.basePower'])->findOrFail($game_id);
             $currentPhase = $game->currentPhase;
 
 
@@ -62,7 +43,7 @@ class AdjudicateGameJob implements ShouldQueue
                 scs_to_win: $game->scs_to_win,
             ));
 
-            if($this->save_response){
+            if($save_response){
                 Storage::drive('gamedata')->put(Str::of($game->name . $game->id)->remove(" ")->lower() . "/{$game->phases()->count()}_{$gameResponse->phase_short}.json", $gameResponse->json);
             }
 
@@ -126,6 +107,5 @@ class AdjudicateGameJob implements ShouldQueue
             $game->powers->filter(fn(Power $p) => collect($gameResponse->winners)->contains($p->basePower->api_name))
                 ->each(fn(Power $p) => $p->update(['is_winner' => true]));
         });
-
     }
 }
