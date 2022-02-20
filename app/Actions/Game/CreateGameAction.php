@@ -65,11 +65,15 @@ class CreateGameAction
     public function asCommand(Command $command): void
     {
         $name = $command->ask("Name of the game");
+
         $variantName = $command->choice("Variant", Variant::all()->pluck('name')->toArray(), 0);
         $variant_id = Variant::where('name', $variantName)->firstOrFail()->id;
-        $phaseLength = (int) $command->ask("Phase length");
-        $command->choice('User', User::all()->pluck('name')->toArray(), 0);
 
-        // $this->handle()
+        $phaseLength = (int) $command->ask("Phase length");
+
+        $username = $command->choice('User', User::all()->pluck('name')->toArray(), 0);
+        $user = User::where('name', $username)->firstOrFail();
+
+        $this->handle($user, $name, $phaseLength, $variant_id, [], false);
     }
 }

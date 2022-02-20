@@ -21,6 +21,7 @@ class Phase extends Model
      */
     protected $fillable = [
         'type',
+        'number',
         'previous_phase_id',
         'game_id',
         'svg_adjudicated',

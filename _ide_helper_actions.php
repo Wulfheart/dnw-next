@@ -3,15 +3,15 @@
 namespace App\Actions\Game;
 
 /**
- * @method static \Lorisleiva\Actions\Decorators\JobDecorator|\Lorisleiva\Actions\Decorators\UniqueJobDecorator makeJob()
- * @method static \Lorisleiva\Actions\Decorators\UniqueJobDecorator makeUniqueJob()
- * @method static \Illuminate\Foundation\Bus\PendingDispatch dispatch()
- * @method static \Illuminate\Foundation\Bus\PendingDispatch|\Illuminate\Support\Fluent dispatchIf(bool $boolean)
- * @method static \Illuminate\Foundation\Bus\PendingDispatch|\Illuminate\Support\Fluent dispatchUnless(bool $boolean)
- * @method static void dispatchSync()
- * @method static void dispatchNow()
- * @method static void dispatchAfterResponse()
- * @method static mixed run()
+ * @method static \Lorisleiva\Actions\Decorators\JobDecorator|\Lorisleiva\Actions\Decorators\UniqueJobDecorator makeJob(\App\Models\User $user, string $name, int $phase_length, int $variant_id, array $no_adjudication, bool $async)
+ * @method static \Lorisleiva\Actions\Decorators\UniqueJobDecorator makeUniqueJob(\App\Models\User $user, string $name, int $phase_length, int $variant_id, array $no_adjudication, bool $async)
+ * @method static \Illuminate\Foundation\Bus\PendingDispatch dispatch(\App\Models\User $user, string $name, int $phase_length, int $variant_id, array $no_adjudication, bool $async)
+ * @method static \Illuminate\Foundation\Bus\PendingDispatch|\Illuminate\Support\Fluent dispatchIf(bool $boolean, \App\Models\User $user, string $name, int $phase_length, int $variant_id, array $no_adjudication, bool $async)
+ * @method static \Illuminate\Foundation\Bus\PendingDispatch|\Illuminate\Support\Fluent dispatchUnless(bool $boolean, \App\Models\User $user, string $name, int $phase_length, int $variant_id, array $no_adjudication, bool $async)
+ * @method static void dispatchSync(\App\Models\User $user, string $name, int $phase_length, int $variant_id, array $no_adjudication, bool $async)
+ * @method static void dispatchNow(\App\Models\User $user, string $name, int $phase_length, int $variant_id, array $no_adjudication, bool $async)
+ * @method static void dispatchAfterResponse(\App\Models\User $user, string $name, int $phase_length, int $variant_id, array $no_adjudication, bool $async)
+ * @method static \App\Models\Game run(\App\Models\User $user, string $name, int $phase_length, int $variant_id, array $no_adjudication, bool $async)
  */
 class CreateGameAction
 {

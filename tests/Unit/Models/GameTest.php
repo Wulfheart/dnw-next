@@ -11,7 +11,7 @@ it('can get retrieve the current phase as relationship', function(){
     $phase = null;
     for($i = 0; $i < 3; $i++){
         $phase = \App\Models\Phase::factory()->create([
-            'previous_phase_id' => $phase?->id,
+            'number' => $i,
             'game_id' => $game->id,
             'adjudicated_at' => now()->subYear()->addDays($i),
         ]);

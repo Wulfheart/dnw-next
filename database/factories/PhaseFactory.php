@@ -25,7 +25,7 @@ class PhaseFactory extends Factory
     {
         return [
             'type' => $this->faker->randomElement(["MOVE","ADJUSTMENT","RETREAT","NON_PLAYING"]),
-            'previous_phase_id' => Phase::factory(),
+            'number' => $this->faker->randomNumber(),
             'svg_adjudicated' => $this->faker->text,
             'svg_with_orders' => $this->faker->text,
             'state_encoded' => $this->faker->text,

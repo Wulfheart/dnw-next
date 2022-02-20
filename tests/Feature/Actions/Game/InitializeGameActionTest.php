@@ -1,6 +1,6 @@
 <?php
 
-use App\Jobs\InitializeGameJob;
+use App\Actions\Game\InitializeGameAction;
 use App\Models\BasePower;
 use App\Models\Game;
 use App\Models\Phase;
@@ -10,7 +10,7 @@ use App\Models\Variant;
 use Database\Seeders\VariantSeeder;
 use function Pest\Laravel\assertDatabaseCount;
 
-it('initializes the game correctly', function(){
+it('initializes the game correctly', function() {
     $this->seed(VariantSeeder::class);
     $game = Game::factory()->create([
         'variant_id' => Variant::first()->id,
@@ -25,7 +25,7 @@ it('initializes the game correctly', function(){
     assertDatabaseCount(PhasePowerData::class, 0);
     assertDatabaseCount(Phase::class, 0);
 
-    dispatch_sync(new InitializeGameJob($game->id));
+    InitializeGameAction::run($game->id, false);
 
     assertDatabaseCount(Phase::class, 1);
     assertDatabaseCount(PhasePowerData::class, 7);
