@@ -18,7 +18,7 @@ class IndexGameController extends Controller
                 'powers' => fn($b) => $b->whereNotNull('user_id'),
                 'variant.basePowers'
             ])->limit(3),
-            'finished' => Game::whereFinished()->limit(4),
+            'finished' => Game::whereFinished()->limit(4)->with('winners'),
             'active' => Game::whereActive()->limit(4),
         ])->map(fn(Builder $builder) =>
             $builder->with(['currentPhase.phasePowerData.power.basePower'])->get()

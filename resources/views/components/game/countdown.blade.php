@@ -1,7 +1,8 @@
-@props(['iso_datetime'])
+@props(['isoDatetime'])
 
-{{--<span x-data="{--}}
-{{--    left: '',--}}
-{{--}" x-init="$interval(() => {left = DateTime.fromISO('{{ now()->addSeconds(30)->toIso8601String() }}')}, 1000)" x-text="left"></span>--}}
-
-{{--<div x-init="$interval(() => console.log('Hello World'), 1000)"></div>--}}
+<span x-data="{
+    left: '',
+}" x-init="$nextTick(() => {
+    left = window.relativeTimeLeft('{{ $isoDatetime }}');
+    $interval(() => {left = window.relativeTimeLeft('{{ $isoDatetime }}')}, 1000)
+})" x-text="left"></span>
