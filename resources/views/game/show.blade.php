@@ -1,9 +1,11 @@
 <x-app-layout>
     <x-container x-data="{ current: 0, max_index: {{ $phases->count() - 1 }}}">
         <h2 class="text-2xl font-bold leading-7 text-gray-900 sm:text-3xl sm:truncate">
-            Kriegsspiele
+            {{ $game->name }}
         </h2>
-        <div class="mt-1 flex flex-col sm:flex-row sm:flex-wrap sm:mt-0 sm:space-x-6">
+        <div class="mt-1 flex flex-col sm:flex-row sm:flex-wrap sm:mt-0 sm:space-x-6 sm:justify-between items-baseline">
+            <div class="flex flex-row space-x-6 ">
+
             <div class="mt-2 flex items-center text-sm text-gray-500">
                 <x-ri-treasure-map-line class="flex-shrink-0 mr-1.5 h-5 w-5 text-gray-400 fill-current"/>
                 {{ $game->variant->name }}
@@ -12,15 +14,19 @@
                 <x-ri-focus-line class="flex-shrink-0 mr-1.5 h-5 w-5 text-gray-400 fill-current"/>
                 {{ $game->currentPhase->phase_name_long }}
             </div>
+            </div>
+            <div class="text-sm text-gray-500">
+                <x-game.countdown :isoDatetime="now()->addSeconds(45)->toIso8601String()"/>
+            </div>
         </div>
 
 
         <x-tabs distribute>
-            <a href="">
-                <x-tabs.item>Map</x-tabs.item>
+            <a href="{{ route('games.show', $game) }}">
+                <x-tabs.item :active="true">Map</x-tabs.item>
             </a>
-            <a href="">
-                <x-tabs.item>Messages</x-tabs.item>
+            <a href="{{ route('games.show.messages.index', $game) }}">
+                <x-tabs.item >Messages</x-tabs.item>
             </a>
 
         </x-tabs>

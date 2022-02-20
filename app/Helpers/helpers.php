@@ -9,6 +9,6 @@ if(!function_exists('storage_asset')){
 }
 if(!function_exists('humanize_minutes')){
     function humanize_minutes(int $m): string {
-        return CarbonInterval::minutes($m)->cascade()->forHumans();
+        return CarbonInterval::minutes($m)->cascade()->forHumans(['short' => true]);
     }
 }

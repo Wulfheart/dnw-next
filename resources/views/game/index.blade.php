@@ -17,15 +17,7 @@
                     </div>
                     <?php /** @var \App\Models\Game $game */ ?>
                     @foreach($preview['new'] as $game)
-                        <x-game.preview :name="$game->name" :link="route('games.show', $game)"
-                                        :bg="storage_asset($game->currentPhase->svg_adjudicated)">
-                            <x-slot name="left">
-                                {{ $game->powers->count() }}/{{$game->variant->basePowers->count()}} Spieler
-                            </x-slot>
-                            <x-slot name="right">
-                                {{ humanize_minutes($game->phase_length) }}
-                            </x-slot>
-                        </x-game.preview>
+                        <x-game.preview.new :game="$game"/>
                     @endforeach
                 </div>
             </div>
@@ -36,15 +28,7 @@
                 <div class="grid grid-cols-4 gap-10 min-h-[12.5rem]">
                     <?php /** @var \App\Models\Game $game */ ?>
                     @forelse($preview['player'] as $game)
-                        <x-game.preview :name="$game->name" :link="route('games.show', $game)"
-                                        :bg="storage_asset($game->currentPhase->svg_adjudicated)">
-                            <x-slot name="left">
-
-                            </x-slot>
-                            <x-slot name="right">
-
-                            </x-slot>
-                        </x-game.preview>
+                        <x-game.preview.player :game="$game"/>
                     @empty
                         <x-game.empty-category />
                     @endforelse
@@ -57,15 +41,7 @@
                 <div class="grid grid-cols-4 gap-10 min-h-[12.5rem]">
                     <?php /** @var \App\Models\Game $game */ ?>
                     @forelse($preview['active'] as $game)
-                        <x-game.preview :name="$game->name" :link="route('games.show', $game)"
-                                        :bg="storage_asset($game->currentPhase->svg_adjudicated)">
-                            <x-slot name="left">
-                                {{ $game->currentPhase->phase_name_short }}
-                            </x-slot>
-                            <x-slot name="right">
-                                <x-game.countdown :isoDatetime="$game->currentPhase->adjudication_at?->toIso8601String()"/>
-                            </x-slot>
-                        </x-game.preview>
+                        <x-game.preview.active :game="$game"/>
                     @empty
                         <x-game.empty-category />
                     @endforelse
@@ -78,15 +54,7 @@
                 <div class="grid grid-cols-4 gap-10 min-h-[12.5rem]">
                     <?php /** @var \App\Models\Game $game */ ?>
                     @forelse($preview['finished'] as $game)
-                        <x-game.preview :name="$game->name" :link="route('games.show', $game)"
-                                        :bg="storage_asset($game->currentPhase->svg_adjudicated)">
-                            <x-slot name="left">
-
-                            </x-slot>
-                            <x-slot name="right">
-
-                            </x-slot>
-                        </x-game.preview>
+                        <x-game.preview.finished :game="$game"/>
                     @empty
                         <x-game.empty-category />
                     @endforelse
