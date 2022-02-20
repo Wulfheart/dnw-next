@@ -25,7 +25,7 @@ it('initializes the game correctly', function() {
     assertDatabaseCount(PhasePowerData::class, 0);
     assertDatabaseCount(Phase::class, 0);
 
-    InitializeGameAction::run($game->id, false);
+    InitializeGameAction::run($game->id);
 
     assertDatabaseCount(Phase::class, 1);
     assertDatabaseCount(PhasePowerData::class, 7);
