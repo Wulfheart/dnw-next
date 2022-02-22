@@ -2,6 +2,8 @@
 
 namespace App\Console\Commands;
 
+use App\Actions\Game\AdjudicateGameAction;
+use App\Actions\Game\InitializeGameAction;
 use App\Jobs\AdjudicateGameJob;
 use App\Jobs\InitializeGameJob;
 use App\Models\BasePower;
@@ -42,21 +44,21 @@ class SimulateGameCommand extends Command
         ]);
 
         $game->load('variant.basePowers');
-        $game->variant->basePowers()->each(fn (BasePower $b) => Power::create([
+        $game->variant->basePowers()->each(fn(BasePower $b) => Power::create([
             'base_power_id' => $b->id,
             'game_id' => $game->id,
         ]));
-        dispatch_sync(new InitializeGameJob($game->id, true));
+        InitializeGameAction::run($game->id, true);
         $this->info("Finished game id $game->id setup");
 
         $bar = $this->output->createProgressBar($this->option('phases'));
 
         $bar->start();
-        for($i = 0; $i < $this->option('phases'); $i++){
+        for ($i = 0; $i < $this->option('phases'); $i++) {
             $game->load('currentPhase.phasePowerData.power.basePower');
 
             /** @var \App\Models\PhasePowerData $phasePowerData */
-            foreach ($game->currentPhase->phasePowerData as $phasePowerData){
+            foreach ($game->currentPhase->phasePowerData as $phasePowerData) {
                 $res = $adjudicator->getDumbbotOrders(new DumbbotRequestDTO(
                     current_state_encoded: $game->currentPhase->state_encoded,
                     power: $phasePowerData->power->basePower->api_name,
@@ -64,7 +66,7 @@ class SimulateGameCommand extends Command
                 $phasePowerData->orders = collect($res->orders)->implode("\n");
                 $phasePowerData->save();
             }
-            dispatch_sync(new AdjudicateGameJob($game->id, true));
+            AdjudicateGameAction::run($game->id, true);
             $bar->advance();
         }
         $bar->finish();
