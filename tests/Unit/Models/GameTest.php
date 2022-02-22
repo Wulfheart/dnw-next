@@ -23,3 +23,7 @@ it('can get retrieve the current phase as relationship', function(){
     assertNotNull($game->currentPhase);
     assertEquals($phase->id,$game->currentPhase->id);
 });
+
+it('evaluates the correct game state', function(){
+
+})->skip(true, 'TODO');

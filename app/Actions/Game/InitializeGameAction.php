@@ -20,21 +20,24 @@ class InitializeGameAction
 {
     use AsAction;
 
-    public function __construct(public AdjudicatorService $adjudicator){}
+    public function __construct(public AdjudicatorService $adjudicator)
+    {
+    }
 
     public function handle(int $game_id, bool $save_response = false)
     {
         $adjudicator = $this->adjudicator;
-        DB::transaction(function() use ($adjudicator, $game_id, $save_response) {
+        DB::transaction(function () use ($adjudicator, $game_id, $save_response) {
             /** @var Game $game */
             $game = Game::with(['variant', 'powers.basePower'])->findOrFail($game_id);
             $gameResponse = $adjudicator->initializeGame($game->variant->api_name);
 
-            if($save_response){
-                Storage::drive('gamedata')->put(Str::of($game->name . $game->id)->remove(" ")->lower() .  "/0_{$gameResponse->phase_short}.json", $gameResponse->json);
+            if ($save_response) {
+                Storage::drive('gamedata')->put(Str::of($game->name.$game->id)->remove(" ")->lower()."/0_{$gameResponse->phase_short}.json",
+                    $gameResponse->json);
             }
 
-            $path = "maps/". Uuid::uuid4() .".svg";
+            $path = "maps/".Uuid::uuid4().".svg";
             Storage::drive('public')->put($path, $gameResponse->svg_adjudicated);
 
             $phase = Phase::create([
@@ -49,7 +52,7 @@ class InitializeGameAction
             ]);
 
             /** @var Power $power */
-            foreach ($game->powers as $power){
+            foreach ($game->powers as $power) {
                 /** @var \App\Utility\Game\DTO\PhasePowerDataDTO $ppd */
                 $ppd = $gameResponse->phase_power_data->filter(
                     fn(PhasePowerDataDTO $item) => $item->power == $power->basePower->api_name
@@ -80,15 +83,15 @@ class InitializeGameAction
 
 
             $c = $game->powers->count();
-            for($i = 0; $i < $c; $i++){
+            for ($i = 0; $i < $c; $i++) {
                 /** @var \App\Models\Power $power_1 */
                 $power_1 = $game->powers->get($i);
-                for($j = $i; $j < $c; $j++){
-                    if($i != $j){
+                for ($j = $i; $j < $c; $j++) {
+                    if ($i != $j) {
                         /** @var Power $power_2 */
                         $power_2 = $game->powers->get($j);
                         MessageRoom::create([
-                            'name' => $power_1->basePower->name . $power_2->basePower->name,
+                            'name' => $power_1->basePower->name.$power_2->basePower->name,
                             'is_group' => false,
                         ])->memberships()->createMany([
                             ['power_id' => $power_1->id],

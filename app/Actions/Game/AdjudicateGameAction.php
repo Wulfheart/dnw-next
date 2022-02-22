@@ -2,7 +2,7 @@
 
 namespace App\Actions\Game;
 
-use App\Enums\PhaseTypeEnum;
+use App\Enums\GameStatusEnum;
 use App\Models\Game;
 use App\Models\Phase;
 use App\Models\PhasePowerData;
@@ -21,14 +21,18 @@ class AdjudicateGameAction
 {
     use AsAction;
 
-    public function __construct(public AdjudicatorService $adjudicator){}
+    public function __construct(public AdjudicatorService $adjudicator)
+    {
+    }
 
     public function handle(int $game_id, bool $save_response = false)
     {
         $adjudicator = $this->adjudicator;
-        DB::transaction(function() use ($adjudicator, $game_id, $save_response){
+        DB::transaction(function () use ($adjudicator, $game_id, $save_response) {
             /** @var Game $game */
-            $game = Game::with(['variant', 'powers.basePower', 'currentPhase.phasePowerData.power.basePower'])->findOrFail($game_id);
+            $game = Game::with([
+                'variant', 'powers.basePower', 'currentPhase.phasePowerData.power.basePower',
+            ])->findOrFail($game_id);
             $currentPhase = $game->currentPhase;
 
 
@@ -43,19 +47,20 @@ class AdjudicateGameAction
                 scs_to_win: $game->scs_to_win,
             ));
 
-            if($save_response){
-                Storage::drive('gamedata')->put(Str::of($game->name . $game->id)->remove(" ")->lower() . "/{$game->phases()->count()}_{$gameResponse->phase_short}.json", $gameResponse->json);
+            if ($save_response) {
+                Storage::drive('gamedata')->put(Str::of($game->name.$game->id)->remove(" ")->lower()."/{$game->phases()->count()}_{$gameResponse->phase_short}.json",
+                    $gameResponse->json);
             }
 
 
-            $path = "maps/". Uuid::uuid4() .".svg";
+            $path = "maps/".Uuid::uuid4().".svg";
             Storage::drive('public')->put($path, $gameResponse->svg_with_orders);
 
             $currentPhase->update([
-                'svg_with_orders' => $path
+                'svg_with_orders' => $path,
             ]);
 
-            foreach ($gameResponse->applied_orders as $applied_order){
+            foreach ($gameResponse->applied_orders as $applied_order) {
                 PhasePowerData::where('phase_id', $currentPhase->id)
                     ->where('power_id', $game->powers->filter(
                         fn(Power $power) => $power->basePower->api_name == $applied_order->power
@@ -64,7 +69,7 @@ class AdjudicateGameAction
             }
 
 
-            $path = "maps/". Uuid::uuid4() .".svg";
+            $path = "maps/".Uuid::uuid4().".svg";
             Storage::drive('public')->put($path, $gameResponse->svg_adjudicated);
 
             $newPhase = Phase::create([
@@ -74,12 +79,12 @@ class AdjudicateGameAction
                 'adjudicated_at' => now(),
                 'phase_name_long' => Str::of($gameResponse->phase_long)->contains('?') ? $gameResponse->phase_short : $gameResponse->phase_long,
                 'phase_name_short' => $gameResponse->phase_short,
-                'type' => PhaseTypeEnum::from($gameResponse->phase_type),
+                'type' => GameStatusEnum::from($gameResponse->phase_type),
                 'svg_adjudicated' => $path,
             ]);
 
             /** @var Power $power */
-            foreach ($game->powers as $power){
+            foreach ($game->powers as $power) {
                 /** @var \App\Utility\Game\DTO\PhasePowerDataDTO $ppd */
                 $ppd = $gameResponse->phase_power_data->filter(
                     fn(PhasePowerDataDTO $item) => $item->power == $power->basePower->api_name
@@ -99,7 +104,7 @@ class AdjudicateGameAction
                     'orders_needed' => $orders_needed,
                 ]);
 
-                if($phasePowerData->supply_center_count + $phasePowerData->unit_count === 0){
+                if ($phasePowerData->supply_center_count + $phasePowerData->unit_count === 0) {
                     $power->update(['is_defeated' => true]);
                 }
             }

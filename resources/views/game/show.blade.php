@@ -72,7 +72,7 @@
                 <li class="grid grid-cols-3 py-4">
                     <div style="color:{{ $phasePowerData->power->basePower->color }}" class="font-medium">
                         {{ $phasePowerData->power->basePower->name }}</div>
-                    <div>{{ $phasePowerData->power->user->name }}</div>
+                    <div>{{ $phasePowerData->power->user?->name }}</div>
                     <div class="grid place-items-end italic text-sm">{{ $phasePowerData->supply_center_count }} VZs,
                         {{ $phasePowerData->unit_count }} Einheiten</div>
                 </li>

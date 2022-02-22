@@ -3,10 +3,12 @@
 namespace App\Models;
 
 use App\Builders\GameBuilder;
+use App\Enums\GameStatusEnum;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\HasManyThrough;
 use Illuminate\Database\Eloquent\Relations\HasOne;
 
 /**
@@ -81,7 +83,21 @@ class Game extends Model
         return $this->hasMany(Power::class)->where('is_winner');
     }
 
-    public function phasePowerData(){
+    public function phasePowerData(): HasManyThrough
+    {
         return $this->hasManyThrough(PhasePowerData::class, Phase::class);
+    }
+
+    public function currentState(): GameStatusEnum{
+        $this->loadMissing(['winners', 'powers']);
+        if($this->winners->count() > 0){
+            return GameStatusEnum::FINISHED;
+        }
+
+        if($this->powers->whereNotNull('user_id')->count() < $this->powers->count()){
+            return GameStatusEnum::PREGAME;
+        }
+
+        return GameStatusEnum::RUNNING;
     }
 }
