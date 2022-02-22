@@ -2,19 +2,36 @@
 
 namespace App\Http\Controllers\Game;
 
+use App\Actions\Game\SubmitOrdersAction;
 use App\Http\Controllers\Controller;
+use App\Http\Requests\SubmitOrdersRequest;
+use App\Models\Game;
+use App\Models\PhasePowerData;
 use Illuminate\Http\Request;
 
 class SubmitOrdersController extends Controller
 {
-    /**
-     * Handle the incoming request.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function __invoke(Request $request)
+    public function __invoke(SubmitOrdersRequest $request, Game $game)
     {
-        //
+        $this->authorize('submitOrders', $game);
+
+        $orders = $request->get('orders');
+        $ready = $request->boolean('ready');
+
+        $game->loadMissing('currentPhase.phasePowerData.power');
+
+        /** @var PhasePowerData $phasePowerData */
+        $phasePowerData = $game->currentPhase->phasePowerData
+            ->filter(
+                fn(PhasePowerData $phasePowerData) => $phasePowerData->power->user_id == auth()->user()->id
+            )
+            ->firstOrFail();
+
+        $phasePowerData->update([
+            'orders' => $orders,
+            'ready_for_adjudication' => $ready,
+        ]);
+
+        return redirect()->route('games.show', $game);
     }
 }

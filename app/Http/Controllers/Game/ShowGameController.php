@@ -6,6 +6,7 @@ use App\DTO\Views\PhaseDTO;
 use App\Http\Controllers\Controller;
 use App\Models\Game;
 use App\Models\Phase;
+use App\Models\PhasePowerData;
 use Illuminate\Http\Request;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Schema;
@@ -34,13 +35,16 @@ class ShowGameController extends Controller
             )
         )->flatMap(fn($values) => $values);
 
+        $user = auth()->user();
+
         return view('game.show', [
             'is_still_creating' => is_null($game->currentPhase),
             'phases' => $phases,
             'phase_keys' => $phases->keys(),
             'game' => $game,
             'gameState' => $game->currentState(),
-            'user' => auth()->user(),
+            'orders' => $game->currentPhase->phasePowerData->filter(fn(PhasePowerData $ppd) => $ppd->power->user_id == $user->id)->first()?->orders,
+            'user' => $user,
         ]);
 
     }

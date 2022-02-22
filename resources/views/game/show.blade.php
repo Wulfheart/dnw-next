@@ -20,28 +20,34 @@
             </div>
         </div>
 
-        @if($game->currentState() == \App\Enums\GameStatusEnum::PREGAME)
+        @if ($game->currentState() == \App\Enums\GameStatusEnum::PREGAME)
             <div class="sm:rounded-lg">
                 <div class="px-4 py-5 sm:p-6 sm:px-0">
                     <div class="sm:flex sm:items-start sm:justify-between">
                         <div>
                             <h3 class="text-lg leading-6 font-medium text-gray-900">
-                                {{ $game->powers->whereNotNull('user_id')->count() }}/{{ $game->variant->basePowers->count() }} Spieler
+                                {{ $game->powers->whereNotNull('user_id')->count() }}
+                                /{{ $game->variant->basePowers->count() }} Spieler
                             </h3>
                             <div class="mt-2 max-w-xl text-sm text-gray-500">
-                                <p>{{ $game->powers->whereNotNull('user_id')->transform(fn($power) => $power->user->name)->implode(', ') }}</p>
+                                <p>{{ $game->powers->whereNotNull('user_id')->transform(fn($power) => $power->user->name)->implode(', ') }}
+                                </p>
                             </div>
                         </div>
-                        @if($user->can('join', $game))
-                            <x-form :action="route('games.join', $game)" class="mt-5 sm:mt-0 sm:ml-6 sm:flex-shrink-0 sm:flex sm:items-center">
-                                <button type="submit" class="inline-flex items-center px-4 py-2 border border-transparent shadow-sm font-medium rounded-md text-white bg-primary-600 hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500 sm:text-sm">
+                        @if ($user->can('join', $game))
+                            <x-form :action="route('games.join', $game)"
+                                class="mt-5 sm:mt-0 sm:ml-6 sm:flex-shrink-0 sm:flex sm:items-center">
+                                <button type="submit"
+                                    class="inline-flex items-center px-4 py-2 border border-transparent shadow-sm font-medium rounded-md text-white bg-primary-600 hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500 sm:text-sm">
                                     Spiel beitreten
                                 </button>
                             </x-form>
                         @endif
-                        @if($user->can('leave', $game))
-                            <x-form :action="route('games.leave', $game)" class="mt-5 sm:mt-0 sm:ml-6 sm:flex-shrink-0 sm:flex sm:items-center">
-                                <button type="submit" class="inline-flex items-center px-4 py-2 border border-transparent shadow-sm font-medium rounded-md text-white bg-primary-600 hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500 sm:text-sm">
+                        @if ($user->can('leave', $game))
+                            <x-form :action="route('games.leave', $game)"
+                                class="mt-5 sm:mt-0 sm:ml-6 sm:flex-shrink-0 sm:flex sm:items-center">
+                                <button type="submit"
+                                    class="inline-flex items-center px-4 py-2 border border-transparent shadow-sm font-medium rounded-md text-white bg-primary-600 hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500 sm:text-sm">
                                     Spiel verlassen
                                 </button>
                             </x-form>
@@ -91,19 +97,43 @@
 
         @can('submitOrders', $game)
             <div class="mt-5">
-                <livewire:order-submission />
+                <x-form :action="route('games.orders.store', $game)">
+                    <label for="comment" class="block text-sm font-medium text-gray-700">Befehle</label>
+                    <div class="mt-1">
+                        <textarea rows="4" name="orders"
+                            class="shadow-sm focus:ring-primary-500 focus:border-primary-500 block w-full sm:text-sm border-gray-300 rounded-md">{{ $orders }}</textarea>
+                    </div>
+                    <div class="mt-2 flex justify-end space-x-4">
+                        <button type="submit" name="ready" value="0"
+                            class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-primary-600 hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500">
+                            Speichern
+                        </button>
+                        <button type="submit" name="ready" value="1"
+                            class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-primary-600 hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500">
+                            Fertig
+                        </button>
+                    </div>
+                </x-form>
+
             </div>
         @endcan
 
         @if ($gameState != \App\Enums\GameStatusEnum::PREGAME)
             <?php
-                /** @var \App\Models\PhasePowerData $phasePowerData */
+            /** @var \App\Models\PhasePowerData $phasePowerData */
             ?>
             <ul class="divide-y divide-gray-200 mt-6">
                 @foreach ($game->currentPhase->phasePowerData as $phasePowerData)
                     <li class="grid grid-cols-3 py-4">
-                        <div style="color:{{ $phasePowerData->power->basePower->color }}" class="font-medium">
-                            {{ $phasePowerData->power->basePower->name }}</div>
+                        <div class="font-medium flex flex-row items-center space-x-2">
+                            <span
+                                style="color:{{ $phasePowerData->power->basePower->color }}">{{ $phasePowerData->power->basePower->name }}</span>
+
+                            @isset($phasePowerData->orders)
+                                <x-heroicon-s-check-circle class="w-4 h-4 {{ $phasePowerData->ready_for_adjudication ? 'text-green-600' : 'text-gray-500' }}
+                                        " />
+                            @endisset
+                        </div>
                         <div>{{ $phasePowerData->power->user->name }}</div>
                         <div class="grid place-items-end italic text-sm">{{ $phasePowerData->supply_center_count }}
                             VZs,
