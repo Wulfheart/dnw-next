@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers\Game;
 
+use App\Actions\Game\JoinGameAction;
 use App\Http\Controllers\Controller;
 use App\Models\Game;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class JoinGameController extends Controller
@@ -15,9 +17,9 @@ class JoinGameController extends Controller
     {
         $this->authorize('join', $game);
 
-        $game->powers()->whereNull('user_id')->inRandomOrder()->first()->update(['user_id' => auth()->user()->id]);
+        JoinGameAction::run(auth()->user(), $game);
 
-        return redirect()->route('games.show', ['game' => $game]);
+        return redirect()->route('games.show', $game);
 
     }
 }

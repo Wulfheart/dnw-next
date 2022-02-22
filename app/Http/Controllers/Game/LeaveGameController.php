@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Game;
 
+use App\Actions\Game\LeaveGameAction;
 use App\Http\Controllers\Controller;
 use App\Models\Game;
 use Illuminate\Http\Request;
@@ -16,8 +17,8 @@ class LeaveGameController extends Controller
     {
         $this->authorize('leave', $game);
 
-        $game->powers()->where('user_id', auth()->user()->id)->update(['user_id' => null]);
+        LeaveGameAction::run(auth()->user(), $game);
 
-        return redirect();
+        return redirect()->route('games.show', $game);
     }
 }

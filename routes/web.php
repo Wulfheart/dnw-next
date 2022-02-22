@@ -1,7 +1,10 @@
 <?php
 
 use App\Actions\Game\CreateGameAction;
+use App\Actions\Game\JoinGameAction;
 use App\Http\Controllers\Game\IndexGameController;
+use App\Http\Controllers\Game\JoinGameController;
+use App\Http\Controllers\Game\LeaveGameController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -34,8 +37,10 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function(){
         Route::get('create', \App\Http\Controllers\Game\CreateGameController::class)->name('create');
         Route::get('/', IndexGameController::class)->name('index');
         Route::post('/', CreateGameAction::class)->name('store');
+        Route::post('/{game}/join', JoinGameController::class)->name('join');
+        Route::post('/{game}/leave', LeaveGameController::class)->name('leave');
         Route::get('/{game}', \App\Http\Controllers\Game\ShowGameController::class)->name('show');
-        Route::get('/{game}/messages')->name('show.messages.index');
-        Route::get('/{game}/messages/test')->name('show.messages.show');
+        // Route::get('/{game}/messages')->name('show.messages.index');
+        // Route::get('/{game}/messages/test')->name('show.messages.show');
     });
 });

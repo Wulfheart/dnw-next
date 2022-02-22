@@ -190,7 +190,7 @@ namespace App\Models{
  * App\Models\Phase
  *
  * @property int $id
- * @property \App\Enums\GameStatusEnum $type
+ * @property \App\Enums\PhaseTypeEnum $type
  * @property int $number
  * @property int $game_id
  * @property string $svg_adjudicated

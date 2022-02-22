@@ -44,6 +44,34 @@ class CreateGameAction
 class InitializeGameAction
 {
 }
+/**
+ * @method static \Lorisleiva\Actions\Decorators\JobDecorator|\Lorisleiva\Actions\Decorators\UniqueJobDecorator makeJob(\App\Models\User $user, \App\Models\Game $game)
+ * @method static \Lorisleiva\Actions\Decorators\UniqueJobDecorator makeUniqueJob(\App\Models\User $user, \App\Models\Game $game)
+ * @method static \Illuminate\Foundation\Bus\PendingDispatch dispatch(\App\Models\User $user, \App\Models\Game $game)
+ * @method static \Illuminate\Foundation\Bus\PendingDispatch|\Illuminate\Support\Fluent dispatchIf(bool $boolean, \App\Models\User $user, \App\Models\Game $game)
+ * @method static \Illuminate\Foundation\Bus\PendingDispatch|\Illuminate\Support\Fluent dispatchUnless(bool $boolean, \App\Models\User $user, \App\Models\Game $game)
+ * @method static dispatchSync(\App\Models\User $user, \App\Models\Game $game)
+ * @method static dispatchNow(\App\Models\User $user, \App\Models\Game $game)
+ * @method static dispatchAfterResponse(\App\Models\User $user, \App\Models\Game $game)
+ * @method static void run(\App\Models\User $user, \App\Models\Game $game)
+ */
+class JoinGameAction
+{
+}
+/**
+ * @method static \Lorisleiva\Actions\Decorators\JobDecorator|\Lorisleiva\Actions\Decorators\UniqueJobDecorator makeJob(\App\Models\User $user, \App\Models\Game $game)
+ * @method static \Lorisleiva\Actions\Decorators\UniqueJobDecorator makeUniqueJob(\App\Models\User $user, \App\Models\Game $game)
+ * @method static \Illuminate\Foundation\Bus\PendingDispatch dispatch(\App\Models\User $user, \App\Models\Game $game)
+ * @method static \Illuminate\Foundation\Bus\PendingDispatch|\Illuminate\Support\Fluent dispatchIf(bool $boolean, \App\Models\User $user, \App\Models\Game $game)
+ * @method static \Illuminate\Foundation\Bus\PendingDispatch|\Illuminate\Support\Fluent dispatchUnless(bool $boolean, \App\Models\User $user, \App\Models\Game $game)
+ * @method static dispatchSync(\App\Models\User $user, \App\Models\Game $game)
+ * @method static dispatchNow(\App\Models\User $user, \App\Models\Game $game)
+ * @method static dispatchAfterResponse(\App\Models\User $user, \App\Models\Game $game)
+ * @method static void run(\App\Models\User $user, \App\Models\Game $game)
+ */
+class LeaveGameAction
+{
+}
 namespace Lorisleiva\Actions\Concerns;
 
 /**

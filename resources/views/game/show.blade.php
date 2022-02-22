@@ -16,20 +16,50 @@
                 </div>
             </div>
             <div class="text-sm text-gray-500">
-                <x-game.countdown :isoDatetime="now()->addSeconds(45)->toIso8601String()" />
+                <x-game.countdown :isoDatetime="$game->currentPhase->adjudication_at?->toIso8601String()" />
             </div>
         </div>
 
+        @if($game->currentState() == \App\Enums\GameStatusEnum::PREGAME)
+            <div class="sm:rounded-lg">
+                <div class="px-4 py-5 sm:p-6 sm:px-0">
+                    <div class="sm:flex sm:items-start sm:justify-between">
+                        <div>
+                            <h3 class="text-lg leading-6 font-medium text-gray-900">
+                                {{ $game->powers->whereNotNull('user_id')->count() }}/{{ $game->variant->basePowers->count() }} Spieler
+                            </h3>
+                            <div class="mt-2 max-w-xl text-sm text-gray-500">
+                                <p>{{ $game->powers->whereNotNull('user_id')->transform(fn($power) => $power->user->name)->implode(', ') }}</p>
+                            </div>
+                        </div>
+                        @if($user->can('join', $game))
+                            <x-form :action="route('games.join', $game)" class="mt-5 sm:mt-0 sm:ml-6 sm:flex-shrink-0 sm:flex sm:items-center">
+                                <button type="submit" class="inline-flex items-center px-4 py-2 border border-transparent shadow-sm font-medium rounded-md text-white bg-primary-600 hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500 sm:text-sm">
+                                    Spiel beitreten
+                                </button>
+                            </x-form>
+                        @endif
+                        @if($user->can('leave', $game))
+                            <x-form :action="route('games.leave', $game)" class="mt-5 sm:mt-0 sm:ml-6 sm:flex-shrink-0 sm:flex sm:items-center">
+                                <button type="submit" class="inline-flex items-center px-4 py-2 border border-transparent shadow-sm font-medium rounded-md text-white bg-primary-600 hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500 sm:text-sm">
+                                    Spiel verlassen
+                                </button>
+                            </x-form>
+                        @endif
+                    </div>
+                </div>
+            </div>
+        @endif
 
-        <x-tabs distribute>
-            <a href="{{ route('games.show', $game) }}">
-                <x-tabs.item :active="true">Map</x-tabs.item>
-            </a>
-            <a href="{{ route('games.show.messages.index', $game) }}">
-                <x-tabs.item>Messages</x-tabs.item>
-            </a>
 
-        </x-tabs>
+        {{-- <x-tabs distribute> --}}
+        {{-- <a href="{{ route('games.show', $game) }}"> --}}
+        {{-- <x-tabs.item :active="true">Map</x-tabs.item> --}}
+        {{-- </a> --}}
+        {{-- <a href="{{ route('games.show.messages.index', $game) }}"> --}}
+        {{-- <x-tabs.item>Messages</x-tabs.item> --}}
+        {{-- </a> --}}
+        {{-- </x-tabs> --}}
 
 
         <div class="flex justify-center mt-5">
@@ -65,19 +95,24 @@
             </div>
         @endcan
 
-        <?php /** @var \App\Models\PhasePowerData $phasePowerData */
-        ?>
-        <ul class="divide-y divide-gray-200 mt-6">
-            @foreach ($game->currentPhase->phasePowerData as $phasePowerData)
-                <li class="grid grid-cols-3 py-4">
-                    <div style="color:{{ $phasePowerData->power->basePower->color }}" class="font-medium">
-                        {{ $phasePowerData->power->basePower->name }}</div>
-                    <div>{{ $phasePowerData->power->user?->name }}</div>
-                    <div class="grid place-items-end italic text-sm">{{ $phasePowerData->supply_center_count }} VZs,
-                        {{ $phasePowerData->unit_count }} Einheiten</div>
-                </li>
-            @endforeach
+        @if ($gameState != \App\Enums\GameStatusEnum::PREGAME)
+            <?php
+                /** @var \App\Models\PhasePowerData $phasePowerData */
+            ?>
+            <ul class="divide-y divide-gray-200 mt-6">
+                @foreach ($game->currentPhase->phasePowerData as $phasePowerData)
+                    <li class="grid grid-cols-3 py-4">
+                        <div style="color:{{ $phasePowerData->power->basePower->color }}" class="font-medium">
+                            {{ $phasePowerData->power->basePower->name }}</div>
+                        <div>{{ $phasePowerData->power->user->name }}</div>
+                        <div class="grid place-items-end italic text-sm">{{ $phasePowerData->supply_center_count }}
+                            VZs,
+                            {{ $phasePowerData->unit_count }} Einheiten
+                        </div>
+                    </li>
+                @endforeach
 
-        </ul>
+            </ul>
+        @endif
     </x-container>
 </x-app-layout>

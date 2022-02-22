@@ -4,8 +4,6 @@ namespace App\Console\Commands;
 
 use App\Actions\Game\AdjudicateGameAction;
 use App\Actions\Game\InitializeGameAction;
-use App\Jobs\AdjudicateGameJob;
-use App\Jobs\InitializeGameJob;
 use App\Models\BasePower;
 use App\Models\Game;
 use App\Models\Power;
