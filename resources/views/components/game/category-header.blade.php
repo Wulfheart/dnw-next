@@ -1,9 +1,11 @@
-@props(['title', 'link'])
+@props(['title', 'link', 'show_link' => false])
 
-<div class="-ml-2 -mt-2 flex flex-wrap items-baseline">
-    <h2 class="ml-2 mt-2 text-2xl leading-6 font-medium text-gray-900">{{ $title }}</h2>
-    <a href="{{ $link }}" class="ml-2 mt-1 text-sm text-gray-500 truncate flex flex-row items-baseline">Mehr
-        anzeigen
-        <x-heroicon-o-chevron-right class="h-3 w-3 stroke-2" />
-    </a>
+<div class="md:flex md:items-center md:justify-between">
+    <h2 class="text-2xl font-extrabold tracking-tight text-gray-900">{{ $title }}</h2>
+    @if($show_link)
+        <a href="#" class="hidden text-sm font-medium text-primary-600 hover:text-primary-500 md:block">
+            Mehr anzeigen<span aria-hidden="true"> &rarr;</span>
+        </a>
+    @endif
 </div>
+

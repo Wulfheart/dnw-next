@@ -1,10 +1,10 @@
 <x-app-layout>
     <x-container.large>
-        <div class="space-y-6">
+        <div class="space-y-12">
 
             <div>
                 <div class="pb-5">
-                    <x-game.category-header title="Neue Spiele" :link="route('games.index')" />
+                    <x-game.category-header title="Neue Spiele" :link="route('games.index')" :show_link="" />
                 </div>
                 <div class="grid grid-cols-4 gap-10 min-h-[12.5rem]">
                     <div class="h-full w-full">
@@ -15,8 +15,7 @@
                             <span class="mt-2 block text-sm font-medium text-gray-900"> Neues Spiel erstellen </span>
                         </a>
                     </div>
-                    <?php /** @var \App\Models\Game $game */
-                    ?>
+                    <?php /** @var \App\Models\Game $game */ ?>
                     @foreach ($preview['new'] as $game)
                         <x-game.preview.new :game="$game" />
                     @endforeach

@@ -27,6 +27,12 @@ class IndexGameController extends Controller
 
         return view('game.index', [
             'preview' => $preview,
+            'show' => new class {
+                public bool $new = true;
+            },
+            't' => (object) [
+                'new' => true
+            ]
         ]);
     }
 }
