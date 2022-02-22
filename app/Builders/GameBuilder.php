@@ -24,7 +24,7 @@ class GameBuilder extends Builder
     public function whereNew(): static
     {
         $this->whereHas('powers', fn(Builder $query) => $query->whereNull('user_id'))
-        ->has('phases', '>=', 1);
+        ->has('phases', '=', 1);
         return $this;
     }
 

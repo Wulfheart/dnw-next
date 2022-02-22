@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Collections\PowerCollection;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -38,6 +39,11 @@ class Power extends Model
         'is_defeated' => 'boolean',
         'is_winner' => 'boolean',
     ];
+
+    public function newCollection(array $models = []): PowerCollection
+    {
+        return new PowerCollection($models);
+    }
 
 
     public function basePower()

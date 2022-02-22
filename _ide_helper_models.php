@@ -58,12 +58,14 @@ namespace App\Models{
  * @property-read int|null $phase_power_data_count
  * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\Phase[] $phases
  * @property-read int|null $phases_count
- * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\Power[] $powers
+ * @property-read \App\Collections\PowerCollection|\App\Models\Power[] $powers
  * @property-read int|null $powers_count
  * @property-read \App\Models\Variant $variant
- * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\Power[] $winners
+ * @property-read \App\Collections\PowerCollection|\App\Models\Power[] $winners
  * @property-read int|null $winners_count
+ * @method static \App\Collections\GameCollection|static[] all($columns = ['*'])
  * @method static \Database\Factories\GameFactory factory(...$parameters)
+ * @method static \App\Collections\GameCollection|static[] get($columns = ['*'])
  * @method static \App\Builders\GameBuilder|Game newModelQuery()
  * @method static \App\Builders\GameBuilder|Game newQuery()
  * @method static \App\Builders\GameBuilder|Game query()
@@ -119,7 +121,7 @@ namespace App\Models{
  * @property \Illuminate\Support\Carbon|null $updated_at
  * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\MessageRoomMembership[] $memberships
  * @property-read int|null $memberships_count
- * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\Power[] $powers
+ * @property-read \App\Collections\PowerCollection|\App\Models\Power[] $powers
  * @property-read int|null $powers_count
  * @method static \Database\Factories\MessageRoomFactory factory(...$parameters)
  * @method static \Illuminate\Database\Eloquent\Builder|MessageRoom newModelQuery()
@@ -279,7 +281,9 @@ namespace App\Models{
  * @property-read \App\Models\BasePower $basePower
  * @property-read \App\Models\Game $game
  * @property-read \App\Models\User|null $user
+ * @method static \App\Collections\PowerCollection|static[] all($columns = ['*'])
  * @method static \Database\Factories\PowerFactory factory(...$parameters)
+ * @method static \App\Collections\PowerCollection|static[] get($columns = ['*'])
  * @method static \Illuminate\Database\Eloquent\Builder|Power newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Power newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Power query()

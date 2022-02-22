@@ -18,15 +18,16 @@ class IndexGameController extends Controller
          */
         $retrieve = fn(Builder $builder) => $builder->with([
             'currentPhase.phasePowerData.power.basePower',
-            'powers' => fn($b) => $b->whereNotNull('user_id'),
+            'powers',
             'variant.basePowers',
+            'winners'
         ])->get();
 
         $vm = new IndexGameViewModel(
             $retrieve(Game::whereActive()->limit(4)),
             $retrieve(Game::whereNew()->limit(3)),
             $retrieve(Game::whereUserIsMember(auth()->user())->limit(4)),
-            $retrieve(Game::whereFinished()->limit(4)->with('winners')),
+            $retrieve(Game::whereFinished()->limit(4)),
             Game::whereNew()->count() > 3,
             Game::whereUserIsMember(auth()->user())->count() > 4,
             Game::whereFinished()->count() > 4,
