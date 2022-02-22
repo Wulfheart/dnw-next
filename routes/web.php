@@ -30,7 +30,7 @@ Route::get('/test', function () {
 Route::get('/info', fn() => phpinfo());
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
-    return view('dashboard');
+    return redirect()->route('games.index');
 })->name('dashboard');
 
 Route::middleware(['auth:sanctum', 'verified'])->group(function () {
