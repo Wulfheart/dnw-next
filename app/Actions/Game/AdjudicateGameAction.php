@@ -3,6 +3,7 @@
 namespace App\Actions\Game;
 
 use App\Enums\GameStatusEnum;
+use App\Enums\PhaseTypeEnum;
 use App\Models\Game;
 use App\Models\Phase;
 use App\Models\PhasePowerData;
@@ -79,7 +80,7 @@ class AdjudicateGameAction
                 'adjudicated_at' => now(),
                 'phase_name_long' => Str::of($gameResponse->phase_long)->contains('?') ? $gameResponse->phase_short : $gameResponse->phase_long,
                 'phase_name_short' => $gameResponse->phase_short,
-                'type' => GameStatusEnum::from($gameResponse->phase_type),
+                'type' => PhaseTypeEnum::from($gameResponse->phase_type),
                 'svg_adjudicated' => $path,
             ]);
 

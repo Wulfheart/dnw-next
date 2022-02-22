@@ -4,8 +4,6 @@ namespace Database\Seeders;
 
 use App\Actions\Game\AdjudicateGameAction;
 use App\Actions\Game\InitializeGameAction;
-use App\Jobs\AdjudicateGameJob;
-use App\Jobs\InitializeGameJob;
 use App\Models\BasePower;
 use App\Models\Game;
 use App\Models\Power;
@@ -34,7 +32,7 @@ class GameRecreatorSeeder extends Seeder
         foreach ($directories as $directory) {
             $files = $fs->allFiles($directory);
             $files = collect($files)->sortBy(fn(string $f) => $f, SORT_NATURAL)->toArray();
-            foreach ($files as $file){
+            foreach ($files as $file) {
                 $sequence->pushFile($fs->path($file));
             }
         }
@@ -53,16 +51,16 @@ class GameRecreatorSeeder extends Seeder
             ]);
 
             $game->load('variant.basePowers');
-            $game->variant->basePowers()->each(fn (BasePower $b) => Power::create([
+            $game->variant->basePowers()->each(fn(BasePower $b) => Power::create([
                 'base_power_id' => $b->id,
                 'game_id' => $game->id,
-                'user_id' => User::factory()->create()->id
+                'user_id' => User::factory()->create()->id,
             ]));
             InitializeGameAction::run($game->id, false);
             $game->currentPhase()->update(['created_at' => $basetime->subDays($file_count)]);
 
 
-            for($i = 0; $i < $file_count - 1; $i++){
+            for ($i = 0; $i < $file_count - 1; $i++) {
                 AdjudicateGameAction::run($game->id);
                 $game->currentPhase()->update(['created_at' => $basetime->subDays($file_count - $i)]);
 
