@@ -1,12 +1,7 @@
 <x-app-layout>
-    <x-slot name="header">
-        <x-header.text>
-            Neues Spiel erstellen
-        </x-header.text>
-    </x-slot>
 
     <x-form :action="route('games.store')">
-        <x-container.index>
+        <x-container title="Spiel erstellen">
             <div class="grid grid-cols-6 gap-6">
                 <div class="col-span-6 sm:col-span-6">
                     <x-jet-label for="name" value="Name" />
@@ -70,7 +65,7 @@
                     <x-jet-button>Spiel erstellen</x-jet-button>
                 </div>
             </div>
-        </x-container.index>
+        </x-container>
 
     </x-form>
 

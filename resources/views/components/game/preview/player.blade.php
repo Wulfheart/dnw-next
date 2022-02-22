@@ -1,11 +1,12 @@
+<?php /** @var \App\Models\Game $game */ ?>
 @props(['game'])
 
-<x-game.preview :name="$game->name" :link="route('games.show', $game)"
-    :bg="storage_asset($game->currentPhase->svg_adjudicated)">
-    <x-slot name="left">
+@switch($game->currentState())
+    @case(\App\Enums\GameStatusEnum::PREGAME)
+        <x-game.preview.new :game="$game"/>
+    @break
+    @case(\App\Enums\GameStatusEnum::RUNNING)
+        <x-game.preview.active :game="$game"/>
+    @break
 
-    </x-slot>
-    <x-slot name="right">
-
-    </x-slot>
-</x-game.preview>
+@endswitch

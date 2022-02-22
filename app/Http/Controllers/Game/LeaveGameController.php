@@ -19,6 +19,6 @@ class LeaveGameController extends Controller
 
         LeaveGameAction::run(auth()->user(), $game);
 
-        return redirect()->route('games.show', $game);
+        return redirect()->route('games.index');
     }
 }
