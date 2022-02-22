@@ -1,10 +1,12 @@
+<?php /** @var \App\ViewModels\Game\IndexGameViewModel $vm */ ?>
+
 <x-app-layout>
     <x-container.large>
         <div class="space-y-12">
 
             <div>
                 <div class="pb-5">
-                    <x-game.category-header title="Neue Spiele" :link="route('games.index')" :show_link="" />
+                    <x-game.category-header title="Neue Spiele" :link="route('games.index')" :show_link="$vm->showNewGamesLink" />
                 </div>
                 <div class="grid grid-cols-4 gap-10 min-h-[12.5rem]">
                     <div class="h-full w-full">
@@ -16,19 +18,19 @@
                         </a>
                     </div>
                     <?php /** @var \App\Models\Game $game */ ?>
-                    @foreach ($preview['new'] as $game)
+                    @foreach ($vm->newGamesPreview as $game)
                         <x-game.preview.new :game="$game" />
                     @endforeach
                 </div>
             </div>
             <div>
                 <div class="pb-5">
-                    <x-game.category-header title="Deine Spiele" :link="route('games.index')" />
+                    <x-game.category-header title="Deine Spiele" :link="route('games.index')" :show_link="$vm->showPlayerGamesLink" />
                 </div>
                 <div class="grid grid-cols-4 gap-10 min-h-[12.5rem]">
                     <?php /** @var \App\Models\Game $game */
                     ?>
-                    @forelse($preview['player'] as $game)
+                    @forelse($vm->playerGamesPreview as $game)
                         <x-game.preview.player :game="$game" />
                     @empty
                         <x-game.empty-category />
@@ -37,12 +39,12 @@
             </div>
             <div>
                 <div class="pb-5">
-                    <x-game.category-header title="Laufende Spiele" :link="route('games.index')" />
+                    <x-game.category-header title="Laufende Spiele" :link="route('games.index')" :show_link="$vm->showRunningGamesLink"/>
                 </div>
                 <div class="grid grid-cols-4 gap-10 min-h-[12.5rem]">
                     <?php /** @var \App\Models\Game $game */
                     ?>
-                    @forelse($preview['active'] as $game)
+                    @forelse($vm->activeGamesPreview as $game)
                         <x-game.preview.active :game="$game" />
                     @empty
                         <x-game.empty-category />
@@ -51,12 +53,12 @@
             </div>
             <div>
                 <div class="pb-5">
-                    <x-game.category-header title="Fertige Spiele" :link="route('games.index')" />
+                    <x-game.category-header title="Fertige Spiele" :link="route('games.index')" :show_link="$vm->showFinishedGamesLink" />
                 </div>
                 <div class="grid grid-cols-4 gap-10 min-h-[12.5rem]">
                     <?php /** @var \App\Models\Game $game */
                     ?>
-                    @forelse($preview['finished'] as $game)
+                    @forelse($vm->finishedGamesPreview as $game)
                         <x-game.preview.finished :game="$game" />
                     @empty
                         <x-game.empty-category />

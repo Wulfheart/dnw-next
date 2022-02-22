@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Game;
 
 use App\Http\Controllers\Controller;
 use App\Models\Game;
+use App\ViewModels\Game\IndexGameViewModel;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
@@ -12,27 +13,26 @@ class IndexGameController extends Controller
 {
     public function __invoke(Request $request)
     {
-        $preview = collect([
-            'player' => Game::whereUserIsMember(auth()->user())->limit(4),
-            'new' => Game::whereNew()->limit(3),
-            'finished' => Game::whereFinished()->limit(4)->with('winners'),
-            'active' => Game::whereActive()->limit(4),
-        ])->map(fn(Builder $builder) =>
-            $builder->with([
-                'currentPhase.phasePowerData.power.basePower',
-                'powers' => fn($b) => $b->whereNotNull('user_id'),
-                'variant.basePowers'
-            ])->get()
+        /**
+         * @return array<Game>|\Illuminate\Database\Eloquent\Collection
+         */
+        $retrieve = fn(Builder $builder) => $builder->with([
+            'currentPhase.phasePowerData.power.basePower',
+            'powers' => fn($b) => $b->whereNotNull('user_id'),
+            'variant.basePowers',
+        ])->get();
+
+        $vm = new IndexGameViewModel(
+            $retrieve(Game::whereActive()->limit(4)),
+            $retrieve(Game::whereNew()->limit(3)),
+            $retrieve(Game::whereUserIsMember(auth()->user())->limit(4)),
+            $retrieve(Game::whereFinished()->limit(4)->with('winners')),
+            Game::whereNew()->count() > 3,
+            Game::whereUserIsMember(auth()->user())->count() > 4,
+            Game::whereFinished()->count() > 4,
+            Game::whereActive()->count() > 4,
         );
 
-        return view('game.index', [
-            'preview' => $preview,
-            'show' => new class {
-                public bool $new = true;
-            },
-            't' => (object) [
-                'new' => true
-            ]
-        ]);
+        return view('game.index', ['vm' => $vm]);
     }
 }
