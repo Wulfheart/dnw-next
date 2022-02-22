@@ -18,7 +18,12 @@ class ShowGameController extends Controller
         // $this->authorize('view', $game);
 
         $game->load([
-            'powers.basePower', 'powers.user', 'winners', 'currentPhase.phasePowerData.power.basePower', 'currentPhase.phasePowerData.power.user', 'phases' => function ($query) {
+            'powers.basePower',
+            'powers.user',
+            'winners',
+            'currentPhase.phasePowerData.power.basePower',
+            'currentPhase.phasePowerData.power.user',
+            'phases' => function ($query) {
                 $query->select(collect(Schema::getColumnListing(app(Phase::class)->getTable()))->reject(fn(string $v
                 ) => $v === 'state_encoded')->toArray());
             },

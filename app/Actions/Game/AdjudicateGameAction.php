@@ -22,6 +22,8 @@ class AdjudicateGameAction
 {
     use AsAction;
 
+    public string $commandSignature = "dnw:game:adjudicate {--id=}";
+
     public function __construct(public AdjudicatorService $adjudicator)
     {
     }
@@ -113,5 +115,15 @@ class AdjudicateGameAction
             $game->powers->filter(fn(Power $p) => collect($gameResponse->winners)->contains($p->basePower->api_name))
                 ->each(fn(Power $p) => $p->update(['is_winner' => true]));
         });
+    }
+
+    public function asCommand(\Illuminate\Console\Command $command): void
+    {
+        $game_id = $command->option('id');
+        $game = Game::findOrFail($game_id);
+
+        $command->withProgressBar(1, fn() => $this->handle($game_id));
+        $command->line('');
+
     }
 }

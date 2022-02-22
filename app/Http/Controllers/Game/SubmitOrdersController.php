@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Game;
 
+use App\Actions\Game\CheckForAdjudicationReady;
 use App\Actions\Game\SubmitOrdersAction;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\SubmitOrdersRequest;
@@ -31,6 +32,8 @@ class SubmitOrdersController extends Controller
             'orders' => $orders,
             'ready_for_adjudication' => $ready,
         ]);
+
+        CheckForAdjudicationReady::run($game);
 
         return redirect()->route('games.show', $game);
     }

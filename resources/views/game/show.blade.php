@@ -95,7 +95,7 @@
             </button>
         </div>
 
-        @can('submitOrders', $game)
+        @if($user->can('submitOrders', $game))
             <div class="mt-5">
                 <x-form :action="route('games.orders.store', $game)">
                     <label for="comment" class="block text-sm font-medium text-gray-700">Befehle</label>
@@ -116,7 +116,7 @@
                 </x-form>
 
             </div>
-        @endcan
+        @endif
 
         @if ($gameState != \App\Enums\GameStatusEnum::PREGAME)
             <?php

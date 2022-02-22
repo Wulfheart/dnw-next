@@ -55,8 +55,7 @@ class Phase extends Model
 
     public function phasePowerData(): HasMany
     {
-        return $this->hasMany(PhasePowerData::class);
+        return $this->hasMany(PhasePowerData::class)->orderBy('supply_center_count');
     }
-
     // public function
 }
