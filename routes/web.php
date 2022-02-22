@@ -2,6 +2,7 @@
 
 use App\Actions\Game\CreateGameAction;
 use App\Actions\Game\JoinGameAction;
+use App\Http\Controllers\Game\Category\IndexNewGameController;
 use App\Http\Controllers\Game\IndexGameController;
 use App\Http\Controllers\Game\JoinGameController;
 use App\Http\Controllers\Game\LeaveGameController;
@@ -22,7 +23,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/test', function (){
+Route::get('/test', function () {
     return view('test');
 });
 
@@ -32,10 +33,16 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
 
-Route::middleware(['auth:sanctum', 'verified'])->group(function(){
-    Route::prefix('games')->name('games.')->group(function(){
+Route::middleware(['auth:sanctum', 'verified'])->group(function () {
+    Route::prefix('games')->name('games.')->group(function () {
         Route::get('create', \App\Http\Controllers\Game\CreateGameController::class)->name('create');
         Route::get('/', IndexGameController::class)->name('index');
+        Route::name('category.')->group(function () {
+            Route::get('new', [IndexNewGameController::class, 'new'])->name('new');
+            Route::get('active', [IndexNewGameController::class, 'active'])->name('active');
+            Route::get('player', [IndexNewGameController::class, 'player'])->name('player');
+            Route::get('finished', [IndexNewGameController::class, 'finished'])->name('finished');
+        });
         Route::post('/', CreateGameAction::class)->name('store');
         Route::post('/{game}/join', JoinGameController::class)->name('join');
         Route::post('/{game}/leave', LeaveGameController::class)->name('leave');

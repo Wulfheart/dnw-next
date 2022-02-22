@@ -6,8 +6,11 @@
         <x-game.preview.new :game="$game"/>
     @break
     @case(\App\Enums\GameStatusEnum::RUNNING)
-        {{ $game->currentState()->name }}
         <x-game.preview.active :game="$game"/>
+    @break
+    @case(\App\Enums\GameStatusEnum::FINISHED)
+        {{ $game->currentState()->name }}
+        <x-game.preview.finished :game="$game"/>
     @break
 
 @endswitch

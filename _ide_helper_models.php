@@ -66,6 +66,7 @@ namespace App\Models{
  * @method static \App\Collections\GameCollection|static[] all($columns = ['*'])
  * @method static \Database\Factories\GameFactory factory(...$parameters)
  * @method static \App\Collections\GameCollection|static[] get($columns = ['*'])
+ * @method static \App\Builders\GameBuilder|Game loadForIndexPages()
  * @method static \App\Builders\GameBuilder|Game newModelQuery()
  * @method static \App\Builders\GameBuilder|Game newQuery()
  * @method static \App\Builders\GameBuilder|Game query()

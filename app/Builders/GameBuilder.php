@@ -33,4 +33,15 @@ class GameBuilder extends Builder
         $this->whereHas('powers', fn(Builder $query) => $query->where('is_winner', true));
         return $this;
     }
+
+    public function loadForIndexPages(): static
+    {
+        $this->with( [
+            'currentPhase.phasePowerData.power.basePower',
+            'powers',
+            'variant.basePowers',
+            'winners',
+        ]);
+        return $this;
+    }
 }

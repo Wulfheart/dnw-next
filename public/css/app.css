@@ -1081,6 +1081,12 @@ select {
 .-mt-px {
   margin-top: -1px;
 }
+.mb-2 {
+  margin-bottom: 0.5rem;
+}
+.mb-1 {
+  margin-bottom: 0.25rem;
+}
 .block {
   display: block;
 }
@@ -1131,6 +1137,9 @@ select {
 }
 .h-full {
   height: 100%;
+}
+.h-auto {
+  height: auto;
 }
 .max-h-\[65vh\] {
   max-height: 65vh;
@@ -1281,6 +1290,9 @@ select {
 }
 .place-items-end {
   place-items: end;
+}
+.items-end {
+  align-items: flex-end;
 }
 .items-center {
   align-items: center;
@@ -1679,6 +1691,9 @@ select {
 }
 .text-right {
   text-align: right;
+}
+.align-bottom {
+  vertical-align: bottom;
 }
 .font-sans {
   font-family: Inter var, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";

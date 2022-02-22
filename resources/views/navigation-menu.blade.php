@@ -5,9 +5,13 @@
             <div class="flex">
                 <!-- Logo -->
                 <div class="flex-shrink-0 flex items-center">
-                    <a href="{{ route('dashboard') }}">
-                        <span class="text-4xl font-black">DNW</span>
-                        <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-primary-100 text-primary-800"> alpha </span>
+                    <a href="{{ route('dashboard') }}" class="flex flex-row items-end">
+                        <div class="text-4xl font-black">DNW</div>
+                        <div class="">
+                            <span class="inline-flex items-center px-2.5 py-0.5 mb-1 rounded-full text-xs font-medium bg-primary-100 text-primary-800">
+                                alpha
+                            </span>
+                        </div>
                     </a>
                 </div>
 

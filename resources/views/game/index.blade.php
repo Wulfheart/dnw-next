@@ -6,7 +6,7 @@
 
             <div>
                 <div class="pb-5">
-                    <x-game.category-header title="Neue Spiele" :link="route('games.index')" :show_link="$vm->showNewGamesLink" />
+                    <x-game.category-header title="Neue Spiele" :link="route('games.category.new')" :show_link="$vm->showNewGamesLink" />
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-10 ">
                     <div class="h-full w-full min-h-[12.5rem]">
@@ -25,11 +25,10 @@
             </div>
             <div>
                 <div class="pb-5">
-                    <x-game.category-header title="Deine Spiele" :link="route('games.index')" :show_link="$vm->showPlayerGamesLink" />
+                    <x-game.category-header title="Deine Spiele" :link="route('games.category.player')" :show_link="$vm->showPlayerGamesLink" />
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-10 ">
-                    <?php /** @var \App\Models\Game $game */
-                    ?>
+                    <?php /** @var \App\Models\Game $game */ ?>
                     @forelse($vm->playerGamesPreview as $game)
                         <x-game.preview.player :game="$game" />
                     @empty
