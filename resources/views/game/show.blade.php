@@ -97,7 +97,8 @@
 
         @if ($user->can('submitOrders', $game))
             <div class="mt-5">
-                <x-form :action="route('games.orders.store', $game)" x-data="{showHelp: false}" x-on:click.away="showHelp = false">
+                <x-form :action="route('games.orders.store', $game)" x-data="{showHelp: false}"
+                    x-on:click.away="showHelp = false">
                     <div>
                         <div class="flex justify-between" x-on:click.prevent="showHelp = !showHelp">
                             <label for="orders" class="block text-sm font-medium text-gray-700">Befehle
@@ -111,27 +112,26 @@
                                 @endisset
                             </label>
                             <span class="text-sm text-gray-500"><button>
-                                    <x-heroicon-o-question-mark-circle type="button"
-                                        class="h-4 w-4" />
+                                    <x-heroicon-o-question-mark-circle type="button" class="h-4 w-4" />
                                 </button></span>
                         </div>
                         <div x-show="showHelp" x-collapse x-cloak>
                             <div class="rounded-md bg-gray-100 p-4 my-4">
-                                    <div class="ml-3">
-                                        <h3 class="text-sm font-medium text-gray-800">Befehlsnotation</h3>
-                                        <div class="mt-2 text-sm text-gray-700 font-mono">
-                                            A LON H <br>
-                                            F IRI - MAO<br>
-                                            A IRI - MAO VIA<br>
-                                            A WAL S F LON<br>
-                                            A WAL S F MAO - IRI<br>
-                                            F NWG C A NWY - EDI<br>
-                                            A IRO R MAO<br>
-                                            A IRO D<br>
-                                            A LON B<br>
-                                            F LIV B<br>
-                                            WAIVE
-                                        </div>
+                                <div class="ml-3">
+                                    <h3 class="text-sm font-medium text-gray-800">Befehlsnotation</h3>
+                                    <div class="mt-2 text-sm text-gray-700 font-mono">
+                                        A LON H // Hold<br>
+                                        F IRI - MAO // Move<br>
+                                        A IRI - MAO VIA // ???<br>
+                                        A WAL S F LON // Support Hold<br>
+                                        A WAL S F MAO - IRI // Support Move<br>
+                                        F NWG C A NWY - EDI // Convoy<br>
+                                        A IRO R MAO // Retreat<br>
+                                        A IRO D // Disband<br>
+                                        A LON B // Build<br>
+                                        F LIV B // Build<br>
+                                        WAIVE
+                                    </div>
                                 </div>
                             </div>
                         </div>
