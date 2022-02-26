@@ -135,11 +135,12 @@
                         <div class="font-medium flex flex-row items-center space-x-2">
                             @if (isset($phasePowerData->orders))
                                 <x-heroicon-s-check-circle
+                                        data-tippy-content="{{ $phasePowerData->ready_for_adjudication ? 'Befehle gespeichert und fertig' : 'Befehle gespeichert' }}"
                                     class="w-4 h-4 {{ $phasePowerData->ready_for_adjudication ? 'text-green-600' : 'text-gray-500' }}" />
                             @elseif($phasePowerData->orders_needed)
-                                <x-heroicon-o-exclamation-circle class="w-4 h-4 text-red-600"/>
+                                <x-heroicon-o-exclamation-circle data-tippy-content="Befehle benötigt" class="w-4 h-4 text-red-600"/>
                             @else
-                                <x-heroicon-o-minus-sm class="w-4 h-4 text-gray-500" />
+                                <x-heroicon-o-minus-sm data-tippy-content="Keine Befehle nötig" class="w-4 h-4 text-gray-500" />
                             @endif
                             <span
                                 style="color:{{ $phasePowerData->power->basePower->color }}">{{ $phasePowerData->power->basePower->name }}</span>
