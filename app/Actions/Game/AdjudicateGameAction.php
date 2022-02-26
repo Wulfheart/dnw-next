@@ -75,11 +75,14 @@ class AdjudicateGameAction
             $path = "maps/".Uuid::uuid4().".svg";
             Storage::drive('public')->put($path, $gameResponse->svg_adjudicated);
 
+
+
             $newPhase = Phase::create([
                 'game_id' => $game->id,
                 'number' => $currentPhase->number + 1,
                 'state_encoded' => $gameResponse->current_state_encoded,
                 'adjudicated_at' => now(),
+                'adjudication_at' => $game->calculateNextAdjudicationPhaseEnd($game->phase_length),
                 'phase_name_long' => Str::of($gameResponse->phase_long)->contains('?') ? $gameResponse->phase_short : $gameResponse->phase_long,
                 'phase_name_short' => $gameResponse->phase_short,
                 'type' => PhaseTypeEnum::from($gameResponse->phase_type),

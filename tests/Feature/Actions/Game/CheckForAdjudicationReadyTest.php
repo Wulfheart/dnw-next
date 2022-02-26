@@ -1,7 +1,8 @@
 <?php
 
-test('example', function () {
-    $response = $this->get('/');
+use App\Models\Game;
 
-    $response->assertStatus(200);
+test('example', function () {
+
+
 });

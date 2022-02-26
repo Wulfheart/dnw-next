@@ -15,11 +15,6 @@ class Phase extends Model
 {
     use HasFactory;
 
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array
-     */
     protected $fillable = [
         'type',
         'number',
@@ -34,11 +29,6 @@ class Phase extends Model
         'adjudicated_at',
     ];
 
-    /**
-     * The attributes that should be cast to native types.
-     *
-     * @var array
-     */
     protected $casts = [
         'id' => 'integer',
         'previous_phase_id' => 'integer',
@@ -57,5 +47,4 @@ class Phase extends Model
     {
         return $this->hasMany(PhasePowerData::class)->orderBy('supply_center_count', 'DESC')->orderBy('unit_count', 'DESC');
     }
-    // public function
 }

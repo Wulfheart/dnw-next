@@ -36,18 +36,18 @@
                         </div>
                         @if ($user->can('join', $game))
                             <x-form :action="route('games.join', $game)"
-                                    class="mt-5 sm:mt-0 sm:ml-6 sm:flex-shrink-0 sm:flex sm:items-center">
+                                class="mt-5 sm:mt-0 sm:ml-6 sm:flex-shrink-0 sm:flex sm:items-center">
                                 <button type="submit"
-                                        class="inline-flex items-center px-4 py-2 border border-transparent shadow-sm font-medium rounded-md text-white bg-primary-600 hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500 sm:text-sm">
+                                    class="inline-flex items-center px-4 py-2 border border-transparent shadow-sm font-medium rounded-md text-white bg-primary-600 hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500 sm:text-sm">
                                     Spiel beitreten
                                 </button>
                             </x-form>
                         @endif
                         @if ($user->can('leave', $game))
                             <x-form :action="route('games.leave', $game)"
-                                    class="mt-5 sm:mt-0 sm:ml-6 sm:flex-shrink-0 sm:flex sm:items-center">
+                                class="mt-5 sm:mt-0 sm:ml-6 sm:flex-shrink-0 sm:flex sm:items-center">
                                 <button type="submit"
-                                        class="inline-flex items-center px-4 py-2 border border-transparent shadow-sm font-medium rounded-md text-white bg-primary-600 hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500 sm:text-sm">
+                                    class="inline-flex items-center px-4 py-2 border border-transparent shadow-sm font-medium rounded-md text-white bg-primary-600 hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500 sm:text-sm">
                                     Spiel verlassen
                                 </button>
                             </x-form>
@@ -73,10 +73,10 @@
             ?>
             @foreach ($phases as $phase)
                 <div class="" x-show="current == {{ $loop->index }}"
-                        {{ !$loop->first ? 'x-cloak' : '' }}>
+                    {{ !$loop->first ? 'x-cloak' : '' }}>
                     <img class="object-cover max-h-[65vh]"
-                         x-bind:src="Math.abs({{ $loop->index }} - current) <= 5 || Math.abs(max_index - {{ $loop->index }}) <= 5 ? '{{ asset('storage/' . $phase->svg) }}' : ''"
-                         alt="{{ $phase->key }}">
+                        x-bind:src="Math.abs({{ $loop->index }} - current) <= 5 || Math.abs(max_index - {{ $loop->index }}) <= 5 ? '{{ asset('storage/' . $phase->svg) }}' : ''"
+                        alt="{{ $phase->key }}">
                 </div>
             @endforeach
         </div>
@@ -95,25 +95,28 @@
             </button>
         </div>
 
-        @if($user->can('submitOrders', $game))
+        @if ($user->can('submitOrders', $game))
             <div class="mt-5">
                 <x-form :action="route('games.orders.store', $game)">
                     <label for="comment" class="block text-sm font-medium text-gray-700">Befehle
                         @isset($userPower->basePower)
-                            (<span style="color:{{ $userPower->basePower->color }}">{{ $userPower->basePower->name }}</span>)
+                            (
+                            <span
+                                style="color:{{ $userPower->basePower->color }}">{{ $userPower->basePower->name }}</span>
+                            )
                         @endisset
                     </label>
                     <div class="mt-1">
                         <textarea rows="4" name="orders"
-                                  class="shadow-sm focus:ring-primary-500 focus:border-primary-500 block w-full sm:text-sm border-gray-300 rounded-md">{{ $orders }}</textarea>
+                            class="shadow-sm focus:ring-primary-500 focus:border-primary-500 block w-full sm:text-sm border-gray-300 rounded-md">{{ $orders }}</textarea>
                     </div>
                     <div class="mt-2 flex justify-end space-x-4">
                         <button type="submit" name="ready" value="0"
-                                class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-primary-600 hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500">
+                            class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-primary-600 hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500">
                             Speichern
                         </button>
                         <button type="submit" name="ready" value="1"
-                                class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-primary-600 hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500">
+                            class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-primary-600 hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500">
                             Fertig
                         </button>
                     </div>
@@ -130,13 +133,17 @@
                 @foreach ($game->currentPhase->phasePowerData as $phasePowerData)
                     <li class="grid grid-cols-3 py-4">
                         <div class="font-medium flex flex-row items-center space-x-2">
-                            <span style="color:{{ $phasePowerData->power->basePower->color }}">{{ $phasePowerData->power->basePower->name }}</span>
-
-                            @isset($phasePowerData->orders)
+                            @if (isset($phasePowerData->orders))
                                 <x-heroicon-s-check-circle
-                                        class="w-4 h-4 {{ $phasePowerData->ready_for_adjudication ? 'text-green-600' : 'text-gray-500' }}
-                                                " />
-                            @endisset
+                                    class="w-4 h-4 {{ $phasePowerData->ready_for_adjudication ? 'text-green-600' : 'text-gray-500' }}" />
+                            @elseif($phasePowerData->orders_needed)
+                                <x-heroicon-o-exclamation-circle class="w-4 h-4 text-red-600"/>
+                            @else
+                                <x-heroicon-o-minus-sm class="w-4 h-4 text-gray-500" />
+                            @endif
+                            <span
+                                style="color:{{ $phasePowerData->power->basePower->color }}">{{ $phasePowerData->power->basePower->name }}</span>
+
                         </div>
                         <div>{{ $phasePowerData->power->user->name }}</div>
                         <div class="grid place-items-end italic text-sm">{{ $phasePowerData->supply_center_count }}

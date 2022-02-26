@@ -2,6 +2,7 @@
 
 namespace App\Actions\Game;
 
+use App\Events\Game\GameStartedEvent;
 use App\Models\Game;
 use App\Models\User;
 use Illuminate\Http\Response;
@@ -19,5 +20,8 @@ class JoinGameAction
             ->inRandomOrder()
             ->firstOrFail()
             ->update(['user_id' => $user->id]);
+
+        $game->load('powers');
+        GameStartedEvent::dispatchIf($game->powers->whereUserAssigned()->count() == $game->powers->count(), $game);
     }
 }

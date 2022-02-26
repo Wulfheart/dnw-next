@@ -5,12 +5,14 @@ namespace App\Models;
 use App\Builders\GameBuilder;
 use App\Collections\GameCollection;
 use App\Enums\GameStatusEnum;
+use Carbon\CarbonInterface;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\HasManyThrough;
 use Illuminate\Database\Eloquent\Relations\HasOne;
+use Illuminate\Support\Carbon;
 
 /**
  * @mixin IdeHelperGame
@@ -31,7 +33,7 @@ class Game extends Model
         'is_paused',
         'scs_to_win',
         'join_phase_length',
-        'start_when_ready'
+        'start_when_ready',
     ];
 
     /**
@@ -80,7 +82,8 @@ class Game extends Model
         return $this->hasOne(Phase::class)->ofMany('number', 'max');
     }
 
-    public function phases(): HasMany {
+    public function phases(): HasMany
+    {
         return $this->hasMany(Phase::class)->orderByDesc('number');
     }
 
@@ -94,17 +97,32 @@ class Game extends Model
         return $this->hasManyThrough(PhasePowerData::class, Phase::class);
     }
 
-    public function currentState(): GameStatusEnum{
+    public function currentState(): GameStatusEnum
+    {
         $this->loadMissing(['winners', 'powers']);
-        if($this->winners->count() > 0){
+        if ($this->winners->count() > 0) {
             return GameStatusEnum::FINISHED;
         }
 
 
-        if($this->powers->whereUserAssigned()->count() < $this->powers->count()){
+        if ($this->powers->whereUserAssigned()->count() < $this->powers->count()) {
             return GameStatusEnum::PREGAME;
         }
 
         return GameStatusEnum::RUNNING;
+    }
+
+    public function calculateNextAdjudicationPhaseEnd(): Carbon
+    {
+        $this->loadMissing('noAdjudicationDays');
+
+        $adjudicationTime = now()->clone()->addMinutes($this->phase_length);
+
+        $no_adjudication_days = $this->noAdjudicationDays->pluck('iso_weekday');
+        while ($no_adjudication_days->contains($adjudicationTime->isoWeekday())) {
+            $adjudicationTime->addDay();
+        }
+
+        return $adjudicationTime;
     }
 }
