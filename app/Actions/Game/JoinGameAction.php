@@ -18,8 +18,6 @@ class JoinGameAction
             ->whereNull('user_id')
             ->inRandomOrder()
             ->firstOrFail()
-            ->update(['user_id' => auth()->user()->id]);
+            ->update(['user_id' => $user->id]);
     }
-
-
 }

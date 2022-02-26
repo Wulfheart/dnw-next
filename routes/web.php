@@ -7,6 +7,7 @@ use App\Http\Controllers\Game\Category\IndexNewGameController;
 use App\Http\Controllers\Game\IndexGameController;
 use App\Http\Controllers\Game\JoinGameController;
 use App\Http\Controllers\Game\LeaveGameController;
+use App\Http\Controllers\Game\StoreGameController;
 use App\Http\Controllers\Game\SubmitOrdersController;
 use Illuminate\Support\Facades\Route;
 
@@ -45,7 +46,7 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
             Route::get('player', [IndexNewGameController::class, 'player'])->name('player');
             Route::get('finished', [IndexNewGameController::class, 'finished'])->name('finished');
         });
-        Route::post('/', CreateGameAction::class)->name('store');
+        Route::post('/', StoreGameController::class)->name('store');
         Route::post('/{game}/orders', SubmitOrdersController::class)->name('orders.store');
         Route::post('/{game}/join', JoinGameController::class)->name('join');
         Route::post('/{game}/leave', LeaveGameController::class)->name('leave');

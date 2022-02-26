@@ -11,3 +11,12 @@ services:
       POSTGRES_DB: dnw-next
     ports:
       - "6543:5432"
+  db_test:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_USER: laravel
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: dnw-next
+    ports:
+      - "6544:5432"

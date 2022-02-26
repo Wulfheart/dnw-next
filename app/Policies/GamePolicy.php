@@ -11,6 +11,11 @@ class GamePolicy
 {
     use HandlesAuthorization;
 
+    public function create(User $user): bool
+    {
+        return true;
+    }
+
     public function join(User $user, Game $game): bool
     {
         return $game->powers()->where('user_id', $user->id)->doesntExist() && $game->currentState() == GameStatusEnum::PREGAME;

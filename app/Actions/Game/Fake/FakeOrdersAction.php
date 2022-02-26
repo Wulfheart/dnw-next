@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Actions\Game;
+namespace App\Actions\Game\Fake;
 
 use App\Models\Game;
 use Lorisleiva\Actions\Concerns\AsAction;
@@ -15,8 +15,8 @@ class FakeOrdersAction
     {
         $game->loadMissing('currentPhase.phasePowerData.power');
 
-        foreach ($game->currentPhase->phasePowerData as $ppd){
-            if(isset($ppd->orders)){
+        foreach ($game->currentPhase->phasePowerData as $ppd) {
+            if (isset($ppd->orders)) {
                 continue;
             }
 

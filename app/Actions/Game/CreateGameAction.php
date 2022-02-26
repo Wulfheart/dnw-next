@@ -19,12 +19,21 @@ class CreateGameAction
 
     public string $commandSignature = 'dnw:game:create';
 
-    public function handle(User $user, string $name, int $phase_length, int $variant_id, array $no_adjudication, bool $async): Game
-    {
+    public function handle(
+        User $user,
+        string $name,
+        int $phase_length,
+        int $variant_id,
+        array $no_adjudication,
+        bool $async
+    ): Game {
+        $variant = Variant::findOrFail($variant_id);
+
         $game = Game::create([
             'name' => $name,
             'phase_length' => $phase_length,
             'variant_id' => $variant_id,
+            'scs_to_win' => $variant->default_scs_to_win,
         ]);
 
 
@@ -35,7 +44,7 @@ class CreateGameAction
         )->toArray());
 
         $game->load('variant.basePowers');
-        $game->variant->basePowers()->each(fn (BasePower $b) => Power::create([
+        $game->variant->basePowers()->each(fn(BasePower $b) => Power::create([
             'base_power_id' => $b->id,
             'game_id' => $game->id,
         ]));
@@ -45,7 +54,7 @@ class CreateGameAction
         $power = $game->powers->random();
         $power->update(['user_id' => $user->id]);
 
-        if($async){
+        if ($async) {
             InitializeGameAction::dispatch($game->id, false);
         } else {
             InitializeGameAction::run($game->id, false);
@@ -54,12 +63,6 @@ class CreateGameAction
         return $game;
 
 
-    }
-
-    public function asController(User $user, StoreGameRequest $request): \Illuminate\Http\RedirectResponse
-    {
-        $game = $this->handle($user, $request->get('name'), $request->get('phase_length'), $request->get('variant_id'), $request->get('no_adjudication'), true);
-        return redirect()->route('games.show', ['game' => $game]);
     }
 
     public function asCommand(Command $command): void

@@ -86,18 +86,34 @@ class JoinGameAction
 class LeaveGameAction
 {
 }
+namespace App\Actions\Game\Fake;
+
 /**
- * @method static \Lorisleiva\Actions\Decorators\JobDecorator|\Lorisleiva\Actions\Decorators\UniqueJobDecorator makeJob(int $user_id, int $game_id, string $orders, bool $ready)
- * @method static \Lorisleiva\Actions\Decorators\UniqueJobDecorator makeUniqueJob(int $user_id, int $game_id, string $orders, bool $ready)
- * @method static \Illuminate\Foundation\Bus\PendingDispatch dispatch(int $user_id, int $game_id, string $orders, bool $ready)
- * @method static \Illuminate\Foundation\Bus\PendingDispatch|\Illuminate\Support\Fluent dispatchIf(bool $boolean, int $user_id, int $game_id, string $orders, bool $ready)
- * @method static \Illuminate\Foundation\Bus\PendingDispatch|\Illuminate\Support\Fluent dispatchUnless(bool $boolean, int $user_id, int $game_id, string $orders, bool $ready)
- * @method static dispatchSync(int $user_id, int $game_id, string $orders, bool $ready)
- * @method static dispatchNow(int $user_id, int $game_id, string $orders, bool $ready)
- * @method static dispatchAfterResponse(int $user_id, int $game_id, string $orders, bool $ready)
- * @method static string run(int $user_id, int $game_id, string $orders, bool $ready)
+ * @method static \Lorisleiva\Actions\Decorators\JobDecorator|\Lorisleiva\Actions\Decorators\UniqueJobDecorator makeJob(\App\Models\Game $game)
+ * @method static \Lorisleiva\Actions\Decorators\UniqueJobDecorator makeUniqueJob(\App\Models\Game $game)
+ * @method static \Illuminate\Foundation\Bus\PendingDispatch dispatch(\App\Models\Game $game)
+ * @method static \Illuminate\Foundation\Bus\PendingDispatch|\Illuminate\Support\Fluent dispatchIf(bool $boolean, \App\Models\Game $game)
+ * @method static \Illuminate\Foundation\Bus\PendingDispatch|\Illuminate\Support\Fluent dispatchUnless(bool $boolean, \App\Models\Game $game)
+ * @method static dispatchSync(\App\Models\Game $game)
+ * @method static dispatchNow(\App\Models\Game $game)
+ * @method static dispatchAfterResponse(\App\Models\Game $game)
+ * @method static mixed run(\App\Models\Game $game)
  */
-class SubmitOrdersAction
+class FakeFillGameAction
+{
+}
+/**
+ * @method static \Lorisleiva\Actions\Decorators\JobDecorator|\Lorisleiva\Actions\Decorators\UniqueJobDecorator makeJob(\App\Models\Game $game, bool $ready)
+ * @method static \Lorisleiva\Actions\Decorators\UniqueJobDecorator makeUniqueJob(\App\Models\Game $game, bool $ready)
+ * @method static \Illuminate\Foundation\Bus\PendingDispatch dispatch(\App\Models\Game $game, bool $ready)
+ * @method static \Illuminate\Foundation\Bus\PendingDispatch|\Illuminate\Support\Fluent dispatchIf(bool $boolean, \App\Models\Game $game, bool $ready)
+ * @method static \Illuminate\Foundation\Bus\PendingDispatch|\Illuminate\Support\Fluent dispatchUnless(bool $boolean, \App\Models\Game $game, bool $ready)
+ * @method static dispatchSync(\App\Models\Game $game, bool $ready)
+ * @method static dispatchNow(\App\Models\Game $game, bool $ready)
+ * @method static dispatchAfterResponse(\App\Models\Game $game, bool $ready)
+ * @method static mixed run(\App\Models\Game $game, bool $ready)
+ */
+class FakeOrdersAction
 {
 }
 namespace Lorisleiva\Actions\Concerns;
