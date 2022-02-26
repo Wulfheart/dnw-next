@@ -22,6 +22,9 @@ class JoinGameAction
             ->update(['user_id' => $user->id]);
 
         $game->load('powers');
-        GameStartedEvent::dispatchIf($game->powers->whereUserAssigned()->count() == $game->powers->count(), $game);
+
+        if($game->powers->whereUserAssigned()->count() == $game->powers->count()){
+            StartGameAction::run($game);
+        }
     }
 }

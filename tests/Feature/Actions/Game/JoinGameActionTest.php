@@ -2,6 +2,7 @@
 
 use App\Actions\Game\CreateGameAction;
 use App\Actions\Game\JoinGameAction;
+use App\Actions\Game\StartGameAction;
 use App\Events\Game\GameStartedEvent;
 use App\Models\Game;
 use App\Models\Power;
@@ -33,8 +34,7 @@ it('dispatches the correct event when it starts', function () {
     $game->load('powers');
     expect($game->powers->whereUserAssigned()->count())->toEqual(6);
 
-    Event::fake();
+    StartGameAction::shouldRun()->with($game);
     JoinGameAction::run(User::factory()->create(), $game);
-    Event::assertDispatched(GameStartedEvent::class);
 
 });
