@@ -17,8 +17,15 @@ class StoreGameController extends Controller
     public function __invoke(StoreGameRequest $request)
     {
         $this->authorize('create', Game::class);
-        $game = CreateGameAction::run($request->user(), $request->get('name'), $request->get('phase_length'),
-            $request->get('variant_id'), collect($request->get('no_adjudication'))->filter(fn(string $value) => (bool)$value)->toArray() ?? [], false);
+        $game = CreateGameAction::run(
+            $request->user(),
+            $request->get('name'),
+            $request->get('phase_length'),
+
+            $request->get('variant_id'),
+            collect($request->get('no_adjudication'))
+                ->filter(fn(string $value) => (bool)$value)->toArray() ?? [],
+            false);
         return redirect()->route('games.show', ['game' => $game]);
     }
 }
