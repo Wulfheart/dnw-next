@@ -12,6 +12,7 @@
         "css:watch": "npx tailwindcss --output=public/css/app.css --watch"
     },
     "devDependencies": {
+        "@alpinejs/collapse": "^3.9.0",
         "@shufo/prettier-plugin-blade": "^1.0.10",
         "@tailwindcss/forms": "^0.4.0",
         "@tailwindcss/line-clamp": "^0.3.1",
