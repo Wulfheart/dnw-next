@@ -10,6 +10,8 @@ class StartGameAction
     use AsAction;
 
     public function handle(Game $game){
+        $game->loadMissing('currentPhase');
 
+        $game->currentPhase->update(['adjudication_at' => $game->calculateNextAdjudicationPhaseEnd()]);
     }
 }
