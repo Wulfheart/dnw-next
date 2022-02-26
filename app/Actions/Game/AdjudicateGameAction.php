@@ -76,7 +76,6 @@ class AdjudicateGameAction
             Storage::drive('public')->put($path, $gameResponse->svg_adjudicated);
 
 
-
             $newPhase = Phase::create([
                 'game_id' => $game->id,
                 'number' => $currentPhase->number + 1,
