@@ -201,8 +201,9 @@ namespace App\Models{
  * @property string $state_encoded
  * @property string $phase_name_long
  * @property string $phase_name_short
+ * @property \Illuminate\Support\Carbon|null $locked_for_adjudication_at
  * @property \Illuminate\Support\Carbon|null $adjudication_at
- * @property string|null $adjudicated_at
+ * @property \Illuminate\Support\Carbon|null $adjudicated_at
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
  * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\PhasePowerData[] $phasePowerData
@@ -217,6 +218,7 @@ namespace App\Models{
  * @method static \Illuminate\Database\Eloquent\Builder|Phase whereCreatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Phase whereGameId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Phase whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Phase whereLockedForAdjudicationAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Phase whereNumber($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Phase wherePhaseNameLong($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Phase wherePhaseNameShort($value)

@@ -25,13 +25,15 @@ class CreatePhasesTable extends Migration
             $table->longText('state_encoded');
             $table->string('phase_name_long');
             $table->string('phase_name_short');
+            $table->dateTime('locked_for_adjudication_at')->nullable();
             $table->dateTime('adjudication_at')->nullable();
-            $table->string('adjudicated_at')->nullable();
+            $table->dateTime('adjudicated_at')->nullable();
             $table->timestamps();
 
             $table->unique('svg_adjudicated');
             $table->unique('svg_with_orders');
             $table->unique(['id', 'number']);
+            $table->unique(['game_id', 'number']);
         });
 
         Schema::enableForeignKeyConstraints();

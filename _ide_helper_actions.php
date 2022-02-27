@@ -86,6 +86,34 @@ class JoinGameAction
 class LeaveGameAction
 {
 }
+/**
+ * @method static \Lorisleiva\Actions\Decorators\JobDecorator|\Lorisleiva\Actions\Decorators\UniqueJobDecorator makeJob()
+ * @method static \Lorisleiva\Actions\Decorators\UniqueJobDecorator makeUniqueJob()
+ * @method static \Illuminate\Foundation\Bus\PendingDispatch dispatch()
+ * @method static \Illuminate\Foundation\Bus\PendingDispatch|\Illuminate\Support\Fluent dispatchIf(bool $boolean)
+ * @method static \Illuminate\Foundation\Bus\PendingDispatch|\Illuminate\Support\Fluent dispatchUnless(bool $boolean)
+ * @method static dispatchSync()
+ * @method static dispatchNow()
+ * @method static dispatchAfterResponse()
+ * @method static mixed run()
+ */
+class LockGameCurrentPhaseForAdjudicationAction
+{
+}
+/**
+ * @method static \Lorisleiva\Actions\Decorators\JobDecorator|\Lorisleiva\Actions\Decorators\UniqueJobDecorator makeJob(\App\Models\Game $game)
+ * @method static \Lorisleiva\Actions\Decorators\UniqueJobDecorator makeUniqueJob(\App\Models\Game $game)
+ * @method static \Illuminate\Foundation\Bus\PendingDispatch dispatch(\App\Models\Game $game)
+ * @method static \Illuminate\Foundation\Bus\PendingDispatch|\Illuminate\Support\Fluent dispatchIf(bool $boolean, \App\Models\Game $game)
+ * @method static \Illuminate\Foundation\Bus\PendingDispatch|\Illuminate\Support\Fluent dispatchUnless(bool $boolean, \App\Models\Game $game)
+ * @method static dispatchSync(\App\Models\Game $game)
+ * @method static dispatchNow(\App\Models\Game $game)
+ * @method static dispatchAfterResponse(\App\Models\Game $game)
+ * @method static mixed run(\App\Models\Game $game)
+ */
+class StartGameAction
+{
+}
 namespace App\Actions\Game\Fake;
 
 /**

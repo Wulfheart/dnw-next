@@ -30,15 +30,14 @@ class AdjudicateGameAction
 
     public function handle(int $game_id, bool $save_response = false)
     {
+        /** @var Game $game */
+        $game = Game::with([
+            'variant', 'powers.basePower', 'currentPhase.phasePowerData.power.basePower',
+        ])->findOrFail($game_id);
+        $currentPhase = $game->currentPhase;
+
         $adjudicator = $this->adjudicator;
-        DB::transaction(function () use ($adjudicator, $game_id, $save_response) {
-            /** @var Game $game */
-            $game = Game::with([
-                'variant', 'powers.basePower', 'currentPhase.phasePowerData.power.basePower',
-            ])->findOrFail($game_id);
-            $currentPhase = $game->currentPhase;
-
-
+        DB::transaction(function () use ($adjudicator, $game, $save_response, $currentPhase) {
             $gameResponse = $adjudicator->adjudicateGame(new AdjudicateGameRequestDTO(
                 previous_state_encoded: $currentPhase->state_encoded,
                 orders: $game->currentPhase->phasePowerData->map(

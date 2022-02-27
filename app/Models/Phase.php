@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use App\Enums\PhaseTypeEnum;
+use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
@@ -25,6 +26,7 @@ class Phase extends Model
         'state_encoded',
         'phase_name_long',
         'phase_name_short',
+        'locked_for_adjudication_at',
         'adjudication_at',
         'adjudicated_at',
     ];
@@ -33,7 +35,9 @@ class Phase extends Model
         'id' => 'integer',
         'previous_phase_id' => 'integer',
         'game_id' => 'integer',
+        'locked_for_adjudication_at' => 'datetime',
         'adjudication_at' => 'datetime',
+        'adjudicated_at' => 'datetime',
         'type' => PhaseTypeEnum::class,
     ];
 
@@ -45,6 +49,17 @@ class Phase extends Model
 
     public function phasePowerData(): HasMany
     {
-        return $this->hasMany(PhasePowerData::class)->orderBy('supply_center_count', 'DESC')->orderBy('unit_count', 'DESC');
+        return $this->hasMany(PhasePowerData::class)->orderBy('supply_center_count', 'DESC')->orderBy('unit_count',
+            'DESC');
     }
+
+    public function adjudicationStarted(): bool {
+        return !is_null($this->locked_for_adjudication_at);
+    }
+
+    public function lockForAdjudication(): void{
+        $this->locked_for_adjudication_at = now();
+        $this->save();
+    }
+
 }

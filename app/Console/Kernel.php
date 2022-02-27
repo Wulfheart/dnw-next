@@ -26,6 +26,9 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
+        $schedule->call(function(){
+
+        })->everyMinute();
         // $schedule->command('inspire')->hourly();
     }
 

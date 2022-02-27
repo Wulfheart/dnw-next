@@ -32,8 +32,13 @@ class FakeOrdersAction
         $ready = $command->option('ready');
 
         $game_id = $command->option('id');
-        $game = Game::findOrFail($game_id);
+        /** @var Game $game */
+        $game = Game::with('currentPhase')->findOrFail($game_id);
 
+        if($game->currentPhase->adjudicationStarted()){
+            $command->error("Adjudication already in progress. Aborting.");
+            return;
+        }
         $this->handle($game, $ready);
     }
 }
