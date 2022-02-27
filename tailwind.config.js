@@ -17,7 +17,9 @@ module.exports = {
             },
             colors: {
                 primary: colors.emerald,
-            }
+            },
+            backgroundColor: ['disabled'],
+            textColor: ['disabled'],
         },
     },
 

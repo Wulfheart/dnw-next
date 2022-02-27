@@ -95,7 +95,7 @@
             </button>
         </div>
 
-        @if ($user->can('submitOrders', $game))
+        @if ($userIsMember)
             <div class="mt-5">
                 <x-form :action="route('games.orders.store', $game)" x-data="{showHelp: false}"
                     x-on:click.away="showHelp = false">
@@ -136,19 +136,32 @@
                             </div>
                         </div>
                     </div>
+
                     <div class="mt-1">
                         <textarea id="orders" rows="4" name="orders"
-                            class="shadow-sm focus:ring-primary-500 focus:border-primary-500 block w-full sm:text-sm border-gray-300 rounded-md">{{ $orders }}</textarea>
+                            class="shadow-sm focus:ring-primary-500 focus:border-primary-500 block w-full sm:text-sm border-gray-300 rounded-md disabled:opacity-50 disabled:bg-gray-200 disabled:cursor-not-allowed"
+                            @disabled(!
+                            $ordersSubmittable)>{{ $ordersNeeded ? $orders : 'Keine Befehle benötigt' }}</textarea>
                     </div>
                     <div class="mt-2 flex justify-end space-x-4">
-                        <button type="submit" name="ready" value="0"
-                            class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-primary-600 hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500">
-                            Speichern
-                        </button>
-                        <button type="submit" name="ready" value="1"
-                            class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-primary-600 hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500">
-                            Fertig
-                        </button>
+                        @if ($ordersReady)
+                            <textarea name="orders" hidden>{{ $orders }}</textarea>
+                            <x-button intent="primary" type="submit" name="ready" value="0"
+                                      class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-primary-600 hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500">
+                                Nicht nicht fertig
+                            </x-button>
+                        @else
+                            <x-button intent="primary" type="submit" name="ready" value="0"
+                                :disabled="!$ordersSubmittable"
+                                class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-primary-600 hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500">
+                                Speichern
+                            </x-button>
+                            <x-button intent="primary" type="submit" name="ready" value="1"
+                                :disabled="!$ordersSubmittable"
+                                class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-primary-600 hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500">
+                                Fertig
+                            </x-button>
+                        @endif
                     </div>
                 </x-form>
 

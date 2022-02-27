@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Game;
 
 use App\DTO\Views\PhaseDTO;
+use App\Enums\GameStatusEnum;
 use App\Http\Controllers\Controller;
 use App\Models\Game;
 use App\Models\Phase;
@@ -45,6 +46,8 @@ class ShowGameController extends Controller
         /** @var PhasePowerData $userPhasePowerData */
         $userPhasePowerData = $game->currentPhase->phasePowerData->filter(fn(PhasePowerData $ppd) => $ppd->power->user_id == $user->id)->first();
 
+        $ordersSubmittable = !$userPhasePowerData?->ready_for_adjudication && $userPhasePowerData?->orders_needed;
+        $userIsMember = $game->currentState() == GameStatusEnum::RUNNING && $game->powers->contains('user_id', $user->id);
 
         return view('game.show', [
             'is_still_creating' => is_null($game->currentPhase),
@@ -52,6 +55,10 @@ class ShowGameController extends Controller
             'phase_keys' => $phases->keys(),
             'game' => $game,
             'gameState' => $game->currentState(),
+            'ordersSubmittable' => $ordersSubmittable,
+            'userIsMember' => $userIsMember,
+            'ordersNeeded' => $userPhasePowerData?->orders_needed,
+            'ordersReady' => $userPhasePowerData?->ready_for_adjudication,
             'orders' => $userPhasePowerData?->orders,
             'userPower' => $userPhasePowerData?->power,
             'user' => $user,

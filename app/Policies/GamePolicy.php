@@ -4,6 +4,8 @@ namespace App\Policies;
 
 use App\Enums\GameStatusEnum;
 use App\Models\Game;
+use App\Models\PhasePowerData;
+use App\Models\Power;
 use App\Models\User;
 use Illuminate\Auth\Access\HandlesAuthorization;
 
@@ -32,7 +34,18 @@ class GamePolicy
     // }
 
     public function submitOrders(User $user, Game $game) {
-        $game->loadMissing(['powers']);
-        return $game->powers->pluck('user_id')->contains($user->id) && $game->currentState() == GameStatusEnum::RUNNING;
+        $game->loadMissing(['powers', 'phasePowerData']);
+
+        /** @var Power $userPower */
+        $userPower = $game->powers->filter(fn(Power $p) => $p->user_id == $user->id)->first();
+
+        if($userPower == null){
+            return false;
+        }
+
+        /** @var PhasePowerData $phasePowerData */
+        $phasePowerData = $game->phasePowerData->first(fn(PhasePowerData $ppd) => $ppd->power_id == $userPower->id);
+
+        return $phasePowerData->orders_needed && $game->currentState() == GameStatusEnum::RUNNING;
     }
 }

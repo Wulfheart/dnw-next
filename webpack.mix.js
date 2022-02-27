@@ -19,10 +19,11 @@ mix.js('resources/js/app.js', 'public/js')
     ])
   .copyDirectory('resources/fonts', 'public/fonts');
 
-mix.browserSync({
-  open: false,
-  proxy: '127.0.0.1:8000',
-});
+// mix.browserSync({
+//   open: false,
+//   proxy: '127.0.0.1:8000',
+// });
+mix.browserSync('127.0.0.1:8000');
 
 if (mix.inProduction()) {
     mix.version();
