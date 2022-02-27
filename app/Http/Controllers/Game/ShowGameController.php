@@ -60,6 +60,7 @@ class ShowGameController extends Controller
             'ordersNeeded' => $userPhasePowerData?->orders_needed,
             'ordersReady' => $userPhasePowerData?->ready_for_adjudication,
             'orders' => $userPhasePowerData?->orders,
+            'adjudicationInProgress' => $game->currentPhase->adjudicationStarted(),
             'userPower' => $userPhasePowerData?->power,
             'user' => $user,
         ]);

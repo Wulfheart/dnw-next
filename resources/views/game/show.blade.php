@@ -16,7 +16,11 @@
                 </div>
             </div>
             <div class="text-sm text-gray-500">
-                <x-game.countdown :isoDatetime="$game->currentPhase->adjudication_at?->toIso8601String()" />
+                @if($adjudicationInProgress)
+                    Auswertung läuft
+                @else
+                    <x-game.countdown :isoDatetime="$game->currentPhase->adjudication_at?->toIso8601String()" />
+                @endif
             </div>
         </div>
 
@@ -146,9 +150,9 @@
                     <div class="mt-2 flex justify-end space-x-4">
                         @if ($ordersReady)
                             <textarea name="orders" hidden>{{ $orders }}</textarea>
-                            <x-button intent="primary" type="submit" name="ready" value="0"
-                                      class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-primary-600 hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500">
-                                Nicht nicht fertig
+                            <x-button intent="primary" type="submit" name="ready" value="0" :disabled="$user->can('submitOrders', $game)"
+                                class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-primary-600 hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500">
+                                Noch nicht fertig
                             </x-button>
                         @else
                             <x-button intent="primary" type="submit" name="ready" value="0"

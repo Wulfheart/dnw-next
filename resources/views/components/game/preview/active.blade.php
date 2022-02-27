@@ -6,6 +6,10 @@
         {{ $game->currentPhase->phase_name_short }}
     </x-slot>
     <x-slot name="right">
-        <x-game.countdown :isoDatetime="$game->currentPhase->adjudication_at?->toIso8601String()" />
+        @if($game->currentPhase->adjudicationStarted())
+            Auswertung läuft
+        @else
+            <x-game.countdown :isoDatetime="$game->currentPhase->adjudication_at?->toIso8601String()" />
+        @endif
     </x-slot>
 </x-game.preview>

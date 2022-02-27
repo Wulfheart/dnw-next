@@ -34,12 +34,16 @@ class GamePolicy
     // }
 
     public function submitOrders(User $user, Game $game) {
-        $game->loadMissing(['powers', 'phasePowerData']);
+        $game->loadMissing(['powers', 'phasePowerData', 'currentPhase']);
 
         /** @var Power $userPower */
         $userPower = $game->powers->filter(fn(Power $p) => $p->user_id == $user->id)->first();
 
         if($userPower == null){
+            return false;
+        }
+
+        if($game->currentPhase->adjudicationStarted()){
             return false;
         }
 

@@ -6,6 +6,7 @@ use App\Models\Phase;
 use Carbon\CarbonInterface;
 use Illuminate\Support\Carbon;
 use function Pest\Laravel\assertDatabaseCount;
+use function Pest\Laravel\travelTo;
 use function PHPUnit\Framework\assertEquals;
 use function PHPUnit\Framework\assertNotNull;
 
@@ -57,3 +58,21 @@ it('calculates the correct phase time for a new phase', function ($hours, $start
     '3h Tuesday 22:00' => [3, '2022-02-22 22.00', '2022-02-24 01.00'],
     '24h Tuesday 15:00' => [24, '2022-02-22 15.00', '2022-02-24 15.00'],
 ]);
+
+it('can get all games which need adjudication', function () {
+    test()->travelTo('2022-02-02 22.00');
+    $game = setupGame();
+    test()->travelTo('2022-02-03 00.00');
+    setupGame();
+
+    test()->travelTo('2022-02-03 21.59.59');
+    expect(Game::whereCanBeAjdudicated()->count())->toBe(0);
+    test()->travelTo('2022-02-03 22.01');
+    expect(Game::whereCanBeAjdudicated()->count())->toBe(1);
+    test()->travelTo('2022-02-04 00.00');
+    expect(Game::whereCanBeAjdudicated()->count())->toBe(2);
+
+    $game->loadMissing('currentPhase');
+    $game->currentPhase->lockForAdjudication();
+    expect(Game::whereCanBeAjdudicated()->count())->toBe(1);
+});

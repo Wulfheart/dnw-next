@@ -44,4 +44,12 @@ class GameBuilder extends Builder
         ]);
         return $this;
     }
+
+    public function whereCanBeAjdudicated(): static
+    {
+        $this->with('currentPhase')->whereHas('currentPhase', function (Builder $builder){
+            $builder->whereNull('locked_for_adjudication_at')->where('adjudication_at', '<=', now());
+        });
+        return $this;
+    }
 }

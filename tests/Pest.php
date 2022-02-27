@@ -55,8 +55,9 @@ expect()->extend('toBeOne', function () {
 function setupGame(): Game
 {
     $user = \App\Models\User::factory()->create();
-
-    test()->seed(VariantSeeder::class);
+    if (Variant::query()->count() == 0) {
+        test()->seed(VariantSeeder::class);
+    }
     $game = CreateGameAction::run($user, faker()->name,
         CarbonInterface::MINUTES_PER_HOUR * CarbonInterface::HOURS_PER_DAY, Variant::firstOrFail()->id, [], false);
 

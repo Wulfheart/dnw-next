@@ -20,7 +20,10 @@ class CheckForAdjudicationReady
             ->count();
 
         $not_defeated_count = $game->currentPhase->phasePowerData->filter(fn(PhasePowerData $ppd) => !$ppd->power->is_defeated)->count();
-        AdjudicateGameAction::dispatchIf($ready_count == $not_defeated_count  && !$game->currentPhase->adjudicationStarted(), $game->id);
-        $game->currentPhase->lockForAdjudication();
+        if($ready_count == $not_defeated_count){
+            AdjudicateGameAction::dispatchIf($ready_count == $not_defeated_count  && !$game->currentPhase->adjudicationStarted(), $game->id);
+            $game->currentPhase->lockForAdjudication();
+
+        }
     }
 }

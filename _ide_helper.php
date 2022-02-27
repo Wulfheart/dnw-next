@@ -17976,6 +17976,128 @@
      
 }
 
+    namespace BeyondCode\ServerTiming\Facades { 
+            /**
+     * 
+     *
+     */ 
+        class ServerTiming {
+                    /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function addMetric($metric)
+        {
+                        /** @var \BeyondCode\ServerTiming\ServerTiming $instance */
+                        return $instance->addMetric($metric);
+        }
+                    /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function addMessage($message)
+        {
+                        /** @var \BeyondCode\ServerTiming\ServerTiming $instance */
+                        return $instance->addMessage($message);
+        }
+                    /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function hasStartedEvent($key)
+        {
+                        /** @var \BeyondCode\ServerTiming\ServerTiming $instance */
+                        return $instance->hasStartedEvent($key);
+        }
+                    /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function measure($key)
+        {
+                        /** @var \BeyondCode\ServerTiming\ServerTiming $instance */
+                        return $instance->measure($key);
+        }
+                    /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function start($key)
+        {
+                        /** @var \BeyondCode\ServerTiming\ServerTiming $instance */
+                        return $instance->start($key);
+        }
+                    /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function stop($key)
+        {
+                        /** @var \BeyondCode\ServerTiming\ServerTiming $instance */
+                        return $instance->stop($key);
+        }
+                    /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function stopAllUnfinishedEvents()
+        {
+                        /** @var \BeyondCode\ServerTiming\ServerTiming $instance */
+                        return $instance->stopAllUnfinishedEvents();
+        }
+                    /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function setDuration($key, $duration)
+        {
+                        /** @var \BeyondCode\ServerTiming\ServerTiming $instance */
+                        return $instance->setDuration($key, $duration);
+        }
+                    /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function getDuration($key)
+        {
+                        /** @var \BeyondCode\ServerTiming\ServerTiming $instance */
+                        return $instance->getDuration($key);
+        }
+                    /**
+         * 
+         *
+         * @return \BeyondCode\ServerTiming\array<string, int|float|null>
+         * @static 
+         */ 
+        public static function events()
+        {
+                        /** @var \BeyondCode\ServerTiming\ServerTiming $instance */
+                        return $instance->events();
+        }
+                    /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function reset($stopwatch)
+        {
+                        /** @var \BeyondCode\ServerTiming\ServerTiming $instance */
+                        return $instance->reset($stopwatch);
+        }
+         
+    }
+     
+}
+
     namespace Spatie\LaravelIgnition\Facades { 
             /**
      * 
@@ -22233,6 +22355,7 @@ namespace  {
             class Livewire extends \Livewire\Livewire {}
             class Action extends \Lorisleiva\Actions\Facades\Actions {}
             class Lody extends \Lorisleiva\Lody\Lody {}
+            class Stopwatch extends \BeyondCode\ServerTiming\Facades\ServerTiming {}
             class Flare extends \Spatie\LaravelIgnition\Facades\Flare {}
      
 }
