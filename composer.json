@@ -30,6 +30,7 @@
   "require-dev": {
     "barryvdh/laravel-debugbar": "^3.6",
     "barryvdh/laravel-ide-helper": "^2.10",
+    "deployer/dist": "^6.8",
     "fakerphp/faker": "^1.9.1",
     "glhd/laravel-dumper": "^1.0",
     "laravel-shift/blueprint": "^2.0",
@@ -82,6 +83,9 @@
     ],
     "pest": [
       "vendor/bin/pest"
+    ],
+    "dep": [
+      "vendor/bin/dep"
     ],
     "fix": [
       "npx blade-formatter \"resources/**/*.blade.php\" --write"

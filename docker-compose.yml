@@ -3,20 +3,20 @@ version: '3.1'
 services:
 
   db:
-    image: postgres
-    restart: always
+    image: mariadb
     environment:
-      POSTGRES_USER: laravel
-      POSTGRES_PASSWORD: password
-      POSTGRES_DB: dnw-next
+      MARIADB_ROOT_PASSWORD: root
+      MARIADB_USER: laravel
+      MARIADB_PASSWORD: password
+      MARIADB_DATABASE: dnw-next
     ports:
-      - "6543:5432"
+      - "3407:3306"
   db_test:
-    image: postgres
-    restart: always
+    image: mariadb
     environment:
-      POSTGRES_USER: laravel
-      POSTGRES_PASSWORD: password
-      POSTGRES_DB: dnw-next
+      MARIADB_ROOT_PASSWORD: root
+      MARIADB_USER: laravel
+      MARIADB_PASSWORD: password
+      MARIADB_DATABASE: dnw-next
     ports:
-      - "6544:5432"
+      - "3408:3306"
