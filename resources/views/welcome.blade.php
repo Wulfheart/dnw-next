@@ -10,6 +10,9 @@
 </head>
 
 <body class="antialiased">
+<a href="{{ route('login') }}">Login</a>
+<br>
+<a href="{{ route('register') }}">Register</a>
 </body>
 
 </html>
