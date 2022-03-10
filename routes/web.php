@@ -9,6 +9,9 @@ use App\Http\Controllers\Game\JoinGameController;
 use App\Http\Controllers\Game\LeaveGameController;
 use App\Http\Controllers\Game\StoreGameController;
 use App\Http\Controllers\Game\SubmitOrdersController;
+use App\Models\Game;
+use App\Models\User;
+use App\Notifications\Game\GameStartedNotification;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -50,3 +53,10 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
         // Route::get('/{game}/messages/test')->name('show.messages.show');
     });
 });
+
+if(config('app.debug')){
+    Route::get('/notification', function() {
+        $game = Game::first();
+        return (new GameStartedNotification($game))->toMail(User::first());
+    });
+}
