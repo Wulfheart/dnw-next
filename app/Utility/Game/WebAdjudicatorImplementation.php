@@ -17,7 +17,7 @@ class WebAdjudicatorImplementation implements AdjudicatorService
      */
     public function getVariants(): VariantsResponseDTO
     {
-        $response = Http::baseUrl(config('diplomacy.adjudicator.base_url'))->get('variants');
+        $response = Http::log()->baseUrl(config('diplomacy.adjudicator.base_url'))->get('variants');
         $response->throw();
         $dto = new VariantsResponseDTO($response->json());
         $dto->json = $response->body();
@@ -31,7 +31,8 @@ class WebAdjudicatorImplementation implements AdjudicatorService
      */
     public function initializeGame(string $variant): AdjudicateGameResponseDTO
     {
-        $response = Http::baseUrl(config('diplomacy.adjudicator.base_url'))->get(implode('/', ['adjudicate', $variant]));
+        $response = Http::log()->baseUrl(config('diplomacy.adjudicator.base_url'))->get(implode('/',
+            ['adjudicate', $variant]));
         $response->throw();
 
         $dto = new AdjudicateGameResponseDTO($response->json());
@@ -46,7 +47,7 @@ class WebAdjudicatorImplementation implements AdjudicatorService
      */
     public function adjudicateGame(AdjudicateGameRequestDTO $request): AdjudicateGameResponseDTO
     {
-        $response = Http::baseUrl(config('diplomacy.adjudicator.base_url'))->post('adjudicate', $request->toArray());
+        $response = Http::log()->baseUrl(config('diplomacy.adjudicator.base_url'))->post('adjudicate', $request->toArray());
         $response->throw();
 
         $dto = new AdjudicateGameResponseDTO($response->json());
@@ -61,7 +62,7 @@ class WebAdjudicatorImplementation implements AdjudicatorService
      */
     public function getDumbbotOrders(DumbbotRequestDTO $request): DumbbotResponseDTO
     {
-        $response = Http::baseUrl(config('diplomacy.adjudicator.base_url'))->post('dumbbot', $request->toArray());
+        $response = Http::log()->baseUrl(config('diplomacy.adjudicator.base_url'))->post('dumbbot', $request->toArray());
         $response->throw();
 
         $dto = new DumbbotResponseDTO($response->json());

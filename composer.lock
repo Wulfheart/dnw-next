@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3e3cf4b3d9857abb4ca103447edcb0fd",
+    "content-hash": "e8613aa7e35bc017a0dda67bdc6e8dd4",
     "packages": [
         {
             "name": "andreiio/blade-remix-icon",
@@ -173,6 +173,82 @@
                 "source": "https://github.com/Bacon/BaconQrCode/tree/2.0.6"
             },
             "time": "2022-02-04T20:16:05+00:00"
+        },
+        {
+            "name": "bilfeldt/laravel-http-client-logger",
+            "version": "v1.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/bilfeldt/laravel-http-client-logger.git",
+                "reference": "2050cf00267d2b62dc81928b1c26ea545b0fccae"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/bilfeldt/laravel-http-client-logger/zipball/2050cf00267d2b62dc81928b1c26ea545b0fccae",
+                "reference": "2050cf00267d2b62dc81928b1c26ea545b0fccae",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "guzzlehttp/guzzle": "^7.2",
+                "illuminate/http": "^8.0 || ^9.0",
+                "illuminate/support": "^8.0 || ^9.0",
+                "php": "^7.4 || ^8.0",
+                "spatie/laravel-package-tools": "^1.1"
+            },
+            "require-dev": {
+                "orchestra/testbench": "^7.0",
+                "phpunit/phpunit": "^9.5.10",
+                "spatie/laravel-ray": "^1.29",
+                "timacdonald/log-fake": "dev-return-types",
+                "vimeo/psalm": "^4.20"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Bilfeldt\\LaravelHttpClientLogger\\LaravelHttpClientLoggerServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Bilfeldt\\LaravelHttpClientLogger\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Anders Bilfeldt",
+                    "email": "abilfeldt@gmail.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A logger for the Laravel HTTP Client",
+            "homepage": "https://github.com/bilfeldt/laravel-http-client-logger",
+            "keywords": [
+                "Guzzle",
+                "PSR3",
+                "bilfeldt",
+                "laravel",
+                "laravel-http-client-logger",
+                "log",
+                "logging"
+            ],
+            "support": {
+                "issues": "https://github.com/bilfeldt/laravel-http-client-logger/issues",
+                "source": "https://github.com/bilfeldt/laravel-http-client-logger/tree/v1.2.0"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/bilfeldt",
+                    "type": "github"
+                }
+            ],
+            "time": "2022-02-10T11:30:44+00:00"
         },
         {
             "name": "blade-ui-kit/blade-heroicons",
