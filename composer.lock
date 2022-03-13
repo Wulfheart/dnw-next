@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e8613aa7e35bc017a0dda67bdc6e8dd4",
+    "content-hash": "729ce57e91e9eb329b426bc2d8f47bcd",
     "packages": [
         {
             "name": "andreiio/blade-remix-icon",
@@ -173,6 +173,66 @@
                 "source": "https://github.com/Bacon/BaconQrCode/tree/2.0.6"
             },
             "time": "2022-02-04T20:16:05+00:00"
+        },
+        {
+            "name": "balping/artisan-bash-completion",
+            "version": "v1.0.4",
+            "source": {
+                "type": "git",
+                "url": "https://gitlab.com/balping/artisan-bash-completion.git",
+                "reference": "afecf2cd720d64ea58e15b7062d25e07949ca264"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://gitlab.com/api/v4/projects/balping%2Fartisan-bash-completion/repository/archive.zip?sha=afecf2cd720d64ea58e15b7062d25e07949ca264",
+                "reference": "afecf2cd720d64ea58e15b7062d25e07949ca264",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/console": "^5.5.0|^6.0|^7.0|^8.0|^9.0",
+                "illuminate/support": "^5.5.0|^6.0|^7.0|^8.0|^9.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Balping\\ArtisanBashCompletion\\ServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Balping\\ArtisanBashCompletion\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "Balázs Dura-Kovács"
+                },
+                {
+                    "name": "Russel Waters",
+                    "homepage": "https://github.com/argakiig"
+                },
+                {
+                    "name": "Jan Hansen",
+                    "homepage": "https://github.com/janka"
+                }
+            ],
+            "description": "Adds bash completion for Laravel 5.5+, 6+ artisan CLI.",
+            "keywords": [
+                "artisan",
+                "bash",
+                "completion",
+                "laravel"
+            ],
+            "support": {
+                "source": "https://gitlab.com/balping/artisan-bash-completion/-/tree/v1.0.4"
+            },
+            "time": "2022-02-15T17:42:16+00:00"
         },
         {
             "name": "bilfeldt/laravel-http-client-logger",

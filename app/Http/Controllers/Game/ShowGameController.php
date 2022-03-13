@@ -49,7 +49,7 @@ class ShowGameController extends Controller
         $ordersSubmittable = !$userPhasePowerData?->ready_for_adjudication && $userPhasePowerData?->orders_needed;
         $userIsMember = $game->currentState() == GameStatusEnum::RUNNING && $game->powers->contains('user_id', $user->id);
 
-        return view('game.show', [
+        $response = response()->view('game.show', [
             'is_still_creating' => is_null($game->currentPhase),
             'phases' => $phases,
             'phase_keys' => $phases->keys(),
@@ -64,6 +64,12 @@ class ShowGameController extends Controller
             'userPower' => $userPhasePowerData?->power,
             'user' => $user,
         ]);
+
+        if($game->currentPhase->adjudication_at){
+            $response->header('Refresh', $game->currentPhase->adjudication_at->diffInSeconds() + 5);
+        }
+
+        return $response;
 
     }
 }
