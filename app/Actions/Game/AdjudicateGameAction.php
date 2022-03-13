@@ -8,6 +8,7 @@ use App\Models\Game;
 use App\Models\Phase;
 use App\Models\PhasePowerData;
 use App\Models\Power;
+use App\Notifications\Game\GameAdjudicatedNotification;
 use App\Utility\Game\AdjudicatorService;
 use App\Utility\Game\DTO\AdjudicateGameRequestDTO;
 use App\Utility\Game\DTO\OrderDTO;
@@ -16,6 +17,7 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 use Lorisleiva\Actions\Concerns\AsAction;
+use PhpParser\Node\Expr\AssignOp\Pow;
 use Ramsey\Uuid\Uuid;
 
 class AdjudicateGameAction
@@ -113,8 +115,15 @@ class AdjudicateGameAction
                 }
             }
 
-            $game->powers->filter(fn(Power $p) => collect($gameResponse->winners)->contains($p->basePower->api_name))
-                ->each(fn(Power $p) => $p->update(['is_winner' => true]));
+            $hasWinner = !empty($gameResponse->winners);
+            if ($hasWinner) {
+                $game->powers->filter(fn(Power $p
+                ) => collect($gameResponse->winners)->contains($p->basePower->api_name))
+                    ->each(fn(Power $p) => $p->update(['is_winner' => true]));
+            } else if($game->currentState() == GameStatusEnum::RUNNING){
+                $game->powers->each(fn(Power $p) => $p->loadMissing('user')->user->notify(new GameAdjudicatedNotification($game)));
+            }
+
         });
     }
 
