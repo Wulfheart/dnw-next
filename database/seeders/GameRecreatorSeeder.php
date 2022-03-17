@@ -9,7 +9,6 @@ use App\Models\Game;
 use App\Models\Power;
 use App\Models\User;
 use App\Models\Variant;
-use App\Utility\Game\GameRecreator;
 use Carbon\Carbon;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
@@ -56,7 +55,7 @@ class GameRecreatorSeeder extends Seeder
                 'game_id' => $game->id,
                 'user_id' => User::factory()->create()->id,
             ]));
-            InitializeGameAction::run($game->id, false);
+            InitializeGameAction::run($game->id, false, false);
             $game->currentPhase()->update(['created_at' => $basetime->subDays($file_count)]);
 
 

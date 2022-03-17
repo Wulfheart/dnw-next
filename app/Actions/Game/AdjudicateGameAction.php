@@ -30,7 +30,7 @@ class AdjudicateGameAction
     {
     }
 
-    public function handle(int $game_id, bool $save_response = false)
+    public function handle(int $game_id, bool $save_response = false, bool $send_emails = true)
     {
         /** @var Game $game */
         $game = Game::with([
@@ -39,7 +39,7 @@ class AdjudicateGameAction
         $currentPhase = $game->currentPhase;
 
         $adjudicator = $this->adjudicator;
-        DB::transaction(function () use ($adjudicator, $game, $save_response, $currentPhase) {
+        DB::transaction(function () use ($adjudicator, $game, $save_response, $currentPhase, $send_emails) {
             $gameResponse = $adjudicator->adjudicateGame(new AdjudicateGameRequestDTO(
                 previous_state_encoded: $currentPhase->state_encoded,
                 orders: $game->currentPhase->phasePowerData->map(
@@ -120,7 +120,7 @@ class AdjudicateGameAction
                 $game->powers->filter(fn(Power $p
                 ) => collect($gameResponse->winners)->contains($p->basePower->api_name))
                     ->each(fn(Power $p) => $p->update(['is_winner' => true]));
-            } else if($game->currentState() == GameStatusEnum::RUNNING){
+            } else if($game->currentState() == GameStatusEnum::RUNNING && $send_emails){
                 $game->powers->each(fn(Power $p) => $p->loadMissing('user')->user->notify(new GameAdjudicatedNotification($game)));
             }
 
