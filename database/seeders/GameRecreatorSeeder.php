@@ -55,12 +55,12 @@ class GameRecreatorSeeder extends Seeder
                 'game_id' => $game->id,
                 'user_id' => User::factory()->create()->id,
             ]));
-            InitializeGameAction::run($game->id, false, false);
+            InitializeGameAction::run($game->id, false);
             $game->currentPhase()->update(['created_at' => $basetime->subDays($file_count)]);
 
 
             for ($i = 0; $i < $file_count - 1; $i++) {
-                AdjudicateGameAction::run($game->id);
+                AdjudicateGameAction::run($game->id, false, false);
                 $game->currentPhase()->update(['created_at' => $basetime->subDays($file_count - $i)]);
 
             }
