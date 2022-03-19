@@ -27,9 +27,9 @@ class GameShowOrderTest extends DuskTestCase
             $selectorNotReadyButton = '[x-dusk="order-button-not-ready"]';
             $selectorSaveButton = '[x-dusk="order-button-save"]';
             $selectorOrderTextarea = '[x-dusk="order-textarea"]';
-            $interactor = $browser->loginAs($phasePowerData->power->user)->visit(route('games.show', $game));
+            $interactor = $browser->loginAs($phasePowerData->power->user);
 
-            $interactor->assertNotPresent($selectorNotReadyButton)
+            $interactor->visit(route('games.show', $game))->assertNotPresent($selectorNotReadyButton)
                 ->assertButtonEnabled($selectorReadyButton)
                 ->assertButtonEnabled($selectorSaveButton)
                 ->assertVisible($selectorOrderTextarea)
@@ -53,10 +53,8 @@ class GameShowOrderTest extends DuskTestCase
             AdjudicateGameAction::run($game->id);
             AdjudicateGameAction::run($game->id);
 
-            $interactor->visit(route('games.show', $game))->screenshot('TEST');
-
             // Two adjudications - no builds or disbands needed
-            $interactor->assertDisabled($selectorOrderTextarea)
+            $interactor->visit(route('games.show', $game))->assertDisabled($selectorOrderTextarea)
                 ->assertButtonDisabled($selectorSaveButton)
                 ->assertButtonDisabled($selectorReadyButton);
         });
