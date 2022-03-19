@@ -31,12 +31,14 @@ class ShowGameController extends Controller
         ]);
 
         $phases = $game->phases->map(fn(Phase $phase) => collect()
-            ->when(!is_null($phase->svg_with_orders), fn(Collection $c) => $c->put($phase->phase_name_short."_with_orders",
-                PhaseDTO::factory()->setKey($phase->phase_name_short."_with_orders")->setSvg($phase->svg_with_orders)
+            ->when(!is_null($phase->svg_with_orders),
+                fn(Collection $c) => $c->put($phase->phase_name_short."_with_orders",
+                    PhaseDTO::factory()->setKey($phase->phase_name_short."_with_orders")->setSvg($phase->svg_with_orders)
                 )
             )
-            ->when(!is_null($phase->svg_adjudicated), fn(Collection $c) => $c->put($phase->phase_name_short."_adjudicated",
-                PhaseDTO::factory()->setKey($phase->phase_name_short."_adjudicated")->setSvg($phase->svg_adjudicated)
+            ->when(!is_null($phase->svg_adjudicated),
+                fn(Collection $c) => $c->put($phase->phase_name_short."_adjudicated",
+                    PhaseDTO::factory()->setKey($phase->phase_name_short."_adjudicated")->setSvg($phase->svg_adjudicated)
                 )
             )
         )->flatMap(fn($values) => $values);
@@ -44,10 +46,14 @@ class ShowGameController extends Controller
         $user = auth()->user();
 
         /** @var PhasePowerData $userPhasePowerData */
-        $userPhasePowerData = $game->currentPhase->phasePowerData->filter(fn(PhasePowerData $ppd) => $ppd->power->user_id == $user->id)->first();
+        $userPhasePowerData = $game->currentPhase->phasePowerData->filter(fn(PhasePowerData $ppd
+        ) => $ppd->power->user_id == $user->id)->first();
 
         $ordersSubmittable = !$userPhasePowerData?->ready_for_adjudication && $userPhasePowerData?->orders_needed;
-        $userIsMember = $game->currentState() == GameStatusEnum::RUNNING && $game->powers->contains('user_id', $user->id);
+        $userIsMember = $game->currentState() == GameStatusEnum::RUNNING && $game->powers->contains('user_id',
+                $user->id);
+        $adjudicationInProgress = $game->currentPhase->adjudicationStarted();
+
 
         $response = response()->view('game.show', [
             'is_still_creating' => is_null($game->currentPhase),
@@ -60,12 +66,12 @@ class ShowGameController extends Controller
             'ordersNeeded' => $userPhasePowerData?->orders_needed,
             'ordersReady' => $userPhasePowerData?->ready_for_adjudication,
             'orders' => $userPhasePowerData?->orders,
-            'adjudicationInProgress' => $game->currentPhase->adjudicationStarted(),
+            'adjudicationInProgress' => $adjudicationInProgress,
             'userPower' => $userPhasePowerData?->power,
             'user' => $user,
         ]);
 
-        if($game->currentPhase->adjudication_at){
+        if ($game->currentPhase->adjudication_at) {
             $response->header('Refresh', $game->currentPhase->adjudication_at->diffInSeconds() + 5);
         }
 

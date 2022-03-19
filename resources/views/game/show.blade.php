@@ -16,7 +16,7 @@
                 </div>
             </div>
             <div class="text-sm text-gray-500">
-                @if($adjudicationInProgress)
+                @if ($adjudicationInProgress)
                     Auswertung läuft
                 @else
                     <x-game.countdown :isoDatetime="$game->currentPhase->adjudication_at?->toIso8601String()" />
@@ -144,25 +144,29 @@
                     <div class="mt-1">
                         <textarea id="orders" rows="4" name="orders"
                             class="shadow-sm focus:ring-primary-500 focus:border-primary-500 block w-full sm:text-sm border-gray-300 rounded-md disabled:opacity-50 disabled:bg-gray-200 disabled:cursor-not-allowed"
-                            @disabled(!
-                            $ordersSubmittable)>{{ $ordersNeeded ? $orders : 'Keine Befehle benötigt' }}</textarea>
+                            @disabled(!$ordersSubmittable)
+                            x-dusk="order-textarea">{{ $ordersNeeded ? $orders : 'Keine Befehle benötigt' }}</textarea>
                     </div>
                     <div class="mt-2 flex justify-end space-x-4">
                         @if ($ordersReady)
                             <textarea name="orders" hidden>{{ $orders }}</textarea>
-                            <x-button intent="primary" type="submit" name="ready" value="0" :disabled="$user->can('submitOrders', $game)"
-                                class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-primary-600 hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500">
+                            <x-button intent="primary" type="submit" name="ready" value="0"
+                                :disabled="$adjudicationInProgress"
+                                class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-primary-600 hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500"
+                                x-dusk="order-button-not-ready">
                                 Noch nicht fertig
                             </x-button>
                         @else
                             <x-button intent="primary" type="submit" name="ready" value="0"
                                 :disabled="!$ordersSubmittable"
-                                class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-primary-600 hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500">
+                                class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-primary-600 hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500"
+                                x-dusk="order-button-save">
                                 Speichern
                             </x-button>
                             <x-button intent="primary" type="submit" name="ready" value="1"
                                 :disabled="!$ordersSubmittable"
-                                class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-primary-600 hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500">
+                                class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-primary-600 hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500"
+                                x-dusk="order-button-ready">
                                 Fertig
                             </x-button>
                         @endif
