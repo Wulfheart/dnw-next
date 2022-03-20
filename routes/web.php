@@ -1,8 +1,5 @@
 <?php
 
-use App\Actions\Game\CreateGameAction;
-use App\Actions\Game\JoinGameAction;
-use App\Actions\Game\SubmitOrdersAction;
 use App\Http\Controllers\Game\Category\IndexNewGameController;
 use App\Http\Controllers\Game\IndexGameController;
 use App\Http\Controllers\Game\JoinGameController;
@@ -54,8 +51,8 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
     });
 });
 
-if(config('app.debug')){
-    Route::get('/notification', function() {
+if (config('app.debug')) {
+    Route::get('/notification', function () {
         $game = Game::first();
         return (new GameStartedNotification($game))->toMail(User::first());
     });
