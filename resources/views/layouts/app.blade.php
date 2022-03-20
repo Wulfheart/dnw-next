@@ -23,7 +23,7 @@
     <script src="{{ mix('js/app.js') }}" defer></script>
 </head>
 
-<body class="font-sans antialiased">
+<body class="font-sans antialiased scroll-smooth {{ config('app.debug') ? 'debug-screens' : '' }}">
     <x-jet-banner />
 
     <div class="min-h-screen">
