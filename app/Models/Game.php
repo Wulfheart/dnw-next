@@ -46,6 +46,11 @@ class Game extends Model
         return $this->belongsTo(\App\Models\Variant::class);
     }
 
+    public function messageMode(): BelongsTo
+    {
+        return $this->belongsTo(MessageMode::class);
+    }
+
     public function noAdjudicationDays(): HasMany
     {
         return $this->hasMany(NoAdjudication::class);

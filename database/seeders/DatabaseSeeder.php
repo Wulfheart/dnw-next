@@ -25,6 +25,7 @@ class DatabaseSeeder extends Seeder
 
         $this->call([
             VariantSeeder::class,
+            MessageModeSeeder::class,
             GameSeeder::class,
             GameRecreatorSeeder::class,
         ]);

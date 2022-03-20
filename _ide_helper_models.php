@@ -44,6 +44,7 @@ namespace App\Models{
  * @property int $id
  * @property string $name
  * @property int $variant_id
+ * @property int $message_mode_id
  * @property int $phase_length
  * @property bool $is_paused
  * @property int|null $scs_to_win
@@ -52,6 +53,7 @@ namespace App\Models{
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
  * @property-read \App\Models\Phase|null $currentPhase
+ * @property-read \App\Models\MessageMode|null $messageMode
  * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\NoAdjudication[] $noAdjudicationDays
  * @property-read int|null $no_adjudication_days_count
  * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\PhasePowerData[] $phasePowerData
@@ -77,6 +79,7 @@ namespace App\Models{
  * @method static \App\Builders\GameBuilder|Game whereId($value)
  * @method static \App\Builders\GameBuilder|Game whereIsPaused($value)
  * @method static \App\Builders\GameBuilder|Game whereJoinPhaseLength($value)
+ * @method static \App\Builders\GameBuilder|Game whereMessageModeId($value)
  * @method static \App\Builders\GameBuilder|Game whereName($value)
  * @method static \App\Builders\GameBuilder|Game whereNew()
  * @method static \App\Builders\GameBuilder|Game wherePhaseLength($value)
@@ -110,6 +113,47 @@ namespace App\Models{
  * @method static \Illuminate\Database\Eloquent\Builder|Message whereUpdatedAt($value)
  */
 	class IdeHelperMessage {}
+}
+
+namespace App\Models{
+/**
+ * App\Models\MessageMode
+ *
+ * @property int $id
+ * @property string|null $name
+ * @property string|null $description
+ * @property bool $room_creation_allowed
+ * @property bool $signing_allowed
+ * @property bool $adjustment_messages_allowed
+ * @property bool $move_messages_allowed
+ * @property bool $retreat_messages_allowed
+ * @property bool $non_playing_messages_allowed
+ * @property bool $pre_game_messages_allowed
+ * @property bool $post_game_messages_allowed
+ * @property bool $show_player_identities_during_game
+ * @property bool $is_custom
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
+ * @method static \Illuminate\Database\Eloquent\Builder|MessageMode newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|MessageMode newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|MessageMode query()
+ * @method static \Illuminate\Database\Eloquent\Builder|MessageMode whereAdjustmentMessagesAllowed($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|MessageMode whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|MessageMode whereDescription($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|MessageMode whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|MessageMode whereIsCustom($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|MessageMode whereMoveMessagesAllowed($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|MessageMode whereName($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|MessageMode whereNonPlayingMessagesAllowed($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|MessageMode wherePostGameMessagesAllowed($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|MessageMode wherePreGameMessagesAllowed($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|MessageMode whereRetreatMessagesAllowed($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|MessageMode whereRoomCreationAllowed($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|MessageMode whereShowPlayerIdentitiesDuringGame($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|MessageMode whereSigningAllowed($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|MessageMode whereUpdatedAt($value)
+ */
+	class IdeHelperMessageMode {}
 }
 
 namespace App\Models{

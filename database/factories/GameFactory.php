@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\MessageMode;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Str;
 use App\Models\Game;
@@ -26,6 +27,7 @@ class GameFactory extends Factory
         return [
             'name' => $this->faker->name,
             'variant_id' => Variant::factory(),
+            'message_mode_id' => MessageMode::firstOrFail(),
             'phase_length' => $this->faker->randomNumber(),
             'is_paused' => $this->faker->boolean,
         ];

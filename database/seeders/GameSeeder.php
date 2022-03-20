@@ -7,6 +7,7 @@ use App\Jobs\AdjudicateGameJob;
 use App\Jobs\InitializeGameJob;
 use App\Models\BasePower;
 use App\Models\Game;
+use App\Models\MessageMode;
 use App\Models\Power;
 use App\Models\User;
 use App\Models\Variant;
@@ -24,12 +25,14 @@ class GameSeeder extends Seeder
     {
 
         foreach ([0,6] as $i) {
-            $variant = Variant::first();
+            $variant = Variant::firstOrFail();
+            $messageMode = MessageMode::firstOrFail();
 
             $game = Game::create([
                 'name' => faker()->catchPhrase,
                 'phase_length' => Carbon::MINUTES_PER_HOUR * Carbon::HOURS_PER_DAY,
                 'variant_id' => $variant->id,
+                'message_mode_id' => $messageMode->id,
                 'scs_to_win' => $variant->default_scs_to_win,
             ]);
 
