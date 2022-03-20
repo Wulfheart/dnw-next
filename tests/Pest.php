@@ -52,4 +52,4 @@ expect()->extend('toBeOne', function () {
 */
 
 
-include('./test_functions.php');
+include(__DIR__ . '/test_functions.php');

@@ -4,7 +4,6 @@ namespace App\Models;
 
 use App\Collections\PowerCollection;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\Model;
 
 /**
  * @mixin IdeHelperPower
@@ -13,24 +12,6 @@ class Power extends Model
 {
     use HasFactory;
 
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array
-     */
-    protected $fillable = [
-        'base_power_id',
-        'user_id',
-        'game_id',
-        'is_defeated',
-        'is_winner',
-    ];
-
-    /**
-     * The attributes that should be cast to native types.
-     *
-     * @var array
-     */
     protected $casts = [
         'id' => 'integer',
         'base_power_id' => 'integer',
@@ -56,7 +37,8 @@ class Power extends Model
         return $this->belongsTo(\App\Models\User::class);
     }
 
-    public function game(){
+    public function game()
+    {
         return $this->belongsTo(Game::class);
     }
 }

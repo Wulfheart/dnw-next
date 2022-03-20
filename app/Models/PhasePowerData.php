@@ -3,7 +3,6 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 /**
@@ -13,28 +12,6 @@ class PhasePowerData extends Model
 {
     use HasFactory;
 
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array
-     */
-    protected $fillable = [
-        'phase_id',
-        'power_id',
-        'home_center_count',
-        'supply_center_count',
-        'unit_count',
-        'orders_needed',
-        'orders',
-        'applied_orders',
-        'ready_for_adjudication',
-    ];
-
-    /**
-     * The attributes that should be cast to native types.
-     *
-     * @var array
-     */
     protected $casts = [
         'id' => 'integer',
         'phase_id' => 'integer',

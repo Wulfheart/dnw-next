@@ -31,7 +31,7 @@ class User extends Authenticatable implements FilamentUser
         'name',
         'email',
         'password',
-        'is_admin'
+        'is_admin',
     ];
 
     /**
@@ -53,7 +53,7 @@ class User extends Authenticatable implements FilamentUser
      */
     protected $casts = [
         'email_verified_at' => 'datetime',
-        'is_admin' => 'boolean'
+        'is_admin' => 'boolean',
     ];
 
     /**

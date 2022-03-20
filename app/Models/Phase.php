@@ -5,7 +5,6 @@ namespace App\Models;
 use App\Enums\PhaseTypeEnum;
 use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 
@@ -15,21 +14,6 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 class Phase extends Model
 {
     use HasFactory;
-
-    protected $fillable = [
-        'type',
-        'number',
-        'previous_phase_id',
-        'game_id',
-        'svg_adjudicated',
-        'svg_with_orders',
-        'state_encoded',
-        'phase_name_long',
-        'phase_name_short',
-        'locked_for_adjudication_at',
-        'adjudication_at',
-        'adjudicated_at',
-    ];
 
     protected $casts = [
         'id' => 'integer',
@@ -53,11 +37,13 @@ class Phase extends Model
             'DESC');
     }
 
-    public function adjudicationStarted(): bool {
+    public function adjudicationStarted(): bool
+    {
         return !is_null($this->locked_for_adjudication_at);
     }
 
-    public function lockForAdjudication(): void{
+    public function lockForAdjudication(): void
+    {
         $this->locked_for_adjudication_at = now();
         $this->save();
     }

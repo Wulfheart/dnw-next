@@ -7,7 +7,6 @@ use App\Collections\GameCollection;
 use App\Enums\GameStatusEnum;
 use Carbon\CarbonInterface;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\HasManyThrough;
@@ -21,26 +20,6 @@ class Game extends Model
 {
     use HasFactory;
 
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array
-     */
-    protected $fillable = [
-        'name',
-        'variant_id',
-        'phase_length',
-        'is_paused',
-        'scs_to_win',
-        'join_phase_length',
-        'start_when_ready',
-    ];
-
-    /**
-     * The attributes that should be cast to native types.
-     *
-     * @var array
-     */
     protected $casts = [
         'id' => 'integer',
         'variant_id' => 'integer',

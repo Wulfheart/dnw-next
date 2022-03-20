@@ -168,6 +168,17 @@ namespace App\Models{
 
 namespace App\Models{
 /**
+ * App\Models\Model
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder|Model newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|Model newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|Model query()
+ */
+	class IdeHelperModel {}
+}
+
+namespace App\Models{
+/**
  * App\Models\NoAdjudication
  *
  * @property int $id

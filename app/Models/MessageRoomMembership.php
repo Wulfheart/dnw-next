@@ -3,8 +3,6 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\Pivot;
 
 /**
  * @mixin IdeHelperMessageRoomMembership
@@ -13,23 +11,6 @@ class MessageRoomMembership extends Model
 {
     use HasFactory;
 
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array
-     */
-    protected $fillable = [
-        'power_id',
-        'message_room_id',
-        'joined_at',
-        'last_visited_at',
-    ];
-
-    /**
-     * The attributes that should be cast to native types.
-     *
-     * @var array
-     */
     protected $casts = [
         'id' => 'integer',
         'power_id' => 'integer',
