@@ -25,5 +25,5 @@ services:
     logging:
       driver: 'none'  # disable saving logs
     ports:
-      - 1026:1025 # smtp server
-      - 8026:8025 # web ui
+      - "1026:1025" # smtp server
+      - "8026:8025" # web ui
