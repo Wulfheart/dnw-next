@@ -2,8 +2,10 @@
 
 use App\Http\Controllers\Game\Category\IndexNewGameController;
 use App\Http\Controllers\Game\IndexGameController;
+use App\Http\Controllers\Game\IndexMessagesController;
 use App\Http\Controllers\Game\JoinGameController;
 use App\Http\Controllers\Game\LeaveGameController;
+use App\Http\Controllers\Game\ShowMessagesController;
 use App\Http\Controllers\Game\StoreGameController;
 use App\Http\Controllers\Game\SubmitOrdersController;
 use App\Models\Game;
@@ -45,9 +47,9 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
         Route::post('/{game}/orders', SubmitOrdersController::class)->name('orders.store');
         Route::post('/{game}/join', JoinGameController::class)->name('join');
         Route::post('/{game}/leave', LeaveGameController::class)->name('leave');
+        Route::get('/{game}/messages', IndexMessagesController::class)->name('messages.index');
+        Route::get('/{game}/messages/{message_room}', ShowMessagesController::class)->name('messages.show');
         Route::get('/{game}', \App\Http\Controllers\Game\ShowGameController::class)->name('show');
-        // Route::get('/{game}/messages')->name('show.messages.index');
-        // Route::get('/{game}/messages/test')->name('show.messages.show');
     });
 });
 
