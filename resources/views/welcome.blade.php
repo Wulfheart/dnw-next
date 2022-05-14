@@ -14,5 +14,8 @@
 <br>
 <a href="{{ route('register') }}">Register</a>
 </body>
-
+@if(config('app.debug'))
+    <script src="https://cdn.jsdelivr.net/gh/underground-works/clockwork-browser@1/dist/toolbar.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/underground-works/clockwork-browser@1/dist/metrics.js"></script>
+@endif
 </html>

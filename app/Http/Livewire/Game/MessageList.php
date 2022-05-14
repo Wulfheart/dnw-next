@@ -18,7 +18,7 @@ class MessageList extends Component
     public function render()
     {
         return view('livewire.game.message-list', [
-            'messageRooms' =>
+            // 'messageRooms' =>
         ]);
     }
 }
