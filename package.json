@@ -1,15 +1,10 @@
 {
     "private": true,
     "scripts": {
-        "dev": "npm run development",
-        "development": "mix",
-        "watch": "mix watch",
-        "watch-poll": "mix watch -- --watch-options-poll=1000",
-        "hot": "mix watch --hot",
-        "prod": "npm run production",
-        "production": "mix --production",
         "css": "npx tailwindcss --output=public/css/app.css",
-        "css:watch": "npx tailwindcss --output=public/css/app.css --watch"
+        "css:watch": "npx tailwindcss --output=public/css/app.css --watch",
+        "dev": "vite",
+        "build": "vite build"
     },
     "devDependencies": {
         "@alpinejs/collapse": "^3.9.0",
