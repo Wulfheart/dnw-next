@@ -1,6 +1,6 @@
 import { DateTime } from "luxon";
 
-require("./bootstrap");
+import "./bootstrap";
 
 import Alpine from "alpinejs";
 import tippy from "tippy.js";
