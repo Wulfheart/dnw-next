@@ -4,6 +4,8 @@ namespace Database\Seeders;
 
 use App\Models\User;
 use App\Models\Variant;
+use App\Utility\Game\AdjudicatorService;
+use App\Utility\Game\TestWithCachingAdjudicatorImplementation;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -22,6 +24,8 @@ class DatabaseSeeder extends Seeder
             'email_verified_at' => now(),
             'password' => \Hash::make('123'),
         ]);
+
+        app()->bind(AdjudicatorService::class, TestWithCachingAdjudicatorImplementation::class);
 
         $this->call([
             VariantSeeder::class,

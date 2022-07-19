@@ -23,6 +23,7 @@
     "laravel/jetstream": "^2.4",
     "laravel/sanctum": "^2.11",
     "laravel/tinker": "^2.5",
+    "league/csv": "^9.8",
     "livewire/livewire": "^2.5",
     "lorisleiva/laravel-actions": "^2.3",
     "machatschek/laravel-server-timing": "^3.0",
