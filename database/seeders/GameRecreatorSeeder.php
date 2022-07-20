@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use App\Actions\Game\AdjudicateGameAction;
 use App\Actions\Game\InitializeGameAction;
+use App\Enums\PhaseTypeEnum;
 use App\Models\BasePower;
 use App\Models\Game;
 use App\Models\MessageMode;
@@ -69,7 +70,22 @@ class GameRecreatorSeeder extends Seeder
             InitializeGameAction::run($game->id, false);
 
 
-            foreach ($all as $turn) {
+            foreach ($all as $key => $turn) {
+
+                // Skip if there is a mismatch between the current phase returned by our adjudicator
+                // and the one in the CSV. This accounts for the fact that the our adjudicator may have
+                // skipped a phase because it has no orders necessary because it automatically
+                // disbands units which have no possibility to retreat.
+                $game->load('currentPhase');
+                $match = [
+                    'a' => PhaseTypeEnum::MOVEMENT,
+                    'b' => PhaseTypeEnum::RETREAT,
+                    'c' => PhaseTypeEnum::ADJUSTMENT,
+                ];
+                if ($game->currentPhase->type !== $match[mb_substr($key, -1, 1)]) {
+                    continue;
+                }
+
                 foreach ($turn as $powerName => $power) {
                     $orders = [];
                     foreach ($power as $order) {
@@ -107,6 +123,7 @@ class GameRecreatorSeeder extends Seeder
                 }
 
                 $pnl = $game->currentPhase->phase_name_long;
+
                 $this->command->info("Adjudicating $pnl");
                 AdjudicateGameAction::run($game->id, true, false);
 
