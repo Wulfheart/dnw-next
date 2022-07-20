@@ -277,7 +277,6 @@
 "27144","7","Army","Support move","No","TURKEY","Serbia","Black Sea","Rumania","00007a"
 "27144","7","Army","Move","No","TURKEY","Armenia",NULL,"Smyrna","00007a"
 "27144","7","Fleet","Support hold","No","TURKEY","Constantinople",NULL,"Bulgaria","00007a"
-"27144","7","Army","Disband","No","ITALY","Rumania",NULL,NULL,"00007b"
 "27144","7",NULL,"Destroy","No","AUSTRIA","Albania",NULL,NULL,"00007c"
 "27144","7",NULL,"Destroy","No","ENGLAND","Yorkshire",NULL,NULL,"00007c"
 "27144","7",NULL,"Build Army","No","GERMANY","Berlin",NULL,NULL,"00007c"
