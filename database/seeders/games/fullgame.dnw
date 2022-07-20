@@ -317,7 +317,6 @@
 "27144","8","Fleet","Support move","No","TURKEY","Black Sea","Serbia","Rumania","00008a"
 "27144","8","Army","Move","No","TURKEY","Serbia",NULL,"Rumania","00008a"
 "27144","8","Fleet","Support hold","No","TURKEY","Constantinople",NULL,"Bulgaria","00008a"
-"27144","8","Fleet","Disband","No","ENGLAND","Heligoland Bight",NULL,NULL,"00008b"
 "27144","9","Army","Move","No","ENGLAND","Brest",NULL,"Paris","00009a"
 "27144","9","Fleet","Support hold","No","ENGLAND","English Channel",NULL,"Belgium","00009a"
 "27144","9","Army","Hold","No","ENGLAND","Belgium",NULL,NULL,"00009a"

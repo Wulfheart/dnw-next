@@ -28,20 +28,26 @@ class GameRecreatorSeeder extends Seeder
     public function run()
     {
         $files = [
-            ['name' => 'fullgame.dnw', 'turns' => 13],
+            'fullgame.dnw',
         ];
 
         $base_path = __DIR__.'/games/';
 
         foreach ($files as $file) {
-            $path = $base_path.$file['name'];
+            $path = $base_path.$file;
 
             $csv = Reader::createFromPath($path);
 
             $csv->setHeaderOffset(0);
 
             $basetime = now();
-            $count = $file['turns'];
+
+            $all = collect($csv->getRecords())
+                ->groupBy('turn_phase')
+                ->map(fn($c) => $c->groupBy('country'));
+
+            $count = $all->count();
+
             $variant = Variant::firstOrFail();
             $messageMode = MessageMode::firstOrFail();
 
@@ -51,6 +57,7 @@ class GameRecreatorSeeder extends Seeder
                 'variant_id' => $variant->id,
                 'message_mode_id' => $messageMode->id,
                 'scs_to_win' => $variant->default_scs_to_win,
+                'created_at' => $basetime->subDays($count),
             ]);
 
             $game->load('variant.basePowers');
@@ -60,28 +67,61 @@ class GameRecreatorSeeder extends Seeder
                 'user_id' => User::factory()->create()->id,
             ]));
             InitializeGameAction::run($game->id, false);
-            $all = collect($csv->getRecords())
-                ->groupBy('turn')
-                ->map(fn($c) => $c->groupBy('country'));
+
+
             foreach ($all as $turn) {
-                foreach ($turn as $power) {
+                foreach ($turn as $powerName => $power) {
+                    $orders = [];
                     foreach ($power as $order) {
-                        
+                        $unitType = mb_substr($order['unitType'], 0, 1);
+                        $territory = $order['territory'];
+                        $fromTerritory = $order['fromTerritory'];
+                        $toTerritory = $order['toTerritory'];
+                        $convoy = \Str::lower($order['viaConvoy']) == 'yes' ? 'VIA' : '';
+
+                        $match = \Str::of($order['type'])->lower()->toString();
+                        $orders[] = match ($match) {
+                            'move' => "$unitType $territory - $toTerritory $convoy",
+                            'hold' => "$unitType $territory H",
+                            // This works also without the type of the unit which gets the support
+                            'support move' => "$unitType $territory S $fromTerritory - $toTerritory",
+                            'support hold' => "$unitType $territory S $toTerritory",
+                            'build fleet' => "F $territory B",
+                            'build army' => "A $territory B",
+                            'convoy' => "$unitType $territory C $fromTerritory - $toTerritory",
+                            'retreat' => "$unitType $territory - $toTerritory",
+                            'destroy', 'disband' => "$territory D",
+                            default => throw new \Exception("$match is not supported")
+                        };
                     }
+
+                    $basePowerId = $game->variant->basePowers->where('api_name', $powerName)->first()->id;
+                    $powerId = $game->powers->where('base_power_id', $basePowerId)->first()->id;
+                    $game->currentPhase->phasePowerData->where(
+                        'power_id',
+                        $powerId
+                    )->first()->update([
+                        'orders' => implode(PHP_EOL, $orders),
+                        'ready_for_adjudication' => true,
+                    ]);
                 }
+
+                $pnl = $game->currentPhase->phase_name_long;
+                $this->command->info("Adjudicating $pnl");
+                AdjudicateGameAction::run($game->id, true, false);
+
+                $phaseName = $game->currentPhase->phase_name_long;
+                $phaseTurnName = $order['turn_phase'];
+                // $this->command->confirm("Finished $phaseTurnName as $phaseName. Would you like to continue?");
+                $game->load('currentPhase.phasePowerData');
+                $game->currentPhase()->update([
+                    'created_at' => $basetime->addDays($count--),
+                ]);
             }
-            // $files = $fs->allFiles($directory);
-            // $game->currentPhase()->update(['created_at' => $basetime->subDays($file_count)]);
-            //
-            //
-            // for ($i = 0; $i < $file_count - 1; $i++) {
-            //     AdjudicateGameAction::run($game->id, false, false);
-            //     $game->currentPhase()->update(['created_at' => $basetime->subDays($file_count - $i)]);
-            //
-            // }
-            //
-            // DB::statement("UPDATE phase_power_data SET orders = applied_orders where phase_id IN (SELECT distinct p.id FROM phase_power_data INNER JOIN phases p on phase_power_data.phase_id = p.id WHERE game_id = $game->id)");
 
         }
+
+        // Some additional saving to make sure the game is saved correctly
+        AdjudicateGameAction::run($game->id, true, false);
     }
 }

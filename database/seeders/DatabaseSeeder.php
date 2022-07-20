@@ -25,7 +25,7 @@ class DatabaseSeeder extends Seeder
             'password' => \Hash::make('123'),
         ]);
 
-        app()->bind(AdjudicatorService::class, TestWithCachingAdjudicatorImplementation::class);
+        // app()->bind(AdjudicatorService::class, TestWithCachingAdjudicatorImplementation::class);
 
         $this->call([
             VariantSeeder::class,
