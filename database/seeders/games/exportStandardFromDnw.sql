@@ -37,4 +37,4 @@ FROM (SELECT ma.gameID,
                LEFT JOIN wD_Territories t1 ON ma.terrID = t1.id AND t1.mapID = ma.mapID
                LEFT JOIN wD_Territories t2 ON ma.fromTerrID = t2.id AND t2.mapID = ma.mapID
                LEFT JOIN wD_Territories t3 ON ma.toTerrID = t3.id AND t3.mapID = ma.mapID) base
-ORDER BY turn_phase;
+ORDER BY turn_phase ASC, base.country ASC;
