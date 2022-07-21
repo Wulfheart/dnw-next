@@ -29,7 +29,8 @@ class GameRecreatorSeeder extends Seeder
     public function run()
     {
         $files = [
-            'fullgame.dnw',
+            '18741.dnw',
+            'fullgame.dnw'
         ];
 
         $base_path = __DIR__.'/games/';

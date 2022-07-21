@@ -1,0 +1,640 @@
+gameID,turn,unitType,type,viaConvoy,country,territory,fromTerritory,toTerritory,turn_phase
+18741,0,Army,Move,No,AUSTRIA,Budapest,,Serbia,00000a
+18741,0,Army,Move,No,AUSTRIA,Vienna,,Trieste,00000a
+18741,0,Fleet,Move,No,AUSTRIA,Trieste,,Albania,00000a
+18741,0,Army,Move,No,ENGLAND,Liverpool,,Wales,00000a
+18741,0,Fleet,Move,No,ENGLAND,London,,English Channel,00000a
+18741,0,Fleet,Move,No,ENGLAND,Edinburgh,,North Sea,00000a
+18741,0,Army,Move,No,FRANCE,Marseilles,,Spain,00000a
+18741,0,Army,Move,No,FRANCE,Paris,,Picardy,00000a
+18741,0,Fleet,Move,No,FRANCE,Brest,,Mid-Atlantic Ocean,00000a
+18741,0,Army,Move,No,GERMANY,Munich,,Ruhr,00000a
+18741,0,Army,Move,No,GERMANY,Berlin,,Kiel,00000a
+18741,0,Fleet,Move,No,GERMANY,Kiel,,Denmark,00000a
+18741,0,Army,Move,No,ITALY,Venice,,Piedmont,00000a
+18741,0,Army,Hold,No,ITALY,Rome,,,00000a
+18741,0,Fleet,Move,No,ITALY,Naples,,Tyrrhenian Sea,00000a
+18741,0,Army,Support move,No,RUSSIA,Warsaw,Budapest,Galicia,00000a
+18741,0,Fleet,Move,No,RUSSIA,St. Petersburg (South Coast),,Livonia,00000a
+18741,0,Fleet,Move,No,RUSSIA,Sevastopol,,Black Sea,00000a
+18741,0,Army,Support hold,No,RUSSIA,Moscow,,St. Petersburg,00000a
+18741,0,Army,Move,No,TURKEY,Constantinople,,Bulgaria,00000a
+18741,0,Fleet,Move,No,TURKEY,Ankara,,Black Sea,00000a
+18741,0,Army,Move,No,TURKEY,Smyrna,,Armenia,00000a
+18741,1,Army,Support move,No,AUSTRIA,Serbia,Albania,Greece,00001a
+18741,1,Army,Move,No,AUSTRIA,Trieste,,Tyrolia,00001a
+18741,1,Fleet,Move,No,AUSTRIA,Albania,,Greece,00001a
+18741,1,Fleet,Convoy,No,ENGLAND,English Channel,Wales,Brest,00001a
+18741,1,Army,Move,Yes,ENGLAND,Wales,,Brest,00001a
+18741,1,Fleet,Move,No,ENGLAND,North Sea,,Norway,00001a
+18741,1,Fleet,Move,No,FRANCE,Mid-Atlantic Ocean,,Western Mediterranean,00001a
+18741,1,Army,Move,No,FRANCE,Picardy,,Brest,00001a
+18741,1,Army,Move,No,FRANCE,Spain,,Marseilles,00001a
+18741,1,Army,Move,No,GERMANY,Ruhr,,Holland,00001a
+18741,1,Army,Move,No,GERMANY,Kiel,,Denmark,00001a
+18741,1,Fleet,Move,No,GERMANY,Denmark,,Sweden,00001a
+18741,1,Army,Move,No,ITALY,Piedmont,,Marseilles,00001a
+18741,1,Fleet,Convoy,No,ITALY,Tyrrhenian Sea,Rome,Tunis,00001a
+18741,1,Army,Move,Yes,ITALY,Rome,,Tunis,00001a
+18741,1,Army,Move,No,RUSSIA,Warsaw,,Livonia,00001a
+18741,1,Fleet,Support move,No,RUSSIA,Livonia,Denmark,Baltic Sea,00001a
+18741,1,Army,Support hold,No,RUSSIA,Moscow,,Sevastopol,00001a
+18741,1,Fleet,Move,No,RUSSIA,Sevastopol,,Armenia,00001a
+18741,1,Army,Move,No,TURKEY,Bulgaria,,Rumania,00001a
+18741,1,Fleet,Move,No,TURKEY,Ankara,,Black Sea,00001a
+18741,1,Army,Move,No,TURKEY,Armenia,,Sevastopol,00001a
+18741,1,,Build Army,No,AUSTRIA,Vienna,,,00001c
+18741,1,,Build Army,No,AUSTRIA,Budapest,,,00001c
+18741,1,,Build Fleet,No,ENGLAND,London,,,00001c
+18741,1,,Build Fleet,No,FRANCE,Marseilles,,,00001c
+18741,1,,Build Army,No,GERMANY,Munich,,,00001c
+18741,1,,Build Army,No,GERMANY,Berlin,,,00001c
+18741,1,,Build Fleet,No,GERMANY,Kiel,,,00001c
+18741,1,,Build Army,No,ITALY,Venice,,,00001c
+18741,1,,Build Army,No,TURKEY,Constantinople,,,00001c
+18741,2,Army,Hold,No,AUSTRIA,Tyrolia,,,00002a
+18741,2,Fleet,Move,No,AUSTRIA,Greece,,Ionian Sea,00002a
+18741,2,Army,Move,No,AUSTRIA,Serbia,,Albania,00002a
+18741,2,Army,Move,No,AUSTRIA,Budapest,,Trieste,00002a
+18741,2,Army,Support hold,No,AUSTRIA,Vienna,,Tyrolia,00002a
+18741,2,Fleet,Hold,No,ENGLAND,Norway,,,00002a
+18741,2,Fleet,Hold,No,ENGLAND,London,,,00002a
+18741,2,Fleet,Move,No,ENGLAND,English Channel,,North Sea,00002a
+18741,2,Army,Move,No,ENGLAND,Wales,,Yorkshire,00002a
+18741,2,Army,Move,No,FRANCE,Picardy,,Brest,00002a
+18741,2,Army,Move,No,FRANCE,Spain,,Portugal,00002a
+18741,2,Fleet,Hold,No,FRANCE,Marseilles,,,00002a
+18741,2,Fleet,Hold,No,FRANCE,Western Mediterranean,,,00002a
+18741,2,Army,Move,No,GERMANY,Holland,,Belgium,00002a
+18741,2,Fleet,Move,No,GERMANY,Sweden,,Skagerrack,00002a
+18741,2,Army,Move,No,GERMANY,Denmark,,Sweden,00002a
+18741,2,Army,Move,No,GERMANY,Munich,,Ruhr,00002a
+18741,2,Army,Move,No,GERMANY,Berlin,,Kiel,00002a
+18741,2,Fleet,Move,No,GERMANY,Kiel,,Heligoland Bight,00002a
+18741,2,Army,Move,No,ITALY,Piedmont,,Marseilles,00002a
+18741,2,Army,Hold,No,ITALY,Tunis,,,00002a
+18741,2,Army,Move,No,ITALY,Venice,,Rome,00002a
+18741,2,Fleet,Move,No,ITALY,Tyrrhenian Sea,,Ionian Sea,00002a
+18741,2,Fleet,Move,No,RUSSIA,Sevastopol,,Armenia,00002a
+18741,2,Army,Move,No,RUSSIA,Warsaw,,Galicia,00002a
+18741,2,Army,Move,No,RUSSIA,Moscow,,Livonia,00002a
+18741,2,Fleet,Move,No,RUSSIA,Livonia,,Prussia,00002a
+18741,2,Fleet,Support move,No,TURKEY,Black Sea,Armenia,Sevastopol,00002a
+18741,2,Army,Move,No,TURKEY,Armenia,,Sevastopol,00002a
+18741,2,Army,Support move,No,TURKEY,Rumania,Armenia,Sevastopol,00002a
+18741,2,Army,Move,No,TURKEY,Constantinople,,Bulgaria,00002a
+18741,2,Fleet,Disband,No,RUSSIA,Sevastopol,,,00002b
+18741,3,Army,Move,No,AUSTRIA,Trieste,,Budapest,00003a
+18741,3,Army,Move,No,AUSTRIA,Albania,,Trieste,00003a
+18741,3,Fleet,Move,No,AUSTRIA,Greece,,Ionian Sea,00003a
+18741,3,Army,Support move,No,AUSTRIA,Tyrolia,Trieste,Venice,00003a
+18741,3,Army,Support move,No,AUSTRIA,Vienna,Trieste,Budapest,00003a
+18741,3,Army,Hold,No,ENGLAND,Yorkshire,,,00003a
+18741,3,Fleet,Move,No,ENGLAND,North Sea,,Skagerrack,00003a
+18741,3,Fleet,Hold,No,ENGLAND,Norway,,,00003a
+18741,3,Fleet,Hold,No,ENGLAND,London,,,00003a
+18741,3,Army,Move,No,FRANCE,Brest,,Picardy,00003a
+18741,3,Army,Hold,No,FRANCE,Portugal,,,00003a
+18741,3,Fleet,Hold,No,FRANCE,Marseilles,,,00003a
+18741,3,Fleet,Move,No,FRANCE,Western Mediterranean,,Gulf of Lyons,00003a
+18741,3,Fleet,Move,No,GERMANY,Heligoland Bight,,North Sea,00003a
+18741,3,Army,Move,No,GERMANY,Kiel,,Berlin,00003a
+18741,3,Army,Hold,No,GERMANY,Belgium,,,00003a
+18741,3,Fleet,Support move,No,GERMANY,Skagerrack,Sweden,Norway,00003a
+18741,3,Army,Move,No,GERMANY,Sweden,,Norway,00003a
+18741,3,Army,Move,No,GERMANY,Ruhr,,Holland,00003a
+18741,3,Army,Support move,No,ITALY,Rome,Piedmont,Venice,00003a
+18741,3,Army,Hold,No,ITALY,Tunis,,,00003a
+18741,3,Army,Move,No,ITALY,Piedmont,,Venice,00003a
+18741,3,Fleet,Move,No,ITALY,Tyrrhenian Sea,,Ionian Sea,00003a
+18741,3,Army,Support hold,No,RUSSIA,Galicia,,Vienna,00003a
+18741,3,Fleet,Support hold,No,RUSSIA,Prussia,,Livonia,00003a
+18741,3,Army,Move,No,RUSSIA,Livonia,,Prussia,00003a
+18741,3,Army,Move,No,TURKEY,Rumania,,Serbia,00003a
+18741,3,Army,Move,No,TURKEY,Sevastopol,,Moscow,00003a
+18741,3,Fleet,Move,No,TURKEY,Black Sea,,Rumania,00003a
+18741,3,Army,Support move,No,TURKEY,Bulgaria,Rumania,Serbia,00003a
+18741,3,,Destroy,No,AUSTRIA,Vienna,,,00003c
+18741,3,,Build Fleet,No,FRANCE,Brest,,,00003c
+18741,3,,Build Fleet,No,GERMANY,Kiel,,,00003c
+18741,3,,Build Army,No,TURKEY,Ankara,,,00003c
+18741,3,,Build Army,No,TURKEY,Constantinople,,,00003c
+18741,3,,Build Fleet,No,TURKEY,Smyrna,,,00003c
+18741,4,Army,Move,No,AUSTRIA,Trieste,,Serbia,00004a
+18741,4,Fleet,Move,No,AUSTRIA,Greece,,Bulgaria (South Coast),00004a
+18741,4,Army,Move,No,AUSTRIA,Tyrolia,,Trieste,00004a
+18741,4,Army,Support move,No,AUSTRIA,Budapest,Trieste,Serbia,00004a
+18741,4,Fleet,Hold,No,ENGLAND,London,,,00004a
+18741,4,Fleet,Move,No,ENGLAND,North Sea,,Skagerrack,00004a
+18741,4,Fleet,Move,No,ENGLAND,Norway,,Sweden,00004a
+18741,4,Army,Hold,No,ENGLAND,Yorkshire,,,00004a
+18741,4,Fleet,Move,No,FRANCE,Marseilles,,Piedmont,00004a
+18741,4,Army,Move,No,FRANCE,Portugal,,Spain,00004a
+18741,4,Army,Move,No,FRANCE,Picardy,,Burgundy,00004a
+18741,4,Fleet,Support move,No,FRANCE,Gulf of Lyons,Marseilles,Piedmont,00004a
+18741,4,Fleet,Move,No,FRANCE,Brest,,Mid-Atlantic Ocean,00004a
+18741,4,Army,Move,No,GERMANY,Berlin,,Prussia,00004a
+18741,4,Fleet,Move,No,GERMANY,Skagerrack,,Norway,00004a
+18741,4,Army,Support move,No,GERMANY,Sweden,Skagerrack,Norway,00004a
+18741,4,Army,Support hold,No,GERMANY,Belgium,,Holland,00004a
+18741,4,Army,Support hold,No,GERMANY,Holland,,Belgium,00004a
+18741,4,Fleet,Move,No,GERMANY,Heligoland Bight,,North Sea,00004a
+18741,4,Fleet,Move,No,GERMANY,Kiel,,Denmark,00004a
+18741,4,Army,Hold,No,ITALY,Venice,,,00004a
+18741,4,Army,Hold,No,ITALY,Tunis,,,00004a
+18741,4,Fleet,Move,No,ITALY,Tyrrhenian Sea,,Ionian Sea,00004a
+18741,4,Army,Move,No,ITALY,Rome,,Naples,00004a
+18741,4,Army,Move,No,RUSSIA,Galicia,,Vienna,00004a
+18741,4,Fleet,Support hold,No,RUSSIA,Prussia,,Berlin,00004a
+18741,4,Army,Move,No,RUSSIA,Livonia,,Moscow,00004a
+18741,4,Army,Move,No,TURKEY,Constantinople,,Bulgaria,00004a
+18741,4,Army,Move,No,TURKEY,Ankara,,Armenia,00004a
+18741,4,Fleet,Move,No,TURKEY,Smyrna,,Aegean Sea,00004a
+18741,4,Army,Move,No,TURKEY,Bulgaria,,Rumania,00004a
+18741,4,Army,Move,No,TURKEY,Serbia,,Greece,00004a
+18741,4,Fleet,Move,No,TURKEY,Rumania,,Black Sea,00004a
+18741,4,Army,Hold,No,TURKEY,Moscow,,,00004a
+18741,4,Fleet,Retreat,No,ENGLAND,Norway,,St. Petersburg (North Coast),00004b
+18741,4,Army,Retreat,No,TURKEY,Serbia,,Albania,00004b
+18741,5,Army,Support move,No,AUSTRIA,Serbia,Greece,Bulgaria,00005a
+18741,5,Army,Support hold,No,AUSTRIA,Trieste,,Serbia,00005a
+18741,5,Fleet,Move,No,AUSTRIA,Greece,,Bulgaria (South Coast),00005a
+18741,5,Army,Move,No,AUSTRIA,Budapest,,Rumania,00005a
+18741,5,Fleet,Move,No,ENGLAND,London,,North Sea,00005a
+18741,5,Fleet,Support move,No,ENGLAND,Skagerrack,St. Petersburg,Norway,00005a
+18741,5,Army,Move,No,ENGLAND,Yorkshire,,Edinburgh,00005a
+18741,5,Fleet,Move,No,ENGLAND,St. Petersburg (North Coast),,Norway,00005a
+18741,5,Army,Move,No,FRANCE,Spain,,Marseilles,00005a
+18741,5,Fleet,Move,No,FRANCE,Mid-Atlantic Ocean,,Western Mediterranean,00005a
+18741,5,Fleet,Move,No,FRANCE,Piedmont,,Tuscany,00005a
+18741,5,Army,Support move,No,FRANCE,Burgundy,Spain,Marseilles,00005a
+18741,5,Fleet,Move,No,FRANCE,Gulf of Lyons,,Tyrrhenian Sea,00005a
+18741,5,Fleet,Support hold,No,GERMANY,Norway,,St. Petersburg,00005a
+18741,5,Army,Hold,No,GERMANY,Sweden,,,00005a
+18741,5,Army,Hold,No,GERMANY,Belgium,,,00005a
+18741,5,Army,Hold,No,GERMANY,Holland,,,00005a
+18741,5,Army,Move,No,GERMANY,Berlin,,Silesia,00005a
+18741,5,Fleet,Support move,No,GERMANY,North Sea,Denmark,Skagerrack,00005a
+18741,5,Fleet,Move,No,GERMANY,Denmark,,Skagerrack,00005a
+18741,5,Army,Hold,No,ITALY,Venice,,,00005a
+18741,5,Army,Hold,No,ITALY,Tunis,,,00005a
+18741,5,Fleet,Support move,No,ITALY,Ionian Sea,Constantinople,Greece,00005a
+18741,5,Army,Move,No,ITALY,Naples,,Rome,00005a
+18741,5,Army,Support move,No,RUSSIA,Vienna,Rumania,Budapest,00005a
+18741,5,Fleet,Support move,No,RUSSIA,Prussia,Denmark,Baltic Sea,00005a
+18741,5,Army,Support hold,No,RUSSIA,Livonia,,St. Petersburg,00005a
+18741,5,Army,Move,No,TURKEY,Constantinople,,Bulgaria,00005a
+18741,5,Army,Move,No,TURKEY,Armenia,,Sevastopol,00005a
+18741,5,Fleet,Support move,No,TURKEY,Aegean Sea,Albania,Greece,00005a
+18741,5,Army,Move,No,TURKEY,Albania,,Greece,00005a
+18741,5,Fleet,Support move,No,TURKEY,Black Sea,Constantinople,Bulgaria,00005a
+18741,5,Army,Move,No,TURKEY,Moscow,,Warsaw,00005a
+18741,5,Army,Move,No,TURKEY,Rumania,,Serbia,00005a
+18741,5,Fleet,Disband,No,AUSTRIA,Greece,,,00005b
+18741,5,,Build Fleet,No,GERMANY,Kiel,,,00005c
+18741,5,,Destroy,No,RUSSIA,Vienna,,,00005c
+18741,5,,Destroy,No,RUSSIA,Livonia,,,00005c
+18741,5,,Build Fleet,No,TURKEY,Smyrna,,,00005c
+18741,5,,Build Army,No,TURKEY,Constantinople,,,00005c
+18741,6,Army,Support hold,No,AUSTRIA,Budapest,,Serbia,00006a
+18741,6,Army,Hold,No,AUSTRIA,Serbia,,,00006a
+18741,6,Army,Move,No,AUSTRIA,Trieste,,Vienna,00006a
+18741,6,Fleet,Support move,No,ENGLAND,London,Skagerrack,North Sea,00006a
+18741,6,Fleet,Move,No,ENGLAND,Skagerrack,,North Sea,00006a
+18741,6,Army,Hold,No,ENGLAND,Edinburgh,,,00006a
+18741,6,Fleet,Move,No,ENGLAND,St. Petersburg (North Coast),,Norway,00006a
+18741,6,Fleet,Support move,No,FRANCE,Western Mediterranean,Tyrrhenian Sea,Tunis,00006a
+18741,6,Fleet,Move,No,FRANCE,Tuscany,,Tyrrhenian Sea,00006a
+18741,6,Army,Move,No,FRANCE,Marseilles,,Piedmont,00006a
+18741,6,Army,Move,No,FRANCE,Burgundy,,Gascony,00006a
+18741,6,Fleet,Move,No,FRANCE,Tyrrhenian Sea,,Tunis,00006a
+18741,6,Fleet,Support move,No,GERMANY,Norway,Denmark,Skagerrack,00006a
+18741,6,Army,Hold,No,GERMANY,Sweden,,,00006a
+18741,6,Army,Hold,No,GERMANY,Belgium,,,00006a
+18741,6,Army,Move,No,GERMANY,Holland,,Ruhr,00006a
+18741,6,Army,Move,No,GERMANY,Silesia,,Berlin,00006a
+18741,6,Fleet,Support move,No,GERMANY,North Sea,Denmark,Skagerrack,00006a
+18741,6,Fleet,Move,No,GERMANY,Denmark,,Skagerrack,00006a
+18741,6,Fleet,Move,No,GERMANY,Kiel,,Holland,00006a
+18741,6,Army,Support hold,No,ITALY,Venice,,Rome,00006a
+18741,6,Army,Hold,No,ITALY,Tunis,,,00006a
+18741,6,Fleet,Move,No,ITALY,Ionian Sea,,Tyrrhenian Sea,00006a
+18741,6,Army,Hold,No,ITALY,Rome,,,00006a
+18741,6,Fleet,Support move,No,RUSSIA,Prussia,Silesia,Berlin,00006a
+18741,6,Army,Move,Yes,TURKEY,Constantinople,,Rumania,00006a
+18741,6,Fleet,Move,No,TURKEY,Smyrna,,Aegean Sea,00006a
+18741,6,Army,Support move,No,TURKEY,Bulgaria,Greece,Serbia,00006a
+18741,6,Army,Support move,No,TURKEY,Sevastopol,Constantinople,Rumania,00006a
+18741,6,Army,Move,No,TURKEY,Rumania,,Galicia,00006a
+18741,6,Army,Move,No,TURKEY,Greece,,Serbia,00006a
+18741,6,Fleet,Convoy,No,TURKEY,Black Sea,Constantinople,Rumania,00006a
+18741,6,Army,Support move,No,TURKEY,Warsaw,Rumania,Galicia,00006a
+18741,6,Fleet,Move,No,TURKEY,Aegean Sea,,Greece,00006a
+18741,6,Fleet,Retreat,No,GERMANY,North Sea,,Denmark,00006b
+18741,6,Army,Retreat,No,ITALY,Tunis,,North Africa,00006b
+18741,7,Army,Support hold,No,AUSTRIA,Vienna,,Budapest,00007a
+18741,7,Army,Move,No,AUSTRIA,Serbia,,Trieste,00007a
+18741,7,Army,Hold,No,AUSTRIA,Budapest,,,00007a
+18741,7,Fleet,Hold,No,ENGLAND,St. Petersburg (North Coast),,,00007a
+18741,7,Army,Hold,No,ENGLAND,Edinburgh,,,00007a
+18741,7,Fleet,Move,No,ENGLAND,North Sea,,Yorkshire,00007a
+18741,7,Fleet,Hold,No,ENGLAND,London,,,00007a
+18741,7,Fleet,Support hold,No,FRANCE,Western Mediterranean,,Tunis,00007a
+18741,7,Fleet,Move,No,FRANCE,Tuscany,,Tyrrhenian Sea,00007a
+18741,7,Army,Move,No,FRANCE,Piedmont,,Tuscany,00007a
+18741,7,Army,Move,No,FRANCE,Gascony,,Spain,00007a
+18741,7,Fleet,Support move,No,FRANCE,Tunis,Tuscany,Tyrrhenian Sea,00007a
+18741,7,Fleet,Move,No,GERMANY,Norway,,Barents Sea,00007a
+18741,7,Army,Move,No,GERMANY,Belgium,,Ruhr,00007a
+18741,7,Army,Move,No,GERMANY,Ruhr,,Holland,00007a
+18741,7,Army,Move,No,GERMANY,Berlin,,Prussia,00007a
+18741,7,Fleet,Move,No,GERMANY,Denmark,,North Sea,00007a
+18741,7,Fleet,Move,No,GERMANY,Skagerrack,,Norway,00007a
+18741,7,Fleet,Move,No,GERMANY,Holland,,Belgium,00007a
+18741,7,Army,Support move,No,GERMANY,Sweden,Skagerrack,Norway,00007a
+18741,7,Army,Move,No,ITALY,Venice,,Trieste,00007a
+18741,7,Army,Move,No,ITALY,North Africa,,Tunis,00007a
+18741,7,Fleet,Support move,No,ITALY,Ionian Sea,North Africa,Tunis,00007a
+18741,7,Army,Move,No,ITALY,Rome,,Venice,00007a
+18741,7,Fleet,Support hold,No,RUSSIA,Prussia,,Berlin,00007a
+18741,7,Army,Move,No,TURKEY,Rumania,,Budapest,00007a
+18741,7,Fleet,Move,No,TURKEY,Smyrna,,Eastern Mediterranean,00007a
+18741,7,Army,Move,No,TURKEY,Bulgaria,,Serbia,00007a
+18741,7,Army,Move,No,TURKEY,Sevastopol,,Moscow,00007a
+18741,7,Fleet,Move,No,TURKEY,Aegean Sea,,Ionian Sea,00007a
+18741,7,Army,Support move,No,TURKEY,Galicia,Rumania,Budapest,00007a
+18741,7,Army,Support move,No,TURKEY,Greece,Bulgaria,Serbia,00007a
+18741,7,Fleet,Hold,No,TURKEY,Black Sea,,,00007a
+18741,7,Army,Support hold,No,TURKEY,Warsaw,,Galicia,00007a
+18741,7,Army,Disband,No,AUSTRIA,Serbia,,,00007b
+18741,7,,Build Army,No,AUSTRIA,Trieste,,,00007c
+18741,7,,Build Army,No,FRANCE,Marseilles,,,00007c
+18741,7,,Destroy,No,ITALY,North Africa,,,00007c
+18741,7,,Destroy,No,RUSSIA,Prussia,,,00007c
+18741,7,,Build Army,No,TURKEY,Constantinople,,,00007c
+18741,8,Army,Support hold,No,AUSTRIA,Trieste,,Budapest,00008a
+18741,8,Army,Hold,No,AUSTRIA,Budapest,,,00008a
+18741,8,Army,Support hold,No,AUSTRIA,Vienna,,Budapest,00008a
+18741,8,Fleet,Hold,No,ENGLAND,London,,,00008a
+18741,8,Fleet,Move,No,ENGLAND,Yorkshire,,Edinburgh,00008a
+18741,8,Army,Move,No,ENGLAND,Edinburgh,,Liverpool,00008a
+18741,8,Fleet,Hold,No,ENGLAND,St. Petersburg (North Coast),,,00008a
+18741,8,Fleet,Move,No,FRANCE,Tyrrhenian Sea,,Ionian Sea,00008a
+18741,8,Fleet,Support move,No,FRANCE,Tunis,Tyrrhenian Sea,Ionian Sea,00008a
+18741,8,Army,Move,No,FRANCE,Marseilles,,Piedmont,00008a
+18741,8,Fleet,Move,No,FRANCE,Western Mediterranean,,Tyrrhenian Sea,00008a
+18741,8,Army,Move,No,FRANCE,Tuscany,,Rome,00008a
+18741,8,Army,Move,No,FRANCE,Spain,,Marseilles,00008a
+18741,8,Fleet,Move,No,GERMANY,Barents Sea,,St. Petersburg (North Coast),00008a
+18741,8,Army,Move,No,GERMANY,Sweden,,Finland,00008a
+18741,8,Army,Move,No,GERMANY,Ruhr,,Belgium,00008a
+18741,8,Army,Hold,No,GERMANY,Holland,,,00008a
+18741,8,Army,Move,No,GERMANY,Berlin,,Prussia,00008a
+18741,8,Fleet,Move,No,GERMANY,North Sea,,Yorkshire,00008a
+18741,8,Fleet,Support hold,No,GERMANY,Norway,,North Sea,00008a
+18741,8,Fleet,Move,No,GERMANY,Belgium,,English Channel,00008a
+18741,8,Army,Support hold,No,ITALY,Venice,,Rome,00008a
+18741,8,Fleet,Move,No,ITALY,Ionian Sea,,Naples,00008a
+18741,8,Army,Support hold,No,ITALY,Rome,,Venice,00008a
+18741,8,Fleet,Move,No,TURKEY,Eastern Mediterranean,,Ionian Sea,00008a
+18741,8,Army,Support hold,No,TURKEY,Serbia,,Rumania,00008a
+18741,8,Army,Move,Yes,TURKEY,Constantinople,,Sevastopol,00008a
+18741,8,Army,Support hold,No,TURKEY,Rumania,,Serbia,00008a
+18741,8,Army,Support hold,No,TURKEY,Moscow,,St. Petersburg,00008a
+18741,8,Fleet,Support move,No,TURKEY,Aegean Sea,Eastern Mediterranean,Ionian Sea,00008a
+18741,8,Army,Move,No,TURKEY,Greece,,Albania,00008a
+18741,8,Fleet,Convoy,No,TURKEY,Black Sea,Constantinople,Sevastopol,00008a
+18741,8,Army,Move,No,TURKEY,Warsaw,,Prussia,00008a
+18741,8,Army,Move,No,TURKEY,Galicia,,Vienna,00008a
+18741,9,Army,Support move,No,AUSTRIA,Vienna,Budapest,Trieste,00009a
+18741,9,Army,Move,No,AUSTRIA,Budapest,,Trieste,00009a
+18741,9,Army,Move,No,AUSTRIA,Trieste,,Tyrolia,00009a
+18741,9,Fleet,Hold,No,ENGLAND,St. Petersburg (North Coast),,,00009a
+18741,9,Army,Move,No,ENGLAND,Liverpool,,Yorkshire,00009a
+18741,9,Fleet,Support move,No,ENGLAND,Edinburgh,Liverpool,Yorkshire,00009a
+18741,9,Fleet,Hold,No,ENGLAND,London,,,00009a
+18741,9,Army,Support move,No,FRANCE,Piedmont,Tuscany,Venice,00009a
+18741,9,Fleet,Hold,No,FRANCE,Western Mediterranean,,,00009a
+18741,9,Fleet,Move,No,FRANCE,Tyrrhenian Sea,,Rome,00009a
+18741,9,Army,Move,No,FRANCE,Tuscany,,Venice,00009a
+18741,9,Army,Move,No,FRANCE,Marseilles,,Piedmont,00009a
+18741,9,Fleet,Move,No,FRANCE,Tunis,,Ionian Sea,00009a
+18741,9,Fleet,Support move,No,GERMANY,Barents Sea,Finland,St. Petersburg,00009a
+18741,9,Army,Move,No,GERMANY,Finland,,St. Petersburg,00009a
+18741,9,Army,Move,Yes,GERMANY,Belgium,,Wales,00009a
+18741,9,Army,Hold,No,GERMANY,Holland,,,00009a
+18741,9,Army,Move,No,GERMANY,Berlin,,Prussia,00009a
+18741,9,Fleet,Move,No,GERMANY,Yorkshire,,North Sea,00009a
+18741,9,Fleet,Move,No,GERMANY,Norway,,Norwegian Sea,00009a
+18741,9,Fleet,Convoy,No,GERMANY,English Channel,Belgium,Wales,00009a
+18741,9,Army,Support hold,No,ITALY,Venice,,Rome,00009a
+18741,9,Fleet,Support hold,No,ITALY,Naples,,Rome,00009a
+18741,9,Army,Support hold,No,ITALY,Rome,,Venice,00009a
+18741,9,Army,Move,No,TURKEY,Sevastopol,,Moscow,00009a
+18741,9,Army,Move,No,TURKEY,Moscow,,Livonia,00009a
+18741,9,Fleet,Support move,No,TURKEY,Aegean Sea,Eastern Mediterranean,Ionian Sea,00009a
+18741,9,Army,Support move,No,TURKEY,Galicia,Rumania,Budapest,00009a
+18741,9,Army,Move,No,TURKEY,Albania,,Trieste,00009a
+18741,9,Fleet,Move,No,TURKEY,Black Sea,,Constantinople,00009a
+18741,9,Army,Move,No,TURKEY,Warsaw,,Prussia,00009a
+18741,9,Fleet,Move,No,TURKEY,Eastern Mediterranean,,Ionian Sea,00009a
+18741,9,Army,Move,No,TURKEY,Rumania,,Budapest,00009a
+18741,9,Army,Support move,No,TURKEY,Serbia,Rumania,Budapest,00009a
+18741,9,Fleet,Retreat,No,ENGLAND,St. Petersburg (North Coast),,Norway,00009b
+18741,9,Army,Retreat,No,ITALY,Venice,,Apulia,00009b
+18741,9,,Destroy,No,AUSTRIA,Trieste,,,00009c
+18741,9,,Build Fleet,No,FRANCE,Brest,,,00009c
+18741,9,,Destroy,No,ITALY,Apulia,,,00009c
+18741,9,,Build Fleet,No,TURKEY,Smyrna,,,00009c
+18741,10,Army,Move,No,AUSTRIA,Vienna,,Trieste,00010a
+18741,10,Army,Support hold,No,AUSTRIA,Tyrolia,,Vienna,00010a
+18741,10,Fleet,Hold,No,ENGLAND,Edinburgh,,,00010a
+18741,10,Fleet,Move,No,ENGLAND,Norway,,Sweden,00010a
+18741,10,Army,Support hold,No,ENGLAND,Yorkshire,,London,00010a
+18741,10,Fleet,Hold,No,ENGLAND,London,,,00010a
+18741,10,Fleet,Move,No,FRANCE,Brest,,Mid-Atlantic Ocean,00010a
+18741,10,Army,Move,No,FRANCE,Piedmont,,Tuscany,00010a
+18741,10,Fleet,Move,No,FRANCE,Western Mediterranean,,Tyrrhenian Sea,00010a
+18741,10,Fleet,Move,No,FRANCE,Tyrrhenian Sea,,Ionian Sea,00010a
+18741,10,Army,Support move,No,FRANCE,Venice,Piedmont,Tuscany,00010a
+18741,10,Army,Move,No,FRANCE,Marseilles,,Piedmont,00010a
+18741,10,Fleet,Support move,No,FRANCE,Tunis,Tyrrhenian Sea,Ionian Sea,00010a
+18741,10,Fleet,Support move,No,GERMANY,Barents Sea,St. Petersburg,Norway,00010a
+18741,10,Army,Move,No,GERMANY,St. Petersburg,,Norway,00010a
+18741,10,Army,Support move,No,GERMANY,Wales,English Channel,London,00010a
+18741,10,Army,Move,Yes,GERMANY,Holland,,Edinburgh,00010a
+18741,10,Army,Move,No,GERMANY,Berlin,,Kiel,00010a
+18741,10,Fleet,Convoy,No,GERMANY,North Sea,Holland,Edinburgh,00010a
+18741,10,Fleet,Support move,No,GERMANY,Norwegian Sea,Holland,Edinburgh,00010a
+18741,10,Fleet,Move,No,GERMANY,English Channel,,London,00010a
+18741,10,Fleet,Support hold,No,ITALY,Naples,,Rome,00010a
+18741,10,Army,Hold,No,ITALY,Rome,,,00010a
+18741,10,Army,Hold,No,TURKEY,Moscow,,,00010a
+18741,10,Fleet,Move,No,TURKEY,Ionian Sea,,Adriatic Sea,00010a
+18741,10,Army,Move,No,TURKEY,Serbia,,Trieste,00010a
+18741,10,Army,Move,No,TURKEY,Livonia,,Prussia,00010a
+18741,10,Fleet,Move,No,TURKEY,Aegean Sea,,Greece,00010a
+18741,10,Army,Support move,No,TURKEY,Galicia,Budapest,Vienna,00010a
+18741,10,Army,Support move,No,TURKEY,Albania,Serbia,Trieste,00010a
+18741,10,Fleet,Move,No,TURKEY,Constantinople,,Aegean Sea,00010a
+18741,10,Army,Move,No,TURKEY,Warsaw,,Prussia,00010a
+18741,10,Army,Move,No,TURKEY,Budapest,,Vienna,00010a
+18741,10,Fleet,Move,No,TURKEY,Smyrna,,Eastern Mediterranean,00010a
+18741,10,Army,Retreat,No,AUSTRIA,Vienna,,Bohemia,00010b
+18741,10,Fleet,Disband,No,ENGLAND,Edinburgh,,,00010b
+18741,11,Army,Move,No,AUSTRIA,Tyrolia,,Munich,00011a
+18741,11,Army,Support move,No,AUSTRIA,Bohemia,Tyrolia,Munich,00011a
+18741,11,Fleet,Support hold,No,ENGLAND,London,,Yorkshire,00011a
+18741,11,Army,Support hold,No,ENGLAND,Yorkshire,,London,00011a
+18741,11,Fleet,Hold,No,ENGLAND,Sweden,,,00011a
+18741,11,Army,Support hold,No,FRANCE,Piedmont,,Venice,00011a
+18741,11,Fleet,Move,No,FRANCE,Mid-Atlantic Ocean,,Western Mediterranean,00011a
+18741,11,Army,Move,No,FRANCE,Tuscany,,Rome,00011a
+18741,11,Fleet,Move,No,FRANCE,Ionian Sea,,Naples,00011a
+18741,11,Army,Support move,No,FRANCE,Venice,Tuscany,Rome,00011a
+18741,11,Fleet,Move,No,FRANCE,Tunis,,Ionian Sea,00011a
+18741,11,Fleet,Support move,No,FRANCE,Tyrrhenian Sea,Ionian Sea,Naples,00011a
+18741,11,Army,Move,No,GERMANY,Edinburgh,,Yorkshire,00011a
+18741,11,Fleet,Support move,No,GERMANY,Barents Sea,Norwegian Sea,Norway,00011a
+18741,11,Army,Move,No,GERMANY,Norway,,Finland,00011a
+18741,11,Army,Move,No,GERMANY,Wales,,Liverpool,00011a
+18741,11,Army,Move,No,GERMANY,Kiel,,Denmark,00011a
+18741,11,Fleet,Move,No,GERMANY,North Sea,,London,00011a
+18741,11,Fleet,Move,No,GERMANY,Norwegian Sea,,Norway,00011a
+18741,11,Fleet,Support move,No,GERMANY,English Channel,North Sea,London,00011a
+18741,11,Army,Support hold,No,ITALY,Rome,,Naples,00011a
+18741,11,Fleet,Support hold,No,ITALY,Naples,,Rome,00011a
+18741,11,Army,Move,No,TURKEY,Warsaw,,Prussia,00011a
+18741,11,Fleet,Support move,No,TURKEY,Aegean Sea,Eastern Mediterranean,Ionian Sea,00011a
+18741,11,Fleet,Move,No,TURKEY,Eastern Mediterranean,,Ionian Sea,00011a
+18741,11,Army,Move,No,TURKEY,Moscow,,St. Petersburg,00011a
+18741,11,Army,Support hold,No,TURKEY,Vienna,,Trieste,00011a
+18741,11,Fleet,Hold,No,TURKEY,Adriatic Sea,,,00011a
+18741,11,Army,Support move,No,TURKEY,Livonia,Moscow,St. Petersburg,00011a
+18741,11,Fleet,Support move,No,TURKEY,Greece,Eastern Mediterranean,Ionian Sea,00011a
+18741,11,Army,Move,No,TURKEY,Galicia,,Silesia,00011a
+18741,11,Army,Support hold,No,TURKEY,Albania,,Trieste,00011a
+18741,11,Army,Support hold,No,TURKEY,Trieste,,Vienna,00011a
+18741,11,Fleet,Retreat,No,ENGLAND,London,,Wales,00011b
+18741,11,Army,Disband,No,ITALY,Rome,,,00011b
+18741,11,Fleet,Disband,No,ITALY,Naples,,,00011b
+18741,11,,Destroy,No,AUSTRIA,Bohemia,,,00011c
+18741,11,,Destroy,No,ENGLAND,Yorkshire,,,00011c
+18741,11,,Destroy,No,ENGLAND,Wales,,,00011c
+18741,11,,Build Fleet,No,FRANCE,Brest,,,00011c
+18741,11,,Build Army,No,FRANCE,Paris,,,00011c
+18741,11,,Build Army,No,GERMANY,Kiel,,,00011c
+18741,11,,Build Army,No,TURKEY,Ankara,,,00011c
+18741,11,,Build Fleet,No,TURKEY,Constantinople,,,00011c
+18741,11,,Build Fleet,No,TURKEY,Smyrna,,,00011c
+18741,12,Army,Move,No,AUSTRIA,Munich,,Ruhr,00012a
+18741,12,Fleet,Move,No,ENGLAND,Sweden,,Baltic Sea,00012a
+18741,12,Fleet,Hold,No,FRANCE,Tunis,,,00012a
+18741,12,Army,Move,No,FRANCE,Paris,,Picardy,00012a
+18741,12,Fleet,Support move,No,FRANCE,Brest,Western Mediterranean,Mid-Atlantic Ocean,00012a
+18741,12,Fleet,Move,No,FRANCE,Western Mediterranean,,Mid-Atlantic Ocean,00012a
+18741,12,Army,Move,No,FRANCE,Rome,,Tuscany,00012a
+18741,12,Army,Move,No,FRANCE,Piedmont,,Marseilles,00012a
+18741,12,Army,Hold,No,FRANCE,Venice,,,00012a
+18741,12,Fleet,Hold,No,FRANCE,Naples,,,00012a
+18741,12,Fleet,Move,No,FRANCE,Tyrrhenian Sea,,Western Mediterranean,00012a
+18741,12,Fleet,Support move,No,GERMANY,Barents Sea,Finland,St. Petersburg,00012a
+18741,12,Army,Move,No,GERMANY,Finland,,St. Petersburg,00012a
+18741,12,Army,Move,No,GERMANY,Liverpool,,Wales,00012a
+18741,12,Army,Move,No,GERMANY,Edinburgh,,Yorkshire,00012a
+18741,12,Army,Support move,No,GERMANY,Denmark,Norway,Sweden,00012a
+18741,12,Fleet,Move,No,GERMANY,Norway,,Sweden,00012a
+18741,12,Fleet,Move,No,GERMANY,English Channel,,Brest,00012a
+18741,12,Fleet,Move,No,GERMANY,London,,North Sea,00012a
+18741,12,Army,Move,No,GERMANY,Kiel,,Berlin,00012a
+18741,12,Army,Hold,No,TURKEY,St. Petersburg,,,00012a
+18741,12,Fleet,Hold,No,TURKEY,Ionian Sea,,,00012a
+18741,12,Fleet,Move,No,TURKEY,Smyrna,,Eastern Mediterranean,00012a
+18741,12,Fleet,Move,No,TURKEY,Constantinople,,Bulgaria (South Coast),00012a
+18741,12,Army,Move,No,TURKEY,Albania,,Trieste,00012a
+18741,12,Army,Move,No,TURKEY,Ankara,,Armenia,00012a
+18741,12,Army,Move,No,TURKEY,Vienna,,Bohemia,00012a
+18741,12,Fleet,Support hold,No,TURKEY,Adriatic Sea,,Ionian Sea,00012a
+18741,12,Army,Move,No,TURKEY,Trieste,,Tyrolia,00012a
+18741,12,Army,Move,No,TURKEY,Prussia,,Berlin,00012a
+18741,12,Fleet,Support hold,No,TURKEY,Aegean Sea,,Ionian Sea,00012a
+18741,12,Army,Support move,No,TURKEY,Silesia,Prussia,Berlin,00012a
+18741,12,Fleet,Move,No,TURKEY,Greece,,Albania,00012a
+18741,12,Army,Support hold,No,TURKEY,Livonia,,St. Petersburg,00012a
+18741,13,Army,Hold,No,AUSTRIA,Ruhr,,,00013a
+18741,13,Fleet,Move,No,ENGLAND,Baltic Sea,,Kiel,00013a
+18741,13,Army,Move,No,FRANCE,Picardy,,Belgium,00013a
+18741,13,Fleet,Move,No,FRANCE,Brest,,English Channel,00013a
+18741,13,Fleet,Move,No,FRANCE,Mid-Atlantic Ocean,,North Atlantic Ocean,00013a
+18741,13,Army,Move,No,FRANCE,Tuscany,,Piedmont,00013a
+18741,13,Fleet,Move,No,FRANCE,Western Mediterranean,,Mid-Atlantic Ocean,00013a
+18741,13,Fleet,Hold,No,FRANCE,Naples,,,00013a
+18741,13,Army,Hold,No,FRANCE,Venice,,,00013a
+18741,13,Army,Move,No,FRANCE,Marseilles,,Burgundy,00013a
+18741,13,Fleet,Move,No,FRANCE,Tunis,,Western Mediterranean,00013a
+18741,13,Fleet,Support move,No,GERMANY,North Sea,English Channel,Belgium,00013a
+18741,13,Fleet,Move,No,GERMANY,Sweden,,Norway,00013a
+18741,13,Fleet,Move,No,GERMANY,English Channel,,Belgium,00013a
+18741,13,Army,Move,No,GERMANY,Kiel,,Munich,00013a
+18741,13,Army,Hold,No,GERMANY,Yorkshire,,,00013a
+18741,13,Army,Move,No,GERMANY,Wales,,London,00013a
+18741,13,Army,Support move,No,GERMANY,Finland,Denmark,Sweden,00013a
+18741,13,Fleet,Move,No,GERMANY,Barents Sea,,St. Petersburg (North Coast),00013a
+18741,13,Army,Move,No,GERMANY,Denmark,,Sweden,00013a
+18741,13,Army,Move,No,TURKEY,Berlin,,Kiel,00013a
+18741,13,Army,Move,No,TURKEY,Armenia,,Sevastopol,00013a
+18741,13,Fleet,Move,No,TURKEY,Bulgaria (South Coast),,Greece,00013a
+18741,13,Fleet,Move,No,TURKEY,Eastern Mediterranean,,Ionian Sea,00013a
+18741,13,Fleet,Move,No,TURKEY,Ionian Sea,,Tyrrhenian Sea,00013a
+18741,13,Army,Support hold,No,TURKEY,St. Petersburg,,Livonia,00013a
+18741,13,Army,Move,No,TURKEY,Bohemia,,Munich,00013a
+18741,13,Fleet,Support move,No,TURKEY,Adriatic Sea,Trieste,Venice,00013a
+18741,13,Army,Support move,No,TURKEY,Tyrolia,Trieste,Venice,00013a
+18741,13,Fleet,Support move,No,TURKEY,Aegean Sea,Eastern Mediterranean,Ionian Sea,00013a
+18741,13,Army,Move,No,TURKEY,Trieste,,Venice,00013a
+18741,13,Army,Support move,No,TURKEY,Silesia,Bohemia,Munich,00013a
+18741,13,Fleet,Support move,No,TURKEY,Albania,Eastern Mediterranean,Ionian Sea,00013a
+18741,13,Army,Support hold,No,TURKEY,Livonia,,St. Petersburg,00013a
+18741,13,Army,Retreat,No,FRANCE,Venice,,Rome,00013b
+18741,13,,Destroy,No,AUSTRIA,Ruhr,,,00013c
+18741,13,,Destroy,No,ENGLAND,Baltic Sea,,,00013c
+18741,13,,Destroy,No,FRANCE,English Channel,,,00013c
+18741,13,,Build Army,No,TURKEY,Ankara,,,00013c
+18741,13,,Build Army,No,TURKEY,Constantinople,,,00013c
+18741,13,,Build Fleet,No,TURKEY,Smyrna,,,00013c
+18741,14,Army,Move,No,FRANCE,Picardy,,Burgundy,00014a
+18741,14,Fleet,Move,No,FRANCE,North Atlantic Ocean,,Mid-Atlantic Ocean,00014a
+18741,14,Army,Move,No,FRANCE,Piedmont,,Venice,00014a
+18741,14,Fleet,Move,No,FRANCE,Mid-Atlantic Ocean,,Spain (South Coast),00014a
+18741,14,Fleet,Move,No,FRANCE,Naples,,Tyrrhenian Sea,00014a
+18741,14,Army,Support hold,No,FRANCE,Rome,,Naples,00014a
+18741,14,Army,Move,No,FRANCE,Burgundy,,Ruhr,00014a
+18741,14,Fleet,Move,No,FRANCE,Western Mediterranean,,Tunis,00014a
+18741,14,Fleet,Move,No,GERMANY,Belgium,,English Channel,00014a
+18741,14,Fleet,Support move,No,GERMANY,Norway,Finland,St. Petersburg,00014a
+18741,14,Fleet,Convoy,No,GERMANY,North Sea,Yorkshire,Holland,00014a
+18741,14,Army,Move,No,GERMANY,Sweden,,Denmark,00014a
+18741,14,Army,Move,Yes,GERMANY,Yorkshire,,Holland,00014a
+18741,14,Army,Hold,No,GERMANY,London,,,00014a
+18741,14,Army,Move,No,GERMANY,Finland,,St. Petersburg,00014a
+18741,14,Fleet,Support move,No,GERMANY,Barents Sea,Finland,St. Petersburg,00014a
+18741,14,Army,Move,No,GERMANY,Kiel,,Munich,00014a
+18741,14,Army,Hold,No,TURKEY,St. Petersburg,,,00014a
+18741,14,Army,Support move,No,TURKEY,Berlin,Munich,Kiel,00014a
+18741,14,Army,Move,No,TURKEY,Ankara,,Constantinople,00014a
+18741,14,Army,Move,No,TURKEY,Constantinople,,Bulgaria,00014a
+18741,14,Fleet,Move,No,TURKEY,Smyrna,,Aegean Sea,00014a
+18741,14,Army,Move,No,TURKEY,Sevastopol,,Ukraine,00014a
+18741,14,Fleet,Support move,No,TURKEY,Greece,Aegean Sea,Ionian Sea,00014a
+18741,14,Fleet,Move,No,TURKEY,Ionian Sea,,Apulia,00014a
+18741,14,Fleet,Move,No,TURKEY,Tyrrhenian Sea,,Tunis,00014a
+18741,14,Army,Move,No,TURKEY,Munich,,Kiel,00014a
+18741,14,Fleet,Support hold,No,TURKEY,Adriatic Sea,,Venice,00014a
+18741,14,Army,Move,No,TURKEY,Tyrolia,,Munich,00014a
+18741,14,Army,Support hold,No,TURKEY,Livonia,,St. Petersburg,00014a
+18741,14,Fleet,Move,No,TURKEY,Albania,,Trieste,00014a
+18741,14,Army,Support move,No,TURKEY,Silesia,Tyrolia,Munich,00014a
+18741,14,Army,Hold,No,TURKEY,Venice,,,00014a
+18741,14,Fleet,Move,No,TURKEY,Aegean Sea,,Ionian Sea,00014a
+18741,14,Army,Disband,No,GERMANY,Kiel,,,00014b
+18741,14,Army,Retreat,No,TURKEY,St. Petersburg,,Moscow,00014b
+18741,15,Army,Move,No,FRANCE,Burgundy,,Munich,00015a
+18741,15,Fleet,Move,No,FRANCE,Mid-Atlantic Ocean,,Spain (South Coast),00015a
+18741,15,Army,Move,No,FRANCE,Piedmont,,Tyrolia,00015a
+18741,15,Fleet,Move,No,FRANCE,Spain (South Coast),,Gulf of Lyons,00015a
+18741,15,Fleet,Hold,No,FRANCE,Naples,,,00015a
+18741,15,Army,Move,No,FRANCE,Rome,,Apulia,00015a
+18741,15,Army,Support move,No,FRANCE,Ruhr,Holland,Kiel,00015a
+18741,15,Fleet,Move,No,FRANCE,Western Mediterranean,,Tyrrhenian Sea,00015a
+18741,15,Fleet,Move,No,GERMANY,Norway,,Sweden,00015a
+18741,15,Fleet,Move,No,GERMANY,North Sea,,Heligoland Bight,00015a
+18741,15,Army,Support move,No,GERMANY,Denmark,Holland,Kiel,00015a
+18741,15,Army,Move,Yes,GERMANY,London,,Belgium,00015a
+18741,15,Army,Hold,No,GERMANY,St. Petersburg,,,00015a
+18741,15,Fleet,Support hold,No,GERMANY,Barents Sea,,St. Petersburg,00015a
+18741,15,Army,Move,No,GERMANY,Holland,,Kiel,00015a
+18741,15,Fleet,Convoy,No,GERMANY,English Channel,London,Belgium,00015a
+18741,15,Fleet,Convoy,No,TURKEY,Aegean Sea,Constantinople,Greece,00015a
+18741,15,Army,Support move,No,TURKEY,Berlin,Kiel,Munich,00015a
+18741,15,Army,Move,Yes,TURKEY,Constantinople,,Greece,00015a
+18741,15,Army,Move,No,TURKEY,Bulgaria,,Serbia,00015a
+18741,15,Army,Move,No,TURKEY,Ukraine,,Galicia,00015a
+18741,15,Fleet,Move,No,TURKEY,Greece,,Ionian Sea,00015a
+18741,15,Fleet,Support move,No,TURKEY,Apulia,Ionian Sea,Naples,00015a
+18741,15,Fleet,Support move,No,TURKEY,Tyrrhenian Sea,Ionian Sea,Naples,00015a
+18741,15,Army,Move,No,TURKEY,Moscow,,St. Petersburg,00015a
+18741,15,Army,Move,No,TURKEY,Kiel,,Munich,00015a
+18741,15,Fleet,Support hold,No,TURKEY,Adriatic Sea,,Apulia,00015a
+18741,15,Fleet,Move,No,TURKEY,Ionian Sea,,Naples,00015a
+18741,15,Army,Support move,No,TURKEY,Venice,Munich,Tyrolia,00015a
+18741,15,Army,Support move,No,TURKEY,Silesia,Kiel,Munich,00015a
+18741,15,Fleet,Support hold,No,TURKEY,Trieste,,Venice,00015a
+18741,15,Army,Support move,No,TURKEY,Livonia,Moscow,St. Petersburg,00015a
+18741,15,Army,Move,No,TURKEY,Munich,,Tyrolia,00015a
+18741,15,,Destroy,No,TURKEY,Constantinople,,,00015c
+18741,16,Army,Support move,No,FRANCE,Burgundy,Ruhr,Munich,00016a
+18741,16,Fleet,Move,No,FRANCE,Spain (South Coast),,Gulf of Lyons,00016a
+18741,16,Army,Move,No,FRANCE,Piedmont,,Tyrolia,00016a
+18741,16,Fleet,Move,No,FRANCE,Gulf of Lyons,,Tyrrhenian Sea,00016a
+18741,16,Fleet,Move,No,FRANCE,Naples,,Ionian Sea,00016a
+18741,16,Army,Move,No,FRANCE,Rome,,Apulia,00016a
+18741,16,Army,Move,No,FRANCE,Ruhr,,Munich,00016a
+18741,16,Fleet,Support move,No,FRANCE,Western Mediterranean,Gulf of Lyons,Tyrrhenian Sea,00016a
+18741,16,Fleet,Move,No,GERMANY,Sweden,,Baltic Sea,00016a
+18741,16,Fleet,Support hold,No,GERMANY,Heligoland Bight,,Kiel,00016a
+18741,16,Army,Support hold,No,GERMANY,Denmark,,Kiel,00016a
+18741,16,Army,Support move,No,GERMANY,Kiel,Ruhr,Munich,00016a
+18741,16,Army,Move,No,GERMANY,Belgium,,Holland,00016a
+18741,16,Army,Hold,No,GERMANY,St. Petersburg,,,00016a
+18741,16,Fleet,Support hold,No,GERMANY,Barents Sea,,St. Petersburg,00016a
+18741,16,Fleet,Move,No,GERMANY,English Channel,,North Sea,00016a
+18741,16,Fleet,Support move,No,TURKEY,Ionian Sea,Apulia,Naples,00016a
+18741,16,Army,Support hold,No,TURKEY,Berlin,,Munich,00016a
+18741,16,Army,Move,No,TURKEY,Serbia,,Trieste,00016a
+18741,16,Fleet,Move,No,TURKEY,Aegean Sea,,Greece,00016a
+18741,16,Army,Move,No,TURKEY,Galicia,,Bohemia,00016a
+18741,16,Fleet,Move,No,TURKEY,Greece,,Albania,00016a
+18741,16,Fleet,Move,No,TURKEY,Apulia,,Naples,00016a
+18741,16,Fleet,Move,No,TURKEY,Tyrrhenian Sea,,Rome,00016a
+18741,16,Army,Move,No,TURKEY,Moscow,,St. Petersburg,00016a
+18741,16,Army,Support hold,No,TURKEY,Munich,,Berlin,00016a
+18741,16,Fleet,Move,No,TURKEY,Adriatic Sea,,Apulia,00016a
+18741,16,Army,Move,No,TURKEY,Tyrolia,,Piedmont,00016a
+18741,16,Army,Support move,No,TURKEY,Livonia,Moscow,St. Petersburg,00016a
+18741,16,Fleet,Move,No,TURKEY,Trieste,,Adriatic Sea,00016a
+18741,16,Army,Support hold,No,TURKEY,Silesia,,Munich,00016a
+18741,16,Army,Support move,No,TURKEY,Venice,Tyrolia,Piedmont,00016a
+18741,16,Fleet,Disband,No,FRANCE,Naples,,,00016b
+18741,16,Army,Retreat,No,FRANCE,Piedmont,,Marseilles,00016b
+18741,16,Fleet,Retreat,No,TURKEY,Tyrrhenian Sea,,Tunis,00016b
+18741,17,Army,Move,No,FRANCE,Ruhr,,Munich,00017a
+18741,17,Army,Move,No,FRANCE,Rome,,Apulia,00017a
+18741,17,Fleet,Support move,No,FRANCE,Tyrrhenian Sea,Western Mediterranean,Tunis,00017a
+18741,17,Army,Move,No,FRANCE,Marseilles,,Piedmont,00017a
+18741,17,Fleet,Support move,No,FRANCE,Gulf of Lyons,Marseilles,Piedmont,00017a
+18741,17,Fleet,Move,No,FRANCE,Western Mediterranean,,Tunis,00017a
+18741,17,Army,Support move,No,FRANCE,Burgundy,Ruhr,Munich,00017a
+18741,17,Fleet,Support move,No,GERMANY,Baltic Sea,Kiel,Berlin,00017a
+18741,17,Army,Move,No,GERMANY,Denmark,,Kiel,00017a
+18741,17,Army,Move,No,GERMANY,Holland,,Kiel,00017a
+18741,17,Army,Hold,No,GERMANY,St. Petersburg,,,00017a
+18741,17,Fleet,Support hold,No,GERMANY,Barents Sea,,St. Petersburg,00017a
+18741,17,Fleet,Move,No,GERMANY,North Sea,,Skagerrack,00017a
+18741,17,Fleet,Move,No,GERMANY,Heligoland Bight,,North Sea,00017a
+18741,17,Army,Move,No,GERMANY,Kiel,,Berlin,00017a
+18741,17,Army,Move,No,TURKEY,Serbia,,Trieste,00017a
+18741,17,Fleet,Move,No,TURKEY,Greece,,Aegean Sea,00017a
+18741,17,Army,Support hold,No,TURKEY,Bohemia,,Munich,00017a
+18741,17,Fleet,Move,No,TURKEY,Albania,,Ionian Sea,00017a
+18741,17,Fleet,Support move,No,TURKEY,Naples,Venice,Rome,00017a
+18741,17,Army,Support hold,No,TURKEY,Moscow,,Livonia,00017a
+18741,17,Fleet,Support move,No,TURKEY,Tunis,Ionian Sea,Tyrrhenian Sea,00017a
+18741,17,Army,Move,No,TURKEY,Venice,,Rome,00017a
+18741,17,Army,Support hold,No,TURKEY,Munich,,Berlin,00017a
+18741,17,Army,Support hold,No,TURKEY,Livonia,,Moscow,00017a
+18741,17,Fleet,Move,No,TURKEY,Adriatic Sea,,Apulia,00017a
+18741,17,Army,Move,No,TURKEY,Piedmont,,Marseilles,00017a
+18741,17,Army,Support hold,No,TURKEY,Silesia,,Berlin,00017a
+18741,17,Army,Support hold,No,TURKEY,Berlin,,Munich,00017a
+18741,17,Fleet,Move,No,TURKEY,Ionian Sea,,Tyrrhenian Sea,00017a
+18741,17,Fleet,Move,No,TURKEY,Trieste,,Adriatic Sea,00017a
