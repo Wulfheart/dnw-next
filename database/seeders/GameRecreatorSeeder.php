@@ -68,6 +68,7 @@ class GameRecreatorSeeder extends Seeder
                 'user_id' => User::factory()->create()->id,
             ]));
             InitializeGameAction::run($game->id, false);
+            $this->command->line("");
 
 
             foreach ($all as $key => $turn) {
@@ -139,6 +140,8 @@ class GameRecreatorSeeder extends Seeder
         }
 
         // Some additional saving to make sure the game is saved correctly
-        AdjudicateGameAction::run($game->id, true, false);
+        while($game->load('currentPhase')->currentPhase->type !== PhaseTypeEnum::ADJUSTMENT) {
+            AdjudicateGameAction::run($game->id, true, false);
+        }
     }
 }
