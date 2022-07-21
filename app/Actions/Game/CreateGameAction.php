@@ -3,9 +3,9 @@
 namespace App\Actions\Game;
 
 use App\Http\Requests\StoreGameRequest;
-use App\Jobs\InitializeGameJob;
 use App\Models\BasePower;
 use App\Models\Game;
+use App\Models\MessageMode;
 use App\Models\Power;
 use App\Models\User;
 use App\Models\Variant;
@@ -25,7 +25,8 @@ class CreateGameAction
         int $phase_length,
         int $variant_id,
         array $no_adjudication,
-        bool $async
+        bool $async,
+        int $message_mode_id,
     ): Game {
         $variant = Variant::findOrFail($variant_id);
 
@@ -34,6 +35,7 @@ class CreateGameAction
             'phase_length' => $phase_length,
             'variant_id' => $variant_id,
             'scs_to_win' => $variant->default_scs_to_win,
+            'message_mode_id' => $message_mode_id,
         ]);
 
 
@@ -77,6 +79,10 @@ class CreateGameAction
         $username = $command->choice('User', User::all()->pluck('name')->toArray(), 0);
         $user = User::where('name', $username)->firstOrFail();
 
-        $this->handle($user, $name, $phaseLength, $variant_id, [], false);
+        $messageModeName = $command->choice('Message mode', MessageMode::all()->pluck('name')->toArray(), 0);
+        /** @var MessageMode $messageMode */
+        $messageMode = MessageMode::query()->where('name', $messageModeName)->firstOrFail();
+
+        $this->handle($user, $name, $phaseLength, $variant_id, [], false, $messageMode->id);
     }
 }
