@@ -8,7 +8,7 @@
         "hot": "mix watch --hot",
         "prod": "npm run production",
         "production": "mix --production",
-        "css": "npx tailwindcss --output=public/css/app.css",
+        "css": "npx tailwindcss --output=public/css/app.css --minify",
         "css:watch": "npx tailwindcss --output=public/css/app.css --watch"
     },
     "devDependencies": {

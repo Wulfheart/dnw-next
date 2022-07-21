@@ -1,3 +1,5 @@
+@props(['head' => null])
+
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
@@ -10,12 +12,15 @@
 
     <!-- Styles -->
     <link rel="stylesheet" href="{{ mix('css/app.css') }}">
+
     <style>
         [x-cloak] {
             display: none !important;
         }
 
     </style>
+
+    @stack('head')
 
     @livewireStyles
 

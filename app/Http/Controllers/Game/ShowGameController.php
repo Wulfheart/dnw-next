@@ -57,6 +57,7 @@ class ShowGameController extends Controller
 
         $response = response()->view('game.show', [
             'is_still_creating' => is_null($game->currentPhase),
+            'preloadLink' => $phases->pluck('svg')->first(),
             'phases' => $phases,
             'phase_keys' => $phases->keys(),
             'game' => $game,
