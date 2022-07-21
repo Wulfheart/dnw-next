@@ -1,5 +1,3 @@
-@props(['head' => null])
-
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
@@ -11,8 +9,7 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Styles -->
-    <link rel="stylesheet" href="{{ mix('css/app.css') }}">
-
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
     <style>
         [x-cloak] {
             display: none !important;
@@ -24,8 +21,6 @@
 
     @livewireStyles
 
-    <!-- Scripts -->
-    <script src="{{ mix('js/app.js') }}" defer></script>
 </head>
 
 <body class="font-sans antialiased scroll-smooth {{ config('app.debug') ? 'debug-screens' : '' }}">
