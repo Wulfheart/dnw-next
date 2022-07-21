@@ -4,7 +4,6 @@ require("./bootstrap");
 
 import Alpine from "alpinejs";
 import tippy from "tippy.js";
-import "tippy.js/dist/tippy.css";
 import collapse from '@alpinejs/collapse'
 
 // Why doesn't this have to be registered?

@@ -17,6 +17,8 @@
 
     </style>
 
+    @stack('head')
+
     @livewireStyles
 
     <!-- Scripts -->
@@ -40,7 +42,7 @@
 
     @stack('modals')
 
-    @livewireScripts
+{{--    @livewireScripts--}}
     @if(config('app.debug'))
         <script src="https://cdn.jsdelivr.net/gh/underground-works/clockwork-browser@1/dist/toolbar.js"></script>
         <script src="https://cdn.jsdelivr.net/gh/underground-works/clockwork-browser@1/dist/metrics.js"></script>
