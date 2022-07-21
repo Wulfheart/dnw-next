@@ -13,7 +13,10 @@
                 <div class="" x-show="current == {{ $loop->index }}"
                     {{ !$loop->first ? 'x-cloak' : '' }}>
                     <img class="object-cover max-h-[65vh]"
-                        src="{{ asset('storage/' . $phase->svg) }}"
+                         @if($loop->first)
+                            src="{{ asset('storage/' . $phase->svg) }}"
+                         @endif
+                         x-bind:src="Math.abs({{ $loop->index }} - current) <= 5 || Math.abs(max_index - {{ $loop->index }}) <= 5 ? '{{ asset('storage/' . $phase->svg) }}' : ''"
                          loading="lazy"
                         alt="{{ $phase->key }}">
                 </div>

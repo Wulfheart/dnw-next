@@ -41,9 +41,9 @@
     @stack('modals')
 
     @livewireScripts
-    @if(config('app.debug'))
-        <script src="https://cdn.jsdelivr.net/gh/underground-works/clockwork-browser@1/dist/toolbar.js"></script>
-        <script src="https://cdn.jsdelivr.net/gh/underground-works/clockwork-browser@1/dist/metrics.js"></script>
-    @endif
+{{--    @if(config('app.debug'))--}}
+{{--        <script src="https://cdn.jsdelivr.net/gh/underground-works/clockwork-browser@1/dist/toolbar.js"></script>--}}
+{{--        <script src="https://cdn.jsdelivr.net/gh/underground-works/clockwork-browser@1/dist/metrics.js"></script>--}}
+{{--    @endif--}}
 </body>
 </html>

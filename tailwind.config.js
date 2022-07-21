@@ -11,9 +11,9 @@ module.exports = {
     ],
 
     theme: {
-        debugScreens: {
-            position: ['top', 'left'],
-        },
+        // debugScreens: {
+        //     position: ['top', 'left'],
+        // },
         extend: {
             fontFamily: {
                 sans: ['Inter', ...defaultTheme.fontFamily.sans],
@@ -28,6 +28,6 @@ module.exports = {
         require('@tailwindcss/forms'),
         require('@tailwindcss/typography'),
         require('@tailwindcss/line-clamp'),
-        require('tailwindcss-debug-screens'),
+        // require('tailwindcss-debug-screens'),
     ],
 };
