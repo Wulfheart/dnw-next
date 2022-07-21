@@ -2,7 +2,6 @@
 
 return [
     'adjudicator' => [
-        // 'base_url' => 'https://dip-adjudicator.onrender.com/v0.4'
-        'base_url' => 'http://127.0.0.1:5000/v0.4',
+        'base_url' => env('DIPLOMACY_ADJUDICATOR_BASE_URL', "https://alexander2.vercel.app/v0.4"),
     ],
 ];
