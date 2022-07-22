@@ -14,8 +14,15 @@ function setupGame(): Game
     if (Variant::query()->count() == 0) {
         test()->seed(VariantSeeder::class);
     }
-    $game = CreateGameAction::run($user, faker()->name,
-        CarbonInterface::MINUTES_PER_HOUR * CarbonInterface::HOURS_PER_DAY, Variant::firstOrFail()->id, [], false);
+    $game = CreateGameAction::run(
+        $user,
+        faker()->name,
+        CarbonInterface::MINUTES_PER_HOUR * CarbonInterface::HOURS_PER_DAY,
+        Variant::firstOrFail()->id,
+        [],
+        false,
+        \App\Models\MessageMode::factory()->create()->id
+    );
 
     FakeFillGameAction::run($game);
 

@@ -17,7 +17,8 @@ it('calculates a phase adjudication time when starting', function () {
         CarbonInterface::MINUTES_PER_HOUR * CarbonInterface::HOURS_PER_DAY,
         $variant->id,
         [],
-        false
+        false,
+        \App\Models\MessageMode::factory()->create()->id,
     );
 
     $game->load('currentPhase');

@@ -27,9 +27,9 @@ class GameFactory extends Factory
         return [
             'name' => $this->faker->name,
             'variant_id' => Variant::factory(),
-            'message_mode_id' => MessageMode::firstOrFail(),
+            'message_mode_id' => MessageMode::factory()->create()->id,
             'phase_length' => $this->faker->randomNumber(),
-            'is_paused' => $this->faker->boolean,
+            'is_paused' => $this->faker->boolean
         ];
     }
 }
