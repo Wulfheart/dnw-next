@@ -117,9 +117,8 @@ class AdjudicateGameAction
 
             $hasWinner = !empty($gameResponse->winners);
             if ($hasWinner) {
-                $game->powers->filter(fn(Power $p
-                ) => collect($gameResponse->winners)->contains($p->basePower->api_name))
-                    ->each(fn(Power $p) => $p->update(['is_winner' => true]));
+                FinishGameAction::run($game, $gameResponse->winners);
+
             } else if($game->currentState() == GameStatusEnum::RUNNING && $send_emails){
                 $game->powers->each(fn(Power $p) => $p->loadMissing('user')->user->notify(new GameAdjudicatedNotification($game)));
             }

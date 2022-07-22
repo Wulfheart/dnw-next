@@ -142,7 +142,7 @@ class GameRecreatorSeeder extends Seeder
 
         // Some additional saving to make sure the game is saved correctly
         while($game->load('currentPhase')->currentPhase->type !== PhaseTypeEnum::ADJUSTMENT) {
-            AdjudicateGameAction::run($game->id, true, false);
+            AdjudicateGameAction::run($game->id, true, true);
         }
     }
 }

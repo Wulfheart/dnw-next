@@ -5,10 +5,10 @@
 
 Hallo,
 
-das Spiel _"{{ $gameName }}"_ wurde ausgewertet. Sieh jetzt nach, was passiert ist.
+das Spiel _"{{ $gameName }}"_ wurde gerade beendet. Sieh jetzt nach, wie es ausgegangen ist.
 
 @component('mail::button', ['url' => $url])
-Spiel ansehen
+    Spiel ansehen
 @endcomponent
 
 Gut Brett!

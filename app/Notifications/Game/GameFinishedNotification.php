@@ -8,10 +8,9 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Messages\MailMessage;
 use Illuminate\Notifications\Notification;
 
-class GameAdjudicatedNotification extends Notification implements ShouldQueue
+class GameFinishedNotification extends Notification implements ShouldQueue
 {
     use Queueable;
-
 
     public function __construct(
         public Game $game
@@ -19,15 +18,27 @@ class GameAdjudicatedNotification extends Notification implements ShouldQueue
         $this->game->loadMissing('variant');
     }
 
+    /**
+     * Get the notification's delivery channels.
+     *
+     * @param  mixed  $notifiable
+     * @return array
+     */
     public function via($notifiable)
     {
         return ['mail', 'database'];
     }
 
+    /**
+     * Get the mail representation of the notification.
+     *
+     * @param  mixed  $notifiable
+     * @return \Illuminate\Notifications\Messages\MailMessage
+     */
     public function toMail($notifiable)
     {
         return (new MailMessage)
-            ->subject('Spiel ausgewertet')
+            ->subject('Spiel beendet')
             ->markdown('mail.markdown.game.adjudicated', [
                 'gameName' => $this->game->name,
                 'url' => route('games.show', $this->game)
