@@ -12,10 +12,10 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
 
     <!-- Styles -->
-    @vite('resources/css/app.css')
+    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 
     <!-- Scripts -->
-    @vite('resources/js/app.js')
+    <script src="{{ asset('js/app.js') }}"></script>
 </head>
 
 <body>

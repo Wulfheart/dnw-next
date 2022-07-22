@@ -1,5 +1,5 @@
-@use "font.css";
-@use "tippy.js/dist/tippy.css";
+@import "font.css";
+@import "tippy.js/dist/tippy.css";
 
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
