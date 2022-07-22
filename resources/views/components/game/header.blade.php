@@ -34,7 +34,7 @@
                     {{ $game->name }}
                 </h2>
                 <div
-                    class="mt-1 flex flex-col sm:flex-row sm:flex-wrap sm:mt-0 sm:space-x-6 sm:justify-between items-baseline">
+                    class="mt-1 flex flex-col sm:flex-row sm:flex-wrap sm:mt-0 sm:space-x-6 sm:justify-between items-center">
                     <div class="flex flex-row space-x-6 ">
 
                         <div class="mt-2 flex items-center text-sm text-gray-500">
@@ -46,7 +46,7 @@
                             {{ $game->currentPhase->phase_name_long }}
                         </div>
                     </div>
-                    <div class="text-sm text-gray-500">
+                    <div class="text-sm text-gray-500 mt-2">
                         @if ($adjudicationInProgress)
                             Auswertung läuft
                         @else
