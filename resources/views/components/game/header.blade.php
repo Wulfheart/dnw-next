@@ -69,7 +69,7 @@
                                         </p>
                                     </div>
                                 </div>
-                                @if ($user->can('join', $game))
+                                @can('join', $game)
                                     <x-form :action="route('games.join', $game)"
                                         class="mt-5 sm:mt-0 sm:ml-6 sm:flex-shrink-0 sm:flex sm:items-center">
                                         <button type="submit"
@@ -77,8 +77,8 @@
                                             Spiel beitreten
                                         </button>
                                     </x-form>
-                                @endif
-                                @if ($user->can('leave', $game))
+                                @endcan
+                                @can('leave', $game)
                                     <x-form :action="route('games.leave', $game)"
                                         class="mt-5 sm:mt-0 sm:ml-6 sm:flex-shrink-0 sm:flex sm:items-center">
                                         <button type="submit"
@@ -86,7 +86,7 @@
                                             Spiel verlassen
                                         </button>
                                     </x-form>
-                                @endif
+                                @endcan
                             </div>
                         </div>
                     </div>
