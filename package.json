@@ -1,7 +1,7 @@
 {
     "private": true,
     "scripts": {
-        "css": "npx tailwindcss --output=public/css/app.css",
+        "css": "npx tailwindcss -i resources/css/app.css --output=public/css/app.css",
         "css:watch": "npx tailwindcss --output=public/css/app.css --watch",
         "js": "npx esbuild resources/js/app.js --outfile=public/js/app.js --bundle --sourcemap"
     },

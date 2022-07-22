@@ -1,9 +1,4 @@
 <x-game.header :game="$game" :adjudication-in-progress="$adjudicationInProgress">
-
-    @push('head')
-        <link rel="preload" href="{{ asset('storage/' . $preloadPhaseImage) }}" as="image">
-    @endpush
-
     <div x-data="{ current: 0, max_index: {{ $phases->count() - 1 }}}">
 
         <div class="flex justify-center mt-5">
@@ -12,12 +7,15 @@
             @foreach ($phases as $phase)
                 <div class="" x-show="current == {{ $loop->index }}"
                     {{ !$loop->first ? 'x-cloak' : '' }}>
-                    <img class="object-cover max-h-[65vh]"
-{{--                         918 × 680 px--}}
-                         width="918"
-                         height="680"
-                        x-bind:src="Math.abs({{ $loop->index }} - current) <= 5 || Math.abs(max_index - {{ $loop->index }}) <= 5 ? '{{ asset('storage/' . $phase->svg) }}' : ''"
-                        alt="{{ $phase->key }}">
+                    @if($loop->first)
+                        <div id="mapContainer" class="object-cover max-h-[65vh]">
+                        {!! $preloadPhaseSvg !!}
+                        </div>
+                    @else
+                        <img class="object-cover max-h-[65vh]"
+                            x-bind:src="Math.abs({{ $loop->index }} - current) <= 5 || Math.abs(max_index - {{ $loop->index }}) <= 5 ? '{{ asset('storage/' . $phase->svg) }}' : ''"
+                            alt="{{ $phase->key }}">
+                    @endif
                 </div>
             @endforeach
         </div>

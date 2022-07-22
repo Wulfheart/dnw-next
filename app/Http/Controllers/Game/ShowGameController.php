@@ -56,11 +56,13 @@ class ShowGameController extends Controller
 
         $preloadImageUrl = $phases->pluck('svg')->first();
 
+        $preload = \Storage::drive('public')->get($preloadImageUrl);
+
 
         $response = response()->view('game.show', [
             'is_still_creating' => is_null($game->currentPhase),
             'phases' => $phases,
-            'preloadPhaseImage' => $preloadImageUrl,
+            'preloadPhaseSvg' => $preload,
             'phase_keys' => $phases->keys(),
             'game' => $game,
             'gameState' => $game->currentState(),
