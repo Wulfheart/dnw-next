@@ -54,11 +54,16 @@ class ShowGameController extends Controller
                 $user->id);
         $adjudicationInProgress = $game->currentPhase->adjudicationStarted();
 
+        $preloadImageUrl = $phases->pluck('svg')->first();
+
+        $preload = \Storage::drive('public')->get($preloadImageUrl);
+
 
         $response = response()->view('game.show', [
             'is_still_creating' => is_null($game->currentPhase),
             'preloadLink' => $phases->pluck('svg')->first(),
             'phases' => $phases,
+            'preloadPhaseSvg' => $preload,
             'phase_keys' => $phases->keys(),
             'game' => $game,
             'gameState' => $game->currentState(),

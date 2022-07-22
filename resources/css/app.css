@@ -1,5 +1,11 @@
 @use "font.css";
+@use "tippy.js/dist/tippy.css";
 
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
+
+#mapContainer > svg {
+  width: 100%;
+  height: 100%;
+}
