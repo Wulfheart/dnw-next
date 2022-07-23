@@ -59,13 +59,15 @@ if (config('app.debug')) {
     //     return (new GameStartedNotification($game))->toMail(User::first());
     // });
 
-    Route::get('/debug', function() {
-       $user = \App\Models\Power
-           // ::with(['game' => ['powers.basePower', 'powers.user']])
-           ::query()->first();
+    Route::get('/debug', function () {
+        $user = \App\Models\Power
+            ::with(['game.powers.basePower', 'game.powers.user'])
+            ->first();
 
-       $user->load(['game' => ['powers.basePower', 'powers.user']]);
-       dd($user->relationsToArray());
+        // $sql = $user->load(['game' => ['powers.basePower', 'powers.user']])->toSql();
+
+        return view('welcome');
+        return $sql;
 
     });
 }
