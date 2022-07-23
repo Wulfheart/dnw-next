@@ -15,15 +15,7 @@ class NoOrderReceivedYetNotification extends Notification implements ShouldQueue
 
     public function __construct(
         public int $phase_id
-    )
-    {
-    }
-
-    public function handle(): void
-    {
-        $phase = Phase::findOrFail($this->phase_id);
-
-
+    ) {
     }
 
     /**
@@ -46,9 +38,9 @@ class NoOrderReceivedYetNotification extends Notification implements ShouldQueue
     public function toMail($notifiable)
     {
         return (new MailMessage)
-                    ->line('The introduction to the notification.')
-                    ->action('Notification Action', url('/'))
-                    ->line('Thank you for using our application!');
+            ->line('The introduction to the notification.')
+            ->action('Notification Action', url('/'))
+            ->line('Thank you for using our application!');
     }
 
     /**

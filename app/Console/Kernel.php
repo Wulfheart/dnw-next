@@ -4,6 +4,7 @@ namespace App\Console;
 
 use App\Actions\Game\AutomaticAdjudicationAtPhaseEndAction;
 use App\Actions\Game\CreateGameAction;
+use App\Actions\Game\RememberUsersToOrderAction;
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
 use Lorisleiva\Actions\Facades\Actions;
@@ -27,9 +28,12 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
-        $schedule->call(function(){
+        $schedule->call(function () {
             AutomaticAdjudicationAtPhaseEndAction::run();
         })->everyMinute()->name('adjudicate')->withoutOverlapping();
+        $schedule->call(function () {
+            RememberUsersToOrderAction::run();
+        })->everyMinute()->name('remember-users-to-order')->withoutOverlapping();
         // $schedule->command('inspire')->hourly();
     }
 

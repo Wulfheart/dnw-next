@@ -70,4 +70,8 @@ if (config('app.debug')) {
         return $sql;
 
     });
+
+    Route::get('/php', function () {
+        return phpinfo();
+    });
 }

@@ -2,6 +2,8 @@
 
 namespace App\Models;
 
+use App\Builders\GameBuilder;
+use App\Builders\PhaseBuilder;
 use App\Enums\PhaseTypeEnum;
 use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -35,6 +37,11 @@ class Phase extends Model
     {
         return $this->hasMany(PhasePowerData::class)->orderBy('supply_center_count', 'DESC')
             ->orderBy('unit_count', 'DESC');
+    }
+
+    public function game(): BelongsTo
+    {
+        return $this->belongsTo(Game::class);
     }
 
     public function adjudicationStarted(): bool

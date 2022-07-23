@@ -1,14 +1,14 @@
-@props(['game', 'adjudicationInProgress'])
+@props(['game', 'adjudicationInProgress', 'hasStarted'])
 
 <x-app-layout>
     <x-container.game {{ $attributes }}>
         <div class="bg-white shadow-2xl block fixed inset-x-0 bottom-0 z-10 lg:hidden space-x-0 flex flex-row space-x-4">
             <x-game.nav-link-mobile :link="route('games.show', $game)" icon-active="heroicon-s-map"
-                icon-inactive="heroicon-o-map" :is-active="request()->routeIs('games.show')">
+                                    icon-inactive="heroicon-o-map" :is-active="request()->routeIs('games.show')">
                 Karte
             </x-game.nav-link-mobile>
             <x-game.nav-link-mobile :link="route('games.messages.index', $game)" icon-active="heroicon-s-mail"
-                icon-inactive="heroicon-o-mail" :is-active="!request()->routeIs('games.show')">
+                                    icon-inactive="heroicon-o-mail" :is-active="!request()->routeIs('games.show')">
                 Nachrichten
             </x-game.nav-link-mobile>
         </div>
@@ -18,10 +18,10 @@
             <div class="w-1/4 items-start hidden lg:block">
                 <div class="sticky top-10 space-y-1">
                     <x-game.nav-link-desktop :link="route('games.show', $game)"
-                        :is-active="request()->routeIs('games.show')">Karte
+                                             :is-active="request()->routeIs('games.show')">Karte
                     </x-game.nav-link-desktop>
                     <x-game.nav-link-desktop :link="route('games.messages.index', $game)"
-                        :is-active="!request()->routeIs('games.show')">Nachrichten
+                                             :is-active="!request()->routeIs('games.show')">Nachrichten
                     </x-game.nav-link-desktop>
 
                 </div>
@@ -34,7 +34,7 @@
                     {{ $game->name }}
                 </h2>
                 <div
-                    class="mt-1 flex flex-col sm:flex-row sm:flex-wrap sm:mt-0 sm:space-x-6 sm:justify-between items-center">
+                        class="mt-1 flex flex-col sm:flex-row sm:flex-wrap sm:mt-0 sm:space-x-6 sm:justify-between items-center">
                     <div class="flex flex-row space-x-6 ">
 
                         <div class="mt-2 flex items-center text-sm text-gray-500">
@@ -50,7 +50,10 @@
                         @if ($adjudicationInProgress)
                             Auswertung läuft
                         @else
-                            <x-game.countdown :isoDatetime="$game->currentPhase->adjudication_at?->toIso8601String()" />
+                            @if($hasStarted)
+                                <x-game.countdown
+                                        :isoDatetime="$game->currentPhase->adjudication_at?->toIso8601String()" />
+                            @endif
                         @endif
                     </div>
                 </div>
@@ -71,18 +74,18 @@
                                 </div>
                                 @can('join', $game)
                                     <x-form :action="route('games.join', $game)"
-                                        class="mt-5 sm:mt-0 sm:ml-6 sm:flex-shrink-0 sm:flex sm:items-center">
+                                            class="mt-5 sm:mt-0 sm:ml-6 sm:flex-shrink-0 sm:flex sm:items-center">
                                         <button type="submit"
-                                            class="inline-flex items-center px-4 py-2 border border-transparent shadow-sm font-medium rounded-md text-white bg-primary-600 hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500 sm:text-sm">
+                                                class="inline-flex items-center px-4 py-2 border border-transparent shadow-sm font-medium rounded-md text-white bg-primary-600 hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500 sm:text-sm">
                                             Spiel beitreten
                                         </button>
                                     </x-form>
                                 @endcan
                                 @can('leave', $game)
                                     <x-form :action="route('games.leave', $game)"
-                                        class="mt-5 sm:mt-0 sm:ml-6 sm:flex-shrink-0 sm:flex sm:items-center">
+                                            class="mt-5 sm:mt-0 sm:ml-6 sm:flex-shrink-0 sm:flex sm:items-center">
                                         <button type="submit"
-                                            class="inline-flex items-center px-4 py-2 border border-transparent shadow-sm font-medium rounded-md text-white bg-primary-600 hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500 sm:text-sm">
+                                                class="inline-flex items-center px-4 py-2 border border-transparent shadow-sm font-medium rounded-md text-white bg-primary-600 hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500 sm:text-sm">
                                             Spiel verlassen
                                         </button>
                                     </x-form>

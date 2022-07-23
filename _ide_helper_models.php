@@ -134,6 +134,7 @@ namespace App\Models{
  * @property bool $is_custom
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
+ * @method static \Database\Factories\MessageModeFactory factory(...$parameters)
  * @method static \Illuminate\Database\Eloquent\Builder|MessageMode newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|MessageMode newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|MessageMode query()
