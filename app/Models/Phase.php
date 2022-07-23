@@ -48,4 +48,10 @@ class Phase extends Model
         $this->save();
     }
 
+    public function type(): Attribute{
+        return Attribute::get(function () {
+
+        });
+    }
+
 }
