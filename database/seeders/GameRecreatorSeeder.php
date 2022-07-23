@@ -30,7 +30,7 @@ class GameRecreatorSeeder extends Seeder
     {
         $files = [
             '18741.dnw',
-            'fullgame.dnw'
+            'fullgame.dnw',
         ];
 
         $base_path = __DIR__.'/games/';
@@ -141,7 +141,7 @@ class GameRecreatorSeeder extends Seeder
         }
 
         // Some additional saving to make sure the game is saved correctly
-        while($game->load('currentPhase')->currentPhase->type !== PhaseTypeEnum::ADJUSTMENT) {
+        while ($game->load('currentPhase')->currentPhase->type !== PhaseTypeEnum::ADJUSTMENT) {
             AdjudicateGameAction::run($game->id, true, true);
         }
     }
