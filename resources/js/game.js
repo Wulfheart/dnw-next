@@ -7,6 +7,24 @@ document.addEventListener("DOMContentLoaded", () => {
       element.textContent = remainingText(secondsLeft);
     }, 1000);
   });
+
+  let mapContainer = document.querySelector("[x-map]");
+  if (mapContainer != null) {
+    let maxIndex = mapContainer.getAttribute("x-map");
+    document.currentMapIndex = 0;
+    document.maxMapIndex = maxIndex;
+    // document.addEventListener("keydown", e => {
+    //   console.log(document.currentMapIndex);
+    //   if (e.key === "ArrowRight") {
+    //     document.currentMapIndex = document.currentMapIndex < document.maxMapIndex ? document.currentMapIndex + 1 : document.currentMapIndex;
+    //   }
+    //   if (e.key === "ArrowLeft") {
+    //     document.currentMapIndex = document.currentMapIndex > 0 ? document.currentMapIndex - 1 : document.currentMapIndex;
+    //   }
+    //   console.log(document.currentMapIndex);
+    // });
+  }
+
 });
 
 function remainingText(secondsRemaining) {
@@ -58,3 +76,4 @@ function remainingText(secondsRemaining) {
     }
   }
 }
+

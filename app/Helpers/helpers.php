@@ -18,6 +18,9 @@ if (!function_exists('remainingTimeText')) {
     function remainingTimeText(string $isoDatetime): string
     {
         $secondsRemaining = \Illuminate\Support\Facades\Date::now()->diffInSeconds($isoDatetime);
+        if (now()->lessThanOrEqualTo($isoDatetime)) {
+            $secondsRemaining *= -1;
+        }
         if ($secondsRemaining <= 0) {
             return "Jetzt";
         }

@@ -1,8 +1,10 @@
 <x-game.header :game="$game" :adjudication-in-progress="$adjudicationInProgress">
-    <div x-data="{ current: 0, max_index: {{ $phases->count() - 1 }}}"
-         x-ref="phases"
-         x-on:keyup.right.window="current = current > 0 ? current - 1 : current"
-         x-on:keyup.left.window=" current=current < max_index ? current + 1 : current"
+    <div
+            {{--            x-map="{{ $phases->count() - 1 }}" --}}
+            x-data="{ current: 0, max_index: {{ $phases->count() - 1 }}}"
+            x-ref="phases"
+            x-on:keydown.right.window.throttle.100ms="current = current > 0 ? current - 1 : current"
+            x-on:keydown.left.window.throttle.100ms="current=current < max_index ? current + 1 : current"
     >
 
         <div class="flex justify-center mt-5">
