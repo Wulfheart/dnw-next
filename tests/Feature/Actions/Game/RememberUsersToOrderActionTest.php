@@ -4,8 +4,7 @@ use App\Actions\Game\RememberUsersToOrderAction;
 use App\Models\PhasePowerData;
 use App\Notifications\Game\NoOrderReceivedYetNotification;
 
-it('', function () {
-    Queue::fake();
+it('remembers a user to submit orders', function () {
     Notification::fake();
 
     $game = setupGame();
@@ -22,11 +21,13 @@ it('', function () {
 
     RememberUsersToOrderAction::run();
 
+    $game->load('currentPhase.phasePowerData.power.user');
+
     $game->currentPhase->phasePowerData->loadMissing('power.user');
 
-    $game->currentPhase->phasePowerData->slice(1)->each(function (PhasePowerData $phasePowerData) {
-        Notification::assertSentTo($phasePowerData->power->user, NoOrderReceivedYetNotification::class);
-    });
+    $users = $game->currentPhase->phasePowerData->slice(1)->pluck('power.user');
+
+    Notification::assertSentTo($users, NoOrderReceivedYetNotification::class);
 
 
 });

@@ -25,7 +25,7 @@ it('dispatches the correct event when it starts', function () {
     test()->seed(VariantSeeder::class);
     $variant = Variant::firstOrFail();
     $game = CreateGameAction::run($user, faker()->name,
-        CarbonInterface::MINUTES_PER_HOUR * CarbonInterface::HOURS_PER_DAY, $variant->id, [], false);
+        CarbonInterface::MINUTES_PER_HOUR * CarbonInterface::HOURS_PER_DAY, $variant->id, [], false, \App\Models\MessageMode::factory()->create()->id);
 
     $game->load('powers');
     $game->powers->whereUserNotAssigned()->random(5)->each(fn(Power $p

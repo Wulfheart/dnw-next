@@ -54,23 +54,6 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
 });
 
 if (config('app.debug')) {
-    // Route::get('/notification', function () {
-    //     $game = Game::first();
-    //     return (new GameStartedNotification($game))->toMail(User::first());
-    // });
-
-    Route::get('/debug', function () {
-        $user = \App\Models\Power
-            ::with(['game.powers.basePower', 'game.powers.user'])
-            ->first();
-
-        // $sql = $user->load(['game' => ['powers.basePower', 'powers.user']])->toSql();
-
-        return view('welcome');
-        return $sql;
-
-    });
-
     Route::get('/php', function () {
         return phpinfo();
     });

@@ -22,7 +22,7 @@ class RememberUsersToOrderAction
             ->whereActive()
             ->whereNotAdjudicating()
             ->whereHas('currentPhase', function (Builder $builder) {
-                $builder->where('adjudication_at', '>=', now()->addHour());
+                $builder->where('adjudication_at', '<=', now()->addHour());
             })
             ->whereHas('currentPhase.phasePowerData', function (Builder $builder) {
                 $builder->where('orders_needed', 1)->whereNull('orders');
