@@ -6,6 +6,7 @@ use App\Builders\GameBuilder;
 use App\Collections\GameCollection;
 use App\Enums\GameStatusEnum;
 use Carbon\CarbonInterface;
+use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
@@ -94,6 +95,10 @@ class Game extends Model
         }
 
         return GameStatusEnum::RUNNING;
+    }
+
+    public function hasStarted(): bool {
+        return $this->currentState() === GameStatusEnum::RUNNING;
     }
 
     public function calculateNextAdjudicationPhaseEnd(): Carbon
