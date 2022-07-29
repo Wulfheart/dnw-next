@@ -4,6 +4,7 @@ namespace App\Models;
 
 use App\Collections\PowerCollection;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 /**
  * @mixin IdeHelperPower
@@ -27,18 +28,22 @@ class Power extends Model
     }
 
 
-    public function basePower()
+    public function basePower(): BelongsTo
     {
         return $this->belongsTo(\App\Models\BasePower::class);
     }
 
-    public function user()
+    public function user(): BelongsTo
     {
         return $this->belongsTo(\App\Models\User::class);
     }
 
-    public function game()
+    public function game(): BelongsTo
     {
         return $this->belongsTo(Game::class);
+    }
+
+    public function messageRooms() {
+        return $this->belongsToMany(MessageRoom::class, 'message_room_memberships');
     }
 }

@@ -15,4 +15,9 @@ class GameMessagePolicy
         $messageRoom->loadMissing('powers');
         return $messageRoom->powers->pluck('user_id')->contains($user->id);
     }
+
+    public function use(User $user, MessageRoom $messageRoom){
+        $messageRoom->loadMissing('powers');
+        return $messageRoom->powers->pluck('user_id')->contains($user->id);
+    }
 }

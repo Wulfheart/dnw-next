@@ -13,6 +13,9 @@ class MessageRoomQueries
      * @return Collection<MessageRoom>
      */
     public static function getMessageRoomsForPower(int $power_id): Collection{
-        return MessageRoom::with(['memberships.power.basePower'])->whereHas('memberships', fn(Builder $builder) => $builder->where('power_id', $power_id))->get();
+        return MessageRoom::with(['memberships.power.basePower', 'latestMessage.sender.basePower'])
+            ->whereHas('memberships', fn(Builder $builder) => $builder->where('power_id', $power_id))
+            ->get();
     }
+
 }

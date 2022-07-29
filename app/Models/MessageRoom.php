@@ -36,6 +36,11 @@ class MessageRoom extends Model
         return $this->hasManyThrough(Message::class, MessageRoomMembership::class);
     }
 
+    public function latestMessage(): \Illuminate\Database\Eloquent\Relations\HasOne
+    {
+        return $this->hasOne(Message::class)->latestOfMany();
+    }
+
     public function getNameForPower(int $power_id): string
     {
         $this->loadMissing('memberships.power.basePower');

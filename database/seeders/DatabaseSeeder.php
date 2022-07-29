@@ -32,6 +32,7 @@ class DatabaseSeeder extends Seeder
             MessageModeSeeder::class,
             GameSeeder::class,
             GameRecreatorSeeder::class,
+            MessageSeeder::class,
         ]);
     }
 }

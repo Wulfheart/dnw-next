@@ -25,8 +25,9 @@ class GameRecreatorSeeder extends Seeder
      * Run the database seeds.
      *
      * @return void
+     * @throws \League\Csv\Exception
      */
-    public function run()
+    public function run(): void
     {
         $files = [
             '18741.dnw',
