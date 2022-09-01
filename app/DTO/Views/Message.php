@@ -2,21 +2,24 @@
 
 namespace App\DTO\Views;
 
+use App\Utility\Markdown;
 use Illuminate\Support\Carbon;
 
 class Message
 {
     public string $sentAt;
+    public string $text;
 
     public function __construct(
         public int $id,
         public string $name,
         public string $color,
-        public string $text,
+        string $text,
         public bool $fromUser,
         Carbon $sentAt,
     ){
         $this->sentAt = $this->formatSendAt($sentAt);
+        $this->text = Markdown::toHtml($text);
     }
 
     protected function formatSendAt(Carbon $date) {

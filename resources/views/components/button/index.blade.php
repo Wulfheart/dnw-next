@@ -6,7 +6,7 @@ $color = match ($intent) { 'primary' => 'text-white bg-primary-600 hover:bg-prim
 @endphp
 
 <button
-    {{ $attributes->merge(['class' => "inline-flex items-center px-4 py-2 border border-gray-300 shadow-sm text-sm font-medium rounded-md $color focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500 disabled:cursor-not-allowed disabled:opacity-50"]) }}
+    {{ $attributes->merge(['class' => "inline-flex justify-center items-center px-4 py-2 border border-gray-300 shadow-sm text-sm font-medium rounded-md $color focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500 disabled:cursor-not-allowed disabled:opacity-50"]) }}
     @disabled($disabled)>
     {{ $slot }}
 </button>

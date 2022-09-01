@@ -39,6 +39,8 @@ class Messages extends Component
         $messages = Message::with("sender.basePower")->where('message_room_id', $this->messageRoomId)->limit($this->amount)->orderByDesc('created_at')->get();
         $this->maxCount();
 
+
+
         return $this->messages = collect($messages)->map(fn(Message $message) => new \App\DTO\Views\Message(
             $message->id,
             $message->sender->basePower->name,

@@ -16,6 +16,7 @@
     "calebporzio/awesome-helpers": "^2.5",
     "contao/imagine-svg": "^1.0",
     "enlightn/enlightn": "^1.25",
+    "erusev/parsedown": "^1.7",
     "filament/filament": "^2.0",
     "fruitcake/laravel-cors": "^2.0",
     "guzzlehttp/guzzle": "^7.0.1",

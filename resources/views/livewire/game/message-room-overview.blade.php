@@ -20,7 +20,7 @@
                 <time class="flex-shrink-0 whitespace-nowrap text-sm text-gray-500">{{ $messageRoomPreview->previewSentAt }}</time>
             </div>
             <div class="mt-1">
-                <p class="line-clamp-2 text-md text-gray-600"> {{ $messageRoomPreview->previewText }}</p>
+                <p class="line-clamp-2 text-md text-gray-600"> {!! $messageRoomPreview->previewText !!}</p>
             </div>
             </a>
         </li>

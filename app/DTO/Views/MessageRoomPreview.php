@@ -3,6 +3,7 @@
 namespace App\DTO\Views;
 
 
+use App\Utility\Markdown;
 use Illuminate\Support\Carbon;
 
 class MessageRoomPreview
@@ -20,6 +21,9 @@ class MessageRoomPreview
         ?Carbon $previewSentAt,
     ){
         $this->previewSentAt = $this->formatPreviewSentAt($previewSentAt);
+        if($this->previewText != null) {
+            $this->previewText = Markdown::toHtml($this->previewText);
+        }
     }
 
     protected function formatPreviewSentAt(?Carbon $date): ?string {
