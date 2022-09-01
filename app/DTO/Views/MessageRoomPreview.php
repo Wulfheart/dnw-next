@@ -16,6 +16,7 @@ class MessageRoomPreview
         public string $textColor,
         public ?string $previewText,
         public ?string $previewPowerName,
+        public bool $unread,
         ?Carbon $previewSentAt,
     ){
         $this->previewSentAt = $this->formatPreviewSentAt($previewSentAt);

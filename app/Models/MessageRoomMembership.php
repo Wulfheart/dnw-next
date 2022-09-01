@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Collections\MessageRoomMembershipCollection;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 /**
@@ -19,6 +20,10 @@ class MessageRoomMembership extends Model
         'last_visited_at' => 'datetime',
     ];
 
+    public function newCollection(array $models = []): MessageRoomMembershipCollection
+    {
+        return new MessageRoomMembershipCollection($models);
+    }
 
     public function power(): \Illuminate\Database\Eloquent\Relations\BelongsTo
     {

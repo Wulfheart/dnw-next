@@ -17,5 +17,4 @@ class MessageRoomQueries
             ->whereHas('memberships', fn(Builder $builder) => $builder->where('power_id', $power_id))
             ->get();
     }
-
 }

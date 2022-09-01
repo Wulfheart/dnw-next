@@ -35,6 +35,7 @@ class MessageRoomOverview extends Component
                 $messageRoom->getColorForPower($this->power_id),
                 Str::limit($messageRoom->latestMessage?->text, 500),
                 $messageRoom->latestMessage?->sender->id == $this->power_id ? "Du" : $messageRoom->latestMessage?->sender->basePower->name,
+                $messageRoom->memberships->forPower($this->power_id)->last_visited_at->lessThan($messageRoom->created_at),
                 $messageRoom->latestMessage?->created_at,
             ))->values()->toArray();
     }
@@ -42,6 +43,7 @@ class MessageRoomOverview extends Component
     public function render()
     {
         $this->populateMessageRoomPreviews();
+
         return view('livewire.game.message-room-overview');
     }
 }
