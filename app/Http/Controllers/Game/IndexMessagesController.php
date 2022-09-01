@@ -11,8 +11,6 @@ class IndexMessagesController extends Controller
 {
     public function __invoke(Request $request, Game $game)
     {
-
-
         $game->loadMissing('currentPhase');
         return view('game.show-messages', [
             'game' => $game,

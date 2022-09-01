@@ -14,11 +14,14 @@ class MessageRoomOverview extends Component
     /** @var array<\App\DTO\Views\MessageRoomPreview>  */
     public array $messageRoomPreviews;
     public int $power_id;
+    public int $game_id;
 
     public function mount(
-        int $power_id
+        int $power_id,
+        int $game_id,
     ) {
         $this->power_id = $power_id;
+        $this->game_id = $game_id;
 
         $this->populateMessageRoomPreviews();
     }

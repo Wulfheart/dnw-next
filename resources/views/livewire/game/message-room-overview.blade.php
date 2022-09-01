@@ -3,7 +3,7 @@
    @foreach($messageRoomPreviews as $messageRoomPreview)
 
         <li class="relative bg-white py-5">
-            <a href="">
+            <a href="{{ route('games.messages.show', ['message_room' => $messageRoomPreview->id, 'game' => $game_id]) }}">
 
             <div class="flex justify-between space-x-3">
                 <div class="min-w-0 flex-1">
