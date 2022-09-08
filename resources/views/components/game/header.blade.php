@@ -7,8 +7,8 @@
                                     icon-inactive="heroicon-o-map" :is-active="request()->routeIs('games.show')">
                 Karte
             </x-game.nav-link-mobile>
-            <x-game.nav-link-mobile :link="route('games.messages.index', $game)" icon-active="heroicon-s-mail"
-                                    icon-inactive="heroicon-o-mail" :is-active="!request()->routeIs('games.show')">
+            <x-game.nav-link-mobile :link="route('games.messages.index', $game)" icon-active="heroicon-s-envelope"
+                                    icon-inactive="heroicon-o-envelope" :is-active="!request()->routeIs('games.show')">
                 Nachrichten
             </x-game.nav-link-mobile>
         </div>
