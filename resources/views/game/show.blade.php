@@ -1,5 +1,8 @@
 <x-game.header :game="$game" :adjudication-in-progress="$adjudicationInProgress"
-               :has-started="$gameState == App\Enums\GameStatusEnum::RUNNING">
+               :has-started="$gameState == App\Enums\GameStatusEnum::RUNNING"
+               :has-unread-messages="$game->hasUnreadMessagesForUserId(auth()->id())"
+>
+
     <div
             {{--            x-map="{{ $phases->count() - 1 }}" --}}
             x-data="{ current: 0, max_index: {{ $phases->count() - 1 }}}"

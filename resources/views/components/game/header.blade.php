@@ -1,4 +1,4 @@
-@props(['game', 'adjudicationInProgress', 'hasStarted'])
+@props(['game', 'adjudicationInProgress', 'hasStarted', 'hasUnreadMessages'])
 
 <x-app-layout>
     <x-container.game {{ $attributes }}>
@@ -11,6 +11,9 @@
                 <x-game.nav-link-mobile :link="route('games.messages.index', $game)" icon-active="heroicon-s-envelope"
                                         icon-inactive="heroicon-o-envelope" :is-active="!request()->routeIs('games.show')">
                     Nachrichten
+                    @if($hasUnreadMessages)
+                        {{-- TODO --}}
+                    @endif
                 </x-game.nav-link-mobile>
             @endcan
         </div>
@@ -25,6 +28,9 @@
                     @can('indexMessages', $game)
                         <x-game.nav-link-desktop :link="route('games.messages.index', $game)"
                                                  :is-active="!request()->routeIs('games.show')">Nachrichten
+                            @if($hasUnreadMessages)
+                                <div class="h-2 w-2 ml-2 rounded-full {{ !request()->routeIs('games.show') ? 'bg-white' : 'bg-primary-500'}}"></div>
+                            @endif
                         </x-game.nav-link-desktop>
                     @endcan
 

@@ -65,11 +65,12 @@ class MessageRoom extends Model
 
     public function getUnreadForPower(int $power_id): bool
     {
-        $this->loadMissing('latestMessage');
+        $this->loadMissing('latestMessage', 'memberships');
         $this->loadCount('messages');
         if($this->messages_count == 0){
             return false;
         }
+
         return $this->memberships->forPower($power_id)->last_visited_at->lessThan($this->latestMessage->created_at);
     }
 }

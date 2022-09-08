@@ -114,4 +114,20 @@ class Game extends Model
 
         return $adjudicationTime;
     }
+
+    public function hasUnreadMessagesForUserId(int $user_id): bool {
+        // This may be solved a little bit more elegant but it is sufficient for now
+        $this->loadMissing(['powers']);
+        $power = Power::with('messageRooms')->where('user_id', $user_id)->where('game_id', $this->id)->first();
+        if($power === null) {
+            return false;
+        }
+        foreach ($power->messageRooms as $messageRoom) {
+            if ($messageRoom->getUnreadForPower($power->id)) {
+                return true;
+            }
+        }
+
+        return false;
+    }
 }
