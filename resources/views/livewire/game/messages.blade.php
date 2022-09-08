@@ -1,8 +1,5 @@
 <div wire:poll>
-    <div>
-        <textarea name="Hello" id="" cols="30" rows="10" @keydown.enter="console.log($wire, 'h')"></textarea>
-    </div>
-    <div class="space-y-2">
+    <div class="space-y-2 wire:poll">
         @foreach($messages as $message)
             <?php /** @var \App\DTO\Views\Message $message */?>
             <div @class(['flex', 'flex-row' => !$message->fromUser, 'flex-row-reverse' => $message->fromUser])>

@@ -133,7 +133,7 @@
                             <x-heroicon-o-exclamation-circle data-tippy-content="Befehle benötigt"
                                                              class="w-4 h-4 text-red-600" />
                         @else
-                            <x-heroicon-o-minus-sm data-tippy-content="Keine Befehle nötig"
+                            <x-heroicon-o-minus-small data-tippy-content="Keine Befehle nötig"
                                                    class="w-4 h-4 text-gray-500" />
                         @endif
                         <span

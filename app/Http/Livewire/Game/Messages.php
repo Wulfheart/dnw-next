@@ -3,18 +3,16 @@
 namespace App\Http\Livewire\Game;
 
 use App\Models\Message;
-use App\Models\MessageRoom;
 use Livewire\Component;
 
 class Messages extends Component
 {
-
-
-
     public int $messageRoomId;
     public int $power_id;
     public int $amount = 25;
     public int $maxMessagesCount;
+
+    protected $listeners = ['messageSent' => 'render'];
 
     public function mount(
         int $messageRoomId,
@@ -31,11 +29,6 @@ class Messages extends Component
     public function increaseAmount() {
             $this->amount += 25;
     }
-
-    public function sendMessage() {
-        dd("HERE");
-    }
-
 
     public function getMessages(): array
     {
