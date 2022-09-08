@@ -9,8 +9,12 @@ use Illuminate\Support\Carbon;
 
 class IndexMessagesController extends Controller
 {
+    /**
+     * @throws \Illuminate\Auth\Access\AuthorizationException
+     */
     public function __invoke(Request $request, Game $game)
     {
+        $this->authorize('indexMessages', $game);
         $game->loadMissing('currentPhase');
         return view('game.show-messages', [
             'game' => $game,

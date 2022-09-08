@@ -3,10 +3,14 @@
 namespace App\Http\Livewire\Game;
 
 use App\Models\Message;
+use App\Models\MessageRoom;
+use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Livewire\Component;
 
 class Messages extends Component
 {
+    use AuthorizesRequests;
+
     public int $messageRoomId;
     public int $power_id;
     public int $amount = 25;
@@ -54,8 +58,12 @@ class Messages extends Component
     }
 
 
+    /**
+     * @throws \Illuminate\Auth\Access\AuthorizationException
+     */
     public function render()
     {
+        $this->authorize('use', MessageRoom::findOrFail($this->messageRoomId));
         return view('livewire.game.messages', [
             'messages' => $this->getMessages(),
             'showMore' => $this->showMore(),

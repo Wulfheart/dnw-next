@@ -9,8 +9,12 @@ use Illuminate\Http\Request;
 
 class ShowMessagesController extends Controller
 {
+    /**
+     * @throws \Illuminate\Auth\Access\AuthorizationException
+     */
     public function __invoke(Request $request, Game $game, MessageRoom $messageRoom)
     {
+        $this->authorize('use', $messageRoom);
         $game->loadMissing('currentPhase');
         return view('game.show-message-room', [
             'game' => $game,

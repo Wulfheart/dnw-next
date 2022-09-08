@@ -4,6 +4,7 @@ namespace App\Http\Livewire\Game;
 
 use App\Models\MessageRoom;
 use App\Queries\MessageRoomQueries;
+use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Str;
@@ -11,6 +12,8 @@ use Livewire\Component;
 
 class MessageRoomOverview extends Component
 {
+    use AuthorizesRequests;
+
     /** @var array<\App\DTO\Views\MessageRoomPreview>  */
     public array $messageRoomPreviews;
     public int $power_id;
