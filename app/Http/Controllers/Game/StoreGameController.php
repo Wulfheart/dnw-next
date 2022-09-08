@@ -6,6 +6,7 @@ use App\Actions\Game\CreateGameAction;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreGameRequest;
 use App\Models\Game;
+use App\Models\MessageMode;
 use Illuminate\Http\Request;
 
 class StoreGameController extends Controller
@@ -17,6 +18,7 @@ class StoreGameController extends Controller
     public function __invoke(StoreGameRequest $request)
     {
         $this->authorize('create', Game::class);
+        $messageMode = MessageMode::first();
         $game = CreateGameAction::run(
             $request->user(),
             $request->get('name'),
@@ -25,7 +27,9 @@ class StoreGameController extends Controller
             $request->get('variant_id'),
             collect($request->get('no_adjudication'))
                 ->filter(fn(string $value) => (bool)$value)->toArray() ?? [],
-            false);
+            false,
+            $messageMode->id,
+        );
         return redirect()->route('games.show', ['game' => $game]);
     }
 }

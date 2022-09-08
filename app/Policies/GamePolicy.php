@@ -30,7 +30,7 @@ class GamePolicy
 
     public function indexMessages(User $user, Game $game){
         $game->loadMissing('powers');
-        return $game->powers->pluck('user_id')->contains($user->id);
+        return $game->powers->pluck('user_id')->contains($user->id) && $game->hasStarted();
     }
 
     public function submitOrders(User $user, Game $game) {
