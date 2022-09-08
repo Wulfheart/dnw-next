@@ -7,10 +7,12 @@
                                     icon-inactive="heroicon-o-map" :is-active="request()->routeIs('games.show')">
                 Karte
             </x-game.nav-link-mobile>
-            <x-game.nav-link-mobile :link="route('games.messages.index', $game)" icon-active="heroicon-s-envelope"
-                                    icon-inactive="heroicon-o-envelope" :is-active="!request()->routeIs('games.show')">
-                Nachrichten
-            </x-game.nav-link-mobile>
+            @can('indexMessages', $game)
+                <x-game.nav-link-mobile :link="route('games.messages.index', $game)" icon-active="heroicon-s-envelope"
+                                        icon-inactive="heroicon-o-envelope" :is-active="!request()->routeIs('games.show')">
+                    Nachrichten
+                </x-game.nav-link-mobile>
+            @endcan
         </div>
         <div class="flex lg:space-x-5">
 
@@ -20,9 +22,12 @@
                     <x-game.nav-link-desktop :link="route('games.show', $game)"
                                              :is-active="request()->routeIs('games.show')">Karte
                     </x-game.nav-link-desktop>
-                    <x-game.nav-link-desktop :link="route('games.messages.index', $game)"
-                                             :is-active="!request()->routeIs('games.show')">Nachrichten
-                    </x-game.nav-link-desktop>
+                    @can('indexMessages', $game)
+                        <x-game.nav-link-desktop :link="route('games.messages.index', $game)"
+                                                 :is-active="!request()->routeIs('games.show')">Nachrichten
+                        </x-game.nav-link-desktop>
+                    @endcan
+
 
                 </div>
             </div>
