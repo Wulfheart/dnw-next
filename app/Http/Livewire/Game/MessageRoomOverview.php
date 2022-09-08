@@ -31,7 +31,7 @@ class MessageRoomOverview extends Component
 
     protected function populateMessageRoomPreviews(): void {
         $rooms = MessageRoomQueries::getMessageRoomsForPower($this->power_id)
-        ->sortByDesc(fn(MessageRoom $mr) => $mr->latestMessage?->created_at ?? $mr->name);
+        ->sortByDesc(fn(MessageRoom $mr) => $mr->latestMessage?->created_at);
 
 
         $this->messageRoomPreviews = $rooms
