@@ -69,6 +69,9 @@
                         <div class="rounded-md bg-gray-100 p-4 my-4">
                             <div class="ml-3">
                                 <h3 class="text-sm font-medium text-gray-800">Befehlsnotation</h3>
+                                <p class="text-sm">
+                                    Die verschiedenen Befehlsarten werden hier angezeigt. Bitte beachte, dass alles ab // nicht nötig ist für eine ordentliche Befehsabgabe. Stattdessen werden damit Kommentare, die nicht bei der Befehlsauswertung berücksichtigt werden, eingefügt.
+                                </p>
                                 <div class="mt-2 text-sm text-gray-700 font-mono">
                                     A LON H // Hold<br>
                                     F IRI - MAO // Move<br>
