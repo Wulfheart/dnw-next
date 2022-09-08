@@ -1,10 +1,6 @@
 {
     "private": true,
     "scripts": {
-        "css": "npx tailwindcss -i resources/css/app.css --output=public/css/app.css",
-        "css:watch": "npx tailwindcss -i resources/css/app.css --output=public/css/app.css --watch",
-        "js": "npx esbuild resources/js/app.js --outfile=public/js/app.js --bundle --sourcemap",
-        "js:watch": "npx esbuild resources/js/app.js --outfile=public/js/app.js --bundle --sourcemap --watch",
         "dev": "vite",
         "build": "vite build"
     },

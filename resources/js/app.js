@@ -7,6 +7,10 @@ import tippy from "tippy.js";
 // import "tippy.js/dist/tippy.css";
 import collapse from "@alpinejs/collapse";
 
+import.meta.glob([
+  '../fonts/**',
+]);
+
 Alpine.plugin(collapse);
 
 window.Alpine = Alpine;
