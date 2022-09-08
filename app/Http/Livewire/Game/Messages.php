@@ -32,6 +32,10 @@ class Messages extends Component
             $this->amount += 25;
     }
 
+    public function sendMessage() {
+        dd("HERE");
+    }
+
 
     public function getMessages(): array
     {

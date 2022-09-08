@@ -1,4 +1,7 @@
-<div wire:poll class="max-h-full">
+<div wire:poll>
+    <div>
+        <textarea name="Hello" id="" cols="30" rows="10" @keydown.enter="console.log($wire, 'h')"></textarea>
+    </div>
     <div class="space-y-2">
         @foreach($messages as $message)
             <?php /** @var \App\DTO\Views\Message $message */?>
@@ -25,7 +28,7 @@
         @endforeach
     </div>
     @if($showMore)
-        <x-button class="w-full mt-4" wire:click="increaseAmount" wire:loading.attr="disabled"
+        <x-button class="w-full mt-4" wire:click.prevent="increaseAmount" wire:loading.attr="disabled"
                   wire:target="increaseAmount" wire:loading.class="bg-red-500">Mehr laden
         </x-button>
     @endif
