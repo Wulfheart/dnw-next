@@ -32,9 +32,9 @@ class MessageRoom extends Model
         return $this->belongsToMany(Power::class, 'message_room_memberships');
     }
 
-    public function messages(): HasManyThrough
+    public function messages(): HasMany
     {
-        return $this->hasManyThrough(Message::class, MessageRoomMembership::class);
+        return $this->hasMany(Message::class);
     }
 
     public function latestMessage(): \Illuminate\Database\Eloquent\Relations\HasOne
@@ -65,11 +65,11 @@ class MessageRoom extends Model
 
     public function getUnreadForPower(int $power_id): bool
     {
-        // Currently not needed. May be a problem later.
-        // $this->loadMissing(['memberships', 'messages']);
+        $this->loadMissing('latestMessage');
+        $this->loadCount('messages');
         if($this->messages_count == 0){
             return false;
         }
-        return $this->memberships->forPower($this->power_id)->last_visited_at->lessThan($this->created_at);
+        return $this->memberships->forPower($power_id)->last_visited_at->lessThan($this->latestMessage->created_at);
     }
 }

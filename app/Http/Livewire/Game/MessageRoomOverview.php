@@ -40,7 +40,7 @@ class MessageRoomOverview extends Component
                 $messageRoom->getNameForPower($this->power_id),
                 $messageRoom->getColorForPower($this->power_id),
                 Str::limit($messageRoom->latestMessage?->text, 500),
-                $messageRoom->latestMessage?->sender->id == $this->power_id ? "Du" : $messageRoom->latestMessage?->sender->basePower->name,
+                $messageRoom->latestMessage?->sender->id == $this->power_id ? $messageRoom->latestMessage?->sender->basePower->name : "Du",
                 $messageRoom->getUnreadForPower($this->power_id),
                 $messageRoom->latestMessage?->created_at,
             ))->values()->toArray();

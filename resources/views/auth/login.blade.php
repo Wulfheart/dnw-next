@@ -13,7 +13,7 @@
         @endif
 
         @env('local')
-            <x-login-link />
+            <x-login-link email="wiebke17@example.com" />
         @endenv
 
         <form method="POST" action="{{ route('login') }}">

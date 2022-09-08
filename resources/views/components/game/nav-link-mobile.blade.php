@@ -1,7 +1,7 @@
 @props(['link' => '#', 'isActive' => false, 'iconInactive', 'IconActive'])
 
 
-<a href="{{ $isActive ? '#' : $link }}"
+<a href="{{ $link }}"
     class="w-full  justify-center inline-block text-center pt-2 pb-1">
     <x-dynamic-component :component="$isActive ? $iconActive : $iconInactive"
                          class="inline-block mb-1 stroke-1 focus:text-primary-600 hover:text-primary-600 {{ $isActive ? 'text-primary-600' : '' }}"

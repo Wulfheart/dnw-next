@@ -1,4 +1,4 @@
-<div>
+<div wire:poll>
     <ul role="list" class="divide-y divide-gray-300">
    @foreach($messageRoomPreviews as $messageRoomPreview)
 
@@ -21,7 +21,11 @@
             </div>
             <div class="mt-1">
                 @if($messageRoomPreview->previewText)
-                <p class="line-clamp-2 text-md text-gray-600"> {!! $messageRoomPreview->previewText !!}</p>
+                <p class="line-clamp-2 text-md text-gray-600">
+                    <span class="italic text-xs">
+                        {{ $messageRoomPreview->previewPowerName }}:
+                    </span>
+                    {!! $messageRoomPreview->previewText !!}</p>
                 @else
                 <p class="line-clamp-2 text-md text-gray-600 italic">Noch keine Nachrichten vorhanden</p>
                 @endif

@@ -2,8 +2,10 @@
 
 namespace App\Http\Livewire\Game;
 
+use App\Models\Membership;
 use App\Models\Message;
 use App\Models\MessageRoom;
+use App\Models\MessageRoomMembership;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Livewire\Component;
 
@@ -64,6 +66,11 @@ class Messages extends Component
     public function render()
     {
         $this->authorize('use', MessageRoom::findOrFail($this->messageRoomId));
+        $membership = MessageRoomMembership::where('power_id', $this->power_id)->where('message_room_id', $this->messageRoomId)->firstOrFail();
+        $membership->last_visited_at = now();
+        $membership->save();
+
+
         return view('livewire.game.messages', [
             'messages' => $this->getMessages(),
             'showMore' => $this->showMore(),
