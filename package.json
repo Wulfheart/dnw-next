@@ -4,7 +4,9 @@
         "css": "npx tailwindcss -i resources/css/app.css --output=public/css/app.css",
         "css:watch": "npx tailwindcss -i resources/css/app.css --output=public/css/app.css --watch",
         "js": "npx esbuild resources/js/app.js --outfile=public/js/app.js --bundle --sourcemap",
-        "js:watch": "npx esbuild resources/js/app.js --outfile=public/js/app.js --bundle --sourcemap --watch"
+        "js:watch": "npx esbuild resources/js/app.js --outfile=public/js/app.js --bundle --sourcemap --watch",
+        "dev": "vite",
+        "build": "vite build"
     },
     "devDependencies": {
         "@alpinejs/collapse": "^3.9.0",
