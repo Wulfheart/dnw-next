@@ -28,7 +28,7 @@ class MessageRoomOverview extends Component
 
     protected function populateMessageRoomPreviews(): void {
         $rooms = MessageRoomQueries::getMessageRoomsForPower($this->power_id)
-        ->sortByDesc(fn(MessageRoom $mr) => $mr->latestMessage->created_at);
+        ->sortByDesc(fn(MessageRoom $mr) => $mr->latestMessage?->created_at ?? $mr->name);
 
 
         $this->messageRoomPreviews = $rooms
@@ -38,7 +38,7 @@ class MessageRoomOverview extends Component
                 $messageRoom->getColorForPower($this->power_id),
                 Str::limit($messageRoom->latestMessage?->text, 500),
                 $messageRoom->latestMessage?->sender->id == $this->power_id ? "Du" : $messageRoom->latestMessage?->sender->basePower->name,
-                $messageRoom->memberships->forPower($this->power_id)->last_visited_at->lessThan($messageRoom->created_at),
+                $messageRoom->getUnreadForPower($this->power_id),
                 $messageRoom->latestMessage?->created_at,
             ))->values()->toArray();
     }

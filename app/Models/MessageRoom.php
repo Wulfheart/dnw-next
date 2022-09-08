@@ -62,4 +62,14 @@ class MessageRoom extends Model
             return $otherMember->power->basePower->color;
         }
     }
+
+    public function getUnreadForPower(int $power_id): bool
+    {
+        // Currently not needed. May be a problem later.
+        // $this->loadMissing(['memberships', 'messages']);
+        if($this->messages_count == 0){
+            return false;
+        }
+        return $this->memberships->forPower($this->power_id)->last_visited_at->lessThan($this->created_at);
+    }
 }
