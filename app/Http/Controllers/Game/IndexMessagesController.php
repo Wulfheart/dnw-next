@@ -20,6 +20,7 @@ class IndexMessagesController extends Controller
             'game' => $game,
             'adjudicationInProgress' => $game->currentPhase->adjudicationStarted(),
             'hasStarted' => $game->hasStarted(),
+            'power_id' => $game->powers->firstWhere('user_id', $request->user()->id)->id,
         ]);
     }
 }
