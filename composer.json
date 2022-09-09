@@ -29,6 +29,7 @@
     "lorisleiva/laravel-actions": "^2.3",
     "machatschek/laravel-server-timing": "^3.0",
     "psr/log": "^1.0",
+    "shvetsgroup/laravel-email-database-log": "^10.0",
     "spatie/data-transfer-object": "^3.7",
     "spatie/laravel-google-fonts": "^1.1",
     "spatie/laravel-login-link": "^1.1",
