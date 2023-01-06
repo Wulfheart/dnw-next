@@ -8,9 +8,6 @@ use App\Http\Controllers\Game\LeaveGameController;
 use App\Http\Controllers\Game\ShowMessagesController;
 use App\Http\Controllers\Game\StoreGameController;
 use App\Http\Controllers\Game\SubmitOrdersController;
-use App\Models\Game;
-use App\Models\User;
-use App\Notifications\Game\GameStartedNotification;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -27,7 +24,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return redirect()->route('games.index');

@@ -11,36 +11,40 @@ class IndexNewGameController extends Controller
     public function new(Request $request)
     {
         $games = Game::whereNew()->loadForIndexPages()->get();
+
         return view('game.category.index', [
             'games' => $games,
-            'title' => 'Neue Spiele'
+            'title' => 'Neue Spiele',
         ]);
     }
 
     public function active(Request $request)
     {
         $games = Game::whereActive()->loadForIndexPages()->get();
+
         return view('game.category.index', [
             'games' => $games,
-            'title' => 'Laufende Spiele'
+            'title' => 'Laufende Spiele',
         ]);
     }
 
     public function player(Request $request)
     {
         $games = Game::whereUserIsMember(auth()->user())->loadForIndexPages()->get();
+
         return view('game.category.index', [
             'games' => $games,
-            'title' => 'Deine Spiele'
+            'title' => 'Deine Spiele',
         ]);
     }
 
     public function finished(Request $request)
     {
         $games = Game::whereFinished()->loadForIndexPages()->get();
+
         return view('game.category.index', [
             'games' => $games,
-            'title' => 'Fertige Spiele'
+            'title' => 'Fertige Spiele',
         ]);
     }
 }

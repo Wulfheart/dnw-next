@@ -21,7 +21,6 @@ class GameShowOrderTest extends DuskTestCase
         $phasePowerData = getCurrentPhaseDataForPower($game, 'FRANCE');
         $phasePowerData->loadMissing('power.user');
 
-
         $this->browse(function (Browser $browser) use ($game, $phasePowerData) {
             $selectorReadyButton = '[x-dusk="order-button-ready"]';
             $selectorNotReadyButton = '[x-dusk="order-button-not-ready"]';
@@ -33,7 +32,7 @@ class GameShowOrderTest extends DuskTestCase
                 ->assertButtonEnabled($selectorReadyButton)
                 ->assertButtonEnabled($selectorSaveButton)
                 ->assertVisible($selectorOrderTextarea)
-                ->assertInputValue($selectorOrderTextarea, "")
+                ->assertInputValue($selectorOrderTextarea, '')
                 ->type($selectorOrderTextarea, '::FOO::')
                 ->click($selectorSaveButton)
                 ->assertInputValue($selectorOrderTextarea, '::FOO::')

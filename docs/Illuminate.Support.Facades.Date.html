@@ -1,0 +1,2473 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Class Illuminate\Support\Facades\Date |  API</title>
+	<link rel="stylesheet" href="assets/main.css">
+	<script src="assets/main.js" defer></script>
+</head>
+
+<body class="layout">
+	<div class="layout-aside">
+	<div class="menu">
+			<div class="menu-section">
+				<h3>Namespaces</h3>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-App.html">App</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Actions.html">Actions</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Builders.html">Builders</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Collections.html">Collections</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Console.html">Console</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.DTO.html">DTO</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Enums.html">Enums</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Events.html">Events</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Exceptions.html">Exceptions</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Filament.html">Filament</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Http.html">Http</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Mail.html">Mail</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Models.html">Models</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Notifications.html">Notifications</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Policies.html">Policies</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Providers.html">Providers</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Queries.html">Queries</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Utility.html">Utility</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.View.html">View</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.ViewModels.html">ViewModels</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-BeyondCode.html">BeyondCode</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-BeyondCode.ServerTiming.html">ServerTiming</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Clockwork.html">Clockwork</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Clockwork.Support.html">Support</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Database.html">Database</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Database.Factories.html">Factories</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Database.Seeders.html">Seeders</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item active">
+				<a href="namespace-Illuminate.html">Illuminate</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Illuminate.Database.html">Database</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Illuminate.Filesystem.html">Filesystem</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Illuminate.Http.html">Http</a>
+			</li>
+			<li class="menuGroup-item active">
+				<a href="namespace-Illuminate.Support.html">Support</a>
+	<ul>
+			<li class="menuGroup-item active">
+				<a href="namespace-Illuminate.Support.Facades.html">Facades</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Illuminate.Testing.html">Testing</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Illuminate.View.html">View</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Jenssegers.html">Jenssegers</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Jenssegers.Agent.html">Agent</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Livewire.html">Livewire</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Livewire.Testing.html">Testing</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Lorisleiva.html">Lorisleiva</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Lorisleiva.Actions.html">Actions</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Lorisleiva.Lody.html">Lody</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Spatie.html">Spatie</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Spatie.LaravelIgnition.html">LaravelIgnition</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Tests.html">Tests</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Tests.Browser.html">Browser</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Tests.Feature.html">Feature</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-none.html">none</a>
+			</li>
+	</ul>
+			</div>
+
+		<div class="menu-section">
+			<h3>Classes</h3>
+			<ul>
+					<li>
+						<a href="Illuminate.Support.Facades.App.html">
+							App
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Artisan.html">
+							Artisan
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Auth.html">
+							Auth
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Blade.html">
+							Blade
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Broadcast.html">
+							Broadcast
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Bus.html">
+							Bus
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Cache.html">
+							Cache
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Config.html">
+							Config
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Cookie.html">
+							Cookie
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Crypt.html">
+							Crypt
+						</a>
+					</li>
+					<li class="active">
+						<a href="Illuminate.Support.Facades.Date.html">
+							Date
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.DB.html">
+							DB
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Event.html">
+							Event
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.File.html">
+							File
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Gate.html">
+							Gate
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Hash.html">
+							Hash
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Http.html">
+							Http
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Lang.html">
+							Lang
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Log.html">
+							Log
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Mail.html">
+							Mail
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Notification.html">
+							Notification
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Password.html">
+							Password
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Queue.html">
+							Queue
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.RateLimiter.html">
+							RateLimiter
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Redirect.html">
+							Redirect
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Request.html">
+							Request
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Response.html">
+							Response
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Route.html">
+							Route
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Schema.html">
+							Schema
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Session.html">
+							Session
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Storage.html">
+							Storage
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.URL.html">
+							URL
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Validator.html">
+							Validator
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.View.html">
+							View
+						</a>
+					</li>
+			</ul>
+		</div>
+
+
+
+
+
+	</div>
+	</div>
+
+	<div class="layout-main">
+		<div class="layout-navbar">
+	<nav class="navbar">
+		<div class="navbar-left">
+			<ul class="navbar-links">
+				<li>
+					<a href="index.html">Overview</a>
+				</li>
+				<li>
+					
+						<a href="namespace-Illuminate.Support.Facades.html">Namespace</a>
+					
+				</li>
+<li class="active"><a href="Illuminate.Support.Facades.Date.html">Class</a></li>				<li>
+					<a href="tree.html">Tree</a>
+				</li>
+			</ul>
+		</div>
+		<div class="navbar-right">
+	<div class="search" data-elements="assets/elements.js">
+		<input class="search-input" placeholder="Search class, function or namespace" autofocus>
+		<ul class="search-results"></ul>
+	</div>
+		</div>
+	</nav>
+		</div>
+
+		<div class="layout-content">
+		<h1>
+			Class <a href="namespace-Illuminate.html">Illuminate</a>\<a href="namespace-Illuminate.Support.html">Support</a>\<a href="namespace-Illuminate.Support.Facades.html">Facades</a>\<a href="Illuminate.Support.Facades.Date.html">Date</a>
+		</h1>
+
+
+	<table class="classLikeSignatureTable">
+
+
+
+
+	</table>
+
+			<div class="classLikeSection">
+	<ul class="classTree">
+	<li>
+<b><span class="active">Illuminate\Support\Facades\Date</span></b>
+
+
+	<ul class="classTree">
+	<li>
+<a href="Date.html"><span>Date</span></a>
+
+
+	</li>
+	</ul>
+	</li>
+	</ul>
+			</div>
+
+		<div class="classLikeSection">
+			<b>Located at</b> <a href="source-_ide_helper.html#4615" title="Go to source code">_ide_helper.php</a><br>
+		</div>
+
+
+		<table class="table" id="methods">
+			<tr>
+				<th class="table-heading sortable" colspan="3" title="Switch between natural and alphabetical order">Methods</th>
+			</tr>
+
+	<tr class="expandable collapsed" data-order="use" id="_use">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#4616-4627" title="Go to source code">use</a>(<span>mixed <var>$handler</var></span>): mixed</code>
+
+
+	<div class="expandable-collapsedView">
+		Use the given handler when generating dates (class name, callable, or factory).
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Use the given handler when generating dates (class name, callable, or factory).</p>
+</div>
+
+
+
+							<h4>Throws</h4>
+							<table>
+									<tr>
+										<td><code><a href="InvalidArgumentException.html"><span>InvalidArgumentException</span></a></code>&nbsp;</td>
+										<td></td>
+									</tr>
+							</table>
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_use">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="useDefault" id="_useDefault">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#4628-4637" title="Go to source code">useDefault</a>(): void</code>
+
+
+	<div class="expandable-collapsedView">
+		Use the default date class when generating dates.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Use the default date class when generating dates.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_useDefault">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="useCallable" id="_useCallable">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#4638-4648" title="Go to source code">useCallable</a>(<span>callable <var>$callable</var></span>): void</code>
+
+
+	<div class="expandable-collapsedView">
+		Execute the given callable on each date creation.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Execute the given callable on each date creation.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_useCallable">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="useClass" id="_useClass">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#4649-4659" title="Go to source code">useClass</a>(<span>string <var>$dateClass</var></span>): void</code>
+
+
+	<div class="expandable-collapsedView">
+		Use the given date type (class) when generating dates.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Use the given date type (class) when generating dates.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_useClass">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="useFactory" id="_useFactory">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#4660-4670" title="Go to source code">useFactory</a>(<span>object <var>$factory</var></span>): void</code>
+
+
+	<div class="expandable-collapsedView">
+		Use the given Carbon factory when generating dates.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Use the given Carbon factory when generating dates.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_useFactory">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="create" id="_create">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html" title="Go to source code">create</a>(<span><var>$year</var> = <span class="php-num">0</span></span>, <span><var>$month</var> = <span class="php-num">1</span></span>, <span><var>$day</var> = <span class="php-num">1</span></span>, <span><var>$hour</var> = <span class="php-num">0</span></span>, <span><var>$minute</var> = <span class="php-num">0</span></span>, <span><var>$second</var> = <span class="php-num">0</span></span>, <span><var>$tz</var> = <span class="php-kw">null</span></span>): <span title="Illuminate\Support\Carbon">Carbon</span></code>
+
+
+
+	<div class="expandable-expandedView">
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_create">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="createFromDate" id="_createFromDate">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html" title="Go to source code">createFromDate</a>(<span><var>$year</var> = <span class="php-kw">null</span></span>, <span><var>$month</var> = <span class="php-kw">null</span></span>, <span><var>$day</var> = <span class="php-kw">null</span></span>, <span><var>$tz</var> = <span class="php-kw">null</span></span>): <span title="Illuminate\Support\Carbon">Carbon</span></code>
+
+
+
+	<div class="expandable-expandedView">
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_createFromDate">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="createFromTime" id="_createFromTime">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html" title="Go to source code">createFromTime</a>(<span><var>$hour</var> = <span class="php-num">0</span></span>, <span><var>$minute</var> = <span class="php-num">0</span></span>, <span><var>$second</var> = <span class="php-num">0</span></span>, <span><var>$tz</var> = <span class="php-kw">null</span></span>): <span title="Illuminate\Support\Carbon">Carbon</span></code>
+
+
+
+	<div class="expandable-expandedView">
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_createFromTime">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="createFromTimeString" id="_createFromTimeString">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html" title="Go to source code">createFromTimeString</a>(<span><var>$time</var></span>, <span><var>$tz</var> = <span class="php-kw">null</span></span>): <span title="Illuminate\Support\Carbon">Carbon</span></code>
+
+
+
+	<div class="expandable-expandedView">
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_createFromTimeString">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="createFromTimestamp" id="_createFromTimestamp">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html" title="Go to source code">createFromTimestamp</a>(<span><var>$timestamp</var></span>, <span><var>$tz</var> = <span class="php-kw">null</span></span>): <span title="Illuminate\Support\Carbon">Carbon</span></code>
+
+
+
+	<div class="expandable-expandedView">
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_createFromTimestamp">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="createFromTimestampMs" id="_createFromTimestampMs">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html" title="Go to source code">createFromTimestampMs</a>(<span><var>$timestamp</var></span>, <span><var>$tz</var> = <span class="php-kw">null</span></span>): <span title="Illuminate\Support\Carbon">Carbon</span></code>
+
+
+
+	<div class="expandable-expandedView">
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_createFromTimestampMs">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="createFromTimestampUTC" id="_createFromTimestampUTC">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html" title="Go to source code">createFromTimestampUTC</a>(<span><var>$timestamp</var></span>): <span title="Illuminate\Support\Carbon">Carbon</span></code>
+
+
+
+	<div class="expandable-expandedView">
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_createFromTimestampUTC">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="createMidnightDate" id="_createMidnightDate">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html" title="Go to source code">createMidnightDate</a>(<span><var>$year</var> = <span class="php-kw">null</span></span>, <span><var>$month</var> = <span class="php-kw">null</span></span>, <span><var>$day</var> = <span class="php-kw">null</span></span>, <span><var>$tz</var> = <span class="php-kw">null</span></span>): <span title="Illuminate\Support\Carbon">Carbon</span></code>
+
+
+
+	<div class="expandable-expandedView">
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_createMidnightDate">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="disableHumanDiffOption" id="_disableHumanDiffOption">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html" title="Go to source code">disableHumanDiffOption</a>(<span><var>$humanDiffOption</var></span>): void</code>
+
+
+
+	<div class="expandable-expandedView">
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_disableHumanDiffOption">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="enableHumanDiffOption" id="_enableHumanDiffOption">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html" title="Go to source code">enableHumanDiffOption</a>(<span><var>$humanDiffOption</var></span>): void</code>
+
+
+
+	<div class="expandable-expandedView">
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_enableHumanDiffOption">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="fromSerialized" id="_fromSerialized">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html" title="Go to source code">fromSerialized</a>(<span><var>$value</var></span>): <span title="Illuminate\Support\Carbon">Carbon</span></code>
+
+
+
+	<div class="expandable-expandedView">
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_fromSerialized">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="getLastErrors" id="_getLastErrors">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html" title="Go to source code">getLastErrors</a>(): array</code>
+
+
+
+	<div class="expandable-expandedView">
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_getLastErrors">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="getTestNow" id="_getTestNow">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html" title="Go to source code">getTestNow</a>(): <span title="Illuminate\Support\Carbon">Carbon</span>|null</code>
+
+
+
+	<div class="expandable-expandedView">
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_getTestNow">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="instance" id="_instance">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html" title="Go to source code">instance</a>(<span><var>$date</var></span>): <span title="Illuminate\Support\Carbon">Carbon</span></code>
+
+
+
+	<div class="expandable-expandedView">
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_instance">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="isMutable" id="_isMutable">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html" title="Go to source code">isMutable</a>(): bool</code>
+
+
+
+	<div class="expandable-expandedView">
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_isMutable">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="maxValue" id="_maxValue">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html" title="Go to source code">maxValue</a>(): <span title="Illuminate\Support\Carbon">Carbon</span></code>
+
+
+
+	<div class="expandable-expandedView">
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_maxValue">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="minValue" id="_minValue">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html" title="Go to source code">minValue</a>(): <span title="Illuminate\Support\Carbon">Carbon</span></code>
+
+
+
+	<div class="expandable-expandedView">
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_minValue">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="now" id="_now">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html" title="Go to source code">now</a>(<span><var>$tz</var> = <span class="php-kw">null</span></span>): <span title="Illuminate\Support\Carbon">Carbon</span></code>
+
+
+
+	<div class="expandable-expandedView">
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_now">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="parse" id="_parse">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html" title="Go to source code">parse</a>(<span><var>$time</var> = <span class="php-kw">null</span></span>, <span><var>$tz</var> = <span class="php-kw">null</span></span>): <span title="Illuminate\Support\Carbon">Carbon</span></code>
+
+
+
+	<div class="expandable-expandedView">
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_parse">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="setHumanDiffOptions" id="_setHumanDiffOptions">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html" title="Go to source code">setHumanDiffOptions</a>(<span><var>$humanDiffOptions</var></span>): void</code>
+
+
+
+	<div class="expandable-expandedView">
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_setHumanDiffOptions">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="setTestNow" id="_setTestNow">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html" title="Go to source code">setTestNow</a>(<span><var>$testNow</var> = <span class="php-kw">null</span></span>): void</code>
+
+
+
+	<div class="expandable-expandedView">
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_setTestNow">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="setUtf8" id="_setUtf8">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html" title="Go to source code">setUtf8</a>(<span><var>$utf8</var></span>): void</code>
+
+
+
+	<div class="expandable-expandedView">
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_setUtf8">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="today" id="_today">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html" title="Go to source code">today</a>(<span><var>$tz</var> = <span class="php-kw">null</span></span>): <span title="Illuminate\Support\Carbon">Carbon</span></code>
+
+
+
+	<div class="expandable-expandedView">
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_today">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="tomorrow" id="_tomorrow">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html" title="Go to source code">tomorrow</a>(<span><var>$tz</var> = <span class="php-kw">null</span></span>): <span title="Illuminate\Support\Carbon">Carbon</span></code>
+
+
+
+	<div class="expandable-expandedView">
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_tomorrow">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="useStrictMode" id="_useStrictMode">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html" title="Go to source code">useStrictMode</a>(<span><var>$strictModeEnabled</var> = <span class="php-kw">true</span></span>): void</code>
+
+
+
+	<div class="expandable-expandedView">
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_useStrictMode">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="yesterday" id="_yesterday">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html" title="Go to source code">yesterday</a>(<span><var>$tz</var> = <span class="php-kw">null</span></span>): <span title="Illuminate\Support\Carbon">Carbon</span></code>
+
+
+
+	<div class="expandable-expandedView">
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_yesterday">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="createFromFormat" id="_createFromFormat">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html" title="Go to source code">createFromFormat</a>(<span><var>$format</var></span>, <span><var>$time</var></span>, <span><var>$tz</var> = <span class="php-kw">null</span></span>): <span title="Illuminate\Support\Carbon">Carbon</span>|false</code>
+
+
+
+	<div class="expandable-expandedView">
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_createFromFormat">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="createSafe" id="_createSafe">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html" title="Go to source code">createSafe</a>(
+	<span><var>$year</var> = <span class="php-kw">null</span></span>,
+	<span><var>$month</var> = <span class="php-kw">null</span></span>,
+	<span><var>$day</var> = <span class="php-kw">null</span></span>,
+	<span><var>$hour</var> = <span class="php-kw">null</span></span>,
+	<span><var>$minute</var> = <span class="php-kw">null</span></span>,
+	<span><var>$second</var> = <span class="php-kw">null</span></span>,
+	<span><var>$tz</var> = <span class="php-kw">null</span></span>,
+): <span title="Illuminate\Support\Carbon">Carbon</span>|false</code>
+
+
+
+	<div class="expandable-expandedView">
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_createSafe">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="make" id="_make">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html" title="Go to source code">make</a>(<span><var>$var</var></span>): <span title="Illuminate\Support\Carbon">Carbon</span>|null</code>
+
+
+
+	<div class="expandable-expandedView">
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_make">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="getTranslator" id="_getTranslator">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html" title="Go to source code">getTranslator</a>(): <span title="Symfony\Component\Translation\TranslatorInterface">TranslatorInterface</span></code>
+
+
+
+	<div class="expandable-expandedView">
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_getTranslator">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="getAvailableLocales" id="_getAvailableLocales">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html" title="Go to source code">getAvailableLocales</a>(): array</code>
+
+
+
+	<div class="expandable-expandedView">
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_getAvailableLocales">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="getDays" id="_getDays">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html" title="Go to source code">getDays</a>(): array</code>
+
+
+
+	<div class="expandable-expandedView">
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_getDays">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="getIsoUnits" id="_getIsoUnits">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html" title="Go to source code">getIsoUnits</a>(): array</code>
+
+
+
+	<div class="expandable-expandedView">
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_getIsoUnits">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="getWeekendDays" id="_getWeekendDays">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html" title="Go to source code">getWeekendDays</a>(): array</code>
+
+
+
+	<div class="expandable-expandedView">
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_getWeekendDays">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="hasFormat" id="_hasFormat">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html" title="Go to source code">hasFormat</a>(<span><var>$date</var></span>, <span><var>$format</var></span>): bool</code>
+
+
+
+	<div class="expandable-expandedView">
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_hasFormat">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="hasMacro" id="_hasMacro">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html" title="Go to source code">hasMacro</a>(<span><var>$name</var></span>): bool</code>
+
+
+
+	<div class="expandable-expandedView">
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_hasMacro">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="hasRelativeKeywords" id="_hasRelativeKeywords">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html" title="Go to source code">hasRelativeKeywords</a>(<span><var>$time</var></span>): bool</code>
+
+
+
+	<div class="expandable-expandedView">
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_hasRelativeKeywords">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="hasTestNow" id="_hasTestNow">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html" title="Go to source code">hasTestNow</a>(): bool</code>
+
+
+
+	<div class="expandable-expandedView">
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_hasTestNow">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="isImmutable" id="_isImmutable">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html" title="Go to source code">isImmutable</a>(): bool</code>
+
+
+
+	<div class="expandable-expandedView">
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_isImmutable">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="isModifiableUnit" id="_isModifiableUnit">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html" title="Go to source code">isModifiableUnit</a>(<span><var>$unit</var></span>): bool</code>
+
+
+
+	<div class="expandable-expandedView">
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_isModifiableUnit">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="isStrictModeEnabled" id="_isStrictModeEnabled">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html" title="Go to source code">isStrictModeEnabled</a>(): bool</code>
+
+
+
+	<div class="expandable-expandedView">
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_isStrictModeEnabled">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="localeHasDiffOneDayWords" id="_localeHasDiffOneDayWords">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html" title="Go to source code">localeHasDiffOneDayWords</a>(<span><var>$locale</var></span>): bool</code>
+
+
+
+	<div class="expandable-expandedView">
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_localeHasDiffOneDayWords">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="localeHasDiffSyntax" id="_localeHasDiffSyntax">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html" title="Go to source code">localeHasDiffSyntax</a>(<span><var>$locale</var></span>): bool</code>
+
+
+
+	<div class="expandable-expandedView">
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_localeHasDiffSyntax">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="localeHasDiffTwoDayWords" id="_localeHasDiffTwoDayWords">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html" title="Go to source code">localeHasDiffTwoDayWords</a>(<span><var>$locale</var></span>): bool</code>
+
+
+
+	<div class="expandable-expandedView">
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_localeHasDiffTwoDayWords">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="localeHasPeriodSyntax" id="_localeHasPeriodSyntax">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html" title="Go to source code">localeHasPeriodSyntax</a>(<span><var>$locale</var></span>): bool</code>
+
+
+
+	<div class="expandable-expandedView">
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_localeHasPeriodSyntax">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="localeHasShortUnits" id="_localeHasShortUnits">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html" title="Go to source code">localeHasShortUnits</a>(<span><var>$locale</var></span>): bool</code>
+
+
+
+	<div class="expandable-expandedView">
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_localeHasShortUnits">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="setLocale" id="_setLocale">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html" title="Go to source code">setLocale</a>(<span><var>$locale</var></span>): bool</code>
+
+
+
+	<div class="expandable-expandedView">
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_setLocale">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="shouldOverflowMonths" id="_shouldOverflowMonths">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html" title="Go to source code">shouldOverflowMonths</a>(): bool</code>
+
+
+
+	<div class="expandable-expandedView">
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_shouldOverflowMonths">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="shouldOverflowYears" id="_shouldOverflowYears">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html" title="Go to source code">shouldOverflowYears</a>(): bool</code>
+
+
+
+	<div class="expandable-expandedView">
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_shouldOverflowYears">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="getHumanDiffOptions" id="_getHumanDiffOptions">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html" title="Go to source code">getHumanDiffOptions</a>(): int</code>
+
+
+
+	<div class="expandable-expandedView">
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_getHumanDiffOptions">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="getMidDayAt" id="_getMidDayAt">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html" title="Go to source code">getMidDayAt</a>(): int</code>
+
+
+
+	<div class="expandable-expandedView">
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_getMidDayAt">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="getWeekEndsAt" id="_getWeekEndsAt">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html" title="Go to source code">getWeekEndsAt</a>(): int</code>
+
+
+
+	<div class="expandable-expandedView">
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_getWeekEndsAt">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="getWeekStartsAt" id="_getWeekStartsAt">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html" title="Go to source code">getWeekStartsAt</a>(): int</code>
+
+
+
+	<div class="expandable-expandedView">
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_getWeekStartsAt">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="executeWithLocale" id="_executeWithLocale">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html" title="Go to source code">executeWithLocale</a>(<span><var>$locale</var></span>, <span><var>$func</var></span>): mixed</code>
+
+
+
+	<div class="expandable-expandedView">
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_executeWithLocale">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="getLocale" id="_getLocale">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html" title="Go to source code">getLocale</a>(): string</code>
+
+
+
+	<div class="expandable-expandedView">
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_getLocale">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="pluralUnit" id="_pluralUnit">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html" title="Go to source code">pluralUnit</a>(<span>string <var>$unit</var></span>): string</code>
+
+
+
+	<div class="expandable-expandedView">
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_pluralUnit">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="singularUnit" id="_singularUnit">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html" title="Go to source code">singularUnit</a>(<span>string <var>$unit</var></span>): string</code>
+
+
+
+	<div class="expandable-expandedView">
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_singularUnit">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="macro" id="_macro">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html" title="Go to source code">macro</a>(<span><var>$name</var></span>, <span><var>$macro</var></span>): void</code>
+
+
+
+	<div class="expandable-expandedView">
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_macro">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="mixin" id="_mixin">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html" title="Go to source code">mixin</a>(<span><var>$mixin</var></span>): void</code>
+
+
+
+	<div class="expandable-expandedView">
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_mixin">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="resetMonthsOverflow" id="_resetMonthsOverflow">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html" title="Go to source code">resetMonthsOverflow</a>(): void</code>
+
+
+
+	<div class="expandable-expandedView">
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_resetMonthsOverflow">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="resetToStringFormat" id="_resetToStringFormat">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html" title="Go to source code">resetToStringFormat</a>(): void</code>
+
+
+
+	<div class="expandable-expandedView">
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_resetToStringFormat">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="resetYearsOverflow" id="_resetYearsOverflow">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html" title="Go to source code">resetYearsOverflow</a>(): void</code>
+
+
+
+	<div class="expandable-expandedView">
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_resetYearsOverflow">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="serializeUsing" id="_serializeUsing">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html" title="Go to source code">serializeUsing</a>(<span><var>$callback</var></span>): void</code>
+
+
+
+	<div class="expandable-expandedView">
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_serializeUsing">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="setMidDayAt" id="_setMidDayAt">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html" title="Go to source code">setMidDayAt</a>(<span><var>$hour</var></span>): void</code>
+
+
+
+	<div class="expandable-expandedView">
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_setMidDayAt">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="setToStringFormat" id="_setToStringFormat">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html" title="Go to source code">setToStringFormat</a>(<span><var>$format</var></span>): void</code>
+
+
+
+	<div class="expandable-expandedView">
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_setToStringFormat">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="setTranslator" id="_setTranslator">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html" title="Go to source code">setTranslator</a>(<span><span title="Symfony\Component\Translation\TranslatorInterface">TranslatorInterface</span> <var>$translator</var></span>): void</code>
+
+
+
+	<div class="expandable-expandedView">
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_setTranslator">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="setWeekEndsAt" id="_setWeekEndsAt">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html" title="Go to source code">setWeekEndsAt</a>(<span><var>$day</var></span>): void</code>
+
+
+
+	<div class="expandable-expandedView">
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_setWeekEndsAt">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="setWeekStartsAt" id="_setWeekStartsAt">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html" title="Go to source code">setWeekStartsAt</a>(<span><var>$day</var></span>): void</code>
+
+
+
+	<div class="expandable-expandedView">
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_setWeekStartsAt">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="setWeekendDays" id="_setWeekendDays">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html" title="Go to source code">setWeekendDays</a>(<span><var>$days</var></span>): void</code>
+
+
+
+	<div class="expandable-expandedView">
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_setWeekendDays">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="useMonthsOverflow" id="_useMonthsOverflow">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html" title="Go to source code">useMonthsOverflow</a>(<span><var>$monthsOverflow</var> = <span class="php-kw">true</span></span>): void</code>
+
+
+
+	<div class="expandable-expandedView">
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_useMonthsOverflow">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="useYearsOverflow" id="_useYearsOverflow">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html" title="Go to source code">useYearsOverflow</a>(<span><var>$yearsOverflow</var> = <span class="php-kw">true</span></span>): void</code>
+
+
+
+	<div class="expandable-expandedView">
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_useYearsOverflow">#</a>
+		</td>
+	</tr>
+		</table>
+
+
+
+
+
+
+
+
+		</div>
+
+		<div class="layout-footer">
+			 API documentation generated by <a href="https://www.apigen.org">ApiGen dev-master</a>
+		</div>
+	</div>
+
+	<div class="layout-rest">
+		<div class="navbar"></div>
+	</div>
+</body>
+</html>

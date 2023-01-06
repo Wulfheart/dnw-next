@@ -3,12 +3,10 @@
 namespace App\Http\Controllers\Game;
 
 use App\Actions\Game\CheckForAdjudicationReady;
-use App\Actions\Game\SubmitOrdersAction;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\SubmitOrdersRequest;
 use App\Models\Game;
 use App\Models\PhasePowerData;
-use Illuminate\Http\Request;
 
 class SubmitOrdersController extends Controller
 {
@@ -24,7 +22,7 @@ class SubmitOrdersController extends Controller
         /** @var PhasePowerData $phasePowerData */
         $phasePowerData = $game->currentPhase->phasePowerData
             ->filter(
-                fn(PhasePowerData $phasePowerData) => $phasePowerData->power->user_id == auth()->user()->id
+                fn (PhasePowerData $phasePowerData) => $phasePowerData->power->user_id == auth()->user()->id
             )
             ->firstOrFail();
 

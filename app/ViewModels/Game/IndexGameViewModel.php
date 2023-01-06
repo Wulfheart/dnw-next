@@ -6,16 +6,22 @@ class IndexGameViewModel
 {
     /** @var array<\App\Models\Game> */
     public $activeGamesPreview;
+
     /** @var array<\App\Models\Game> */
     public $newGamesPreview;
+
     /** @var array<\App\Models\Game> */
     public $playerGamesPreview;
+
     /** @var array<\App\Models\Game> */
     public $finishedGamesPreview;
 
     public bool $showNewGamesLink;
+
     public bool $showPlayerGamesLink;
+
     public bool $showFinishedGamesLink;
+
     public bool $showRunningGamesLink;
 
     /**
@@ -47,6 +53,4 @@ class IndexGameViewModel
         $this->showFinishedGamesLink = $showFinishedGamesLink;
         $this->showRunningGamesLink = $showRunningGamesLink;
     }
-
-
 }

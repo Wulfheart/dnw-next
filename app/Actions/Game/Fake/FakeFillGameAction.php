@@ -12,7 +12,7 @@ class FakeFillGameAction
 {
     use AsAction;
 
-    public string $commandSignature = "dnw:game:fill {--id=}";
+    public string $commandSignature = 'dnw:game:fill {--id=}';
 
     public function handle(Game $game)
     {
@@ -24,7 +24,7 @@ class FakeFillGameAction
 
         $users_left = $game->powers->count() - $game->powers->whereUserAssigned()->count();
 
-        User::factory()->count($users_left)->create()->each(fn(User $u) => JoinGameAction::run($u, $game));
+        User::factory()->count($users_left)->create()->each(fn (User $u) => JoinGameAction::run($u, $game));
     }
 
     public function asCommand(\Illuminate\Console\Command $command): void
@@ -34,8 +34,6 @@ class FakeFillGameAction
 
         $this->handle($game);
 
-
         $command->info("Game (id: $game->id, name: '$game->name') filled with users");
     }
-
 }

@@ -1,0 +1,1571 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Class Illuminate\Support\Facades\Mail |  API</title>
+	<link rel="stylesheet" href="assets/main.css">
+	<script src="assets/main.js" defer></script>
+</head>
+
+<body class="layout">
+	<div class="layout-aside">
+	<div class="menu">
+			<div class="menu-section">
+				<h3>Namespaces</h3>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-App.html">App</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Actions.html">Actions</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Builders.html">Builders</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Collections.html">Collections</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Console.html">Console</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.DTO.html">DTO</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Enums.html">Enums</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Events.html">Events</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Exceptions.html">Exceptions</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Filament.html">Filament</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Http.html">Http</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Mail.html">Mail</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Models.html">Models</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Notifications.html">Notifications</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Policies.html">Policies</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Providers.html">Providers</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Queries.html">Queries</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Utility.html">Utility</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.View.html">View</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.ViewModels.html">ViewModels</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-BeyondCode.html">BeyondCode</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-BeyondCode.ServerTiming.html">ServerTiming</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Clockwork.html">Clockwork</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Clockwork.Support.html">Support</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Database.html">Database</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Database.Factories.html">Factories</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Database.Seeders.html">Seeders</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item active">
+				<a href="namespace-Illuminate.html">Illuminate</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Illuminate.Database.html">Database</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Illuminate.Filesystem.html">Filesystem</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Illuminate.Http.html">Http</a>
+			</li>
+			<li class="menuGroup-item active">
+				<a href="namespace-Illuminate.Support.html">Support</a>
+	<ul>
+			<li class="menuGroup-item active">
+				<a href="namespace-Illuminate.Support.Facades.html">Facades</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Illuminate.Testing.html">Testing</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Illuminate.View.html">View</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Jenssegers.html">Jenssegers</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Jenssegers.Agent.html">Agent</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Livewire.html">Livewire</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Livewire.Testing.html">Testing</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Lorisleiva.html">Lorisleiva</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Lorisleiva.Actions.html">Actions</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Lorisleiva.Lody.html">Lody</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Spatie.html">Spatie</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Spatie.LaravelIgnition.html">LaravelIgnition</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Tests.html">Tests</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Tests.Browser.html">Browser</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Tests.Feature.html">Feature</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-none.html">none</a>
+			</li>
+	</ul>
+			</div>
+
+		<div class="menu-section">
+			<h3>Classes</h3>
+			<ul>
+					<li>
+						<a href="Illuminate.Support.Facades.App.html">
+							App
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Artisan.html">
+							Artisan
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Auth.html">
+							Auth
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Blade.html">
+							Blade
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Broadcast.html">
+							Broadcast
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Bus.html">
+							Bus
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Cache.html">
+							Cache
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Config.html">
+							Config
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Cookie.html">
+							Cookie
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Crypt.html">
+							Crypt
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Date.html">
+							Date
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.DB.html">
+							DB
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Event.html">
+							Event
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.File.html">
+							File
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Gate.html">
+							Gate
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Hash.html">
+							Hash
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Http.html">
+							Http
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Lang.html">
+							Lang
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Log.html">
+							Log
+						</a>
+					</li>
+					<li class="active">
+						<a href="Illuminate.Support.Facades.Mail.html">
+							Mail
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Notification.html">
+							Notification
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Password.html">
+							Password
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Queue.html">
+							Queue
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.RateLimiter.html">
+							RateLimiter
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Redirect.html">
+							Redirect
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Request.html">
+							Request
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Response.html">
+							Response
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Route.html">
+							Route
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Schema.html">
+							Schema
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Session.html">
+							Session
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Storage.html">
+							Storage
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.URL.html">
+							URL
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Validator.html">
+							Validator
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.View.html">
+							View
+						</a>
+					</li>
+			</ul>
+		</div>
+
+
+
+
+
+	</div>
+	</div>
+
+	<div class="layout-main">
+		<div class="layout-navbar">
+	<nav class="navbar">
+		<div class="navbar-left">
+			<ul class="navbar-links">
+				<li>
+					<a href="index.html">Overview</a>
+				</li>
+				<li>
+					
+						<a href="namespace-Illuminate.Support.Facades.html">Namespace</a>
+					
+				</li>
+<li class="active"><a href="Illuminate.Support.Facades.Mail.html">Class</a></li>				<li>
+					<a href="tree.html">Tree</a>
+				</li>
+			</ul>
+		</div>
+		<div class="navbar-right">
+	<div class="search" data-elements="assets/elements.js">
+		<input class="search-input" placeholder="Search class, function or namespace" autofocus>
+		<ul class="search-results"></ul>
+	</div>
+		</div>
+	</nav>
+		</div>
+
+		<div class="layout-content">
+		<h1>
+			Class <a href="namespace-Illuminate.html">Illuminate</a>\<a href="namespace-Illuminate.Support.html">Support</a>\<a href="namespace-Illuminate.Support.Facades.html">Facades</a>\<a href="Illuminate.Support.Facades.Mail.html">Mail</a>
+		</h1>
+
+
+	<table class="classLikeSignatureTable">
+
+
+
+
+	</table>
+
+			<div class="classLikeSection">
+	<ul class="classTree">
+	<li>
+<b><span class="active">Illuminate\Support\Facades\Mail</span></b>
+
+
+	<ul class="classTree">
+	<li>
+<a href="Mail.html"><span>Mail</span></a>
+
+
+	</li>
+	</ul>
+	</li>
+	</ul>
+			</div>
+
+		<div class="classLikeSection">
+			<b>Located at</b> <a href="source-_ide_helper.html#8262" title="Go to source code">_ide_helper.php</a><br>
+		</div>
+
+
+		<table class="table" id="methods">
+			<tr>
+				<th class="table-heading sortable" colspan="3" title="Switch between natural and alphabetical order">Methods</th>
+			</tr>
+
+	<tr class="expandable collapsed" data-order="mailer" id="_mailer">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#8263-8274" title="Go to source code">mailer</a>(<span>string|null <var>$name</var> = <span class="php-kw">null</span></span>): <span title="Illuminate\Contracts\Mail\Mailer">Mailer</span></code>
+
+
+	<div class="expandable-collapsedView">
+		Get a mailer instance by name.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Get a mailer instance by name.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_mailer">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="driver" id="_driver">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#8275-8286" title="Go to source code">driver</a>(<span>string|null <var>$driver</var> = <span class="php-kw">null</span></span>): <span title="Illuminate\Mail\Mailer">Mailer</span></code>
+
+
+	<div class="expandable-collapsedView">
+		Get a mailer driver instance.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Get a mailer driver instance.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_driver">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="createSymfonyTransport" id="_createSymfonyTransport">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#8287-8299" title="Go to source code">createSymfonyTransport</a>(<span>array <var>$config</var></span>): <span title="Symfony\Component\Mailer\Transport\TransportInterface">TransportInterface</span></code>
+
+
+	<div class="expandable-collapsedView">
+		Create a new transport instance.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Create a new transport instance.</p>
+</div>
+
+
+
+							<h4>Throws</h4>
+							<table>
+									<tr>
+										<td><code><a href="InvalidArgumentException.html"><span>InvalidArgumentException</span></a></code>&nbsp;</td>
+										<td></td>
+									</tr>
+							</table>
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_createSymfonyTransport">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="getDefaultDriver" id="_getDefaultDriver">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#8300-8310" title="Go to source code">getDefaultDriver</a>(): string</code>
+
+
+	<div class="expandable-collapsedView">
+		Get the default mail driver name.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Get the default mail driver name.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_getDefaultDriver">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="setDefaultDriver" id="_setDefaultDriver">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#8311-8322" title="Go to source code">setDefaultDriver</a>(<span>string <var>$name</var></span>): void</code>
+
+
+	<div class="expandable-collapsedView">
+		Set the default mail driver name.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Set the default mail driver name.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_setDefaultDriver">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="purge" id="_purge">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#8323-8334" title="Go to source code">purge</a>(<span>string|null <var>$name</var> = <span class="php-kw">null</span></span>): void</code>
+
+
+	<div class="expandable-collapsedView">
+		Disconnect the given mailer and remove from local cache.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Disconnect the given mailer and remove from local cache.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_purge">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="extend" id="_extend">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#8335-8347" title="Go to source code">extend</a>(<span>string <var>$driver</var></span>, <span><a href="Closure.html"><span title="Closure">Closure</span></a> <var>$callback</var></span>): <span title="Illuminate\Mail\MailManager">MailManager</span></code>
+
+
+	<div class="expandable-collapsedView">
+		Register a custom transport creator Closure.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Register a custom transport creator Closure.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_extend">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="getApplication" id="_getApplication">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#8348-8358" title="Go to source code">getApplication</a>(): <span title="Illuminate\Contracts\Foundation\Application">Application</span></code>
+
+
+	<div class="expandable-collapsedView">
+		Get the application instance used by the manager.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Get the application instance used by the manager.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_getApplication">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="setApplication" id="_setApplication">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#8359-8370" title="Go to source code">setApplication</a>(<span><span title="Illuminate\Contracts\Foundation\Application">Application</span> <var>$app</var></span>): <span title="Illuminate\Mail\MailManager">MailManager</span></code>
+
+
+	<div class="expandable-collapsedView">
+		Set the application instance used by the manager.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Set the application instance used by the manager.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_setApplication">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="forgetMailers" id="_forgetMailers">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#8371-8381" title="Go to source code">forgetMailers</a>(): <span title="Illuminate\Mail\MailManager">MailManager</span></code>
+
+
+	<div class="expandable-collapsedView">
+		Forget all of the resolved mailer instances.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Forget all of the resolved mailer instances.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_forgetMailers">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="assertSent" id="_assertSent">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#8382-8394" title="Go to source code">assertSent</a>(<span>string|<a href="Closure.html"><span title="Closure">Closure</span></a> <var>$mailable</var></span>, <span>callable|int|null <var>$callback</var> = <span class="php-kw">null</span></span>): void</code>
+
+
+	<div class="expandable-collapsedView">
+		Assert if a mailable was sent based on a truth-test callback.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Assert if a mailable was sent based on a truth-test callback.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_assertSent">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="assertNotOutgoing" id="_assertNotOutgoing">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#8395-8407" title="Go to source code">assertNotOutgoing</a>(<span>string|<a href="Closure.html"><span title="Closure">Closure</span></a> <var>$mailable</var></span>, <span>callable|null <var>$callback</var> = <span class="php-kw">null</span></span>): void</code>
+
+
+	<div class="expandable-collapsedView">
+		Determine if a mailable was not sent or queued to be sent based on a truth-test callback.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Determine if a mailable was not sent or queued to be sent based on a truth-test callback.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_assertNotOutgoing">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="assertNotSent" id="_assertNotSent">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#8408-8420" title="Go to source code">assertNotSent</a>(<span>string|<a href="Closure.html"><span title="Closure">Closure</span></a> <var>$mailable</var></span>, <span>callable|null <var>$callback</var> = <span class="php-kw">null</span></span>): void</code>
+
+
+	<div class="expandable-collapsedView">
+		Determine if a mailable was not sent based on a truth-test callback.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Determine if a mailable was not sent based on a truth-test callback.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_assertNotSent">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="assertNothingOutgoing" id="_assertNothingOutgoing">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#8421-8431" title="Go to source code">assertNothingOutgoing</a>(): void</code>
+
+
+	<div class="expandable-collapsedView">
+		Assert that no mailables were sent or queued to be sent.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Assert that no mailables were sent or queued to be sent.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_assertNothingOutgoing">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="assertNothingSent" id="_assertNothingSent">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#8432-8442" title="Go to source code">assertNothingSent</a>(): void</code>
+
+
+	<div class="expandable-collapsedView">
+		Assert that no mailables were sent.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Assert that no mailables were sent.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_assertNothingSent">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="assertQueued" id="_assertQueued">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#8443-8455" title="Go to source code">assertQueued</a>(<span>string|<a href="Closure.html"><span title="Closure">Closure</span></a> <var>$mailable</var></span>, <span>callable|int|null <var>$callback</var> = <span class="php-kw">null</span></span>): void</code>
+
+
+	<div class="expandable-collapsedView">
+		Assert if a mailable was queued based on a truth-test callback.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Assert if a mailable was queued based on a truth-test callback.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_assertQueued">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="assertNotQueued" id="_assertNotQueued">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#8456-8468" title="Go to source code">assertNotQueued</a>(<span>string|<a href="Closure.html"><span title="Closure">Closure</span></a> <var>$mailable</var></span>, <span>callable|null <var>$callback</var> = <span class="php-kw">null</span></span>): void</code>
+
+
+	<div class="expandable-collapsedView">
+		Determine if a mailable was not queued based on a truth-test callback.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Determine if a mailable was not queued based on a truth-test callback.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_assertNotQueued">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="assertNothingQueued" id="_assertNothingQueued">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#8469-8479" title="Go to source code">assertNothingQueued</a>(): void</code>
+
+
+	<div class="expandable-collapsedView">
+		Assert that no mailables were queued.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Assert that no mailables were queued.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_assertNothingQueued">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="sent" id="_sent">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#8480-8492" title="Go to source code">sent</a>(<span>string|<a href="Closure.html"><span title="Closure">Closure</span></a> <var>$mailable</var></span>, <span>callable|null <var>$callback</var> = <span class="php-kw">null</span></span>): <a href="Illuminate.Support.Collection.html"><span title="Illuminate\Support\Collection">Collection</span></a></code>
+
+
+	<div class="expandable-collapsedView">
+		Get all of the mailables matching a truth-test callback.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Get all of the mailables matching a truth-test callback.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_sent">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="hasSent" id="_hasSent">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#8493-8504" title="Go to source code">hasSent</a>(<span>string <var>$mailable</var></span>): bool</code>
+
+
+	<div class="expandable-collapsedView">
+		Determine if the given mailable has been sent.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Determine if the given mailable has been sent.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_hasSent">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="queued" id="_queued">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#8505-8517" title="Go to source code">queued</a>(<span>string|<a href="Closure.html"><span title="Closure">Closure</span></a> <var>$mailable</var></span>, <span>callable|null <var>$callback</var> = <span class="php-kw">null</span></span>): <a href="Illuminate.Support.Collection.html"><span title="Illuminate\Support\Collection">Collection</span></a></code>
+
+
+	<div class="expandable-collapsedView">
+		Get all of the queued mailables matching a truth-test callback.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Get all of the queued mailables matching a truth-test callback.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_queued">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="hasQueued" id="_hasQueued">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#8518-8529" title="Go to source code">hasQueued</a>(<span>string <var>$mailable</var></span>): bool</code>
+
+
+	<div class="expandable-collapsedView">
+		Determine if the given mailable has been queued.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Determine if the given mailable has been queued.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_hasQueued">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="to" id="_to">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#8530-8541" title="Go to source code">to</a>(<span>mixed <var>$users</var></span>): <span title="Illuminate\Mail\PendingMail">PendingMail</span></code>
+
+
+	<div class="expandable-collapsedView">
+		Begin the process of mailing a mailable class instance.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Begin the process of mailing a mailable class instance.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_to">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="bcc" id="_bcc">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#8542-8553" title="Go to source code">bcc</a>(<span>mixed <var>$users</var></span>): <span title="Illuminate\Mail\PendingMail">PendingMail</span></code>
+
+
+	<div class="expandable-collapsedView">
+		Begin the process of mailing a mailable class instance.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Begin the process of mailing a mailable class instance.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_bcc">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="raw" id="_raw">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#8554-8566" title="Go to source code">raw</a>(<span>string <var>$text</var></span>, <span><a href="Closure.html"><span title="Closure">Closure</span></a>|string <var>$callback</var></span>): void</code>
+
+
+	<div class="expandable-collapsedView">
+		Send a new message with only a raw text part.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Send a new message with only a raw text part.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_raw">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="send" id="_send">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#8567-8580" title="Go to source code">send</a>(<span><span title="Illuminate\Contracts\Mail\Mailable">Mailable</span>|string|array <var>$view</var></span>, <span>array <var>$data</var> = []</span>, <span><a href="Closure.html"><span title="Closure">Closure</span></a>|string|null <var>$callback</var> = <span class="php-kw">null</span></span>): void</code>
+
+
+	<div class="expandable-collapsedView">
+		Send a new message using a view.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Send a new message using a view.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_send">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="queue" id="_queue">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#8581-8593" title="Go to source code">queue</a>(<span><span title="Illuminate\Contracts\Mail\Mailable">Mailable</span>|string|array <var>$view</var></span>, <span>string|null <var>$queue</var> = <span class="php-kw">null</span></span>): mixed</code>
+
+
+	<div class="expandable-collapsedView">
+		Queue a new e-mail message for sending.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Queue a new e-mail message for sending.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_queue">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="later" id="_later">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#8594-8607" title="Go to source code">later</a>(<span><a href="DateTimeInterface.html"><span title="DateTimeInterface">DateTimeInterface</span></a>|<a href="DateInterval.html"><span title="DateInterval">DateInterval</span></a>|int <var>$delay</var></span>, <span><span title="Illuminate\Contracts\Mail\Mailable">Mailable</span>|string|array <var>$view</var></span>, <span>string|null <var>$queue</var> = <span class="php-kw">null</span></span>): mixed</code>
+
+
+	<div class="expandable-collapsedView">
+		Queue a new e-mail message for sending after (n) seconds.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Queue a new e-mail message for sending after (n) seconds.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_later">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="failures" id="_failures">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#8608-8618" title="Go to source code">failures</a>(): array</code>
+
+
+	<div class="expandable-collapsedView">
+		Get the array of failed recipients.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Get the array of failed recipients.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_failures">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="alwaysFrom" id="_alwaysFrom">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html" title="Go to source code">alwaysFrom</a>(<span>string <var>$address</var></span>, <span>string|null <var>$name</var> = <span class="php-kw">null</span></span>): void</code>
+
+
+
+	<div class="expandable-expandedView">
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_alwaysFrom">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="alwaysReplyTo" id="_alwaysReplyTo">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html" title="Go to source code">alwaysReplyTo</a>(<span>string <var>$address</var></span>, <span>string|null <var>$name</var> = <span class="php-kw">null</span></span>): void</code>
+
+
+
+	<div class="expandable-expandedView">
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_alwaysReplyTo">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="alwaysReturnPath" id="_alwaysReturnPath">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html" title="Go to source code">alwaysReturnPath</a>(<span>string <var>$address</var></span>): void</code>
+
+
+
+	<div class="expandable-expandedView">
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_alwaysReturnPath">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="alwaysTo" id="_alwaysTo">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html" title="Go to source code">alwaysTo</a>(<span>string <var>$address</var></span>, <span>string|null <var>$name</var> = <span class="php-kw">null</span></span>): void</code>
+
+
+
+	<div class="expandable-expandedView">
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_alwaysTo">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="plain" id="_plain">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html" title="Go to source code">plain</a>(<span>string <var>$view</var></span>, <span>array <var>$data</var></span>, <span><var>$callback</var></span>): <span title="Illuminate\Mail\SentMessage">SentMessage</span>|null</code>
+
+
+
+	<div class="expandable-expandedView">
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_plain">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="html" id="_html">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html" title="Go to source code">html</a>(<span>string <var>$html</var></span>, <span><var>$callback</var></span>): <span title="Illuminate\Mail\SentMessage">SentMessage</span>|null</code>
+
+
+
+	<div class="expandable-expandedView">
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_html">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="laterOn" id="_laterOn">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html" title="Go to source code">laterOn</a>(<span>string <var>$queue</var></span>, <span><a href="DateTimeInterface.html"><span title="DateTimeInterface">DateTimeInterface</span></a>|<a href="DateInterval.html"><span title="DateInterval">DateInterval</span></a>|int <var>$delay</var></span>, <span><span title="Illuminate\Contracts\Mail\Mailable">Mailable</span>|string|array <var>$view</var></span>): mixed</code>
+
+
+
+	<div class="expandable-expandedView">
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_laterOn">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="queueOn" id="_queueOn">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html" title="Go to source code">queueOn</a>(<span>string <var>$queue</var></span>, <span><span title="Illuminate\Contracts\Mail\Mailable">Mailable</span>|string|array <var>$view</var></span>): mixed</code>
+
+
+
+	<div class="expandable-expandedView">
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_queueOn">#</a>
+		</td>
+	</tr>
+		</table>
+
+
+
+
+
+
+
+
+		</div>
+
+		<div class="layout-footer">
+			 API documentation generated by <a href="https://www.apigen.org">ApiGen dev-master</a>
+		</div>
+	</div>
+
+	<div class="layout-rest">
+		<div class="navbar"></div>
+	</div>
+</body>
+</html>

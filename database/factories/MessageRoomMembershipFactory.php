@@ -2,11 +2,10 @@
 
 namespace Database\Factories;
 
-use Illuminate\Database\Eloquent\Factories\Factory;
-use Illuminate\Support\Str;
 use App\Models\MessageRoom;
 use App\Models\MessageRoomMembership;
 use App\Models\Power;
+use Illuminate\Database\Eloquent\Factories\Factory;
 
 class MessageRoomMembershipFactory extends Factory
 {

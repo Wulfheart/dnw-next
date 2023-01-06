@@ -17,7 +17,6 @@ class NoAdjudication extends Model
         'iso_weekday' => 'integer',
     ];
 
-
     public function game()
     {
         return $this->belongsTo(\App\Models\Game::class);

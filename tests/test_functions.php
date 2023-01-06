@@ -34,6 +34,6 @@ function getCurrentPhaseDataForPower(Game $game, string $power): PhasePowerData
     $game->loadMissing('currentPhase.phasePowerData.power.basePower');
 
     return $game->currentPhase->phasePowerData->filter(
-        fn(PhasePowerData $ppd) => $ppd->power->basePower->api_name == $power
+        fn (PhasePowerData $ppd) => $ppd->power->basePower->api_name == $power
     )->firstOrFail();
 }

@@ -23,7 +23,6 @@ class PhasePowerData extends Model
         'ready_for_adjudication' => 'boolean',
     ];
 
-
     public function phase(): BelongsTo
     {
         return $this->belongsTo(\App\Models\Phase::class);

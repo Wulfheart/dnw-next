@@ -2,9 +2,8 @@
 
 namespace Database\Factories;
 
-use Illuminate\Database\Eloquent\Factories\Factory;
-use Illuminate\Support\Str;
 use App\Models\Variant;
+use Illuminate\Database\Eloquent\Factories\Factory;
 
 class VariantFactory extends Factory
 {
@@ -26,7 +25,7 @@ class VariantFactory extends Factory
             'api_name' => $this->faker->word,
             'name' => $this->faker->name,
             'default_scs_to_win' => $this->faker->randomNumber(),
-            'total_scs' => $this->faker->randomNumber()
+            'total_scs' => $this->faker->randomNumber(),
         ];
     }
 }

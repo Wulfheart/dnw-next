@@ -3,8 +3,6 @@
 namespace Tests\Feature\Livewire\Game;
 
 use App\Http\Livewire\Game\MessageList;
-use Illuminate\Foundation\Testing\RefreshDatabase;
-use Illuminate\Foundation\Testing\WithFaker;
 use Livewire\Livewire;
 use Tests\TestCase;
 

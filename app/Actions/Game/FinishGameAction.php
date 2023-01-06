@@ -22,12 +22,12 @@ class FinishGameAction
         $game->loadMissing('powers.basePower');
 
         $game->powers->filter(
-            fn(Power $p) => collect($winners)->contains($p->basePower->api_name)
-        )->each(fn(Power $p) => $p->update(['is_winner' => true]));
+            fn (Power $p) => collect($winners)->contains($p->basePower->api_name)
+        )->each(fn (Power $p) => $p->update(['is_winner' => true]));
 
-        if($send_email) {
+        if ($send_email) {
             $game->powers->each(
-                fn(Power $power) => $power->loadMissing('user')->user->notify(new GameFinishedNotification($game))
+                fn (Power $power) => $power->loadMissing('user')->user->notify(new GameFinishedNotification($game))
             );
         }
     }

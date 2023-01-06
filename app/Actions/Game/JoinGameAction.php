@@ -2,12 +2,9 @@
 
 namespace App\Actions\Game;
 
-use App\Events\Game\GameStartedEvent;
 use App\Models\Game;
 use App\Models\User;
-use Illuminate\Http\Response;
 use Lorisleiva\Actions\Concerns\AsAction;
-use Illuminate\Http\Request;
 
 class JoinGameAction
 {
@@ -23,7 +20,7 @@ class JoinGameAction
 
         $game->load('powers');
 
-        if($game->powers->whereUserAssigned()->count() == $game->powers->count()){
+        if ($game->powers->whereUserAssigned()->count() == $game->powers->count()) {
             StartGameAction::run($game);
         }
     }

@@ -9,7 +9,6 @@ use Illuminate\Http\Request;
 
 class LeaveGameController extends Controller
 {
-
     /**
      * @throws \Illuminate\Auth\Access\AuthorizationException
      */

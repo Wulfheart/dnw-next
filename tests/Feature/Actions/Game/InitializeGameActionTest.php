@@ -10,7 +10,7 @@ use App\Models\Variant;
 use Database\Seeders\VariantSeeder;
 use function Pest\Laravel\assertDatabaseCount;
 
-it('initializes the game correctly', function() {
+it('initializes the game correctly', function () {
     $this->seed(VariantSeeder::class);
     $game = Game::factory()->create([
         'variant_id' => Variant::first()->id,

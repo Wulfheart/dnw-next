@@ -1,0 +1,1558 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Class SplFileObject |  API</title>
+	<link rel="stylesheet" href="assets/main.css">
+	<script src="assets/main.js" defer></script>
+</head>
+
+<body class="layout">
+	<div class="layout-aside">
+	<div class="menu">
+			<div class="menu-section">
+				<h3>Namespaces</h3>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-App.html">App</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Actions.html">Actions</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Builders.html">Builders</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Collections.html">Collections</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Console.html">Console</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.DTO.html">DTO</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Enums.html">Enums</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Events.html">Events</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Exceptions.html">Exceptions</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Filament.html">Filament</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Http.html">Http</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Mail.html">Mail</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Models.html">Models</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Notifications.html">Notifications</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Policies.html">Policies</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Providers.html">Providers</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Queries.html">Queries</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Utility.html">Utility</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.View.html">View</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.ViewModels.html">ViewModels</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-BeyondCode.html">BeyondCode</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-BeyondCode.ServerTiming.html">ServerTiming</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Clockwork.html">Clockwork</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Clockwork.Support.html">Support</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Database.html">Database</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Database.Factories.html">Factories</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Database.Seeders.html">Seeders</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Illuminate.html">Illuminate</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Illuminate.Database.html">Database</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Illuminate.Filesystem.html">Filesystem</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Illuminate.Http.html">Http</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Illuminate.Support.html">Support</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Illuminate.Testing.html">Testing</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Illuminate.View.html">View</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Jenssegers.html">Jenssegers</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Jenssegers.Agent.html">Agent</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Livewire.html">Livewire</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Livewire.Testing.html">Testing</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Lorisleiva.html">Lorisleiva</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Lorisleiva.Actions.html">Actions</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Lorisleiva.Lody.html">Lody</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Spatie.html">Spatie</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Spatie.LaravelIgnition.html">LaravelIgnition</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Tests.html">Tests</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Tests.Browser.html">Browser</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Tests.Feature.html">Feature</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item active">
+				<a href="namespace-none.html">none</a>
+			</li>
+	</ul>
+			</div>
+
+		<div class="menu-section">
+			<h3>Classes</h3>
+			<ul>
+					<li>
+						<a href="Action.html">
+							Action
+						</a>
+					</li>
+					<li>
+						<a href="AddBccColumnEmailLog.html">
+							AddBccColumnEmailLog
+						</a>
+					</li>
+					<li>
+						<a href="AddMoreMailColumnsEmailLog.html">
+							AddMoreMailColumnsEmailLog
+						</a>
+					</li>
+					<li>
+						<a href="AddTwoFactorColumnsToUsersTable.html">
+							AddTwoFactorColumnsToUsersTable
+						</a>
+					</li>
+					<li>
+						<a href="Agent.html">
+							Agent
+						</a>
+					</li>
+					<li>
+						<a href="App.html">
+							App
+						</a>
+					</li>
+					<li>
+						<a href="Arr.html">
+							Arr
+						</a>
+					</li>
+					<li>
+						<a href="Artisan.html">
+							Artisan
+						</a>
+					</li>
+					<li>
+						<a href="Auth.html">
+							Auth
+						</a>
+					</li>
+					<li>
+						<a href="Blade.html">
+							Blade
+						</a>
+					</li>
+					<li>
+						<a href="Broadcast.html">
+							Broadcast
+						</a>
+					</li>
+					<li>
+						<a href="Bus.html">
+							Bus
+						</a>
+					</li>
+					<li>
+						<a href="Cache.html">
+							Cache
+						</a>
+					</li>
+					<li>
+						<a href="Clockwork.html">
+							Clockwork
+						</a>
+					</li>
+					<li>
+						<a href="Config.html">
+							Config
+						</a>
+					</li>
+					<li>
+						<a href="Cookie.html">
+							Cookie
+						</a>
+					</li>
+					<li>
+						<a href="CreateBasePowersTable.html">
+							CreateBasePowersTable
+						</a>
+					</li>
+					<li>
+						<a href="CreateFailedJobsTable.html">
+							CreateFailedJobsTable
+						</a>
+					</li>
+					<li>
+						<a href="CreateGamesTable.html">
+							CreateGamesTable
+						</a>
+					</li>
+					<li>
+						<a href="CreateJobsTable.html">
+							CreateJobsTable
+						</a>
+					</li>
+					<li>
+						<a href="CreateMessageRoomMembershipsTable.html">
+							CreateMessageRoomMembershipsTable
+						</a>
+					</li>
+					<li>
+						<a href="CreateMessageRoomsTable.html">
+							CreateMessageRoomsTable
+						</a>
+					</li>
+					<li>
+						<a href="CreateMessagesTable.html">
+							CreateMessagesTable
+						</a>
+					</li>
+					<li>
+						<a href="CreateNoAdjudicationsTable.html">
+							CreateNoAdjudicationsTable
+						</a>
+					</li>
+					<li>
+						<a href="CreatePasswordResetsTable.html">
+							CreatePasswordResetsTable
+						</a>
+					</li>
+					<li>
+						<a href="CreatePersonalAccessTokensTable.html">
+							CreatePersonalAccessTokensTable
+						</a>
+					</li>
+					<li>
+						<a href="CreatePhasePowerDataTable.html">
+							CreatePhasePowerDataTable
+						</a>
+					</li>
+					<li>
+						<a href="CreatePhasesTable.html">
+							CreatePhasesTable
+						</a>
+					</li>
+					<li>
+						<a href="CreatePowersTable.html">
+							CreatePowersTable
+						</a>
+					</li>
+					<li>
+						<a href="CreateSessionsTable.html">
+							CreateSessionsTable
+						</a>
+					</li>
+					<li>
+						<a href="CreateUsersTable.html">
+							CreateUsersTable
+						</a>
+					</li>
+					<li>
+						<a href="CreateVariantsTable.html">
+							CreateVariantsTable
+						</a>
+					</li>
+					<li>
+						<a href="Crypt.html">
+							Crypt
+						</a>
+					</li>
+					<li>
+						<a href="Date.html">
+							Date
+						</a>
+					</li>
+					<li>
+						<a href="DB.html">
+							DB
+						</a>
+					</li>
+					<li>
+						<a href="Eloquent.html">
+							Eloquent
+						</a>
+					</li>
+					<li>
+						<a href="EmailLog.html">
+							EmailLog
+						</a>
+					</li>
+					<li>
+						<a href="Event.html">
+							Event
+						</a>
+					</li>
+					<li>
+						<a href="File.html">
+							File
+						</a>
+					</li>
+					<li>
+						<a href="Flare.html">
+							Flare
+						</a>
+					</li>
+					<li>
+						<a href="Gate.html">
+							Gate
+						</a>
+					</li>
+					<li>
+						<a href="Hash.html">
+							Hash
+						</a>
+					</li>
+					<li>
+						<a href="Http.html">
+							Http
+						</a>
+					</li>
+					<li>
+						<a href="Lang.html">
+							Lang
+						</a>
+					</li>
+					<li>
+						<a href="Livewire.html">
+							Livewire
+						</a>
+					</li>
+					<li>
+						<a href="Lody.html">
+							Lody
+						</a>
+					</li>
+					<li>
+						<a href="Log.html">
+							Log
+						</a>
+					</li>
+					<li>
+						<a href="Mail.html">
+							Mail
+						</a>
+					</li>
+					<li>
+						<a href="Notification.html">
+							Notification
+						</a>
+					</li>
+					<li>
+						<a href="Password.html">
+							Password
+						</a>
+					</li>
+					<li>
+						<a href="Queue.html">
+							Queue
+						</a>
+					</li>
+					<li>
+						<a href="RateLimiter.html">
+							RateLimiter
+						</a>
+					</li>
+					<li>
+						<a href="Redirect.html">
+							Redirect
+						</a>
+					</li>
+					<li>
+						<a href="Request.html">
+							Request
+						</a>
+					</li>
+					<li>
+						<a href="Response.html">
+							Response
+						</a>
+					</li>
+					<li>
+						<a href="Route.html">
+							Route
+						</a>
+					</li>
+					<li>
+						<a href="Schema.html">
+							Schema
+						</a>
+					</li>
+					<li>
+						<a href="Session.html">
+							Session
+						</a>
+					</li>
+					<li>
+						<a href="Stopwatch.html">
+							Stopwatch
+						</a>
+					</li>
+					<li>
+						<a href="Storage.html">
+							Storage
+						</a>
+					</li>
+					<li>
+						<a href="Str.html">
+							Str
+						</a>
+					</li>
+					<li>
+						<a href="URL.html">
+							URL
+						</a>
+					</li>
+					<li>
+						<a href="UseLongtextForAttachments.html">
+							UseLongtextForAttachments
+						</a>
+					</li>
+					<li>
+						<a href="Validator.html">
+							Validator
+						</a>
+					</li>
+					<li>
+						<a href="View.html">
+							View
+						</a>
+					</li>
+			</ul>
+		</div>
+
+
+
+
+
+		<div class="menu-section">
+			<h3>Functions</h3>
+			<ul>
+					<li>
+						<a href="function-setupGame.html">
+							setupGame
+						</a>
+					</li>
+					<li>
+						<a href="function-getCurrentPhaseDataForPower.html">
+							getCurrentPhaseDataForPower
+						</a>
+					</li>
+					<li>
+						<a href="function-storage_asset.html">
+							storage_asset
+						</a>
+					</li>
+					<li>
+						<a href="function-humanize_minutes.html">
+							humanize_minutes
+						</a>
+					</li>
+					<li>
+						<a href="function-remainingTimeText.html">
+							remainingTimeText
+						</a>
+					</li>
+			</ul>
+		</div>
+	</div>
+	</div>
+
+	<div class="layout-main">
+		<div class="layout-navbar">
+	<nav class="navbar">
+		<div class="navbar-left">
+			<ul class="navbar-links">
+				<li>
+					<a href="index.html">Overview</a>
+				</li>
+				<li>
+					
+						<a href="namespace-none.html">Namespace</a>
+					
+				</li>
+<li class="active"><a href="SplFileObject.html">Class</a></li>				<li>
+					<a href="tree.html">Tree</a>
+				</li>
+			</ul>
+		</div>
+		<div class="navbar-right">
+	<div class="search" data-elements="assets/elements.js">
+		<input class="search-input" placeholder="Search class, function or namespace" autofocus>
+		<ul class="search-results"></ul>
+	</div>
+		</div>
+	</nav>
+		</div>
+
+		<div class="layout-content">
+		<h1>
+			Class <a href="SplFileObject.html">SplFileObject</a>
+		</h1>
+
+
+	<table class="classLikeSignatureTable">
+
+
+
+		<tr>
+			<th><code>extends</code></th>
+			<td>
+<code><a href="SplFileInfo.html"><span title="SplFileInfo">SplFileInfo</span></a></code>			</td>
+		</tr>
+		<tr>
+			<th><code>implements</code></th>
+			<td>
+<code><a href="RecursiveIterator.html"><span title="RecursiveIterator">RecursiveIterator</span></a>, <a href="SeekableIterator.html"><span title="SeekableIterator">SeekableIterator</span></a></code>			</td>
+		</tr>
+
+	</table>
+
+			<div class="classLikeSection">
+	<ul class="classTree">
+	<li>
+<a href="SplFileInfo.html"><span>SplFileInfo</span></a>
+
+
+	<ul class="classTree">
+	<li>
+<b><span class="active">SplFileObject</span></b>
+
+		implements
+			<a href="RecursiveIterator.html"><span title="RecursiveIterator">RecursiveIterator</span></a>, 
+			<a href="SeekableIterator.html"><span title="SeekableIterator">SeekableIterator</span></a>
+
+	</li>
+	</ul>
+	</li>
+	</ul>
+			</div>
+
+		<div class="classLikeSection">
+
+		</div>
+
+
+		<table class="table" id="methods">
+			<tr>
+				<th class="table-heading sortable" colspan="3" title="Switch between natural and alphabetical order">Methods</th>
+			</tr>
+
+	<tr class="expandable collapsed" data-order="fputcsv" id="_fputcsv">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code>fputcsv(<span>array <var>$fields</var></span>, <span>string <var>$separator</var> = <span class="php-str">","</span></span>, <span>string <var>$enclosure</var> = <span class="php-str">"\""</span></span>, <span>string <var>$escape</var> = <span class="php-str">"\\"</span></span>, <span>string <var>$eol</var> = <span class="php-str">"\n"</span></span>)</code>
+
+
+
+	<div class="expandable-expandedView">
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_fputcsv">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="__construct" id="___construct">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code>__construct(<span>string <var>$filename</var></span>, <span>string <var>$mode</var> = <span class="php-str">"r"</span></span>, <span>bool <var>$useIncludePath</var> = <span class="php-kw">false</span></span>, <span>resource|null <var>$context</var> = <span class="php-kw">null</span></span>)</code>
+
+
+
+	<div class="expandable-expandedView">
+
+
+
+
+		<h4>Overrides</h4>
+		<ul>
+				<li>
+<a href="SplFileInfo.html#___construct">						<code>SplFileInfo::__construct()</code></a>				</li>
+		</ul>
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#___construct">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="rewind" id="_rewind">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code>rewind(): void</code>
+
+
+
+	<div class="expandable-expandedView">
+
+
+
+
+		<h4>Implements</h4>
+		<ul>
+				<li>
+<a href="Iterator.html#_rewind">						<code>Iterator::rewind()</code></a>				</li>
+		</ul>
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_rewind">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="eof" id="_eof">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code>eof(): bool</code>
+
+
+
+	<div class="expandable-expandedView">
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_eof">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="valid" id="_valid">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code>valid(): bool</code>
+
+
+
+	<div class="expandable-expandedView">
+
+
+
+
+		<h4>Implements</h4>
+		<ul>
+				<li>
+<a href="Iterator.html#_valid">						<code>Iterator::valid()</code></a>				</li>
+		</ul>
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_valid">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="fgets" id="_fgets">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code>fgets(): string</code>
+
+
+
+	<div class="expandable-expandedView">
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_fgets">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="fread" id="_fread">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code>fread(<span>int <var>$length</var></span>): string|false</code>
+
+
+
+	<div class="expandable-expandedView">
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_fread">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="fgetcsv" id="_fgetcsv">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code>fgetcsv(<span>string <var>$separator</var> = <span class="php-str">","</span></span>, <span>string <var>$enclosure</var> = <span class="php-str">"\""</span></span>, <span>string <var>$escape</var> = <span class="php-str">"\\"</span></span>): array|false</code>
+
+
+
+	<div class="expandable-expandedView">
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_fgetcsv">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="setCsvControl" id="_setCsvControl">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code>setCsvControl(<span>string <var>$separator</var> = <span class="php-str">","</span></span>, <span>string <var>$enclosure</var> = <span class="php-str">"\""</span></span>, <span>string <var>$escape</var> = <span class="php-str">"\\"</span></span>): void</code>
+
+
+
+	<div class="expandable-expandedView">
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_setCsvControl">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="getCsvControl" id="_getCsvControl">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code>getCsvControl(): array</code>
+
+
+
+	<div class="expandable-expandedView">
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_getCsvControl">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="flock" id="_flock">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code>flock(<span>int <var>$operation</var></span>, <span>int &amp;<var>$wouldBlock</var> = <span class="php-kw">null</span></span>): bool</code>
+
+
+
+	<div class="expandable-expandedView">
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_flock">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="fflush" id="_fflush">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code>fflush(): bool</code>
+
+
+
+	<div class="expandable-expandedView">
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_fflush">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="ftell" id="_ftell">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code>ftell(): int|false</code>
+
+
+
+	<div class="expandable-expandedView">
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_ftell">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="fseek" id="_fseek">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code>fseek(<span>int <var>$offset</var></span>, <span>int <var>$whence</var> = SEEK_SET</span>): int</code>
+
+
+
+	<div class="expandable-expandedView">
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_fseek">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="fgetc" id="_fgetc">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code>fgetc(): string|false</code>
+
+
+
+	<div class="expandable-expandedView">
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_fgetc">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="fpassthru" id="_fpassthru">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code>fpassthru(): int</code>
+
+
+
+	<div class="expandable-expandedView">
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_fpassthru">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="fscanf" id="_fscanf">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code>fscanf(<span>string <var>$format</var></span>, <span>mixed &amp;...<var>$vars</var></span>): array|int|null</code>
+
+
+
+	<div class="expandable-expandedView">
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_fscanf">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="fwrite" id="_fwrite">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code>fwrite(<span>string <var>$data</var></span>, <span>int <var>$length</var> = <span class="php-num">0</span></span>): int|false</code>
+
+
+
+	<div class="expandable-expandedView">
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_fwrite">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="fstat" id="_fstat">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code>fstat(): array</code>
+
+
+
+	<div class="expandable-expandedView">
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_fstat">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="ftruncate" id="_ftruncate">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code>ftruncate(<span>int <var>$size</var></span>): bool</code>
+
+
+
+	<div class="expandable-expandedView">
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_ftruncate">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="current" id="_current">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code>current(): string|array|false</code>
+
+
+
+	<div class="expandable-expandedView">
+
+
+
+
+		<h4>Implements</h4>
+		<ul>
+				<li>
+<a href="Iterator.html#_current">						<code>Iterator::current()</code></a>				</li>
+		</ul>
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_current">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="key" id="_key">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code>key(): int</code>
+
+
+
+	<div class="expandable-expandedView">
+
+
+
+
+		<h4>Implements</h4>
+		<ul>
+				<li>
+<a href="Iterator.html#_key">						<code>Iterator::key()</code></a>				</li>
+		</ul>
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_key">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="next" id="_next">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code>next(): void</code>
+
+
+
+	<div class="expandable-expandedView">
+
+
+
+
+		<h4>Implements</h4>
+		<ul>
+				<li>
+<a href="Iterator.html#_next">						<code>Iterator::next()</code></a>				</li>
+		</ul>
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_next">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="setFlags" id="_setFlags">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code>setFlags(<span>int <var>$flags</var></span>): void</code>
+
+
+
+	<div class="expandable-expandedView">
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_setFlags">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="getFlags" id="_getFlags">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code>getFlags(): int</code>
+
+
+
+	<div class="expandable-expandedView">
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_getFlags">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="setMaxLineLen" id="_setMaxLineLen">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code>setMaxLineLen(<span>int <var>$maxLength</var></span>): void</code>
+
+
+
+	<div class="expandable-expandedView">
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_setMaxLineLen">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="getMaxLineLen" id="_getMaxLineLen">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code>getMaxLineLen(): int</code>
+
+
+
+	<div class="expandable-expandedView">
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_getMaxLineLen">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="hasChildren" id="_hasChildren">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code>hasChildren(): bool</code>
+
+
+
+	<div class="expandable-expandedView">
+
+
+
+
+		<h4>Implements</h4>
+		<ul>
+				<li>
+<a href="RecursiveIterator.html#_hasChildren">						<code>RecursiveIterator::hasChildren()</code></a>				</li>
+		</ul>
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_hasChildren">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="getChildren" id="_getChildren">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code>getChildren(): <a href="RecursiveIterator.html"><span title="RecursiveIterator">RecursiveIterator</span></a>|null</code>
+
+
+
+	<div class="expandable-expandedView">
+
+
+
+
+		<h4>Implements</h4>
+		<ul>
+				<li>
+<a href="RecursiveIterator.html#_getChildren">						<code>RecursiveIterator::getChildren()</code></a>				</li>
+		</ul>
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_getChildren">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="seek" id="_seek">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code>seek(<span>int <var>$line</var></span>): void</code>
+
+
+
+	<div class="expandable-expandedView">
+
+
+
+
+		<h4>Implements</h4>
+		<ul>
+				<li>
+<a href="SeekableIterator.html#_seek">						<code>SeekableIterator::seek()</code></a>				</li>
+		</ul>
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_seek">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="getCurrentLine" id="_getCurrentLine">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code>getCurrentLine(): string</code>
+
+
+
+	<div class="expandable-expandedView">
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_getCurrentLine">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="__toString" id="___toString">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code>__toString(): string</code>
+
+
+
+	<div class="expandable-expandedView">
+
+
+
+
+		<h4>Overrides</h4>
+		<ul>
+				<li>
+<a href="SplFileInfo.html#___toString">						<code>SplFileInfo::__toString()</code></a>				</li>
+		</ul>
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#___toString">#</a>
+		</td>
+	</tr>
+		</table>
+		<table class="table">
+			<tr>
+				<th class="table-heading">Methods inherited from <a href="SplFileInfo.html"><span>SplFileInfo</span></a></th>
+			</tr>
+			<tr>
+				<td class="table-cell">
+<code><a href="SplFileInfo.html#_getPath">getPath()</a>, <a href="SplFileInfo.html#_getFilename">getFilename()</a>, <a href="SplFileInfo.html#_getExtension">getExtension()</a>, <a href="SplFileInfo.html#_getBasename">getBasename()</a>, <a href="SplFileInfo.html#_getPathname">getPathname()</a>, <a href="SplFileInfo.html#_getPerms">getPerms()</a>, <a href="SplFileInfo.html#_getInode">getInode()</a>, <a href="SplFileInfo.html#_getSize">getSize()</a>, <a href="SplFileInfo.html#_getOwner">getOwner()</a>, <a href="SplFileInfo.html#_getGroup">getGroup()</a>, <a href="SplFileInfo.html#_getATime">getATime()</a>, <a href="SplFileInfo.html#_getMTime">getMTime()</a>, <a href="SplFileInfo.html#_getCTime">getCTime()</a>, <a href="SplFileInfo.html#_getType">getType()</a>, <a href="SplFileInfo.html#_isWritable">isWritable()</a>, <a href="SplFileInfo.html#_isReadable">isReadable()</a>, <a href="SplFileInfo.html#_isExecutable">isExecutable()</a>, <a href="SplFileInfo.html#_isFile">isFile()</a>, <a href="SplFileInfo.html#_isDir">isDir()</a>, <a href="SplFileInfo.html#_isLink">isLink()</a>, <a href="SplFileInfo.html#_getLinkTarget">getLinkTarget()</a>, <a href="SplFileInfo.html#_getRealPath">getRealPath()</a>, <a href="SplFileInfo.html#_getFileInfo">getFileInfo()</a>, <a href="SplFileInfo.html#_getPathInfo">getPathInfo()</a>, <a href="SplFileInfo.html#_openFile">openFile()</a>, <a href="SplFileInfo.html#_setFileClass">setFileClass()</a>, <a href="SplFileInfo.html#_setInfoClass">setInfoClass()</a>, <a href="SplFileInfo.html#___debugInfo">__debugInfo()</a>, <a href="SplFileInfo.html#__bad_state_ex" class="deprecated">_bad_state_ex()</a></code>				</td>
+			</tr>
+		</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		</div>
+
+		<div class="layout-footer">
+			 API documentation generated by <a href="https://www.apigen.org">ApiGen dev-master</a>
+		</div>
+	</div>
+
+	<div class="layout-rest">
+		<div class="navbar"></div>
+	</div>
+</body>
+</html>

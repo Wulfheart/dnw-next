@@ -3,7 +3,6 @@
 namespace App\Actions\Game;
 
 use App\Models\Game;
-use Illuminate\Database\Query\Builder;
 use Lorisleiva\Actions\Concerns\AsAction;
 
 class AutomaticAdjudicationAtPhaseEndAction

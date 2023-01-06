@@ -2,10 +2,9 @@
 
 namespace Database\Factories;
 
-use Illuminate\Database\Eloquent\Factories\Factory;
-use Illuminate\Support\Str;
 use App\Models\Game;
 use App\Models\NoAdjudication;
+use Illuminate\Database\Eloquent\Factories\Factory;
 
 class NoAdjudicationFactory extends Factory
 {

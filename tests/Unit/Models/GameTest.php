@@ -1,12 +1,9 @@
 <?php
 
 use App\Models\Game;
-use App\Models\NoAdjudication;
 use App\Models\Phase;
 use Carbon\CarbonInterface;
-use Illuminate\Support\Carbon;
 use function Pest\Laravel\assertDatabaseCount;
-use function Pest\Laravel\travelTo;
 use function PHPUnit\Framework\assertEquals;
 use function PHPUnit\Framework\assertNotNull;
 
@@ -30,7 +27,6 @@ it('can get retrieve the current phase as relationship', function () {
 });
 
 it('evaluates the correct game state', function () {
-
 })->skip(true, 'TODO');
 
 it('calculates the correct phase time for a new phase', function ($hours, $start, $end) {
@@ -52,7 +48,6 @@ it('calculates the correct phase time for a new phase', function ($hours, $start
     test()->travelTo($start);
     $result = $game->calculateNextAdjudicationPhaseEnd();
     expect($result->equalTo($end))->toBeTrue();
-
 })->with([
     '3h Thursday 22:00' => [3, '2022-02-24 22.00', '2022-02-25 01.00'],
     '3h Tuesday 22:00' => [3, '2022-02-22 22.00', '2022-02-24 01.00'],

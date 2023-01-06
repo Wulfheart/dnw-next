@@ -12,6 +12,5 @@ class FakeSeedGameWithOrdersAction
 
     public function handle(string $seed): void
     {
-
     }
 }

@@ -12,7 +12,6 @@ class GameAdjudicatedNotification extends Notification implements ShouldQueue
 {
     use Queueable;
 
-
     public function __construct(
         public Game $game
     ) {
@@ -30,7 +29,7 @@ class GameAdjudicatedNotification extends Notification implements ShouldQueue
             ->subject('Spiel ausgewertet')
             ->markdown('mail.markdown.game.adjudicated', [
                 'gameName' => $this->game->name,
-                'url' => route('games.show', $this->game)
+                'url' => route('games.show', $this->game),
             ]);
     }
 

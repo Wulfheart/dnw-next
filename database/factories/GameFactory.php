@@ -2,11 +2,10 @@
 
 namespace Database\Factories;
 
-use App\Models\MessageMode;
-use Illuminate\Database\Eloquent\Factories\Factory;
-use Illuminate\Support\Str;
 use App\Models\Game;
+use App\Models\MessageMode;
 use App\Models\Variant;
+use Illuminate\Database\Eloquent\Factories\Factory;
 
 class GameFactory extends Factory
 {
@@ -29,7 +28,7 @@ class GameFactory extends Factory
             'variant_id' => Variant::factory(),
             'message_mode_id' => MessageMode::factory()->create()->id,
             'phase_length' => $this->faker->randomNumber(),
-            'is_paused' => $this->faker->boolean
+            'is_paused' => $this->faker->boolean,
         ];
     }
 }

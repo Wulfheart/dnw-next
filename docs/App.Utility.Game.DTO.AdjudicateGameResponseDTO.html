@@ -1,0 +1,653 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Class App\Utility\Game\DTO\AdjudicateGameResponseDTO |  API</title>
+	<link rel="stylesheet" href="assets/main.css">
+	<script src="assets/main.js" defer></script>
+</head>
+
+<body class="layout">
+	<div class="layout-aside">
+	<div class="menu">
+			<div class="menu-section">
+				<h3>Namespaces</h3>
+	<ul>
+			<li class="menuGroup-item active">
+				<a href="namespace-App.html">App</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Actions.html">Actions</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Builders.html">Builders</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Collections.html">Collections</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Console.html">Console</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.DTO.html">DTO</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Enums.html">Enums</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Events.html">Events</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Exceptions.html">Exceptions</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Filament.html">Filament</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Http.html">Http</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Mail.html">Mail</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Models.html">Models</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Notifications.html">Notifications</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Policies.html">Policies</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Providers.html">Providers</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Queries.html">Queries</a>
+			</li>
+			<li class="menuGroup-item active">
+				<a href="namespace-App.Utility.html">Utility</a>
+	<ul>
+			<li class="menuGroup-item active">
+				<a href="namespace-App.Utility.Game.html">Game</a>
+	<ul>
+			<li class="menuGroup-item active">
+				<a href="namespace-App.Utility.Game.DTO.html">DTO</a>
+			</li>
+	</ul>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.View.html">View</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.ViewModels.html">ViewModels</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-BeyondCode.html">BeyondCode</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-BeyondCode.ServerTiming.html">ServerTiming</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Clockwork.html">Clockwork</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Clockwork.Support.html">Support</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Database.html">Database</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Database.Factories.html">Factories</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Database.Seeders.html">Seeders</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Illuminate.html">Illuminate</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Illuminate.Database.html">Database</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Illuminate.Filesystem.html">Filesystem</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Illuminate.Http.html">Http</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Illuminate.Support.html">Support</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Illuminate.Testing.html">Testing</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Illuminate.View.html">View</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Jenssegers.html">Jenssegers</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Jenssegers.Agent.html">Agent</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Livewire.html">Livewire</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Livewire.Testing.html">Testing</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Lorisleiva.html">Lorisleiva</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Lorisleiva.Actions.html">Actions</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Lorisleiva.Lody.html">Lody</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Spatie.html">Spatie</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Spatie.LaravelIgnition.html">LaravelIgnition</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Tests.html">Tests</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Tests.Browser.html">Browser</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Tests.Feature.html">Feature</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-none.html">none</a>
+			</li>
+	</ul>
+			</div>
+
+		<div class="menu-section">
+			<h3>Classes</h3>
+			<ul>
+					<li>
+						<a href="App.Utility.Game.DTO.AdjudicateGameRequestDTO.html">
+							AdjudicateGameRequestDTO
+						</a>
+					</li>
+					<li class="active">
+						<a href="App.Utility.Game.DTO.AdjudicateGameResponseDTO.html">
+							AdjudicateGameResponseDTO
+						</a>
+					</li>
+					<li>
+						<a href="App.Utility.Game.DTO.AppliedOrderDTO.html">
+							AppliedOrderDTO
+						</a>
+					</li>
+					<li>
+						<a href="App.Utility.Game.DTO.BaseDTO.html">
+							BaseDTO
+						</a>
+					</li>
+					<li>
+						<a href="App.Utility.Game.DTO.DumbbotRequestDTO.html">
+							DumbbotRequestDTO
+						</a>
+					</li>
+					<li>
+						<a href="App.Utility.Game.DTO.DumbbotResponseDTO.html">
+							DumbbotResponseDTO
+						</a>
+					</li>
+					<li>
+						<a href="App.Utility.Game.DTO.OrderDTO.html">
+							OrderDTO
+						</a>
+					</li>
+					<li>
+						<a href="App.Utility.Game.DTO.PhasePowerDataDTO.html">
+							PhasePowerDataDTO
+						</a>
+					</li>
+					<li>
+						<a href="App.Utility.Game.DTO.PossibleOrderDTO.html">
+							PossibleOrderDTO
+						</a>
+					</li>
+					<li>
+						<a href="App.Utility.Game.DTO.UnitDTO.html">
+							UnitDTO
+						</a>
+					</li>
+					<li>
+						<a href="App.Utility.Game.DTO.VariantDTO.html">
+							VariantDTO
+						</a>
+					</li>
+					<li>
+						<a href="App.Utility.Game.DTO.VariantsResponseDTO.html">
+							VariantsResponseDTO
+						</a>
+					</li>
+			</ul>
+		</div>
+
+
+
+
+
+	</div>
+	</div>
+
+	<div class="layout-main">
+		<div class="layout-navbar">
+	<nav class="navbar">
+		<div class="navbar-left">
+			<ul class="navbar-links">
+				<li>
+					<a href="index.html">Overview</a>
+				</li>
+				<li>
+					
+						<a href="namespace-App.Utility.Game.DTO.html">Namespace</a>
+					
+				</li>
+<li class="active"><a href="App.Utility.Game.DTO.AdjudicateGameResponseDTO.html">Class</a></li>				<li>
+					<a href="tree.html">Tree</a>
+				</li>
+			</ul>
+		</div>
+		<div class="navbar-right">
+	<div class="search" data-elements="assets/elements.js">
+		<input class="search-input" placeholder="Search class, function or namespace" autofocus>
+		<ul class="search-results"></ul>
+	</div>
+		</div>
+	</nav>
+		</div>
+
+		<div class="layout-content">
+		<h1>
+			Class <a href="namespace-App.html">App</a>\<a href="namespace-App.Utility.html">Utility</a>\<a href="namespace-App.Utility.Game.html">Game</a>\<a href="namespace-App.Utility.Game.DTO.html">DTO</a>\<a href="App.Utility.Game.DTO.AdjudicateGameResponseDTO.html">AdjudicateGameResponseDTO</a>
+		</h1>
+
+
+	<table class="classLikeSignatureTable">
+
+
+
+		<tr>
+			<th><code>extends</code></th>
+			<td>
+<code><a href="App.Utility.Game.DTO.BaseDTO.html"><span title="App\Utility\Game\DTO\BaseDTO">BaseDTO</span></a></code>			</td>
+		</tr>
+
+	</table>
+
+			<div class="classLikeSection">
+	<ul class="classTree">
+	<li>
+<span>Spatie\DataTransferObject\DataTransferObject</span>
+
+
+	<ul class="classTree">
+	<li>
+<a href="App.Utility.Game.DTO.BaseDTO.html"><span>App\Utility\Game\DTO\BaseDTO</span></a>
+
+
+	<ul class="classTree">
+	<li>
+<b><span class="active">App\Utility\Game\DTO\AdjudicateGameResponseDTO</span></b>
+
+
+	</li>
+	</ul>
+	</li>
+	</ul>
+	</li>
+	</ul>
+			</div>
+
+		<div class="classLikeSection">
+			<b>Located at</b> <a href="source-app.Utility.Game.DTO.AdjudicateGameResponseDTO.html#11" title="Go to source code">app/Utility/Game/DTO/AdjudicateGameResponseDTO.php</a><br>
+		</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		<table class="table" id="properties">
+			<tr>
+				<th class="table-heading sortable" colspan="4" title="Switch between natural and alphabetical order">Properties</th>
+			</tr>
+
+	<tr class="expandable collapsed" data-order="applied_orders" id="$applied_orders">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell table-shrink">
+				<code class="nowrap"><a href="App.Utility.Game.DTO.AppliedOrderDTO.html"><span title="App\Utility\Game\DTO\AppliedOrderDTO">AppliedOrderDTO</span></a>[]</code>
+			</td>
+
+			<td class="table-cell">
+<code><var><a href="source-app.Utility.Game.DTO.AdjudicateGameResponseDTO.html#14-16" title="Go to source code">$applied_orders</a></var></code>
+				
+
+	<div class="expandable-expandedView">
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#$applied_orders">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="current_state_encoded" id="$current_state_encoded">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell table-shrink">
+				<code class="nowrap">string</code>
+			</td>
+
+			<td class="table-cell">
+<code><var><a href="source-app.Utility.Game.DTO.AdjudicateGameResponseDTO.html#17" title="Go to source code">$current_state_encoded</a></var></code>
+				
+
+	<div class="expandable-expandedView">
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#$current_state_encoded">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="phase_long" id="$phase_long">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell table-shrink">
+				<code class="nowrap">string</code>
+			</td>
+
+			<td class="table-cell">
+<code><var><a href="source-app.Utility.Game.DTO.AdjudicateGameResponseDTO.html#18" title="Go to source code">$phase_long</a></var></code>
+				
+
+	<div class="expandable-expandedView">
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#$phase_long">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="phase_power_data" id="$phase_power_data">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell table-shrink">
+				<code class="nowrap"><a href="App.Utility.Game.DTO.PhasePowerDataDTO.html"><span title="App\Utility\Game\DTO\PhasePowerDataDTO">PhasePowerDataDTO</span></a>[]</code>
+			</td>
+
+			<td class="table-cell">
+<code><var><a href="source-app.Utility.Game.DTO.AdjudicateGameResponseDTO.html#20-22" title="Go to source code">$phase_power_data</a></var></code>
+				
+
+	<div class="expandable-expandedView">
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#$phase_power_data">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="phase_short" id="$phase_short">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell table-shrink">
+				<code class="nowrap">string</code>
+			</td>
+
+			<td class="table-cell">
+<code><var><a href="source-app.Utility.Game.DTO.AdjudicateGameResponseDTO.html#23" title="Go to source code">$phase_short</a></var></code>
+				
+
+	<div class="expandable-expandedView">
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#$phase_short">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="phase_type" id="$phase_type">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell table-shrink">
+				<code class="nowrap">string</code>
+			</td>
+
+			<td class="table-cell">
+<code><var><a href="source-app.Utility.Game.DTO.AdjudicateGameResponseDTO.html#24" title="Go to source code">$phase_type</a></var></code>
+				
+
+	<div class="expandable-expandedView">
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#$phase_type">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="possible_orders" id="$possible_orders">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell table-shrink">
+				<code class="nowrap"><a href="App.Utility.Game.DTO.PossibleOrderDTO.html"><span title="App\Utility\Game\DTO\PossibleOrderDTO">PossibleOrderDTO</span></a>[]</code>
+			</td>
+
+			<td class="table-cell">
+<code><var><a href="source-app.Utility.Game.DTO.AdjudicateGameResponseDTO.html#26-28" title="Go to source code">$possible_orders</a></var></code>
+				
+
+	<div class="expandable-expandedView">
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#$possible_orders">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="svg_adjudicated" id="$svg_adjudicated">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell table-shrink">
+				<code class="nowrap">string</code>
+			</td>
+
+			<td class="table-cell">
+<code><var><a href="source-app.Utility.Game.DTO.AdjudicateGameResponseDTO.html#29" title="Go to source code">$svg_adjudicated</a></var></code>
+				
+
+	<div class="expandable-expandedView">
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#$svg_adjudicated">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="svg_with_orders" id="$svg_with_orders">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell table-shrink">
+				<code class="nowrap">string</code>
+			</td>
+
+			<td class="table-cell">
+<code><var><a href="source-app.Utility.Game.DTO.AdjudicateGameResponseDTO.html#30" title="Go to source code">$svg_with_orders</a></var></code>
+				
+
+	<div class="expandable-expandedView">
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#$svg_with_orders">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="winners" id="$winners">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell table-shrink">
+				<code class="nowrap">string[]</code>
+			</td>
+
+			<td class="table-cell">
+<code><var><a href="source-app.Utility.Game.DTO.AdjudicateGameResponseDTO.html#32-33" title="Go to source code">$winners</a></var></code>
+				
+
+	<div class="expandable-expandedView">
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#$winners">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="winning_phase" id="$winning_phase">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell table-shrink">
+				<code class="nowrap">string</code>
+			</td>
+
+			<td class="table-cell">
+<code><var><a href="source-app.Utility.Game.DTO.AdjudicateGameResponseDTO.html#34" title="Go to source code">$winning_phase</a></var></code>
+				
+
+	<div class="expandable-expandedView">
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#$winning_phase">#</a>
+		</td>
+	</tr>
+		</table>
+		<table class="table">
+			<tr>
+				<th class="table-heading">Properties inherited from <a href="App.Utility.Game.DTO.BaseDTO.html"><span>App\Utility\Game\DTO\BaseDTO</span></a></th>
+			</tr>
+			<tr>
+				<td class="table-cell">
+<code><var><a href="App.Utility.Game.DTO.BaseDTO.html#$json">$json</a></var></code>				</td>
+			</tr>
+		</table>
+
+
+
+
+
+
+
+
+		</div>
+
+		<div class="layout-footer">
+			 API documentation generated by <a href="https://www.apigen.org">ApiGen dev-master</a>
+		</div>
+	</div>
+
+	<div class="layout-rest">
+		<div class="navbar"></div>
+	</div>
+</body>
+</html>

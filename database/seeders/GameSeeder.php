@@ -3,8 +3,6 @@
 namespace Database\Seeders;
 
 use App\Actions\Game\InitializeGameAction;
-use App\Jobs\AdjudicateGameJob;
-use App\Jobs\InitializeGameJob;
 use App\Models\BasePower;
 use App\Models\Game;
 use App\Models\MessageMode;
@@ -23,8 +21,7 @@ class GameSeeder extends Seeder
      */
     public function run()
     {
-
-        foreach ([0,6] as $i) {
+        foreach ([0, 6] as $i) {
             $variant = Variant::firstOrFail();
             $messageMode = MessageMode::firstOrFail();
 
@@ -37,19 +34,16 @@ class GameSeeder extends Seeder
             ]);
 
             $game->load('variant.basePowers', 'powers');
-            $game->variant->basePowers()->each(fn(BasePower $b) => Power::create([
+            $game->variant->basePowers()->each(fn (BasePower $b) => Power::create([
                 'base_power_id' => $b->id,
                 'game_id' => $game->id,
             ]));
 
             $powers = $game->powers()->whereNull('user_id')->get()->random($i);
 
-            $powers->each(fn(Power $p) => $p->update(['user_id' => User::factory()->create()->id]));
-
+            $powers->each(fn (Power $p) => $p->update(['user_id' => User::factory()->create()->id]));
 
             InitializeGameAction::run($game->id);
         }
-
     }
-
 }

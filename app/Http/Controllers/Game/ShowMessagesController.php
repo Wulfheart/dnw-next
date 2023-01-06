@@ -16,6 +16,7 @@ class ShowMessagesController extends Controller
     {
         $this->authorize('use', $messageRoom);
         $game->loadMissing(['currentPhase', 'powers']);
+
         return view('game.show-message-room', [
             'game' => $game,
             'adjudicationInProgress' => $game->currentPhase->adjudicationStarted(),

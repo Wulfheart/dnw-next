@@ -4,10 +4,7 @@ namespace Database\Seeders;
 
 use App\Models\Game;
 use App\Models\Message;
-use App\Models\MessageRoom;
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-use Illuminate\Support\Facades\DB;
 
 class MessageSeeder extends Seeder
 {
@@ -37,7 +34,6 @@ class MessageSeeder extends Seeder
 
                     // Message::insert($messages);
                 }
-
             }
         }
     }

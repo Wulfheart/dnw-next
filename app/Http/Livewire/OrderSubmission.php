@@ -9,11 +9,13 @@ class OrderSubmission extends Component
 {
     public PhasePowerData $ppd;
 
-    public function onSave(){
+    public function onSave()
+    {
         $this->ppd->update();
     }
 
-    public function onReady(){
+    public function onReady()
+    {
         $this->ppd->update(['ready_for_adjudication' => true]);
     }
 

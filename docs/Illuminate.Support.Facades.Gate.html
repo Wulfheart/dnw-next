@@ -1,0 +1,1274 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Class Illuminate\Support\Facades\Gate |  API</title>
+	<link rel="stylesheet" href="assets/main.css">
+	<script src="assets/main.js" defer></script>
+</head>
+
+<body class="layout">
+	<div class="layout-aside">
+	<div class="menu">
+			<div class="menu-section">
+				<h3>Namespaces</h3>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-App.html">App</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Actions.html">Actions</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Builders.html">Builders</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Collections.html">Collections</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Console.html">Console</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.DTO.html">DTO</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Enums.html">Enums</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Events.html">Events</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Exceptions.html">Exceptions</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Filament.html">Filament</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Http.html">Http</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Mail.html">Mail</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Models.html">Models</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Notifications.html">Notifications</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Policies.html">Policies</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Providers.html">Providers</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Queries.html">Queries</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Utility.html">Utility</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.View.html">View</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.ViewModels.html">ViewModels</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-BeyondCode.html">BeyondCode</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-BeyondCode.ServerTiming.html">ServerTiming</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Clockwork.html">Clockwork</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Clockwork.Support.html">Support</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Database.html">Database</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Database.Factories.html">Factories</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Database.Seeders.html">Seeders</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item active">
+				<a href="namespace-Illuminate.html">Illuminate</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Illuminate.Database.html">Database</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Illuminate.Filesystem.html">Filesystem</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Illuminate.Http.html">Http</a>
+			</li>
+			<li class="menuGroup-item active">
+				<a href="namespace-Illuminate.Support.html">Support</a>
+	<ul>
+			<li class="menuGroup-item active">
+				<a href="namespace-Illuminate.Support.Facades.html">Facades</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Illuminate.Testing.html">Testing</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Illuminate.View.html">View</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Jenssegers.html">Jenssegers</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Jenssegers.Agent.html">Agent</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Livewire.html">Livewire</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Livewire.Testing.html">Testing</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Lorisleiva.html">Lorisleiva</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Lorisleiva.Actions.html">Actions</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Lorisleiva.Lody.html">Lody</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Spatie.html">Spatie</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Spatie.LaravelIgnition.html">LaravelIgnition</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Tests.html">Tests</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Tests.Browser.html">Browser</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Tests.Feature.html">Feature</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-none.html">none</a>
+			</li>
+	</ul>
+			</div>
+
+		<div class="menu-section">
+			<h3>Classes</h3>
+			<ul>
+					<li>
+						<a href="Illuminate.Support.Facades.App.html">
+							App
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Artisan.html">
+							Artisan
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Auth.html">
+							Auth
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Blade.html">
+							Blade
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Broadcast.html">
+							Broadcast
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Bus.html">
+							Bus
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Cache.html">
+							Cache
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Config.html">
+							Config
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Cookie.html">
+							Cookie
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Crypt.html">
+							Crypt
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Date.html">
+							Date
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.DB.html">
+							DB
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Event.html">
+							Event
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.File.html">
+							File
+						</a>
+					</li>
+					<li class="active">
+						<a href="Illuminate.Support.Facades.Gate.html">
+							Gate
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Hash.html">
+							Hash
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Http.html">
+							Http
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Lang.html">
+							Lang
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Log.html">
+							Log
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Mail.html">
+							Mail
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Notification.html">
+							Notification
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Password.html">
+							Password
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Queue.html">
+							Queue
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.RateLimiter.html">
+							RateLimiter
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Redirect.html">
+							Redirect
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Request.html">
+							Request
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Response.html">
+							Response
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Route.html">
+							Route
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Schema.html">
+							Schema
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Session.html">
+							Session
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Storage.html">
+							Storage
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.URL.html">
+							URL
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Validator.html">
+							Validator
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.View.html">
+							View
+						</a>
+					</li>
+			</ul>
+		</div>
+
+
+
+
+
+	</div>
+	</div>
+
+	<div class="layout-main">
+		<div class="layout-navbar">
+	<nav class="navbar">
+		<div class="navbar-left">
+			<ul class="navbar-links">
+				<li>
+					<a href="index.html">Overview</a>
+				</li>
+				<li>
+					
+						<a href="namespace-Illuminate.Support.Facades.html">Namespace</a>
+					
+				</li>
+<li class="active"><a href="Illuminate.Support.Facades.Gate.html">Class</a></li>				<li>
+					<a href="tree.html">Tree</a>
+				</li>
+			</ul>
+		</div>
+		<div class="navbar-right">
+	<div class="search" data-elements="assets/elements.js">
+		<input class="search-input" placeholder="Search class, function or namespace" autofocus>
+		<ul class="search-results"></ul>
+	</div>
+		</div>
+	</nav>
+		</div>
+
+		<div class="layout-content">
+		<h1>
+			Class <a href="namespace-Illuminate.html">Illuminate</a>\<a href="namespace-Illuminate.Support.html">Support</a>\<a href="namespace-Illuminate.Support.Facades.html">Facades</a>\<a href="Illuminate.Support.Facades.Gate.html">Gate</a>
+		</h1>
+
+
+	<table class="classLikeSignatureTable">
+
+
+
+
+	</table>
+
+			<div class="classLikeSection">
+	<ul class="classTree">
+	<li>
+<b><span class="active">Illuminate\Support\Facades\Gate</span></b>
+
+
+	<ul class="classTree">
+	<li>
+<a href="Gate.html"><span>Gate</span></a>
+
+
+	</li>
+	</ul>
+	</li>
+	</ul>
+			</div>
+
+		<div class="classLikeSection">
+			<b>Located at</b> <a href="source-_ide_helper.html#6848" title="Go to source code">_ide_helper.php</a><br>
+		</div>
+
+
+		<table class="table" id="methods">
+			<tr>
+				<th class="table-heading sortable" colspan="3" title="Switch between natural and alphabetical order">Methods</th>
+			</tr>
+
+	<tr class="expandable collapsed" data-order="has" id="_has">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#6849-6860" title="Go to source code">has</a>(<span>string|array <var>$ability</var></span>): bool</code>
+
+
+	<div class="expandable-collapsedView">
+		Determine if a given ability has been defined.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Determine if a given ability has been defined.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_has">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="allowIf" id="_allowIf">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#6861-6875" title="Go to source code">allowIf</a>(<span><span title="Illuminate\Auth\Access\Response">Response</span>|<a href="Closure.html"><span title="Closure">Closure</span></a>|bool <var>$condition</var></span>, <span>string|null <var>$message</var> = <span class="php-kw">null</span></span>, <span>string|null <var>$code</var> = <span class="php-kw">null</span></span>): <span title="Illuminate\Auth\Access\Response">Response</span></code>
+
+
+	<div class="expandable-collapsedView">
+		Perform an on-demand authorization check. Throw an authorization exception if the condition or callback is false.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Perform an on-demand authorization check. Throw an authorization exception if the condition or callback is false.</p>
+</div>
+
+
+
+							<h4>Throws</h4>
+							<table>
+									<tr>
+										<td><code><span>Illuminate\Auth\Access\AuthorizationException</span></code>&nbsp;</td>
+										<td></td>
+									</tr>
+							</table>
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_allowIf">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="denyIf" id="_denyIf">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#6876-6890" title="Go to source code">denyIf</a>(<span><span title="Illuminate\Auth\Access\Response">Response</span>|<a href="Closure.html"><span title="Closure">Closure</span></a>|bool <var>$condition</var></span>, <span>string|null <var>$message</var> = <span class="php-kw">null</span></span>, <span>string|null <var>$code</var> = <span class="php-kw">null</span></span>): <span title="Illuminate\Auth\Access\Response">Response</span></code>
+
+
+	<div class="expandable-collapsedView">
+		Perform an on-demand authorization check. Throw an authorization exception if the condition or callback is true.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Perform an on-demand authorization check. Throw an authorization exception if the condition or callback is true.</p>
+</div>
+
+
+
+							<h4>Throws</h4>
+							<table>
+									<tr>
+										<td><code><span>Illuminate\Auth\Access\AuthorizationException</span></code>&nbsp;</td>
+										<td></td>
+									</tr>
+							</table>
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_denyIf">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="define" id="_define">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#6891-6904" title="Go to source code">define</a>(<span>string <var>$ability</var></span>, <span>callable|array|string <var>$callback</var></span>): <span title="Illuminate\Auth\Access\Gate">Gate</span></code>
+
+
+	<div class="expandable-collapsedView">
+		Define a new ability.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Define a new ability.</p>
+</div>
+
+
+
+							<h4>Throws</h4>
+							<table>
+									<tr>
+										<td><code><a href="InvalidArgumentException.html"><span>InvalidArgumentException</span></a></code>&nbsp;</td>
+										<td></td>
+									</tr>
+							</table>
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_define">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="resource" id="_resource">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#6905-6918" title="Go to source code">resource</a>(<span>string <var>$name</var></span>, <span>string <var>$class</var></span>, <span>array|null <var>$abilities</var> = <span class="php-kw">null</span></span>): <span title="Illuminate\Auth\Access\Gate">Gate</span></code>
+
+
+	<div class="expandable-collapsedView">
+		Define abilities for a resource.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Define abilities for a resource.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_resource">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="policy" id="_policy">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#6919-6931" title="Go to source code">policy</a>(<span>string <var>$class</var></span>, <span>string <var>$policy</var></span>): <span title="Illuminate\Auth\Access\Gate">Gate</span></code>
+
+
+	<div class="expandable-collapsedView">
+		Define a policy class for a given class type.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Define a policy class for a given class type.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_policy">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="before" id="_before">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#6932-6943" title="Go to source code">before</a>(<span>callable <var>$callback</var></span>): <span title="Illuminate\Auth\Access\Gate">Gate</span></code>
+
+
+	<div class="expandable-collapsedView">
+		Register a callback to run before all Gate checks.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Register a callback to run before all Gate checks.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_before">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="after" id="_after">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#6944-6955" title="Go to source code">after</a>(<span>callable <var>$callback</var></span>): <span title="Illuminate\Auth\Access\Gate">Gate</span></code>
+
+
+	<div class="expandable-collapsedView">
+		Register a callback to run after all Gate checks.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Register a callback to run after all Gate checks.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_after">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="allows" id="_allows">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#6956-6968" title="Go to source code">allows</a>(<span>string <var>$ability</var></span>, <span>array|mixed <var>$arguments</var> = []</span>): bool</code>
+
+
+	<div class="expandable-collapsedView">
+		Determine if the given ability should be granted for the current user.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Determine if the given ability should be granted for the current user.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_allows">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="denies" id="_denies">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#6969-6981" title="Go to source code">denies</a>(<span>string <var>$ability</var></span>, <span>array|mixed <var>$arguments</var> = []</span>): bool</code>
+
+
+	<div class="expandable-collapsedView">
+		Determine if the given ability should be denied for the current user.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Determine if the given ability should be denied for the current user.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_denies">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="check" id="_check">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#6982-6994" title="Go to source code">check</a>(<span><span title="Illuminate\Auth\Access\iterable">iterable</span>|string <var>$abilities</var></span>, <span>array|mixed <var>$arguments</var> = []</span>): bool</code>
+
+
+	<div class="expandable-collapsedView">
+		Determine if all of the given abilities should be granted for the current user.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Determine if all of the given abilities should be granted for the current user.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_check">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="any" id="_any">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#6995-7007" title="Go to source code">any</a>(<span><span title="Illuminate\Auth\Access\iterable">iterable</span>|string <var>$abilities</var></span>, <span>array|mixed <var>$arguments</var> = []</span>): bool</code>
+
+
+	<div class="expandable-collapsedView">
+		Determine if any one of the given abilities should be granted for the current user.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Determine if any one of the given abilities should be granted for the current user.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_any">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="none" id="_none">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#7008-7020" title="Go to source code">none</a>(<span><span title="Illuminate\Auth\Access\iterable">iterable</span>|string <var>$abilities</var></span>, <span>array|mixed <var>$arguments</var> = []</span>): bool</code>
+
+
+	<div class="expandable-collapsedView">
+		Determine if all of the given abilities should be denied for the current user.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Determine if all of the given abilities should be denied for the current user.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_none">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="authorize" id="_authorize">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#7021-7034" title="Go to source code">authorize</a>(<span>string <var>$ability</var></span>, <span>array|mixed <var>$arguments</var> = []</span>): <span title="Illuminate\Auth\Access\Response">Response</span></code>
+
+
+	<div class="expandable-collapsedView">
+		Determine if the given ability should be granted for the current user.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Determine if the given ability should be granted for the current user.</p>
+</div>
+
+
+
+							<h4>Throws</h4>
+							<table>
+									<tr>
+										<td><code><span>Illuminate\Auth\Access\AuthorizationException</span></code>&nbsp;</td>
+										<td></td>
+									</tr>
+							</table>
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_authorize">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="inspect" id="_inspect">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#7035-7047" title="Go to source code">inspect</a>(<span>string <var>$ability</var></span>, <span>array|mixed <var>$arguments</var> = []</span>): <span title="Illuminate\Auth\Access\Response">Response</span></code>
+
+
+	<div class="expandable-collapsedView">
+		Inspect the user for the given ability.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Inspect the user for the given ability.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_inspect">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="raw" id="_raw">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#7048-7061" title="Go to source code">raw</a>(<span>string <var>$ability</var></span>, <span>array|mixed <var>$arguments</var> = []</span>): mixed</code>
+
+
+	<div class="expandable-collapsedView">
+		Get the raw result from the authorization callback.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Get the raw result from the authorization callback.</p>
+</div>
+
+
+
+							<h4>Throws</h4>
+							<table>
+									<tr>
+										<td><code><span>Illuminate\Auth\Access\AuthorizationException</span></code>&nbsp;</td>
+										<td></td>
+									</tr>
+							</table>
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_raw">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="getPolicyFor" id="_getPolicyFor">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#7062-7073" title="Go to source code">getPolicyFor</a>(<span>object|string <var>$class</var></span>): mixed</code>
+
+
+	<div class="expandable-collapsedView">
+		Get a policy instance for a given class.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Get a policy instance for a given class.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_getPolicyFor">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="guessPolicyNamesUsing" id="_guessPolicyNamesUsing">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#7074-7085" title="Go to source code">guessPolicyNamesUsing</a>(<span>callable <var>$callback</var></span>): <span title="Illuminate\Auth\Access\Gate">Gate</span></code>
+
+
+	<div class="expandable-collapsedView">
+		Specify a callback to be used to guess policy names.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Specify a callback to be used to guess policy names.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_guessPolicyNamesUsing">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="resolvePolicy" id="_resolvePolicy">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#7086-7098" title="Go to source code">resolvePolicy</a>(<span>object|string <var>$class</var></span>): mixed</code>
+
+
+	<div class="expandable-collapsedView">
+		Build a policy class instance of the given type.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Build a policy class instance of the given type.</p>
+</div>
+
+
+
+							<h4>Throws</h4>
+							<table>
+									<tr>
+										<td><code><span>Illuminate\Contracts\Container\BindingResolutionException</span></code>&nbsp;</td>
+										<td></td>
+									</tr>
+							</table>
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_resolvePolicy">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="forUser" id="_forUser">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#7099-7110" title="Go to source code">forUser</a>(<span><span title="Illuminate\Contracts\Auth\Authenticatable">Authenticatable</span>|mixed <var>$user</var></span>): static</code>
+
+
+	<div class="expandable-collapsedView">
+		Get a gate instance for the given user.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Get a gate instance for the given user.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_forUser">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="abilities" id="_abilities">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#7111-7121" title="Go to source code">abilities</a>(): array</code>
+
+
+	<div class="expandable-collapsedView">
+		Get all of the defined abilities.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Get all of the defined abilities.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_abilities">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="policies" id="_policies">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#7122-7132" title="Go to source code">policies</a>(): array</code>
+
+
+	<div class="expandable-collapsedView">
+		Get all of the defined policies.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Get all of the defined policies.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_policies">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="setContainer" id="_setContainer">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#7133-7144" title="Go to source code">setContainer</a>(<span><span title="Illuminate\Contracts\Container\Container">Container</span> <var>$container</var></span>): <span title="Illuminate\Auth\Access\Gate">Gate</span></code>
+
+
+	<div class="expandable-collapsedView">
+		Set the container instance used by the gate.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Set the container instance used by the gate.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_setContainer">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="denyWithStatus" id="_denyWithStatus">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#7145-7158" title="Go to source code">denyWithStatus</a>(<span>int <var>$status</var></span>, <span><var>$message</var> = <span class="php-kw">null</span></span>, <span><var>$code</var> = <span class="php-kw">null</span></span>): <span title="Illuminate\Auth\Access\Response">Response</span></code>
+
+
+	<div class="expandable-collapsedView">
+		Deny with a HTTP status code.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Deny with a HTTP status code.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_denyWithStatus">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="denyAsNotFound" id="_denyAsNotFound">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#7159-7171" title="Go to source code">denyAsNotFound</a>(<span><var>$message</var> = <span class="php-kw">null</span></span>, <span><var>$code</var> = <span class="php-kw">null</span></span>): <span title="Illuminate\Auth\Access\Response">Response</span></code>
+
+
+	<div class="expandable-collapsedView">
+		Deny with a 404 HTTP status code.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Deny with a 404 HTTP status code.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_denyAsNotFound">#</a>
+		</td>
+	</tr>
+		</table>
+
+
+
+
+
+
+
+
+		</div>
+
+		<div class="layout-footer">
+			 API documentation generated by <a href="https://www.apigen.org">ApiGen dev-master</a>
+		</div>
+	</div>
+
+	<div class="layout-rest">
+		<div class="navbar"></div>
+	</div>
+</body>
+</html>

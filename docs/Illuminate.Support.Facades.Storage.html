@@ -1,0 +1,2355 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Class Illuminate\Support\Facades\Storage |  API</title>
+	<link rel="stylesheet" href="assets/main.css">
+	<script src="assets/main.js" defer></script>
+</head>
+
+<body class="layout">
+	<div class="layout-aside">
+	<div class="menu">
+			<div class="menu-section">
+				<h3>Namespaces</h3>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-App.html">App</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Actions.html">Actions</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Builders.html">Builders</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Collections.html">Collections</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Console.html">Console</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.DTO.html">DTO</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Enums.html">Enums</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Events.html">Events</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Exceptions.html">Exceptions</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Filament.html">Filament</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Http.html">Http</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Mail.html">Mail</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Models.html">Models</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Notifications.html">Notifications</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Policies.html">Policies</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Providers.html">Providers</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Queries.html">Queries</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Utility.html">Utility</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.View.html">View</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.ViewModels.html">ViewModels</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-BeyondCode.html">BeyondCode</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-BeyondCode.ServerTiming.html">ServerTiming</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Clockwork.html">Clockwork</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Clockwork.Support.html">Support</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Database.html">Database</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Database.Factories.html">Factories</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Database.Seeders.html">Seeders</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item active">
+				<a href="namespace-Illuminate.html">Illuminate</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Illuminate.Database.html">Database</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Illuminate.Filesystem.html">Filesystem</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Illuminate.Http.html">Http</a>
+			</li>
+			<li class="menuGroup-item active">
+				<a href="namespace-Illuminate.Support.html">Support</a>
+	<ul>
+			<li class="menuGroup-item active">
+				<a href="namespace-Illuminate.Support.Facades.html">Facades</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Illuminate.Testing.html">Testing</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Illuminate.View.html">View</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Jenssegers.html">Jenssegers</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Jenssegers.Agent.html">Agent</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Livewire.html">Livewire</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Livewire.Testing.html">Testing</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Lorisleiva.html">Lorisleiva</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Lorisleiva.Actions.html">Actions</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Lorisleiva.Lody.html">Lody</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Spatie.html">Spatie</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Spatie.LaravelIgnition.html">LaravelIgnition</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Tests.html">Tests</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Tests.Browser.html">Browser</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Tests.Feature.html">Feature</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-none.html">none</a>
+			</li>
+	</ul>
+			</div>
+
+		<div class="menu-section">
+			<h3>Classes</h3>
+			<ul>
+					<li>
+						<a href="Illuminate.Support.Facades.App.html">
+							App
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Artisan.html">
+							Artisan
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Auth.html">
+							Auth
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Blade.html">
+							Blade
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Broadcast.html">
+							Broadcast
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Bus.html">
+							Bus
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Cache.html">
+							Cache
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Config.html">
+							Config
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Cookie.html">
+							Cookie
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Crypt.html">
+							Crypt
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Date.html">
+							Date
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.DB.html">
+							DB
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Event.html">
+							Event
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.File.html">
+							File
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Gate.html">
+							Gate
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Hash.html">
+							Hash
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Http.html">
+							Http
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Lang.html">
+							Lang
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Log.html">
+							Log
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Mail.html">
+							Mail
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Notification.html">
+							Notification
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Password.html">
+							Password
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Queue.html">
+							Queue
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.RateLimiter.html">
+							RateLimiter
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Redirect.html">
+							Redirect
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Request.html">
+							Request
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Response.html">
+							Response
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Route.html">
+							Route
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Schema.html">
+							Schema
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Session.html">
+							Session
+						</a>
+					</li>
+					<li class="active">
+						<a href="Illuminate.Support.Facades.Storage.html">
+							Storage
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.URL.html">
+							URL
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Validator.html">
+							Validator
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.View.html">
+							View
+						</a>
+					</li>
+			</ul>
+		</div>
+
+
+
+
+
+	</div>
+	</div>
+
+	<div class="layout-main">
+		<div class="layout-navbar">
+	<nav class="navbar">
+		<div class="navbar-left">
+			<ul class="navbar-links">
+				<li>
+					<a href="index.html">Overview</a>
+				</li>
+				<li>
+					
+						<a href="namespace-Illuminate.Support.Facades.html">Namespace</a>
+					
+				</li>
+<li class="active"><a href="Illuminate.Support.Facades.Storage.html">Class</a></li>				<li>
+					<a href="tree.html">Tree</a>
+				</li>
+			</ul>
+		</div>
+		<div class="navbar-right">
+	<div class="search" data-elements="assets/elements.js">
+		<input class="search-input" placeholder="Search class, function or namespace" autofocus>
+		<ul class="search-results"></ul>
+	</div>
+		</div>
+	</nav>
+		</div>
+
+		<div class="layout-content">
+		<h1>
+			Class <a href="namespace-Illuminate.html">Illuminate</a>\<a href="namespace-Illuminate.Support.html">Support</a>\<a href="namespace-Illuminate.Support.Facades.html">Facades</a>\<a href="Illuminate.Support.Facades.Storage.html">Storage</a>
+		</h1>
+
+
+	<table class="classLikeSignatureTable">
+
+
+
+
+	</table>
+
+			<div class="classLikeSection">
+	<ul class="classTree">
+	<li>
+<b><span class="active">Illuminate\Support\Facades\Storage</span></b>
+
+
+	<ul class="classTree">
+	<li>
+<a href="Storage.html"><span>Storage</span></a>
+
+
+	</li>
+	</ul>
+	</li>
+	</ul>
+			</div>
+
+		<div class="classLikeSection">
+			<b>Located at</b> <a href="source-_ide_helper.html#14340" title="Go to source code">_ide_helper.php</a><br>
+		</div>
+
+
+		<table class="table" id="methods">
+			<tr>
+				<th class="table-heading sortable" colspan="3" title="Switch between natural and alphabetical order">Methods</th>
+			</tr>
+
+	<tr class="expandable collapsed" data-order="drive" id="_drive">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#14341-14352" title="Go to source code">drive</a>(<span>string|null <var>$name</var> = <span class="php-kw">null</span></span>): <span title="Illuminate\Filesystem\FilesystemAdapter">FilesystemAdapter</span></code>
+
+
+	<div class="expandable-collapsedView">
+		Get a filesystem instance.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Get a filesystem instance.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_drive">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="disk" id="_disk">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#14353-14364" title="Go to source code">disk</a>(<span>string|null <var>$name</var> = <span class="php-kw">null</span></span>): <span title="Illuminate\Filesystem\FilesystemAdapter">FilesystemAdapter</span></code>
+
+
+	<div class="expandable-collapsedView">
+		Get a filesystem instance.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Get a filesystem instance.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_disk">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="cloud" id="_cloud">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#14365-14375" title="Go to source code">cloud</a>(): <span title="Illuminate\Filesystem\FilesystemAdapter">FilesystemAdapter</span></code>
+
+
+	<div class="expandable-collapsedView">
+		Get a default cloud filesystem instance.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Get a default cloud filesystem instance.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_cloud">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="build" id="_build">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#14376-14387" title="Go to source code">build</a>(<span>string|array <var>$config</var></span>): <span title="Illuminate\Filesystem\FilesystemAdapter">FilesystemAdapter</span></code>
+
+
+	<div class="expandable-collapsedView">
+		Build an on-demand disk.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Build an on-demand disk.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_build">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="createLocalDriver" id="_createLocalDriver">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#14388-14399" title="Go to source code">createLocalDriver</a>(<span>array <var>$config</var></span>): <span title="Illuminate\Filesystem\FilesystemAdapter">FilesystemAdapter</span></code>
+
+
+	<div class="expandable-collapsedView">
+		Create an instance of the local driver.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Create an instance of the local driver.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_createLocalDriver">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="createFtpDriver" id="_createFtpDriver">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#14400-14411" title="Go to source code">createFtpDriver</a>(<span>array <var>$config</var></span>): <span title="Illuminate\Filesystem\FilesystemAdapter">FilesystemAdapter</span></code>
+
+
+	<div class="expandable-collapsedView">
+		Create an instance of the ftp driver.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Create an instance of the ftp driver.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_createFtpDriver">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="createSftpDriver" id="_createSftpDriver">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#14412-14423" title="Go to source code">createSftpDriver</a>(<span>array <var>$config</var></span>): <span title="Illuminate\Filesystem\FilesystemAdapter">FilesystemAdapter</span></code>
+
+
+	<div class="expandable-collapsedView">
+		Create an instance of the sftp driver.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Create an instance of the sftp driver.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_createSftpDriver">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="createS3Driver" id="_createS3Driver">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#14424-14435" title="Go to source code">createS3Driver</a>(<span>array <var>$config</var></span>): <span title="Illuminate\Contracts\Filesystem\Cloud">Cloud</span></code>
+
+
+	<div class="expandable-collapsedView">
+		Create an instance of the Amazon S3 driver.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Create an instance of the Amazon S3 driver.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_createS3Driver">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="set" id="_set">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#14436-14448" title="Go to source code">set</a>(<span>string <var>$name</var></span>, <span>mixed <var>$disk</var></span>): <span title="Illuminate\Filesystem\FilesystemManager">FilesystemManager</span></code>
+
+
+	<div class="expandable-collapsedView">
+		Set the given disk instance.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Set the given disk instance.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_set">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="getDefaultDriver" id="_getDefaultDriver">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#14449-14459" title="Go to source code">getDefaultDriver</a>(): string</code>
+
+
+	<div class="expandable-collapsedView">
+		Get the default driver name.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Get the default driver name.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_getDefaultDriver">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="getDefaultCloudDriver" id="_getDefaultCloudDriver">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#14460-14470" title="Go to source code">getDefaultCloudDriver</a>(): string</code>
+
+
+	<div class="expandable-collapsedView">
+		Get the default cloud driver name.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Get the default cloud driver name.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_getDefaultCloudDriver">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="forgetDisk" id="_forgetDisk">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#14471-14482" title="Go to source code">forgetDisk</a>(<span>array|string <var>$disk</var></span>): <span title="Illuminate\Filesystem\FilesystemManager">FilesystemManager</span></code>
+
+
+	<div class="expandable-collapsedView">
+		Unset the given disk instances.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Unset the given disk instances.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_forgetDisk">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="purge" id="_purge">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#14483-14494" title="Go to source code">purge</a>(<span>string|null <var>$name</var> = <span class="php-kw">null</span></span>): void</code>
+
+
+	<div class="expandable-collapsedView">
+		Disconnect the given disk and remove from local cache.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Disconnect the given disk and remove from local cache.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_purge">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="extend" id="_extend">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#14495-14507" title="Go to source code">extend</a>(<span>string <var>$driver</var></span>, <span><a href="Closure.html"><span title="Closure">Closure</span></a> <var>$callback</var></span>): <span title="Illuminate\Filesystem\FilesystemManager">FilesystemManager</span></code>
+
+
+	<div class="expandable-collapsedView">
+		Register a custom driver creator Closure.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Register a custom driver creator Closure.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_extend">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="setApplication" id="_setApplication">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#14508-14519" title="Go to source code">setApplication</a>(<span><span title="Illuminate\Contracts\Foundation\Application">Application</span> <var>$app</var></span>): <span title="Illuminate\Filesystem\FilesystemManager">FilesystemManager</span></code>
+
+
+	<div class="expandable-collapsedView">
+		Set the application instance used by the manager.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Set the application instance used by the manager.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_setApplication">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="assertExists" id="_assertExists">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#14520-14532" title="Go to source code">assertExists</a>(<span>string|array <var>$path</var></span>, <span>string|null <var>$content</var> = <span class="php-kw">null</span></span>): <span title="Illuminate\Filesystem\FilesystemAdapter">FilesystemAdapter</span></code>
+
+
+	<div class="expandable-collapsedView">
+		Assert that the given file or directory exists.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Assert that the given file or directory exists.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_assertExists">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="assertMissing" id="_assertMissing">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#14533-14544" title="Go to source code">assertMissing</a>(<span>string|array <var>$path</var></span>): <span title="Illuminate\Filesystem\FilesystemAdapter">FilesystemAdapter</span></code>
+
+
+	<div class="expandable-collapsedView">
+		Assert that the given file or directory does not exist.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Assert that the given file or directory does not exist.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_assertMissing">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="assertDirectoryEmpty" id="_assertDirectoryEmpty">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#14545-14556" title="Go to source code">assertDirectoryEmpty</a>(<span>string <var>$path</var></span>): <span title="Illuminate\Filesystem\FilesystemAdapter">FilesystemAdapter</span></code>
+
+
+	<div class="expandable-collapsedView">
+		Assert that the given directory is empty.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Assert that the given directory is empty.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_assertDirectoryEmpty">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="exists" id="_exists">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#14557-14568" title="Go to source code">exists</a>(<span>string <var>$path</var></span>): bool</code>
+
+
+	<div class="expandable-collapsedView">
+		Determine if a file or directory exists.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Determine if a file or directory exists.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_exists">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="missing" id="_missing">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#14569-14580" title="Go to source code">missing</a>(<span>string <var>$path</var></span>): bool</code>
+
+
+	<div class="expandable-collapsedView">
+		Determine if a file or directory is missing.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Determine if a file or directory is missing.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_missing">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="fileExists" id="_fileExists">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#14581-14592" title="Go to source code">fileExists</a>(<span>string <var>$path</var></span>): bool</code>
+
+
+	<div class="expandable-collapsedView">
+		Determine if a file exists.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Determine if a file exists.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_fileExists">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="fileMissing" id="_fileMissing">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#14593-14604" title="Go to source code">fileMissing</a>(<span>string <var>$path</var></span>): bool</code>
+
+
+	<div class="expandable-collapsedView">
+		Determine if a file is missing.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Determine if a file is missing.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_fileMissing">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="directoryExists" id="_directoryExists">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#14605-14616" title="Go to source code">directoryExists</a>(<span>string <var>$path</var></span>): bool</code>
+
+
+	<div class="expandable-collapsedView">
+		Determine if a directory exists.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Determine if a directory exists.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_directoryExists">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="directoryMissing" id="_directoryMissing">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#14617-14628" title="Go to source code">directoryMissing</a>(<span>string <var>$path</var></span>): bool</code>
+
+
+	<div class="expandable-collapsedView">
+		Determine if a directory is missing.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Determine if a directory is missing.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_directoryMissing">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="path" id="_path">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#14629-14640" title="Go to source code">path</a>(<span>string <var>$path</var></span>): string</code>
+
+
+	<div class="expandable-collapsedView">
+		Get the full path for the file at the given "short" path.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Get the full path for the file at the given &quot;short&quot; path.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_path">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="get" id="_get">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#14641-14652" title="Go to source code">get</a>(<span>string <var>$path</var></span>): string|null</code>
+
+
+	<div class="expandable-collapsedView">
+		Get the contents of a file.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Get the contents of a file.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_get">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="response" id="_response">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#14653-14667" title="Go to source code">response</a>(
+	<span>string <var>$path</var></span>,
+	<span>string|null <var>$name</var> = <span class="php-kw">null</span></span>,
+	<span>array <var>$headers</var> = []</span>,
+	<span>string|null <var>$disposition</var> = <span class="php-str">'inline'</span></span>,
+): <span title="Symfony\Component\HttpFoundation\StreamedResponse">StreamedResponse</span></code>
+
+
+	<div class="expandable-collapsedView">
+		Create a streamed response for a given file.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Create a streamed response for a given file.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_response">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="download" id="_download">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#14668-14680" title="Go to source code">download</a>(<span>string <var>$path</var></span>, <span>string|null <var>$name</var> = <span class="php-kw">null</span></span>, <span><var>$headers</var> = []</span>): <span title="Symfony\Component\HttpFoundation\StreamedResponse">StreamedResponse</span></code>
+
+
+	<div class="expandable-collapsedView">
+		Create a streamed download response for a given file.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Create a streamed download response for a given file.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_download">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="put" id="_put">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#14681-14694" title="Go to source code">put</a>(<span>string <var>$path</var></span>, <span><span title="Psr\Http\Message\StreamInterface">StreamInterface</span>|<span title="Illuminate\Http\File">File</span>|<span title="Illuminate\Http\UploadedFile">UploadedFile</span>|string|resource <var>$contents</var></span>, <span>mixed <var>$options</var> = []</span>): string|bool</code>
+
+
+	<div class="expandable-collapsedView">
+		Write the contents of a file.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Write the contents of a file.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_put">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="putFile" id="_putFile">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#14695-14708" title="Go to source code">putFile</a>(<span>string <var>$path</var></span>, <span><span title="Illuminate\Http\File">File</span>|<span title="Illuminate\Http\UploadedFile">UploadedFile</span>|string <var>$file</var></span>, <span>mixed <var>$options</var> = []</span>): string|false</code>
+
+
+	<div class="expandable-collapsedView">
+		Store the uploaded file on the disk.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Store the uploaded file on the disk.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_putFile">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="putFileAs" id="_putFileAs">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#14709-14723" title="Go to source code">putFileAs</a>(<span>string <var>$path</var></span>, <span><span title="Illuminate\Http\File">File</span>|<span title="Illuminate\Http\UploadedFile">UploadedFile</span>|string <var>$file</var></span>, <span>string <var>$name</var></span>, <span>mixed <var>$options</var> = []</span>): string|false</code>
+
+
+	<div class="expandable-collapsedView">
+		Store the uploaded file on the disk with a given name.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Store the uploaded file on the disk with a given name.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_putFileAs">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="getVisibility" id="_getVisibility">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#14724-14735" title="Go to source code">getVisibility</a>(<span>string <var>$path</var></span>): string</code>
+
+
+	<div class="expandable-collapsedView">
+		Get the visibility for the given path.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Get the visibility for the given path.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_getVisibility">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="setVisibility" id="_setVisibility">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#14736-14748" title="Go to source code">setVisibility</a>(<span>string <var>$path</var></span>, <span>string <var>$visibility</var></span>): bool</code>
+
+
+	<div class="expandable-collapsedView">
+		Set the visibility for the given path.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Set the visibility for the given path.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_setVisibility">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="prepend" id="_prepend">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#14749-14763" title="Go to source code">prepend</a>(<span>string <var>$path</var></span>, <span>string <var>$data</var></span>, <span>string <var>$separator</var> = <span class="php-str">'
+'</span></span>): bool</code>
+
+
+	<div class="expandable-collapsedView">
+		Prepend to a file.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Prepend to a file.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_prepend">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="append" id="_append">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#14764-14778" title="Go to source code">append</a>(<span>string <var>$path</var></span>, <span>string <var>$data</var></span>, <span>string <var>$separator</var> = <span class="php-str">'
+'</span></span>): bool</code>
+
+
+	<div class="expandable-collapsedView">
+		Append to a file.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Append to a file.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_append">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="delete" id="_delete">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#14779-14790" title="Go to source code">delete</a>(<span>string|array <var>$paths</var></span>): bool</code>
+
+
+	<div class="expandable-collapsedView">
+		Delete the file at a given path.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Delete the file at a given path.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_delete">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="copy" id="_copy">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#14791-14803" title="Go to source code">copy</a>(<span>string <var>$from</var></span>, <span>string <var>$to</var></span>): bool</code>
+
+
+	<div class="expandable-collapsedView">
+		Copy a file to a new location.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Copy a file to a new location.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_copy">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="move" id="_move">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#14804-14816" title="Go to source code">move</a>(<span>string <var>$from</var></span>, <span>string <var>$to</var></span>): bool</code>
+
+
+	<div class="expandable-collapsedView">
+		Move a file to a new location.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Move a file to a new location.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_move">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="size" id="_size">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#14817-14828" title="Go to source code">size</a>(<span>string <var>$path</var></span>): int</code>
+
+
+	<div class="expandable-collapsedView">
+		Get the file size of a given file.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Get the file size of a given file.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_size">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="mimeType" id="_mimeType">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#14829-14840" title="Go to source code">mimeType</a>(<span>string <var>$path</var></span>): string|false</code>
+
+
+	<div class="expandable-collapsedView">
+		Get the mime-type of a given file.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Get the mime-type of a given file.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_mimeType">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="lastModified" id="_lastModified">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#14841-14852" title="Go to source code">lastModified</a>(<span>string <var>$path</var></span>): int</code>
+
+
+	<div class="expandable-collapsedView">
+		Get the file's last modification time.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Get the file's last modification time.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_lastModified">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="readStream" id="_readStream">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#14853-14864" title="Go to source code">readStream</a>(<span>string <var>$path</var></span>): resource|null</code>
+
+
+	<div class="expandable-collapsedView">
+		Get a resource to read the file.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Get a resource to read the file.</p>
+</div>
+
+
+							<h4>Returns</h4>
+							<div><p>The path resource or null on failure.</p>
+</div>
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_readStream">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="writeStream" id="_writeStream">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#14865-14878" title="Go to source code">writeStream</a>(<span>string <var>$path</var></span>, <span>resource <var>$resource</var></span>, <span>array <var>$options</var> = []</span>): bool</code>
+
+
+	<div class="expandable-collapsedView">
+		Write a new file using a stream.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Write a new file using a stream.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_writeStream">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="url" id="_url">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#14879-14891" title="Go to source code">url</a>(<span>string <var>$path</var></span>): string</code>
+
+
+	<div class="expandable-collapsedView">
+		Get the URL for the file at the given path.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Get the URL for the file at the given path.</p>
+</div>
+
+
+
+							<h4>Throws</h4>
+							<table>
+									<tr>
+										<td><code><a href="RuntimeException.html"><span>RuntimeException</span></a></code>&nbsp;</td>
+										<td></td>
+									</tr>
+							</table>
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_url">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="temporaryUrl" id="_temporaryUrl">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#14892-14906" title="Go to source code">temporaryUrl</a>(<span>string <var>$path</var></span>, <span><a href="DateTimeInterface.html"><span title="DateTimeInterface">DateTimeInterface</span></a> <var>$expiration</var></span>, <span>array <var>$options</var> = []</span>): string</code>
+
+
+	<div class="expandable-collapsedView">
+		Get a temporary URL for the file at the given path.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Get a temporary URL for the file at the given path.</p>
+</div>
+
+
+
+							<h4>Throws</h4>
+							<table>
+									<tr>
+										<td><code><a href="RuntimeException.html"><span>RuntimeException</span></a></code>&nbsp;</td>
+										<td></td>
+									</tr>
+							</table>
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_temporaryUrl">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="files" id="_files">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#14907-14919" title="Go to source code">files</a>(<span>string|null <var>$directory</var> = <span class="php-kw">null</span></span>, <span>bool <var>$recursive</var> = <span class="php-kw">false</span></span>): array</code>
+
+
+	<div class="expandable-collapsedView">
+		Get an array of all files in a directory.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Get an array of all files in a directory.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_files">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="allFiles" id="_allFiles">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#14920-14931" title="Go to source code">allFiles</a>(<span>string|null <var>$directory</var> = <span class="php-kw">null</span></span>): array</code>
+
+
+	<div class="expandable-collapsedView">
+		Get all of the files from the given directory (recursive).
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Get all of the files from the given directory (recursive).</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_allFiles">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="directories" id="_directories">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#14932-14944" title="Go to source code">directories</a>(<span>string|null <var>$directory</var> = <span class="php-kw">null</span></span>, <span>bool <var>$recursive</var> = <span class="php-kw">false</span></span>): array</code>
+
+
+	<div class="expandable-collapsedView">
+		Get all of the directories within a given directory.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Get all of the directories within a given directory.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_directories">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="allDirectories" id="_allDirectories">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#14945-14956" title="Go to source code">allDirectories</a>(<span>string|null <var>$directory</var> = <span class="php-kw">null</span></span>): array</code>
+
+
+	<div class="expandable-collapsedView">
+		Get all the directories within a given directory (recursive).
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Get all the directories within a given directory (recursive).</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_allDirectories">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="makeDirectory" id="_makeDirectory">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#14957-14968" title="Go to source code">makeDirectory</a>(<span>string <var>$path</var></span>): bool</code>
+
+
+	<div class="expandable-collapsedView">
+		Create a directory.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Create a directory.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_makeDirectory">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="deleteDirectory" id="_deleteDirectory">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#14969-14980" title="Go to source code">deleteDirectory</a>(<span>string <var>$directory</var></span>): bool</code>
+
+
+	<div class="expandable-collapsedView">
+		Recursively delete a directory.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Recursively delete a directory.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_deleteDirectory">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="getDriver" id="_getDriver">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#14981-14991" title="Go to source code">getDriver</a>(): <span title="League\Flysystem\FilesystemOperator">FilesystemOperator</span></code>
+
+
+	<div class="expandable-collapsedView">
+		Get the Flysystem driver.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Get the Flysystem driver.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_getDriver">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="getAdapter" id="_getAdapter">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#14992-15002" title="Go to source code">getAdapter</a>(): <span title="League\Flysystem\FilesystemAdapter">FilesystemAdapter</span></code>
+
+
+	<div class="expandable-collapsedView">
+		Get the Flysystem adapter.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Get the Flysystem adapter.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_getAdapter">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="getConfig" id="_getConfig">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#15003-15013" title="Go to source code">getConfig</a>(): array</code>
+
+
+	<div class="expandable-collapsedView">
+		Get the configuration values.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Get the configuration values.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_getConfig">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="buildTemporaryUrlsUsing" id="_buildTemporaryUrlsUsing">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#15014-15025" title="Go to source code">buildTemporaryUrlsUsing</a>(<span><a href="Closure.html"><span title="Closure">Closure</span></a> <var>$callback</var></span>): void</code>
+
+
+	<div class="expandable-collapsedView">
+		Define a custom temporary URL builder callback.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Define a custom temporary URL builder callback.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_buildTemporaryUrlsUsing">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="macro" id="_macro">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#15026-15037" title="Go to source code">macro</a>(<span>string <var>$name</var></span>, <span>object|callable <var>$macro</var></span>): void</code>
+
+
+	<div class="expandable-collapsedView">
+		Register a custom macro.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Register a custom macro.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_macro">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="mixin" id="_mixin">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#15038-15050" title="Go to source code">mixin</a>(<span>object <var>$mixin</var></span>, <span>bool <var>$replace</var> = <span class="php-kw">true</span></span>): void</code>
+
+
+	<div class="expandable-collapsedView">
+		Mix another object into the class.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Mix another object into the class.</p>
+</div>
+
+
+
+							<h4>Throws</h4>
+							<table>
+									<tr>
+										<td><code><a href="ReflectionException.html"><span>ReflectionException</span></a></code>&nbsp;</td>
+										<td></td>
+									</tr>
+							</table>
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_mixin">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="hasMacro" id="_hasMacro">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#15051-15061" title="Go to source code">hasMacro</a>(<span>string <var>$name</var></span>): bool</code>
+
+
+	<div class="expandable-collapsedView">
+		Checks if macro is registered.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Checks if macro is registered.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_hasMacro">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="flushMacros" id="_flushMacros">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#15062-15071" title="Go to source code">flushMacros</a>(): void</code>
+
+
+	<div class="expandable-collapsedView">
+		Flush the existing macros.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Flush the existing macros.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_flushMacros">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="macroCall" id="_macroCall">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#15072-15085" title="Go to source code">macroCall</a>(<span>string <var>$method</var></span>, <span>array <var>$parameters</var></span>): mixed</code>
+
+
+	<div class="expandable-collapsedView">
+		Dynamically handle calls to the class.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Dynamically handle calls to the class.</p>
+</div>
+
+
+
+							<h4>Throws</h4>
+							<table>
+									<tr>
+										<td><code><a href="BadMethodCallException.html"><span>BadMethodCallException</span></a></code>&nbsp;</td>
+										<td></td>
+									</tr>
+							</table>
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_macroCall">#</a>
+		</td>
+	</tr>
+		</table>
+
+
+
+
+
+
+
+
+		</div>
+
+		<div class="layout-footer">
+			 API documentation generated by <a href="https://www.apigen.org">ApiGen dev-master</a>
+		</div>
+	</div>
+
+	<div class="layout-rest">
+		<div class="navbar"></div>
+	</div>
+</body>
+</html>

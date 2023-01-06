@@ -1,0 +1,829 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Class Illuminate\Support\Facades\RateLimiter |  API</title>
+	<link rel="stylesheet" href="assets/main.css">
+	<script src="assets/main.js" defer></script>
+</head>
+
+<body class="layout">
+	<div class="layout-aside">
+	<div class="menu">
+			<div class="menu-section">
+				<h3>Namespaces</h3>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-App.html">App</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Actions.html">Actions</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Builders.html">Builders</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Collections.html">Collections</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Console.html">Console</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.DTO.html">DTO</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Enums.html">Enums</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Events.html">Events</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Exceptions.html">Exceptions</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Filament.html">Filament</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Http.html">Http</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Mail.html">Mail</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Models.html">Models</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Notifications.html">Notifications</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Policies.html">Policies</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Providers.html">Providers</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Queries.html">Queries</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Utility.html">Utility</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.View.html">View</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.ViewModels.html">ViewModels</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-BeyondCode.html">BeyondCode</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-BeyondCode.ServerTiming.html">ServerTiming</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Clockwork.html">Clockwork</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Clockwork.Support.html">Support</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Database.html">Database</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Database.Factories.html">Factories</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Database.Seeders.html">Seeders</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item active">
+				<a href="namespace-Illuminate.html">Illuminate</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Illuminate.Database.html">Database</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Illuminate.Filesystem.html">Filesystem</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Illuminate.Http.html">Http</a>
+			</li>
+			<li class="menuGroup-item active">
+				<a href="namespace-Illuminate.Support.html">Support</a>
+	<ul>
+			<li class="menuGroup-item active">
+				<a href="namespace-Illuminate.Support.Facades.html">Facades</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Illuminate.Testing.html">Testing</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Illuminate.View.html">View</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Jenssegers.html">Jenssegers</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Jenssegers.Agent.html">Agent</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Livewire.html">Livewire</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Livewire.Testing.html">Testing</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Lorisleiva.html">Lorisleiva</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Lorisleiva.Actions.html">Actions</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Lorisleiva.Lody.html">Lody</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Spatie.html">Spatie</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Spatie.LaravelIgnition.html">LaravelIgnition</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Tests.html">Tests</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Tests.Browser.html">Browser</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Tests.Feature.html">Feature</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-none.html">none</a>
+			</li>
+	</ul>
+			</div>
+
+		<div class="menu-section">
+			<h3>Classes</h3>
+			<ul>
+					<li>
+						<a href="Illuminate.Support.Facades.App.html">
+							App
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Artisan.html">
+							Artisan
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Auth.html">
+							Auth
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Blade.html">
+							Blade
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Broadcast.html">
+							Broadcast
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Bus.html">
+							Bus
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Cache.html">
+							Cache
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Config.html">
+							Config
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Cookie.html">
+							Cookie
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Crypt.html">
+							Crypt
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Date.html">
+							Date
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.DB.html">
+							DB
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Event.html">
+							Event
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.File.html">
+							File
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Gate.html">
+							Gate
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Hash.html">
+							Hash
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Http.html">
+							Http
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Lang.html">
+							Lang
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Log.html">
+							Log
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Mail.html">
+							Mail
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Notification.html">
+							Notification
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Password.html">
+							Password
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Queue.html">
+							Queue
+						</a>
+					</li>
+					<li class="active">
+						<a href="Illuminate.Support.Facades.RateLimiter.html">
+							RateLimiter
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Redirect.html">
+							Redirect
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Request.html">
+							Request
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Response.html">
+							Response
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Route.html">
+							Route
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Schema.html">
+							Schema
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Session.html">
+							Session
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Storage.html">
+							Storage
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.URL.html">
+							URL
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Validator.html">
+							Validator
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.View.html">
+							View
+						</a>
+					</li>
+			</ul>
+		</div>
+
+
+
+
+
+	</div>
+	</div>
+
+	<div class="layout-main">
+		<div class="layout-navbar">
+	<nav class="navbar">
+		<div class="navbar-left">
+			<ul class="navbar-links">
+				<li>
+					<a href="index.html">Overview</a>
+				</li>
+				<li>
+					
+						<a href="namespace-Illuminate.Support.Facades.html">Namespace</a>
+					
+				</li>
+<li class="active"><a href="Illuminate.Support.Facades.RateLimiter.html">Class</a></li>				<li>
+					<a href="tree.html">Tree</a>
+				</li>
+			</ul>
+		</div>
+		<div class="navbar-right">
+	<div class="search" data-elements="assets/elements.js">
+		<input class="search-input" placeholder="Search class, function or namespace" autofocus>
+		<ul class="search-results"></ul>
+	</div>
+		</div>
+	</nav>
+		</div>
+
+		<div class="layout-content">
+		<h1>
+			Class <a href="namespace-Illuminate.html">Illuminate</a>\<a href="namespace-Illuminate.Support.html">Support</a>\<a href="namespace-Illuminate.Support.Facades.html">Facades</a>\<a href="Illuminate.Support.Facades.RateLimiter.html">RateLimiter</a>
+		</h1>
+
+
+	<table class="classLikeSignatureTable">
+
+
+
+
+	</table>
+
+			<div class="classLikeSection">
+	<ul class="classTree">
+	<li>
+<b><span class="active">Illuminate\Support\Facades\RateLimiter</span></b>
+
+
+	<ul class="classTree">
+	<li>
+<a href="RateLimiter.html"><span>RateLimiter</span></a>
+
+
+	</li>
+	</ul>
+	</li>
+	</ul>
+			</div>
+
+		<div class="classLikeSection">
+			<b>Located at</b> <a href="source-_ide_helper.html#9630" title="Go to source code">_ide_helper.php</a><br>
+		</div>
+
+
+		<table class="table" id="methods">
+			<tr>
+				<th class="table-heading sortable" colspan="3" title="Switch between natural and alphabetical order">Methods</th>
+			</tr>
+
+	<tr class="expandable collapsed" data-order="for" id="_for">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#9631-9643" title="Go to source code">for</a>(<span>string <var>$name</var></span>, <span><a href="Closure.html"><span title="Closure">Closure</span></a> <var>$callback</var></span>): <span title="Illuminate\Cache\RateLimiter">RateLimiter</span></code>
+
+
+	<div class="expandable-collapsedView">
+		Register a named limiter configuration.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Register a named limiter configuration.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_for">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="limiter" id="_limiter">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#9644-9655" title="Go to source code">limiter</a>(<span>string <var>$name</var></span>): <a href="Closure.html"><span title="Closure">Closure</span></a></code>
+
+
+	<div class="expandable-collapsedView">
+		Get the given named rate limiter.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Get the given named rate limiter.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_limiter">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="attempt" id="_attempt">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#9656-9670" title="Go to source code">attempt</a>(<span>string <var>$key</var></span>, <span>int <var>$maxAttempts</var></span>, <span><a href="Closure.html"><span title="Closure">Closure</span></a> <var>$callback</var></span>, <span>int <var>$decaySeconds</var> = <span class="php-num">60</span></span>): mixed</code>
+
+
+	<div class="expandable-collapsedView">
+		Attempts to execute a callback if it's not limited.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Attempts to execute a callback if it's not limited.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_attempt">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="tooManyAttempts" id="_tooManyAttempts">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#9671-9683" title="Go to source code">tooManyAttempts</a>(<span>string <var>$key</var></span>, <span>int <var>$maxAttempts</var></span>): bool</code>
+
+
+	<div class="expandable-collapsedView">
+		Determine if the given key has been "accessed" too many times.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Determine if the given key has been &quot;accessed&quot; too many times.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_tooManyAttempts">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="hit" id="_hit">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#9684-9696" title="Go to source code">hit</a>(<span>string <var>$key</var></span>, <span>int <var>$decaySeconds</var> = <span class="php-num">60</span></span>): int</code>
+
+
+	<div class="expandable-collapsedView">
+		Increment the counter for a given key for a given decay time.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Increment the counter for a given key for a given decay time.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_hit">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="attempts" id="_attempts">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#9697-9708" title="Go to source code">attempts</a>(<span>string <var>$key</var></span>): mixed</code>
+
+
+	<div class="expandable-collapsedView">
+		Get the number of attempts for the given key.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Get the number of attempts for the given key.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_attempts">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="resetAttempts" id="_resetAttempts">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#9709-9720" title="Go to source code">resetAttempts</a>(<span>string <var>$key</var></span>): mixed</code>
+
+
+	<div class="expandable-collapsedView">
+		Reset the number of attempts for the given key.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Reset the number of attempts for the given key.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_resetAttempts">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="remaining" id="_remaining">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#9721-9733" title="Go to source code">remaining</a>(<span>string <var>$key</var></span>, <span>int <var>$maxAttempts</var></span>): int</code>
+
+
+	<div class="expandable-collapsedView">
+		Get the number of retries left for the given key.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Get the number of retries left for the given key.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_remaining">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="retriesLeft" id="_retriesLeft">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#9734-9746" title="Go to source code">retriesLeft</a>(<span>string <var>$key</var></span>, <span>int <var>$maxAttempts</var></span>): int</code>
+
+
+	<div class="expandable-collapsedView">
+		Get the number of retries left for the given key.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Get the number of retries left for the given key.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_retriesLeft">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="clear" id="_clear">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#9747-9758" title="Go to source code">clear</a>(<span>string <var>$key</var></span>): void</code>
+
+
+	<div class="expandable-collapsedView">
+		Clear the hits and lockout timer for the given key.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Clear the hits and lockout timer for the given key.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_clear">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="availableIn" id="_availableIn">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#9759-9770" title="Go to source code">availableIn</a>(<span>string <var>$key</var></span>): int</code>
+
+
+	<div class="expandable-collapsedView">
+		Get the number of seconds until the "key" is accessible again.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Get the number of seconds until the &quot;key&quot; is accessible again.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_availableIn">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="cleanRateLimiterKey" id="_cleanRateLimiterKey">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#9771-9782" title="Go to source code">cleanRateLimiterKey</a>(<span>string <var>$key</var></span>): string</code>
+
+
+	<div class="expandable-collapsedView">
+		Clean the rate limiter key from unicode characters.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Clean the rate limiter key from unicode characters.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_cleanRateLimiterKey">#</a>
+		</td>
+	</tr>
+		</table>
+
+
+
+
+
+
+
+
+		</div>
+
+		<div class="layout-footer">
+			 API documentation generated by <a href="https://www.apigen.org">ApiGen dev-master</a>
+		</div>
+	</div>
+
+	<div class="layout-rest">
+		<div class="navbar"></div>
+	</div>
+</body>
+</html>

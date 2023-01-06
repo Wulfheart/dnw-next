@@ -13,11 +13,7 @@ use App\Models\User;
 use App\Models\Variant;
 use Carbon\Carbon;
 use Illuminate\Database\Seeder;
-use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\Http;
-use Illuminate\Support\Facades\Storage;
 use League\Csv\Reader;
-use League\Csv\Statement;
 
 class GameRecreatorSeeder extends Seeder
 {
@@ -25,6 +21,7 @@ class GameRecreatorSeeder extends Seeder
      * Run the database seeds.
      *
      * @return void
+     *
      * @throws \League\Csv\Exception
      */
     public function run(): void
@@ -47,7 +44,7 @@ class GameRecreatorSeeder extends Seeder
 
             $all = collect($csv->getRecords())
                 ->groupBy('turn_phase')
-                ->map(fn($c) => $c->groupBy('country'));
+                ->map(fn ($c) => $c->groupBy('country'));
 
             $count = $all->count();
 
@@ -64,17 +61,15 @@ class GameRecreatorSeeder extends Seeder
             ]);
 
             $game->load('variant.basePowers');
-            $game->variant->basePowers()->each(fn(BasePower $b) => Power::create([
+            $game->variant->basePowers()->each(fn (BasePower $b) => Power::create([
                 'base_power_id' => $b->id,
                 'game_id' => $game->id,
                 'user_id' => User::factory()->create()->id,
             ]));
             InitializeGameAction::run($game->id, false);
-            $this->command->line("");
-
+            $this->command->line('');
 
             foreach ($all as $key => $turn) {
-
                 // Skip if there is a mismatch between the current phase returned by our adjudicator
                 // and the one in the CSV. This accounts for the fact that the our adjudicator may have
                 // skipped a phase because it has no orders necessary because it automatically
@@ -138,7 +133,6 @@ class GameRecreatorSeeder extends Seeder
                     'created_at' => $basetime->addDays($count--),
                 ]);
             }
-
         }
 
         // Some additional saving to make sure the game is saved correctly

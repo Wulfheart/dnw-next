@@ -1,0 +1,1339 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Class Illuminate\Support\Facades\Schema |  API</title>
+	<link rel="stylesheet" href="assets/main.css">
+	<script src="assets/main.js" defer></script>
+</head>
+
+<body class="layout">
+	<div class="layout-aside">
+	<div class="menu">
+			<div class="menu-section">
+				<h3>Namespaces</h3>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-App.html">App</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Actions.html">Actions</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Builders.html">Builders</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Collections.html">Collections</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Console.html">Console</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.DTO.html">DTO</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Enums.html">Enums</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Events.html">Events</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Exceptions.html">Exceptions</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Filament.html">Filament</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Http.html">Http</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Mail.html">Mail</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Models.html">Models</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Notifications.html">Notifications</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Policies.html">Policies</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Providers.html">Providers</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Queries.html">Queries</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Utility.html">Utility</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.View.html">View</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.ViewModels.html">ViewModels</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-BeyondCode.html">BeyondCode</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-BeyondCode.ServerTiming.html">ServerTiming</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Clockwork.html">Clockwork</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Clockwork.Support.html">Support</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Database.html">Database</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Database.Factories.html">Factories</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Database.Seeders.html">Seeders</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item active">
+				<a href="namespace-Illuminate.html">Illuminate</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Illuminate.Database.html">Database</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Illuminate.Filesystem.html">Filesystem</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Illuminate.Http.html">Http</a>
+			</li>
+			<li class="menuGroup-item active">
+				<a href="namespace-Illuminate.Support.html">Support</a>
+	<ul>
+			<li class="menuGroup-item active">
+				<a href="namespace-Illuminate.Support.Facades.html">Facades</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Illuminate.Testing.html">Testing</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Illuminate.View.html">View</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Jenssegers.html">Jenssegers</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Jenssegers.Agent.html">Agent</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Livewire.html">Livewire</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Livewire.Testing.html">Testing</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Lorisleiva.html">Lorisleiva</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Lorisleiva.Actions.html">Actions</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Lorisleiva.Lody.html">Lody</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Spatie.html">Spatie</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Spatie.LaravelIgnition.html">LaravelIgnition</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Tests.html">Tests</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Tests.Browser.html">Browser</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Tests.Feature.html">Feature</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-none.html">none</a>
+			</li>
+	</ul>
+			</div>
+
+		<div class="menu-section">
+			<h3>Classes</h3>
+			<ul>
+					<li>
+						<a href="Illuminate.Support.Facades.App.html">
+							App
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Artisan.html">
+							Artisan
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Auth.html">
+							Auth
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Blade.html">
+							Blade
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Broadcast.html">
+							Broadcast
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Bus.html">
+							Bus
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Cache.html">
+							Cache
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Config.html">
+							Config
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Cookie.html">
+							Cookie
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Crypt.html">
+							Crypt
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Date.html">
+							Date
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.DB.html">
+							DB
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Event.html">
+							Event
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.File.html">
+							File
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Gate.html">
+							Gate
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Hash.html">
+							Hash
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Http.html">
+							Http
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Lang.html">
+							Lang
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Log.html">
+							Log
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Mail.html">
+							Mail
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Notification.html">
+							Notification
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Password.html">
+							Password
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Queue.html">
+							Queue
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.RateLimiter.html">
+							RateLimiter
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Redirect.html">
+							Redirect
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Request.html">
+							Request
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Response.html">
+							Response
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Route.html">
+							Route
+						</a>
+					</li>
+					<li class="active">
+						<a href="Illuminate.Support.Facades.Schema.html">
+							Schema
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Session.html">
+							Session
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Storage.html">
+							Storage
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.URL.html">
+							URL
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Validator.html">
+							Validator
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.View.html">
+							View
+						</a>
+					</li>
+			</ul>
+		</div>
+
+
+
+
+
+	</div>
+	</div>
+
+	<div class="layout-main">
+		<div class="layout-navbar">
+	<nav class="navbar">
+		<div class="navbar-left">
+			<ul class="navbar-links">
+				<li>
+					<a href="index.html">Overview</a>
+				</li>
+				<li>
+					
+						<a href="namespace-Illuminate.Support.Facades.html">Namespace</a>
+					
+				</li>
+<li class="active"><a href="Illuminate.Support.Facades.Schema.html">Class</a></li>				<li>
+					<a href="tree.html">Tree</a>
+				</li>
+			</ul>
+		</div>
+		<div class="navbar-right">
+	<div class="search" data-elements="assets/elements.js">
+		<input class="search-input" placeholder="Search class, function or namespace" autofocus>
+		<ul class="search-results"></ul>
+	</div>
+		</div>
+	</nav>
+		</div>
+
+		<div class="layout-content">
+		<h1>
+			Class <a href="namespace-Illuminate.html">Illuminate</a>\<a href="namespace-Illuminate.Support.html">Support</a>\<a href="namespace-Illuminate.Support.Facades.html">Facades</a>\<a href="Illuminate.Support.Facades.Schema.html">Schema</a>
+		</h1>
+
+
+	<table class="classLikeSignatureTable">
+
+
+
+
+	</table>
+
+			<div class="classLikeSection">
+	<ul class="classTree">
+	<li>
+<b><span class="active">Illuminate\Support\Facades\Schema</span></b>
+
+
+	<ul class="classTree">
+	<li>
+<a href="Schema.html"><span>Schema</span></a>
+
+
+	</li>
+	</ul>
+	</li>
+	</ul>
+			</div>
+
+		<div class="classLikeSection">
+			<b>Located at</b> <a href="source-_ide_helper.html#13337" title="Go to source code">_ide_helper.php</a><br>
+		</div>
+
+
+		<table class="table" id="methods">
+			<tr>
+				<th class="table-heading sortable" colspan="3" title="Switch between natural and alphabetical order">Methods</th>
+			</tr>
+
+	<tr class="expandable collapsed" data-order="createDatabase" id="_createDatabase">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#13338-13349" title="Go to source code">createDatabase</a>(<span>string <var>$name</var></span>): bool</code>
+
+
+	<div class="expandable-collapsedView">
+		Create a database in the schema.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Create a database in the schema.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_createDatabase">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="dropDatabaseIfExists" id="_dropDatabaseIfExists">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#13350-13361" title="Go to source code">dropDatabaseIfExists</a>(<span>string <var>$name</var></span>): bool</code>
+
+
+	<div class="expandable-collapsedView">
+		Drop a database from the schema if the database exists.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Drop a database from the schema if the database exists.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_dropDatabaseIfExists">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="hasTable" id="_hasTable">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#13362-13373" title="Go to source code">hasTable</a>(<span>string <var>$table</var></span>): bool</code>
+
+
+	<div class="expandable-collapsedView">
+		Determine if the given table exists.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Determine if the given table exists.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_hasTable">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="getColumnListing" id="_getColumnListing">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#13374-13385" title="Go to source code">getColumnListing</a>(<span>string <var>$table</var></span>): array</code>
+
+
+	<div class="expandable-collapsedView">
+		Get the column listing for a given table.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Get the column listing for a given table.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_getColumnListing">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="dropAllTables" id="_dropAllTables">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#13386-13396" title="Go to source code">dropAllTables</a>(): void</code>
+
+
+	<div class="expandable-collapsedView">
+		Drop all tables from the database.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Drop all tables from the database.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_dropAllTables">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="dropAllViews" id="_dropAllViews">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#13397-13407" title="Go to source code">dropAllViews</a>(): void</code>
+
+
+	<div class="expandable-collapsedView">
+		Drop all views from the database.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Drop all views from the database.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_dropAllViews">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="getAllTables" id="_getAllTables">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#13408-13418" title="Go to source code">getAllTables</a>(): array</code>
+
+
+	<div class="expandable-collapsedView">
+		Get all of the table names for the database.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Get all of the table names for the database.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_getAllTables">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="getAllViews" id="_getAllViews">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#13419-13429" title="Go to source code">getAllViews</a>(): array</code>
+
+
+	<div class="expandable-collapsedView">
+		Get all of the view names for the database.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Get all of the view names for the database.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_getAllViews">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="defaultStringLength" id="_defaultStringLength">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#13430-13440" title="Go to source code">defaultStringLength</a>(<span>int <var>$length</var></span>): void</code>
+
+
+	<div class="expandable-collapsedView">
+		Set the default string length for migrations.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Set the default string length for migrations.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_defaultStringLength">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="defaultMorphKeyType" id="_defaultMorphKeyType">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#13441-13452" title="Go to source code">defaultMorphKeyType</a>(<span>string <var>$type</var></span>): void</code>
+
+
+	<div class="expandable-collapsedView">
+		Set the default morph key type for migrations.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Set the default morph key type for migrations.</p>
+</div>
+
+
+
+							<h4>Throws</h4>
+							<table>
+									<tr>
+										<td><code><a href="InvalidArgumentException.html"><span>InvalidArgumentException</span></a></code>&nbsp;</td>
+										<td></td>
+									</tr>
+							</table>
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_defaultMorphKeyType">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="morphUsingUuids" id="_morphUsingUuids">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#13453-13462" title="Go to source code">morphUsingUuids</a>(): void</code>
+
+
+	<div class="expandable-collapsedView">
+		Set the default morph key type for migrations to UUIDs.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Set the default morph key type for migrations to UUIDs.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_morphUsingUuids">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="hasColumn" id="_hasColumn">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#13463-13475" title="Go to source code">hasColumn</a>(<span>string <var>$table</var></span>, <span>string <var>$column</var></span>): bool</code>
+
+
+	<div class="expandable-collapsedView">
+		Determine if the given table has a given column.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Determine if the given table has a given column.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_hasColumn">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="hasColumns" id="_hasColumns">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#13476-13488" title="Go to source code">hasColumns</a>(<span>string <var>$table</var></span>, <span>array <var>$columns</var></span>): bool</code>
+
+
+	<div class="expandable-collapsedView">
+		Determine if the given table has given columns.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Determine if the given table has given columns.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_hasColumns">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="whenTableHasColumn" id="_whenTableHasColumn">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#13489-13502" title="Go to source code">whenTableHasColumn</a>(<span>string <var>$table</var></span>, <span>string <var>$column</var></span>, <span><a href="Closure.html"><span title="Closure">Closure</span></a> <var>$callback</var></span>): void</code>
+
+
+	<div class="expandable-collapsedView">
+		Execute a table builder callback if the given table has a given column.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Execute a table builder callback if the given table has a given column.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_whenTableHasColumn">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="whenTableDoesntHaveColumn" id="_whenTableDoesntHaveColumn">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#13503-13516" title="Go to source code">whenTableDoesntHaveColumn</a>(<span>string <var>$table</var></span>, <span>string <var>$column</var></span>, <span><a href="Closure.html"><span title="Closure">Closure</span></a> <var>$callback</var></span>): void</code>
+
+
+	<div class="expandable-collapsedView">
+		Execute a table builder callback if the given table doesn't have a given column.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Execute a table builder callback if the given table doesn't have a given column.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_whenTableDoesntHaveColumn">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="getColumnType" id="_getColumnType">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#13517-13529" title="Go to source code">getColumnType</a>(<span>string <var>$table</var></span>, <span>string <var>$column</var></span>): string</code>
+
+
+	<div class="expandable-collapsedView">
+		Get the data type for the given column name.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Get the data type for the given column name.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_getColumnType">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="table" id="_table">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#13530-13542" title="Go to source code">table</a>(<span>string <var>$table</var></span>, <span><a href="Closure.html"><span title="Closure">Closure</span></a> <var>$callback</var></span>): void</code>
+
+
+	<div class="expandable-collapsedView">
+		Modify a table on the schema.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Modify a table on the schema.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_table">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="create" id="_create">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#13543-13555" title="Go to source code">create</a>(<span>string <var>$table</var></span>, <span><a href="Closure.html"><span title="Closure">Closure</span></a> <var>$callback</var></span>): void</code>
+
+
+	<div class="expandable-collapsedView">
+		Create a new table on the schema.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Create a new table on the schema.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_create">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="drop" id="_drop">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#13556-13567" title="Go to source code">drop</a>(<span>string <var>$table</var></span>): void</code>
+
+
+	<div class="expandable-collapsedView">
+		Drop a table from the schema.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Drop a table from the schema.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_drop">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="dropIfExists" id="_dropIfExists">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#13568-13579" title="Go to source code">dropIfExists</a>(<span>string <var>$table</var></span>): void</code>
+
+
+	<div class="expandable-collapsedView">
+		Drop a table from the schema if it exists.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Drop a table from the schema if it exists.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_dropIfExists">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="dropColumns" id="_dropColumns">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#13580-13592" title="Go to source code">dropColumns</a>(<span>string <var>$table</var></span>, <span>string|array <var>$columns</var></span>): void</code>
+
+
+	<div class="expandable-collapsedView">
+		Drop columns from a table schema.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Drop columns from a table schema.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_dropColumns">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="dropAllTypes" id="_dropAllTypes">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#13593-13604" title="Go to source code">dropAllTypes</a>(): void</code>
+
+
+	<div class="expandable-collapsedView">
+		Drop all types from the database.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Drop all types from the database.</p>
+</div>
+
+
+
+							<h4>Throws</h4>
+							<table>
+									<tr>
+										<td><code><a href="LogicException.html"><span>LogicException</span></a></code>&nbsp;</td>
+										<td></td>
+									</tr>
+							</table>
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_dropAllTypes">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="rename" id="_rename">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#13605-13617" title="Go to source code">rename</a>(<span>string <var>$from</var></span>, <span>string <var>$to</var></span>): void</code>
+
+
+	<div class="expandable-collapsedView">
+		Rename a table on the schema.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Rename a table on the schema.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_rename">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="enableForeignKeyConstraints" id="_enableForeignKeyConstraints">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#13618-13628" title="Go to source code">enableForeignKeyConstraints</a>(): bool</code>
+
+
+	<div class="expandable-collapsedView">
+		Enable foreign key constraints.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Enable foreign key constraints.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_enableForeignKeyConstraints">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="disableForeignKeyConstraints" id="_disableForeignKeyConstraints">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#13629-13639" title="Go to source code">disableForeignKeyConstraints</a>(): bool</code>
+
+
+	<div class="expandable-collapsedView">
+		Disable foreign key constraints.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Disable foreign key constraints.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_disableForeignKeyConstraints">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="getConnection" id="_getConnection">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#13640-13650" title="Go to source code">getConnection</a>(): <span title="Illuminate\Database\Connection">Connection</span></code>
+
+
+	<div class="expandable-collapsedView">
+		Get the database connection instance.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Get the database connection instance.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_getConnection">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="setConnection" id="_setConnection">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#13651-13662" title="Go to source code">setConnection</a>(<span><span title="Illuminate\Database\Connection">Connection</span> <var>$connection</var></span>): <span title="Illuminate\Database\Schema\MySqlBuilder">MySqlBuilder</span></code>
+
+
+	<div class="expandable-collapsedView">
+		Set the database connection instance.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Set the database connection instance.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_setConnection">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="blueprintResolver" id="_blueprintResolver">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#13663-13674" title="Go to source code">blueprintResolver</a>(<span><a href="Closure.html"><span title="Closure">Closure</span></a> <var>$resolver</var></span>): void</code>
+
+
+	<div class="expandable-collapsedView">
+		Set the Schema Blueprint resolver callback.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Set the Schema Blueprint resolver callback.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_blueprintResolver">#</a>
+		</td>
+	</tr>
+		</table>
+
+
+
+
+
+
+
+
+		</div>
+
+		<div class="layout-footer">
+			 API documentation generated by <a href="https://www.apigen.org">ApiGen dev-master</a>
+		</div>
+	</div>
+
+	<div class="layout-rest">
+		<div class="navbar"></div>
+	</div>
+</body>
+</html>

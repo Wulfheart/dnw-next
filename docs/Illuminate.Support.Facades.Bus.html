@@ -1,0 +1,1519 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Class Illuminate\Support\Facades\Bus |  API</title>
+	<link rel="stylesheet" href="assets/main.css">
+	<script src="assets/main.js" defer></script>
+</head>
+
+<body class="layout">
+	<div class="layout-aside">
+	<div class="menu">
+			<div class="menu-section">
+				<h3>Namespaces</h3>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-App.html">App</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Actions.html">Actions</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Builders.html">Builders</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Collections.html">Collections</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Console.html">Console</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.DTO.html">DTO</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Enums.html">Enums</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Events.html">Events</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Exceptions.html">Exceptions</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Filament.html">Filament</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Http.html">Http</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Mail.html">Mail</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Models.html">Models</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Notifications.html">Notifications</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Policies.html">Policies</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Providers.html">Providers</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Queries.html">Queries</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Utility.html">Utility</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.View.html">View</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.ViewModels.html">ViewModels</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-BeyondCode.html">BeyondCode</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-BeyondCode.ServerTiming.html">ServerTiming</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Clockwork.html">Clockwork</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Clockwork.Support.html">Support</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Database.html">Database</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Database.Factories.html">Factories</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Database.Seeders.html">Seeders</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item active">
+				<a href="namespace-Illuminate.html">Illuminate</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Illuminate.Database.html">Database</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Illuminate.Filesystem.html">Filesystem</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Illuminate.Http.html">Http</a>
+			</li>
+			<li class="menuGroup-item active">
+				<a href="namespace-Illuminate.Support.html">Support</a>
+	<ul>
+			<li class="menuGroup-item active">
+				<a href="namespace-Illuminate.Support.Facades.html">Facades</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Illuminate.Testing.html">Testing</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Illuminate.View.html">View</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Jenssegers.html">Jenssegers</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Jenssegers.Agent.html">Agent</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Livewire.html">Livewire</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Livewire.Testing.html">Testing</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Lorisleiva.html">Lorisleiva</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Lorisleiva.Actions.html">Actions</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Lorisleiva.Lody.html">Lody</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Spatie.html">Spatie</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Spatie.LaravelIgnition.html">LaravelIgnition</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Tests.html">Tests</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Tests.Browser.html">Browser</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Tests.Feature.html">Feature</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-none.html">none</a>
+			</li>
+	</ul>
+			</div>
+
+		<div class="menu-section">
+			<h3>Classes</h3>
+			<ul>
+					<li>
+						<a href="Illuminate.Support.Facades.App.html">
+							App
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Artisan.html">
+							Artisan
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Auth.html">
+							Auth
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Blade.html">
+							Blade
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Broadcast.html">
+							Broadcast
+						</a>
+					</li>
+					<li class="active">
+						<a href="Illuminate.Support.Facades.Bus.html">
+							Bus
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Cache.html">
+							Cache
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Config.html">
+							Config
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Cookie.html">
+							Cookie
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Crypt.html">
+							Crypt
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Date.html">
+							Date
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.DB.html">
+							DB
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Event.html">
+							Event
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.File.html">
+							File
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Gate.html">
+							Gate
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Hash.html">
+							Hash
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Http.html">
+							Http
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Lang.html">
+							Lang
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Log.html">
+							Log
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Mail.html">
+							Mail
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Notification.html">
+							Notification
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Password.html">
+							Password
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Queue.html">
+							Queue
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.RateLimiter.html">
+							RateLimiter
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Redirect.html">
+							Redirect
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Request.html">
+							Request
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Response.html">
+							Response
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Route.html">
+							Route
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Schema.html">
+							Schema
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Session.html">
+							Session
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Storage.html">
+							Storage
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.URL.html">
+							URL
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Validator.html">
+							Validator
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.View.html">
+							View
+						</a>
+					</li>
+			</ul>
+		</div>
+
+
+
+
+
+	</div>
+	</div>
+
+	<div class="layout-main">
+		<div class="layout-navbar">
+	<nav class="navbar">
+		<div class="navbar-left">
+			<ul class="navbar-links">
+				<li>
+					<a href="index.html">Overview</a>
+				</li>
+				<li>
+					
+						<a href="namespace-Illuminate.Support.Facades.html">Namespace</a>
+					
+				</li>
+<li class="active"><a href="Illuminate.Support.Facades.Bus.html">Class</a></li>				<li>
+					<a href="tree.html">Tree</a>
+				</li>
+			</ul>
+		</div>
+		<div class="navbar-right">
+	<div class="search" data-elements="assets/elements.js">
+		<input class="search-input" placeholder="Search class, function or namespace" autofocus>
+		<ul class="search-results"></ul>
+	</div>
+		</div>
+	</nav>
+		</div>
+
+		<div class="layout-content">
+		<h1>
+			Class <a href="namespace-Illuminate.html">Illuminate</a>\<a href="namespace-Illuminate.Support.html">Support</a>\<a href="namespace-Illuminate.Support.Facades.html">Facades</a>\<a href="Illuminate.Support.Facades.Bus.html">Bus</a>
+		</h1>
+
+
+	<table class="classLikeSignatureTable">
+
+
+
+
+	</table>
+
+			<div class="classLikeSection">
+	<ul class="classTree">
+	<li>
+<b><span class="active">Illuminate\Support\Facades\Bus</span></b>
+
+
+	<ul class="classTree">
+	<li>
+<a href="Bus.html"><span>Bus</span></a>
+
+
+	</li>
+	</ul>
+	</li>
+	</ul>
+			</div>
+
+		<div class="classLikeSection">
+			<b>Located at</b> <a href="source-_ide_helper.html#2988" title="Go to source code">_ide_helper.php</a><br>
+		</div>
+
+
+		<table class="table" id="methods">
+			<tr>
+				<th class="table-heading sortable" colspan="3" title="Switch between natural and alphabetical order">Methods</th>
+			</tr>
+
+	<tr class="expandable collapsed" data-order="dispatch" id="_dispatch">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#2989-3000" title="Go to source code">dispatch</a>(<span>mixed <var>$command</var></span>): mixed</code>
+
+
+	<div class="expandable-collapsedView">
+		Dispatch a command to its appropriate handler.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Dispatch a command to its appropriate handler.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_dispatch">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="dispatchSync" id="_dispatchSync">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#3001-3015" title="Go to source code">dispatchSync</a>(<span>mixed <var>$command</var></span>, <span>mixed <var>$handler</var> = <span class="php-kw">null</span></span>): mixed</code>
+
+
+	<div class="expandable-collapsedView">
+		Dispatch a command to its appropriate handler in the current process.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Dispatch a command to its appropriate handler in the current process.</p>
+<p>Queueable jobs will be dispatched to the &quot;sync&quot; queue.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_dispatchSync">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="dispatchNow" id="_dispatchNow">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#3016-3028" title="Go to source code">dispatchNow</a>(<span>mixed <var>$command</var></span>, <span>mixed <var>$handler</var> = <span class="php-kw">null</span></span>): mixed</code>
+
+
+	<div class="expandable-collapsedView">
+		Dispatch a command to its appropriate handler in the current process without using the synchronous queue.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Dispatch a command to its appropriate handler in the current process without using the synchronous queue.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_dispatchNow">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="findBatch" id="_findBatch">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#3029-3040" title="Go to source code">findBatch</a>(<span>string <var>$batchId</var></span>): <span title="Illuminate\Bus\Batch">Batch</span>|null</code>
+
+
+	<div class="expandable-collapsedView">
+		Attempt to find the batch with the given ID.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Attempt to find the batch with the given ID.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_findBatch">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="batch" id="_batch">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#3041-3052" title="Go to source code">batch</a>(<span><a href="Illuminate.Support.Collection.html"><span title="Illuminate\Support\Collection">Collection</span></a>|array|mixed <var>$jobs</var></span>): <span title="Illuminate\Bus\PendingBatch">PendingBatch</span></code>
+
+
+	<div class="expandable-collapsedView">
+		Create a new batch of queueable jobs.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Create a new batch of queueable jobs.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_batch">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="chain" id="_chain">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#3053-3064" title="Go to source code">chain</a>(<span><a href="Illuminate.Support.Collection.html"><span title="Illuminate\Support\Collection">Collection</span></a>|array <var>$jobs</var></span>): <span title="Illuminate\Foundation\Bus\PendingChain">PendingChain</span></code>
+
+
+	<div class="expandable-collapsedView">
+		Create a new chain of queueable jobs.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Create a new chain of queueable jobs.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_chain">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="hasCommandHandler" id="_hasCommandHandler">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#3065-3076" title="Go to source code">hasCommandHandler</a>(<span>mixed <var>$command</var></span>): bool</code>
+
+
+	<div class="expandable-collapsedView">
+		Determine if the given command has a handler.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Determine if the given command has a handler.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_hasCommandHandler">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="getCommandHandler" id="_getCommandHandler">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#3077-3088" title="Go to source code">getCommandHandler</a>(<span>mixed <var>$command</var></span>): bool|mixed</code>
+
+
+	<div class="expandable-collapsedView">
+		Retrieve the handler for a command.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Retrieve the handler for a command.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_getCommandHandler">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="dispatchToQueue" id="_dispatchToQueue">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#3089-3101" title="Go to source code">dispatchToQueue</a>(<span>mixed <var>$command</var></span>): mixed</code>
+
+
+	<div class="expandable-collapsedView">
+		Dispatch a command to its appropriate handler behind a queue.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Dispatch a command to its appropriate handler behind a queue.</p>
+</div>
+
+
+
+							<h4>Throws</h4>
+							<table>
+									<tr>
+										<td><code><a href="RuntimeException.html"><span>RuntimeException</span></a></code>&nbsp;</td>
+										<td></td>
+									</tr>
+							</table>
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_dispatchToQueue">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="dispatchAfterResponse" id="_dispatchAfterResponse">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#3102-3114" title="Go to source code">dispatchAfterResponse</a>(<span>mixed <var>$command</var></span>, <span>mixed <var>$handler</var> = <span class="php-kw">null</span></span>): void</code>
+
+
+	<div class="expandable-collapsedView">
+		Dispatch a command to its appropriate handler after the current process.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Dispatch a command to its appropriate handler after the current process.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_dispatchAfterResponse">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="pipeThrough" id="_pipeThrough">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#3115-3126" title="Go to source code">pipeThrough</a>(<span>array <var>$pipes</var></span>): <span title="Illuminate\Bus\Dispatcher">Dispatcher</span></code>
+
+
+	<div class="expandable-collapsedView">
+		Set the pipes through which commands should be piped before dispatching.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Set the pipes through which commands should be piped before dispatching.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_pipeThrough">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="map" id="_map">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#3127-3138" title="Go to source code">map</a>(<span>array <var>$map</var></span>): <span title="Illuminate\Bus\Dispatcher">Dispatcher</span></code>
+
+
+	<div class="expandable-collapsedView">
+		Map a command to a handler.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Map a command to a handler.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_map">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="assertDispatched" id="_assertDispatched">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#3139-3151" title="Go to source code">assertDispatched</a>(<span>string|<a href="Closure.html"><span title="Closure">Closure</span></a> <var>$command</var></span>, <span>callable|int|null <var>$callback</var> = <span class="php-kw">null</span></span>): void</code>
+
+
+	<div class="expandable-collapsedView">
+		Assert if a job was dispatched based on a truth-test callback.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Assert if a job was dispatched based on a truth-test callback.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_assertDispatched">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="assertDispatchedTimes" id="_assertDispatchedTimes">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#3152-3164" title="Go to source code">assertDispatchedTimes</a>(<span>string <var>$command</var></span>, <span>int <var>$times</var> = <span class="php-num">1</span></span>): void</code>
+
+
+	<div class="expandable-collapsedView">
+		Assert if a job was pushed a number of times.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Assert if a job was pushed a number of times.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_assertDispatchedTimes">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="assertNotDispatched" id="_assertNotDispatched">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#3165-3177" title="Go to source code">assertNotDispatched</a>(<span>string|<a href="Closure.html"><span title="Closure">Closure</span></a> <var>$command</var></span>, <span>callable|null <var>$callback</var> = <span class="php-kw">null</span></span>): void</code>
+
+
+	<div class="expandable-collapsedView">
+		Determine if a job was dispatched based on a truth-test callback.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Determine if a job was dispatched based on a truth-test callback.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_assertNotDispatched">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="assertNothingDispatched" id="_assertNothingDispatched">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#3178-3188" title="Go to source code">assertNothingDispatched</a>(): void</code>
+
+
+	<div class="expandable-collapsedView">
+		Assert that no jobs were dispatched.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Assert that no jobs were dispatched.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_assertNothingDispatched">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="assertDispatchedSync" id="_assertDispatchedSync">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#3189-3201" title="Go to source code">assertDispatchedSync</a>(<span>string|<a href="Closure.html"><span title="Closure">Closure</span></a> <var>$command</var></span>, <span>callable|int|null <var>$callback</var> = <span class="php-kw">null</span></span>): void</code>
+
+
+	<div class="expandable-collapsedView">
+		Assert if a job was explicitly dispatched synchronously based on a truth-test callback.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Assert if a job was explicitly dispatched synchronously based on a truth-test callback.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_assertDispatchedSync">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="assertDispatchedSyncTimes" id="_assertDispatchedSyncTimes">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#3202-3214" title="Go to source code">assertDispatchedSyncTimes</a>(<span>string <var>$command</var></span>, <span>int <var>$times</var> = <span class="php-num">1</span></span>): void</code>
+
+
+	<div class="expandable-collapsedView">
+		Assert if a job was pushed synchronously a number of times.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Assert if a job was pushed synchronously a number of times.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_assertDispatchedSyncTimes">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="assertNotDispatchedSync" id="_assertNotDispatchedSync">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#3215-3227" title="Go to source code">assertNotDispatchedSync</a>(<span>string|<a href="Closure.html"><span title="Closure">Closure</span></a> <var>$command</var></span>, <span>callable|null <var>$callback</var> = <span class="php-kw">null</span></span>): void</code>
+
+
+	<div class="expandable-collapsedView">
+		Determine if a job was dispatched based on a truth-test callback.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Determine if a job was dispatched based on a truth-test callback.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_assertNotDispatchedSync">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="assertDispatchedAfterResponse" id="_assertDispatchedAfterResponse">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#3228-3240" title="Go to source code">assertDispatchedAfterResponse</a>(<span>string|<a href="Closure.html"><span title="Closure">Closure</span></a> <var>$command</var></span>, <span>callable|int|null <var>$callback</var> = <span class="php-kw">null</span></span>): void</code>
+
+
+	<div class="expandable-collapsedView">
+		Assert if a job was dispatched after the response was sent based on a truth-test callback.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Assert if a job was dispatched after the response was sent based on a truth-test callback.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_assertDispatchedAfterResponse">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="assertDispatchedAfterResponseTimes" id="_assertDispatchedAfterResponseTimes">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#3241-3253" title="Go to source code">assertDispatchedAfterResponseTimes</a>(<span>string <var>$command</var></span>, <span>int <var>$times</var> = <span class="php-num">1</span></span>): void</code>
+
+
+	<div class="expandable-collapsedView">
+		Assert if a job was pushed after the response was sent a number of times.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Assert if a job was pushed after the response was sent a number of times.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_assertDispatchedAfterResponseTimes">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="assertNotDispatchedAfterResponse" id="_assertNotDispatchedAfterResponse">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#3254-3266" title="Go to source code">assertNotDispatchedAfterResponse</a>(<span>string|<a href="Closure.html"><span title="Closure">Closure</span></a> <var>$command</var></span>, <span>callable|null <var>$callback</var> = <span class="php-kw">null</span></span>): void</code>
+
+
+	<div class="expandable-collapsedView">
+		Determine if a job was dispatched based on a truth-test callback.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Determine if a job was dispatched based on a truth-test callback.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_assertNotDispatchedAfterResponse">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="assertChained" id="_assertChained">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#3267-3278" title="Go to source code">assertChained</a>(<span>array <var>$expectedChain</var></span>): void</code>
+
+
+	<div class="expandable-collapsedView">
+		Assert if a chain of jobs was dispatched.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Assert if a chain of jobs was dispatched.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_assertChained">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="assertDispatchedWithoutChain" id="_assertDispatchedWithoutChain">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#3279-3291" title="Go to source code">assertDispatchedWithoutChain</a>(<span>string|<a href="Closure.html"><span title="Closure">Closure</span></a> <var>$command</var></span>, <span>callable|null <var>$callback</var> = <span class="php-kw">null</span></span>): void</code>
+
+
+	<div class="expandable-collapsedView">
+		Assert if a job was dispatched with an empty chain based on a truth-test callback.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Assert if a job was dispatched with an empty chain based on a truth-test callback.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_assertDispatchedWithoutChain">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="assertBatched" id="_assertBatched">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#3292-3303" title="Go to source code">assertBatched</a>(<span>callable <var>$callback</var></span>): void</code>
+
+
+	<div class="expandable-collapsedView">
+		Assert if a batch was dispatched based on a truth-test callback.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Assert if a batch was dispatched based on a truth-test callback.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_assertBatched">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="assertBatchCount" id="_assertBatchCount">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#3304-3315" title="Go to source code">assertBatchCount</a>(<span>int <var>$count</var></span>): void</code>
+
+
+	<div class="expandable-collapsedView">
+		Assert the number of batches that have been dispatched.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Assert the number of batches that have been dispatched.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_assertBatchCount">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="dispatched" id="_dispatched">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#3316-3328" title="Go to source code">dispatched</a>(<span>string <var>$command</var></span>, <span>callable|null <var>$callback</var> = <span class="php-kw">null</span></span>): <a href="Illuminate.Support.Collection.html"><span title="Illuminate\Support\Collection">Collection</span></a></code>
+
+
+	<div class="expandable-collapsedView">
+		Get all of the jobs matching a truth-test callback.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Get all of the jobs matching a truth-test callback.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_dispatched">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="dispatchedSync" id="_dispatchedSync">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#3329-3341" title="Go to source code">dispatchedSync</a>(<span>string <var>$command</var></span>, <span>callable|null <var>$callback</var> = <span class="php-kw">null</span></span>): <a href="Illuminate.Support.Collection.html"><span title="Illuminate\Support\Collection">Collection</span></a></code>
+
+
+	<div class="expandable-collapsedView">
+		Get all of the jobs dispatched synchronously matching a truth-test callback.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Get all of the jobs dispatched synchronously matching a truth-test callback.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_dispatchedSync">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="dispatchedAfterResponse" id="_dispatchedAfterResponse">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#3342-3354" title="Go to source code">dispatchedAfterResponse</a>(<span>string <var>$command</var></span>, <span>callable|null <var>$callback</var> = <span class="php-kw">null</span></span>): <a href="Illuminate.Support.Collection.html"><span title="Illuminate\Support\Collection">Collection</span></a></code>
+
+
+	<div class="expandable-collapsedView">
+		Get all of the jobs dispatched after the response was sent matching a truth-test callback.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Get all of the jobs dispatched after the response was sent matching a truth-test callback.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_dispatchedAfterResponse">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="batched" id="_batched">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#3355-3366" title="Go to source code">batched</a>(<span>callable <var>$callback</var></span>): <a href="Illuminate.Support.Collection.html"><span title="Illuminate\Support\Collection">Collection</span></a></code>
+
+
+	<div class="expandable-collapsedView">
+		Get all of the pending batches matching a truth-test callback.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Get all of the pending batches matching a truth-test callback.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_batched">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="hasDispatched" id="_hasDispatched">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#3367-3378" title="Go to source code">hasDispatched</a>(<span>string <var>$command</var></span>): bool</code>
+
+
+	<div class="expandable-collapsedView">
+		Determine if there are any stored commands for a given class.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Determine if there are any stored commands for a given class.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_hasDispatched">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="hasDispatchedSync" id="_hasDispatchedSync">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#3379-3390" title="Go to source code">hasDispatchedSync</a>(<span>string <var>$command</var></span>): bool</code>
+
+
+	<div class="expandable-collapsedView">
+		Determine if there are any stored commands for a given class.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Determine if there are any stored commands for a given class.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_hasDispatchedSync">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="hasDispatchedAfterResponse" id="_hasDispatchedAfterResponse">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#3391-3402" title="Go to source code">hasDispatchedAfterResponse</a>(<span>string <var>$command</var></span>): bool</code>
+
+
+	<div class="expandable-collapsedView">
+		Determine if there are any stored commands for a given class.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Determine if there are any stored commands for a given class.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_hasDispatchedAfterResponse">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="recordPendingBatch" id="_recordPendingBatch">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#3403-3414" title="Go to source code">recordPendingBatch</a>(<span><span title="Illuminate\Bus\PendingBatch">PendingBatch</span> <var>$pendingBatch</var></span>): <span title="Illuminate\Bus\Batch">Batch</span></code>
+
+
+	<div class="expandable-collapsedView">
+		Record the fake pending batch dispatch.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Record the fake pending batch dispatch.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_recordPendingBatch">#</a>
+		</td>
+	</tr>
+		</table>
+
+
+
+
+
+
+
+
+		</div>
+
+		<div class="layout-footer">
+			 API documentation generated by <a href="https://www.apigen.org">ApiGen dev-master</a>
+		</div>
+	</div>
+
+	<div class="layout-rest">
+		<div class="navbar"></div>
+	</div>
+</body>
+</html>

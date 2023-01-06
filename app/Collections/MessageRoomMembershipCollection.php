@@ -10,9 +10,9 @@ use Illuminate\Database\Eloquent\Collection;
  */
 class MessageRoomMembershipCollection extends Collection
 {
-    public function forPower(int $power_id): MessageRoomMembership {
+    public function forPower(int $power_id): MessageRoomMembership
+    {
         /** @var MessageRoomMembership $current */
-        return  $this->where("power_id", $power_id)->firstOrFail();
+        return  $this->where('power_id', $power_id)->firstOrFail();
     }
-
 }

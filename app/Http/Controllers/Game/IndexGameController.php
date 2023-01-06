@@ -7,7 +7,6 @@ use App\Models\Game;
 use App\ViewModels\Game\IndexGameViewModel;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Http\Request;
-use Illuminate\Support\Str;
 
 class IndexGameController extends Controller
 {
@@ -16,11 +15,11 @@ class IndexGameController extends Controller
         /**
          * @return array<Game>|\Illuminate\Database\Eloquent\Collection
          */
-        $retrieve = fn(Builder $builder) => $builder->with([
+        $retrieve = fn (Builder $builder) => $builder->with([
             'currentPhase.phasePowerData.power.basePower',
             'powers',
             'variant.basePowers',
-            'winners'
+            'winners',
         ])->get();
 
         $vm = new IndexGameViewModel(

@@ -18,7 +18,7 @@ class VariantSeeder extends Seeder
             'name' => 'Standard',
             'api_name' => 'standard',
             'default_scs_to_win' => 18,
-            'total_scs' => 34
+            'total_scs' => 34,
         ]);
 
         $powers = [

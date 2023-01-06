@@ -1,12 +1,9 @@
 <?php
 
-
 use App\Actions\Game\InitializeGameAction;
-use App\Http\Requests\StoreGameRequest;
 use App\Models\Game;
 use App\Models\User;
 use App\Models\Variant;
-use Carbon\Carbon;
 use Carbon\CarbonInterface;
 use Database\Seeders\VariantSeeder;
 use function Pest\Laravel\actingAs;
@@ -17,7 +14,6 @@ it('can create a game without "no adjudication"', function () {
 
     $user = User::factory()->create();
     actingAs($user);
-
 
     $response = $this->post(route('games.store'), [
         'name' => 'Conquerors of the old world',
@@ -39,7 +35,6 @@ it('can create a game with "no adjudication day"', function () {
 
     $user = User::factory()->create();
     actingAs($user);
-
 
     $response = $this->post(route('games.store'), [
         'name' => 'Conquerors of the old world',
@@ -71,7 +66,6 @@ it('cannot create a game with seven "no adjudication day"', function () {
 
     $user = User::factory()->create();
     actingAs($user);
-
 
     $response = $this->post(route('games.store'), [
         'name' => 'Conquerors of the old world',

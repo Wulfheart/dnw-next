@@ -33,11 +33,11 @@ class InitializeGameAction
             $gameResponse = $adjudicator->initializeGame($game->variant->api_name);
 
             if ($save_response) {
-                Storage::drive('gamedata')->put(Str::of($game->name.$game->id)->remove(" ")->lower()."/0_{$gameResponse->phase_short}.json",
+                Storage::drive('gamedata')->put(Str::of($game->name.$game->id)->remove(' ')->lower()."/0_{$gameResponse->phase_short}.json",
                     $gameResponse->json);
             }
 
-            $path = "maps/".Uuid::uuid4().".svg";
+            $path = 'maps/'.Uuid::uuid4().'.svg';
             Storage::drive('public')->put($path, $gameResponse->svg_adjudicated);
 
             $phase = Phase::create([
@@ -55,13 +55,13 @@ class InitializeGameAction
             foreach ($game->powers as $power) {
                 /** @var \App\Utility\Game\DTO\PhasePowerDataDTO $ppd */
                 $ppd = $gameResponse->phase_power_data->filter(
-                    fn(PhasePowerDataDTO $item) => $item->power == $power->basePower->api_name
+                    fn (PhasePowerDataDTO $item) => $item->power == $power->basePower->api_name
                 )->first();
                 $orders_needed = $gameResponse->possible_orders->filter(
-                        fn($item) => $item->power == $power->basePower->api_name
-                    )->first()->units->filter(
-                        fn($item) => count($item->possible_orders) > 0
-                    )->count() > 0;
+                    fn ($item) => $item->power == $power->basePower->api_name
+                )->first()->units->filter(
+                    fn ($item) => count($item->possible_orders) > 0
+                )->count() > 0;
                 PhasePowerData::create([
                     'phase_id' => $phase->id,
                     'power_id' => $power->id,
@@ -78,9 +78,8 @@ class InitializeGameAction
                 'name' => 'Global',
                 'is_group' => true,
             ])->memberships()->createMany(
-                $game->powers->pluck('id')->map(fn(int $item) => ['power_id' => $item])->toArray()
+                $game->powers->pluck('id')->map(fn (int $item) => ['power_id' => $item])->toArray()
             );
-
 
             $c = $game->powers->count();
             for ($i = 0; $i < $c; $i++) {

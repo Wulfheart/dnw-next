@@ -7,11 +7,9 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreGameRequest;
 use App\Models\Game;
 use App\Models\MessageMode;
-use Illuminate\Http\Request;
 
 class StoreGameController extends Controller
 {
-
     /**
      * @throws \Illuminate\Auth\Access\AuthorizationException
      */
@@ -26,10 +24,11 @@ class StoreGameController extends Controller
 
             $request->get('variant_id'),
             collect($request->get('no_adjudication'))
-                ->filter(fn(string $value) => (bool)$value)->toArray() ?? [],
+                ->filter(fn (string $value) => (bool) $value)->toArray() ?? [],
             false,
             $messageMode->id,
         );
+
         return redirect()->route('games.show', ['game' => $game]);
     }
 }

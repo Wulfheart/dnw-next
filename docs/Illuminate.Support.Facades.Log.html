@@ -1,0 +1,1220 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Class Illuminate\Support\Facades\Log |  API</title>
+	<link rel="stylesheet" href="assets/main.css">
+	<script src="assets/main.js" defer></script>
+</head>
+
+<body class="layout">
+	<div class="layout-aside">
+	<div class="menu">
+			<div class="menu-section">
+				<h3>Namespaces</h3>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-App.html">App</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Actions.html">Actions</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Builders.html">Builders</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Collections.html">Collections</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Console.html">Console</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.DTO.html">DTO</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Enums.html">Enums</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Events.html">Events</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Exceptions.html">Exceptions</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Filament.html">Filament</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Http.html">Http</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Mail.html">Mail</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Models.html">Models</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Notifications.html">Notifications</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Policies.html">Policies</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Providers.html">Providers</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Queries.html">Queries</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Utility.html">Utility</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.View.html">View</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.ViewModels.html">ViewModels</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-BeyondCode.html">BeyondCode</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-BeyondCode.ServerTiming.html">ServerTiming</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Clockwork.html">Clockwork</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Clockwork.Support.html">Support</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Database.html">Database</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Database.Factories.html">Factories</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Database.Seeders.html">Seeders</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item active">
+				<a href="namespace-Illuminate.html">Illuminate</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Illuminate.Database.html">Database</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Illuminate.Filesystem.html">Filesystem</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Illuminate.Http.html">Http</a>
+			</li>
+			<li class="menuGroup-item active">
+				<a href="namespace-Illuminate.Support.html">Support</a>
+	<ul>
+			<li class="menuGroup-item active">
+				<a href="namespace-Illuminate.Support.Facades.html">Facades</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Illuminate.Testing.html">Testing</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Illuminate.View.html">View</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Jenssegers.html">Jenssegers</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Jenssegers.Agent.html">Agent</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Livewire.html">Livewire</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Livewire.Testing.html">Testing</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Lorisleiva.html">Lorisleiva</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Lorisleiva.Actions.html">Actions</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Lorisleiva.Lody.html">Lody</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Spatie.html">Spatie</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Spatie.LaravelIgnition.html">LaravelIgnition</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Tests.html">Tests</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Tests.Browser.html">Browser</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Tests.Feature.html">Feature</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-none.html">none</a>
+			</li>
+	</ul>
+			</div>
+
+		<div class="menu-section">
+			<h3>Classes</h3>
+			<ul>
+					<li>
+						<a href="Illuminate.Support.Facades.App.html">
+							App
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Artisan.html">
+							Artisan
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Auth.html">
+							Auth
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Blade.html">
+							Blade
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Broadcast.html">
+							Broadcast
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Bus.html">
+							Bus
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Cache.html">
+							Cache
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Config.html">
+							Config
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Cookie.html">
+							Cookie
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Crypt.html">
+							Crypt
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Date.html">
+							Date
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.DB.html">
+							DB
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Event.html">
+							Event
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.File.html">
+							File
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Gate.html">
+							Gate
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Hash.html">
+							Hash
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Http.html">
+							Http
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Lang.html">
+							Lang
+						</a>
+					</li>
+					<li class="active">
+						<a href="Illuminate.Support.Facades.Log.html">
+							Log
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Mail.html">
+							Mail
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Notification.html">
+							Notification
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Password.html">
+							Password
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Queue.html">
+							Queue
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.RateLimiter.html">
+							RateLimiter
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Redirect.html">
+							Redirect
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Request.html">
+							Request
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Response.html">
+							Response
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Route.html">
+							Route
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Schema.html">
+							Schema
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Session.html">
+							Session
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Storage.html">
+							Storage
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.URL.html">
+							URL
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Validator.html">
+							Validator
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.View.html">
+							View
+						</a>
+					</li>
+			</ul>
+		</div>
+
+
+
+
+
+	</div>
+	</div>
+
+	<div class="layout-main">
+		<div class="layout-navbar">
+	<nav class="navbar">
+		<div class="navbar-left">
+			<ul class="navbar-links">
+				<li>
+					<a href="index.html">Overview</a>
+				</li>
+				<li>
+					
+						<a href="namespace-Illuminate.Support.Facades.html">Namespace</a>
+					
+				</li>
+<li class="active"><a href="Illuminate.Support.Facades.Log.html">Class</a></li>				<li>
+					<a href="tree.html">Tree</a>
+				</li>
+			</ul>
+		</div>
+		<div class="navbar-right">
+	<div class="search" data-elements="assets/elements.js">
+		<input class="search-input" placeholder="Search class, function or namespace" autofocus>
+		<ul class="search-results"></ul>
+	</div>
+		</div>
+	</nav>
+		</div>
+
+		<div class="layout-content">
+		<h1>
+			Class <a href="namespace-Illuminate.html">Illuminate</a>\<a href="namespace-Illuminate.Support.html">Support</a>\<a href="namespace-Illuminate.Support.Facades.html">Facades</a>\<a href="Illuminate.Support.Facades.Log.html">Log</a>
+		</h1>
+
+
+	<table class="classLikeSignatureTable">
+
+
+
+
+	</table>
+
+			<div class="classLikeSection">
+	<ul class="classTree">
+	<li>
+<b><span class="active">Illuminate\Support\Facades\Log</span></b>
+
+
+	<ul class="classTree">
+	<li>
+<a href="Log.html"><span>Log</span></a>
+
+
+	</li>
+	</ul>
+	</li>
+	</ul>
+			</div>
+
+		<div class="classLikeSection">
+			<b>Located at</b> <a href="source-_ide_helper.html#7974" title="Go to source code">_ide_helper.php</a><br>
+		</div>
+
+
+		<table class="table" id="methods">
+			<tr>
+				<th class="table-heading sortable" colspan="3" title="Switch between natural and alphabetical order">Methods</th>
+			</tr>
+
+	<tr class="expandable collapsed" data-order="build" id="_build">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#7975-7986" title="Go to source code">build</a>(<span>array <var>$config</var></span>): <span title="Psr\Log\LoggerInterface">LoggerInterface</span></code>
+
+
+	<div class="expandable-collapsedView">
+		Build an on-demand log channel.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Build an on-demand log channel.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_build">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="stack" id="_stack">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#7987-7999" title="Go to source code">stack</a>(<span>array <var>$channels</var></span>, <span>string|null <var>$channel</var> = <span class="php-kw">null</span></span>): <span title="Psr\Log\LoggerInterface">LoggerInterface</span></code>
+
+
+	<div class="expandable-collapsedView">
+		Create a new, on-demand aggregate logger instance.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Create a new, on-demand aggregate logger instance.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_stack">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="channel" id="_channel">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#8000-8011" title="Go to source code">channel</a>(<span>string|null <var>$channel</var> = <span class="php-kw">null</span></span>): <span title="Psr\Log\LoggerInterface">LoggerInterface</span></code>
+
+
+	<div class="expandable-collapsedView">
+		Get a log channel instance.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Get a log channel instance.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_channel">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="driver" id="_driver">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#8012-8023" title="Go to source code">driver</a>(<span>string|null <var>$driver</var> = <span class="php-kw">null</span></span>): <span title="Psr\Log\LoggerInterface">LoggerInterface</span></code>
+
+
+	<div class="expandable-collapsedView">
+		Get a log driver instance.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Get a log driver instance.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_driver">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="shareContext" id="_shareContext">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#8024-8035" title="Go to source code">shareContext</a>(<span>array <var>$context</var></span>): <span title="Illuminate\Log\LogManager">LogManager</span></code>
+
+
+	<div class="expandable-collapsedView">
+		Share context across channels and stacks.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Share context across channels and stacks.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_shareContext">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="sharedContext" id="_sharedContext">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#8036-8046" title="Go to source code">sharedContext</a>(): array</code>
+
+
+	<div class="expandable-collapsedView">
+		The context shared across channels and stacks.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>The context shared across channels and stacks.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_sharedContext">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="flushSharedContext" id="_flushSharedContext">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#8047-8057" title="Go to source code">flushSharedContext</a>(): <span title="Illuminate\Log\LogManager">LogManager</span></code>
+
+
+	<div class="expandable-collapsedView">
+		Flush the shared context.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Flush the shared context.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_flushSharedContext">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="getDefaultDriver" id="_getDefaultDriver">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#8058-8068" title="Go to source code">getDefaultDriver</a>(): string|null</code>
+
+
+	<div class="expandable-collapsedView">
+		Get the default log driver name.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Get the default log driver name.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_getDefaultDriver">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="setDefaultDriver" id="_setDefaultDriver">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#8069-8080" title="Go to source code">setDefaultDriver</a>(<span>string <var>$name</var></span>): void</code>
+
+
+	<div class="expandable-collapsedView">
+		Set the default log driver name.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Set the default log driver name.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_setDefaultDriver">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="extend" id="_extend">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#8081-8093" title="Go to source code">extend</a>(<span>string <var>$driver</var></span>, <span><a href="Closure.html"><span title="Closure">Closure</span></a> <var>$callback</var></span>): <span title="Illuminate\Log\LogManager">LogManager</span></code>
+
+
+	<div class="expandable-collapsedView">
+		Register a custom driver creator Closure.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Register a custom driver creator Closure.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_extend">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="forgetChannel" id="_forgetChannel">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#8094-8105" title="Go to source code">forgetChannel</a>(<span>string|null <var>$driver</var> = <span class="php-kw">null</span></span>): <span title="Illuminate\Log\LogManager">LogManager</span></code>
+
+
+	<div class="expandable-collapsedView">
+		Unset the given channel instance.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Unset the given channel instance.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_forgetChannel">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="getChannels" id="_getChannels">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#8106-8116" title="Go to source code">getChannels</a>(): array</code>
+
+
+	<div class="expandable-collapsedView">
+		Get all of the resolved log channels.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Get all of the resolved log channels.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_getChannels">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="emergency" id="_emergency">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#8117-8129" title="Go to source code">emergency</a>(<span>string <var>$message</var></span>, <span>array <var>$context</var> = []</span>): void</code>
+
+
+	<div class="expandable-collapsedView">
+		System is unusable.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>System is unusable.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_emergency">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="alert" id="_alert">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#8130-8145" title="Go to source code">alert</a>(<span>string <var>$message</var></span>, <span>array <var>$context</var> = []</span>): void</code>
+
+
+	<div class="expandable-collapsedView">
+		Action must be taken immediately.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Action must be taken immediately.</p>
+<p>Example: Entire website down, database unavailable, etc. This should
+trigger the SMS alerts and wake you up.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_alert">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="critical" id="_critical">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#8146-8160" title="Go to source code">critical</a>(<span>string <var>$message</var></span>, <span>array <var>$context</var> = []</span>): void</code>
+
+
+	<div class="expandable-collapsedView">
+		Critical conditions.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Critical conditions.</p>
+<p>Example: Application component unavailable, unexpected exception.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_critical">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="error" id="_error">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#8161-8174" title="Go to source code">error</a>(<span>string <var>$message</var></span>, <span>array <var>$context</var> = []</span>): void</code>
+
+
+	<div class="expandable-collapsedView">
+		Runtime errors that do not require immediate action but should typically
+be logged and monitored.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Runtime errors that do not require immediate action but should typically
+be logged and monitored.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_error">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="warning" id="_warning">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#8175-8190" title="Go to source code">warning</a>(<span>string <var>$message</var></span>, <span>array <var>$context</var> = []</span>): void</code>
+
+
+	<div class="expandable-collapsedView">
+		Exceptional occurrences that are not errors.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Exceptional occurrences that are not errors.</p>
+<p>Example: Use of deprecated APIs, poor use of an API, undesirable things
+that are not necessarily wrong.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_warning">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="notice" id="_notice">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#8191-8203" title="Go to source code">notice</a>(<span>string <var>$message</var></span>, <span>array <var>$context</var> = []</span>): void</code>
+
+
+	<div class="expandable-collapsedView">
+		Normal but significant events.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Normal but significant events.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_notice">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="info" id="_info">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#8204-8218" title="Go to source code">info</a>(<span>string <var>$message</var></span>, <span>array <var>$context</var> = []</span>): void</code>
+
+
+	<div class="expandable-collapsedView">
+		Interesting events.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Interesting events.</p>
+<p>Example: User logs in, SQL logs.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_info">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="debug" id="_debug">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#8219-8231" title="Go to source code">debug</a>(<span>string <var>$message</var></span>, <span>array <var>$context</var> = []</span>): void</code>
+
+
+	<div class="expandable-collapsedView">
+		Detailed debug information.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Detailed debug information.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_debug">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="log" id="_log">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#8232-8245" title="Go to source code">log</a>(<span>mixed <var>$level</var></span>, <span>string <var>$message</var></span>, <span>array <var>$context</var> = []</span>): void</code>
+
+
+	<div class="expandable-collapsedView">
+		Logs with an arbitrary level.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Logs with an arbitrary level.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_log">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="withContext" id="_withContext">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html" title="Go to source code">withContext</a>(<span>array <var>$context</var> = []</span>): <span title="Illuminate\Log\Logger">Logger</span></code>
+
+
+
+	<div class="expandable-expandedView">
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_withContext">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="withoutContext" id="_withoutContext">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html" title="Go to source code">withoutContext</a>(): <span title="Illuminate\Log\Logger">Logger</span></code>
+
+
+
+	<div class="expandable-expandedView">
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_withoutContext">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="write" id="_write">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html" title="Go to source code">write</a>(<span>string <var>$level</var></span>, <span>string <var>$message</var></span>, <span>array <var>$context</var> = []</span>): void</code>
+
+
+
+	<div class="expandable-expandedView">
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_write">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="listen" id="_listen">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html" title="Go to source code">listen</a>(<span><a href="Closure.html"><span title="Closure">Closure</span></a> <var>$callback</var></span>): void</code>
+
+
+
+	<div class="expandable-expandedView">
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_listen">#</a>
+		</td>
+	</tr>
+		</table>
+
+
+
+
+
+
+
+
+		</div>
+
+		<div class="layout-footer">
+			 API documentation generated by <a href="https://www.apigen.org">ApiGen dev-master</a>
+		</div>
+	</div>
+
+	<div class="layout-rest">
+		<div class="navbar"></div>
+	</div>
+</body>
+</html>

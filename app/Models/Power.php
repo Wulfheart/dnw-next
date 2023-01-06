@@ -27,7 +27,6 @@ class Power extends Model
         return new PowerCollection($models);
     }
 
-
     public function basePower(): BelongsTo
     {
         return $this->belongsTo(\App\Models\BasePower::class);
@@ -43,7 +42,8 @@ class Power extends Model
         return $this->belongsTo(Game::class);
     }
 
-    public function messageRooms() {
+    public function messageRooms()
+    {
         return $this->belongsToMany(MessageRoom::class, 'message_room_memberships');
     }
 }

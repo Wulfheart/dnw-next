@@ -4,8 +4,8 @@ namespace Database\Factories;
 
 use App\Enums\PhaseTypeEnum;
 use App\Models\Game;
-use Illuminate\Database\Eloquent\Factories\Factory;
 use App\Models\Phase;
+use Illuminate\Database\Eloquent\Factories\Factory;
 
 class PhaseFactory extends Factory
 {

@@ -41,7 +41,7 @@ class GameFinishedNotification extends Notification implements ShouldQueue
             ->subject('Spiel beendet')
             ->markdown('mail.markdown.game.adjudicated', [
                 'gameName' => $this->game->name,
-                'url' => route('games.show', $this->game)
+                'url' => route('games.show', $this->game),
             ]);
     }
 

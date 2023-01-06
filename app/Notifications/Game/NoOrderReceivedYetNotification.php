@@ -2,8 +2,6 @@
 
 namespace App\Notifications\Game;
 
-use App\Models\Game;
-use App\Models\Phase;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Messages\MailMessage;

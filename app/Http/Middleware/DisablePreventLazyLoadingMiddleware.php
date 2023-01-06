@@ -18,6 +18,7 @@ class DisablePreventLazyLoadingMiddleware
     public function handle(Request $request, Closure $next)
     {
         Model::preventLazyLoading(false);
+
         return $next($request);
     }
 }

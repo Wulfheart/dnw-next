@@ -3,7 +3,6 @@
 namespace Database\Seeders;
 
 use App\Models\User;
-use App\Models\Variant;
 use App\Utility\Game\AdjudicatorService;
 use App\Utility\Game\TestWithCachingAdjudicatorImplementation;
 use Illuminate\Database\Seeder;

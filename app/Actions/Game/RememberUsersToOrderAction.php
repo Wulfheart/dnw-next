@@ -2,9 +2,7 @@
 
 namespace App\Actions\Game;
 
-use App\Builders\GameBuilder;
 use App\Models\Game;
-use App\Models\Phase;
 use App\Models\PhasePowerData;
 use App\Notifications\Game\NoOrderReceivedYetNotification;
 use Illuminate\Database\Eloquent\Builder;
@@ -17,7 +15,6 @@ class RememberUsersToOrderAction
 
     public function handle()
     {
-
         $candidates = Game::with('currentPhase.phasePowerData.power.user')
             ->whereActive()
             ->whereNotAdjudicating()
@@ -40,8 +37,6 @@ class RememberUsersToOrderAction
                 'created_at' => now(),
                 'updated_at' => now(),
             ]);
-
-
         });
     }
 }

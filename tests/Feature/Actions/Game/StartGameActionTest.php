@@ -26,5 +26,4 @@ it('calculates a phase adjudication time when starting', function () {
 
     FakeFillGameAction::run($game);
     expect($game->currentPhase->adjudication_at->greaterThan(now()))->toBeTrue();
-
 });

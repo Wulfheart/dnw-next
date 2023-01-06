@@ -2,8 +2,6 @@
 
 namespace App\Models;
 
-use App\Builders\GameBuilder;
-use App\Builders\PhaseBuilder;
 use App\Enums\PhaseTypeEnum;
 use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -27,7 +25,6 @@ class Phase extends Model
         'type' => PhaseTypeEnum::class,
     ];
 
-
     public function previousPhase(): BelongsTo
     {
         return $this->belongsTo(Phase::class);
@@ -46,7 +43,7 @@ class Phase extends Model
 
     public function adjudicationStarted(): bool
     {
-        return !is_null($this->locked_for_adjudication_at);
+        return ! is_null($this->locked_for_adjudication_at);
     }
 
     public function lockForAdjudication(): void
@@ -58,8 +55,6 @@ class Phase extends Model
     public function statusType(): Attribute
     {
         return Attribute::get(function () {
-
         });
     }
-
 }

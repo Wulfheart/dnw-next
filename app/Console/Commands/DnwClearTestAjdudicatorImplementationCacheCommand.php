@@ -24,6 +24,7 @@ class DnwClearTestAjdudicatorImplementationCacheCommand extends Command
         foreach ($files as $file) {
             unlink($file->getRealPath());
         }
+
         return 0;
     }
 }

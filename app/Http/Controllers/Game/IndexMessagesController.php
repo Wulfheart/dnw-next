@@ -5,7 +5,6 @@ namespace App\Http\Controllers\Game;
 use App\Http\Controllers\Controller;
 use App\Models\Game;
 use Illuminate\Http\Request;
-use Illuminate\Support\Carbon;
 
 class IndexMessagesController extends Controller
 {
@@ -16,6 +15,7 @@ class IndexMessagesController extends Controller
     {
         $this->authorize('indexMessages', $game);
         $game->loadMissing('currentPhase');
+
         return view('game.show-messages', [
             'game' => $game,
             'adjudicationInProgress' => $game->currentPhase->adjudicationStarted(),

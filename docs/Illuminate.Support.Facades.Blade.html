@@ -1,0 +1,1642 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Class Illuminate\Support\Facades\Blade |  API</title>
+	<link rel="stylesheet" href="assets/main.css">
+	<script src="assets/main.js" defer></script>
+</head>
+
+<body class="layout">
+	<div class="layout-aside">
+	<div class="menu">
+			<div class="menu-section">
+				<h3>Namespaces</h3>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-App.html">App</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Actions.html">Actions</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Builders.html">Builders</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Collections.html">Collections</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Console.html">Console</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.DTO.html">DTO</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Enums.html">Enums</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Events.html">Events</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Exceptions.html">Exceptions</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Filament.html">Filament</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Http.html">Http</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Mail.html">Mail</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Models.html">Models</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Notifications.html">Notifications</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Policies.html">Policies</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Providers.html">Providers</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Queries.html">Queries</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Utility.html">Utility</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.View.html">View</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.ViewModels.html">ViewModels</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-BeyondCode.html">BeyondCode</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-BeyondCode.ServerTiming.html">ServerTiming</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Clockwork.html">Clockwork</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Clockwork.Support.html">Support</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Database.html">Database</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Database.Factories.html">Factories</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Database.Seeders.html">Seeders</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item active">
+				<a href="namespace-Illuminate.html">Illuminate</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Illuminate.Database.html">Database</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Illuminate.Filesystem.html">Filesystem</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Illuminate.Http.html">Http</a>
+			</li>
+			<li class="menuGroup-item active">
+				<a href="namespace-Illuminate.Support.html">Support</a>
+	<ul>
+			<li class="menuGroup-item active">
+				<a href="namespace-Illuminate.Support.Facades.html">Facades</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Illuminate.Testing.html">Testing</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Illuminate.View.html">View</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Jenssegers.html">Jenssegers</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Jenssegers.Agent.html">Agent</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Livewire.html">Livewire</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Livewire.Testing.html">Testing</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Lorisleiva.html">Lorisleiva</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Lorisleiva.Actions.html">Actions</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Lorisleiva.Lody.html">Lody</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Spatie.html">Spatie</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Spatie.LaravelIgnition.html">LaravelIgnition</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Tests.html">Tests</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Tests.Browser.html">Browser</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Tests.Feature.html">Feature</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-none.html">none</a>
+			</li>
+	</ul>
+			</div>
+
+		<div class="menu-section">
+			<h3>Classes</h3>
+			<ul>
+					<li>
+						<a href="Illuminate.Support.Facades.App.html">
+							App
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Artisan.html">
+							Artisan
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Auth.html">
+							Auth
+						</a>
+					</li>
+					<li class="active">
+						<a href="Illuminate.Support.Facades.Blade.html">
+							Blade
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Broadcast.html">
+							Broadcast
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Bus.html">
+							Bus
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Cache.html">
+							Cache
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Config.html">
+							Config
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Cookie.html">
+							Cookie
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Crypt.html">
+							Crypt
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Date.html">
+							Date
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.DB.html">
+							DB
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Event.html">
+							Event
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.File.html">
+							File
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Gate.html">
+							Gate
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Hash.html">
+							Hash
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Http.html">
+							Http
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Lang.html">
+							Lang
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Log.html">
+							Log
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Mail.html">
+							Mail
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Notification.html">
+							Notification
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Password.html">
+							Password
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Queue.html">
+							Queue
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.RateLimiter.html">
+							RateLimiter
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Redirect.html">
+							Redirect
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Request.html">
+							Request
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Response.html">
+							Response
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Route.html">
+							Route
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Schema.html">
+							Schema
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Session.html">
+							Session
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Storage.html">
+							Storage
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.URL.html">
+							URL
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Validator.html">
+							Validator
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.View.html">
+							View
+						</a>
+					</li>
+			</ul>
+		</div>
+
+
+
+
+
+	</div>
+	</div>
+
+	<div class="layout-main">
+		<div class="layout-navbar">
+	<nav class="navbar">
+		<div class="navbar-left">
+			<ul class="navbar-links">
+				<li>
+					<a href="index.html">Overview</a>
+				</li>
+				<li>
+					
+						<a href="namespace-Illuminate.Support.Facades.html">Namespace</a>
+					
+				</li>
+<li class="active"><a href="Illuminate.Support.Facades.Blade.html">Class</a></li>				<li>
+					<a href="tree.html">Tree</a>
+				</li>
+			</ul>
+		</div>
+		<div class="navbar-right">
+	<div class="search" data-elements="assets/elements.js">
+		<input class="search-input" placeholder="Search class, function or namespace" autofocus>
+		<ul class="search-results"></ul>
+	</div>
+		</div>
+	</nav>
+		</div>
+
+		<div class="layout-content">
+		<h1>
+			Class <a href="namespace-Illuminate.html">Illuminate</a>\<a href="namespace-Illuminate.Support.html">Support</a>\<a href="namespace-Illuminate.Support.Facades.html">Facades</a>\<a href="Illuminate.Support.Facades.Blade.html">Blade</a>
+		</h1>
+
+
+	<table class="classLikeSignatureTable">
+
+
+
+
+	</table>
+
+			<div class="classLikeSection">
+	<ul class="classTree">
+	<li>
+<b><span class="active">Illuminate\Support\Facades\Blade</span></b>
+
+
+	<ul class="classTree">
+	<li>
+<a href="Blade.html"><span>Blade</span></a>
+
+
+	</li>
+	</ul>
+	</li>
+	</ul>
+			</div>
+
+		<div class="classLikeSection">
+			<b>Located at</b> <a href="source-_ide_helper.html#2307" title="Go to source code">_ide_helper.php</a><br>
+		</div>
+
+
+		<table class="table" id="methods">
+			<tr>
+				<th class="table-heading sortable" colspan="3" title="Switch between natural and alphabetical order">Methods</th>
+			</tr>
+
+	<tr class="expandable collapsed" data-order="compile" id="_compile">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#2308-2319" title="Go to source code">compile</a>(<span>string|null <var>$path</var> = <span class="php-kw">null</span></span>): void</code>
+
+
+	<div class="expandable-collapsedView">
+		Compile the view at the given path.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Compile the view at the given path.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_compile">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="getPath" id="_getPath">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#2320-2330" title="Go to source code">getPath</a>(): string</code>
+
+
+	<div class="expandable-collapsedView">
+		Get the path currently being compiled.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Get the path currently being compiled.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_getPath">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="setPath" id="_setPath">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#2331-2342" title="Go to source code">setPath</a>(<span>string <var>$path</var></span>): void</code>
+
+
+	<div class="expandable-collapsedView">
+		Set the path currently being compiled.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Set the path currently being compiled.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_setPath">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="compileString" id="_compileString">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#2343-2354" title="Go to source code">compileString</a>(<span>string <var>$value</var></span>): string</code>
+
+
+	<div class="expandable-collapsedView">
+		Compile the given Blade template contents.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Compile the given Blade template contents.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_compileString">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="render" id="_render">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#2355-2367" title="Go to source code">render</a>(<span>string <var>$string</var></span>, <span>array <var>$data</var> = []</span>, <span>bool <var>$deleteCachedView</var> = <span class="php-kw">false</span></span>): string</code>
+
+
+	<div class="expandable-collapsedView">
+		Evaluate and render a Blade string to HTML.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Evaluate and render a Blade string to HTML.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_render">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="renderComponent" id="_renderComponent">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#2368-2378" title="Go to source code">renderComponent</a>(<span><span title="Illuminate\View\Component">Component</span> <var>$component</var></span>): string</code>
+
+
+	<div class="expandable-collapsedView">
+		Render a component instance to HTML.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Render a component instance to HTML.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_renderComponent">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="stripParentheses" id="_stripParentheses">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#2379-2390" title="Go to source code">stripParentheses</a>(<span>string <var>$expression</var></span>): string</code>
+
+
+	<div class="expandable-collapsedView">
+		Strip the parentheses from the given expression.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Strip the parentheses from the given expression.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_stripParentheses">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="extend" id="_extend">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#2391-2402" title="Go to source code">extend</a>(<span>callable <var>$compiler</var></span>): void</code>
+
+
+	<div class="expandable-collapsedView">
+		Register a custom Blade compiler.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Register a custom Blade compiler.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_extend">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="getExtensions" id="_getExtensions">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#2403-2413" title="Go to source code">getExtensions</a>(): array</code>
+
+
+	<div class="expandable-collapsedView">
+		Get the extensions used by the compiler.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Get the extensions used by the compiler.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_getExtensions">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="if" id="_if">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#2414-2426" title="Go to source code">if</a>(<span>string <var>$name</var></span>, <span>callable <var>$callback</var></span>): void</code>
+
+
+	<div class="expandable-collapsedView">
+		Register an "if" statement directive.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Register an &quot;if&quot; statement directive.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_if">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="check" id="_check">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#2427-2439" title="Go to source code">check</a>(<span>string <var>$name</var></span>, <span>array ...<var>$parameters</var></span>): bool</code>
+
+
+	<div class="expandable-collapsedView">
+		Check the result of a condition.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Check the result of a condition.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_check">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="component" id="_component">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#2440-2453" title="Go to source code">component</a>(<span>string <var>$class</var></span>, <span>string|null <var>$alias</var> = <span class="php-kw">null</span></span>, <span>string <var>$prefix</var> = <span class="php-str">''</span></span>): void</code>
+
+
+	<div class="expandable-collapsedView">
+		Register a class-based component alias directive.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Register a class-based component alias directive.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_component">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="components" id="_components">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#2454-2466" title="Go to source code">components</a>(<span>array <var>$components</var></span>, <span>string <var>$prefix</var> = <span class="php-str">''</span></span>): void</code>
+
+
+	<div class="expandable-collapsedView">
+		Register an array of class-based components.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Register an array of class-based components.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_components">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="getClassComponentAliases" id="_getClassComponentAliases">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#2467-2477" title="Go to source code">getClassComponentAliases</a>(): array</code>
+
+
+	<div class="expandable-collapsedView">
+		Get the registered class component aliases.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Get the registered class component aliases.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_getClassComponentAliases">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="anonymousComponentNamespace" id="_anonymousComponentNamespace">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#2478-2490" title="Go to source code">anonymousComponentNamespace</a>(<span>string <var>$directory</var></span>, <span>string|null <var>$prefix</var> = <span class="php-kw">null</span></span>): void</code>
+
+
+	<div class="expandable-collapsedView">
+		Register an anonymous component namespace.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Register an anonymous component namespace.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_anonymousComponentNamespace">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="componentNamespace" id="_componentNamespace">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#2491-2503" title="Go to source code">componentNamespace</a>(<span>string <var>$namespace</var></span>, <span>string <var>$prefix</var></span>): void</code>
+
+
+	<div class="expandable-collapsedView">
+		Register a class-based component namespace.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Register a class-based component namespace.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_componentNamespace">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="getAnonymousComponentNamespaces" id="_getAnonymousComponentNamespaces">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#2504-2514" title="Go to source code">getAnonymousComponentNamespaces</a>(): array</code>
+
+
+	<div class="expandable-collapsedView">
+		Get the registered anonymous component namespaces.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Get the registered anonymous component namespaces.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_getAnonymousComponentNamespaces">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="getClassComponentNamespaces" id="_getClassComponentNamespaces">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#2515-2525" title="Go to source code">getClassComponentNamespaces</a>(): array</code>
+
+
+	<div class="expandable-collapsedView">
+		Get the registered class component namespaces.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Get the registered class component namespaces.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_getClassComponentNamespaces">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="aliasComponent" id="_aliasComponent">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#2526-2538" title="Go to source code">aliasComponent</a>(<span>string <var>$path</var></span>, <span>string|null <var>$alias</var> = <span class="php-kw">null</span></span>): void</code>
+
+
+	<div class="expandable-collapsedView">
+		Register a component alias directive.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Register a component alias directive.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_aliasComponent">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="include" id="_include">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#2539-2551" title="Go to source code">include</a>(<span>string <var>$path</var></span>, <span>string|null <var>$alias</var> = <span class="php-kw">null</span></span>): void</code>
+
+
+	<div class="expandable-collapsedView">
+		Register an include alias directive.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Register an include alias directive.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_include">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="aliasInclude" id="_aliasInclude">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#2552-2564" title="Go to source code">aliasInclude</a>(<span>string <var>$path</var></span>, <span>string|null <var>$alias</var> = <span class="php-kw">null</span></span>): void</code>
+
+
+	<div class="expandable-collapsedView">
+		Register an include alias directive.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Register an include alias directive.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_aliasInclude">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="directive" id="_directive">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#2565-2578" title="Go to source code">directive</a>(<span>string <var>$name</var></span>, <span>callable <var>$handler</var></span>): void</code>
+
+
+	<div class="expandable-collapsedView">
+		Register a handler for custom directives.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Register a handler for custom directives.</p>
+</div>
+
+
+
+							<h4>Throws</h4>
+							<table>
+									<tr>
+										<td><code><a href="InvalidArgumentException.html"><span>InvalidArgumentException</span></a></code>&nbsp;</td>
+										<td></td>
+									</tr>
+							</table>
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_directive">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="getCustomDirectives" id="_getCustomDirectives">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#2579-2589" title="Go to source code">getCustomDirectives</a>(): array</code>
+
+
+	<div class="expandable-collapsedView">
+		Get the list of custom directives.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Get the list of custom directives.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_getCustomDirectives">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="precompiler" id="_precompiler">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#2590-2601" title="Go to source code">precompiler</a>(<span>callable <var>$precompiler</var></span>): void</code>
+
+
+	<div class="expandable-collapsedView">
+		Register a new precompiler.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Register a new precompiler.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_precompiler">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="setEchoFormat" id="_setEchoFormat">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#2602-2613" title="Go to source code">setEchoFormat</a>(<span>string <var>$format</var></span>): void</code>
+
+
+	<div class="expandable-collapsedView">
+		Set the echo format to be used by the compiler.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Set the echo format to be used by the compiler.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_setEchoFormat">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="withDoubleEncoding" id="_withDoubleEncoding">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#2614-2624" title="Go to source code">withDoubleEncoding</a>(): void</code>
+
+
+	<div class="expandable-collapsedView">
+		Set the "echo" format to double encode entities.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Set the &quot;echo&quot; format to double encode entities.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_withDoubleEncoding">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="withoutDoubleEncoding" id="_withoutDoubleEncoding">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#2625-2635" title="Go to source code">withoutDoubleEncoding</a>(): void</code>
+
+
+	<div class="expandable-collapsedView">
+		Set the "echo" format to not double encode entities.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Set the &quot;echo&quot; format to not double encode entities.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_withoutDoubleEncoding">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="withoutComponentTags" id="_withoutComponentTags">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#2636-2646" title="Go to source code">withoutComponentTags</a>(): void</code>
+
+
+	<div class="expandable-collapsedView">
+		Indicate that component tags should not be compiled.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Indicate that component tags should not be compiled.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_withoutComponentTags">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="getCompiledPath" id="_getCompiledPath">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#2647-2658" title="Go to source code">getCompiledPath</a>(<span>string <var>$path</var></span>): string</code>
+
+
+	<div class="expandable-collapsedView">
+		Get the path to the compiled version of a view.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Get the path to the compiled version of a view.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_getCompiledPath">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="isExpired" id="_isExpired">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#2659-2670" title="Go to source code">isExpired</a>(<span>string <var>$path</var></span>): bool</code>
+
+
+	<div class="expandable-collapsedView">
+		Determine if the view at the given path is expired.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Determine if the view at the given path is expired.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_isExpired">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="newComponentHash" id="_newComponentHash">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#2671-2681" title="Go to source code">newComponentHash</a>(<span>string <var>$component</var></span>): string</code>
+
+
+	<div class="expandable-collapsedView">
+		Get a new component hash for a component name.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Get a new component hash for a component name.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_newComponentHash">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="compileClassComponentOpening" id="_compileClassComponentOpening">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#2682-2695" title="Go to source code">compileClassComponentOpening</a>(<span>string <var>$component</var></span>, <span>string <var>$alias</var></span>, <span>string <var>$data</var></span>, <span>string <var>$hash</var></span>): string</code>
+
+
+	<div class="expandable-collapsedView">
+		Compile a class component opening.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Compile a class component opening.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_compileClassComponentOpening">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="compileEndComponentClass" id="_compileEndComponentClass">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#2696-2706" title="Go to source code">compileEndComponentClass</a>(): string</code>
+
+
+	<div class="expandable-collapsedView">
+		Compile the end-component statements into valid PHP.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Compile the end-component statements into valid PHP.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_compileEndComponentClass">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="sanitizeComponentAttribute" id="_sanitizeComponentAttribute">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#2707-2717" title="Go to source code">sanitizeComponentAttribute</a>(<span>mixed <var>$value</var></span>): mixed</code>
+
+
+	<div class="expandable-collapsedView">
+		Sanitize the given component attribute value.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Sanitize the given component attribute value.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_sanitizeComponentAttribute">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="compileEndOnce" id="_compileEndOnce">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#2718-2728" title="Go to source code">compileEndOnce</a>(): string</code>
+
+
+	<div class="expandable-collapsedView">
+		Compile an end-once block into valid PHP.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Compile an end-once block into valid PHP.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_compileEndOnce">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="stringable" id="_stringable">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#2729-2741" title="Go to source code">stringable</a>(<span>string|callable <var>$class</var></span>, <span>callable|null <var>$handler</var> = <span class="php-kw">null</span></span>): void</code>
+
+
+	<div class="expandable-collapsedView">
+		Add a handler to be executed before echoing a given class.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Add a handler to be executed before echoing a given class.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_stringable">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="compileEchos" id="_compileEchos">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#2742-2753" title="Go to source code">compileEchos</a>(<span>string <var>$value</var></span>): string</code>
+
+
+	<div class="expandable-collapsedView">
+		Compile Blade echos into valid PHP.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Compile Blade echos into valid PHP.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_compileEchos">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="applyEchoHandler" id="_applyEchoHandler">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#2754-2765" title="Go to source code">applyEchoHandler</a>(<span>string <var>$value</var></span>): string</code>
+
+
+	<div class="expandable-collapsedView">
+		Apply the echo handler for the value if it exists.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Apply the echo handler for the value if it exists.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_applyEchoHandler">#</a>
+		</td>
+	</tr>
+		</table>
+
+
+
+
+
+
+
+
+		</div>
+
+		<div class="layout-footer">
+			 API documentation generated by <a href="https://www.apigen.org">ApiGen dev-master</a>
+		</div>
+	</div>
+
+	<div class="layout-rest">
+		<div class="navbar"></div>
+	</div>
+</body>
+</html>

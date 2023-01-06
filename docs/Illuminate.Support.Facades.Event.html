@@ -1,0 +1,1270 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Class Illuminate\Support\Facades\Event |  API</title>
+	<link rel="stylesheet" href="assets/main.css">
+	<script src="assets/main.js" defer></script>
+</head>
+
+<body class="layout">
+	<div class="layout-aside">
+	<div class="menu">
+			<div class="menu-section">
+				<h3>Namespaces</h3>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-App.html">App</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Actions.html">Actions</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Builders.html">Builders</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Collections.html">Collections</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Console.html">Console</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.DTO.html">DTO</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Enums.html">Enums</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Events.html">Events</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Exceptions.html">Exceptions</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Filament.html">Filament</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Http.html">Http</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Mail.html">Mail</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Models.html">Models</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Notifications.html">Notifications</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Policies.html">Policies</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Providers.html">Providers</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Queries.html">Queries</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.Utility.html">Utility</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.View.html">View</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-App.ViewModels.html">ViewModels</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-BeyondCode.html">BeyondCode</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-BeyondCode.ServerTiming.html">ServerTiming</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Clockwork.html">Clockwork</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Clockwork.Support.html">Support</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Database.html">Database</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Database.Factories.html">Factories</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Database.Seeders.html">Seeders</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item active">
+				<a href="namespace-Illuminate.html">Illuminate</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Illuminate.Database.html">Database</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Illuminate.Filesystem.html">Filesystem</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Illuminate.Http.html">Http</a>
+			</li>
+			<li class="menuGroup-item active">
+				<a href="namespace-Illuminate.Support.html">Support</a>
+	<ul>
+			<li class="menuGroup-item active">
+				<a href="namespace-Illuminate.Support.Facades.html">Facades</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Illuminate.Testing.html">Testing</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Illuminate.View.html">View</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Jenssegers.html">Jenssegers</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Jenssegers.Agent.html">Agent</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Livewire.html">Livewire</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Livewire.Testing.html">Testing</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Lorisleiva.html">Lorisleiva</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Lorisleiva.Actions.html">Actions</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Lorisleiva.Lody.html">Lody</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Spatie.html">Spatie</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Spatie.LaravelIgnition.html">LaravelIgnition</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Tests.html">Tests</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Tests.Browser.html">Browser</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Tests.Feature.html">Feature</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-none.html">none</a>
+			</li>
+	</ul>
+			</div>
+
+		<div class="menu-section">
+			<h3>Classes</h3>
+			<ul>
+					<li>
+						<a href="Illuminate.Support.Facades.App.html">
+							App
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Artisan.html">
+							Artisan
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Auth.html">
+							Auth
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Blade.html">
+							Blade
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Broadcast.html">
+							Broadcast
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Bus.html">
+							Bus
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Cache.html">
+							Cache
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Config.html">
+							Config
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Cookie.html">
+							Cookie
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Crypt.html">
+							Crypt
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Date.html">
+							Date
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.DB.html">
+							DB
+						</a>
+					</li>
+					<li class="active">
+						<a href="Illuminate.Support.Facades.Event.html">
+							Event
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.File.html">
+							File
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Gate.html">
+							Gate
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Hash.html">
+							Hash
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Http.html">
+							Http
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Lang.html">
+							Lang
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Log.html">
+							Log
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Mail.html">
+							Mail
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Notification.html">
+							Notification
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Password.html">
+							Password
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Queue.html">
+							Queue
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.RateLimiter.html">
+							RateLimiter
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Redirect.html">
+							Redirect
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Request.html">
+							Request
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Response.html">
+							Response
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Route.html">
+							Route
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Schema.html">
+							Schema
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Session.html">
+							Session
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Storage.html">
+							Storage
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.URL.html">
+							URL
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.Validator.html">
+							Validator
+						</a>
+					</li>
+					<li>
+						<a href="Illuminate.Support.Facades.View.html">
+							View
+						</a>
+					</li>
+			</ul>
+		</div>
+
+
+
+
+
+	</div>
+	</div>
+
+	<div class="layout-main">
+		<div class="layout-navbar">
+	<nav class="navbar">
+		<div class="navbar-left">
+			<ul class="navbar-links">
+				<li>
+					<a href="index.html">Overview</a>
+				</li>
+				<li>
+					
+						<a href="namespace-Illuminate.Support.Facades.html">Namespace</a>
+					
+				</li>
+<li class="active"><a href="Illuminate.Support.Facades.Event.html">Class</a></li>				<li>
+					<a href="tree.html">Tree</a>
+				</li>
+			</ul>
+		</div>
+		<div class="navbar-right">
+	<div class="search" data-elements="assets/elements.js">
+		<input class="search-input" placeholder="Search class, function or namespace" autofocus>
+		<ul class="search-results"></ul>
+	</div>
+		</div>
+	</nav>
+		</div>
+
+		<div class="layout-content">
+		<h1>
+			Class <a href="namespace-Illuminate.html">Illuminate</a>\<a href="namespace-Illuminate.Support.html">Support</a>\<a href="namespace-Illuminate.Support.Facades.html">Facades</a>\<a href="Illuminate.Support.Facades.Event.html">Event</a>
+		</h1>
+
+
+	<table class="classLikeSignatureTable">
+
+
+
+
+	</table>
+
+			<div class="classLikeSection">
+	<ul class="classTree">
+	<li>
+<b><span class="active">Illuminate\Support\Facades\Event</span></b>
+
+
+	<ul class="classTree">
+	<li>
+<a href="Event.html"><span>Event</span></a>
+
+
+	</li>
+	</ul>
+	</li>
+	</ul>
+			</div>
+
+		<div class="classLikeSection">
+			<b>Located at</b> <a href="source-_ide_helper.html#5878" title="Go to source code">_ide_helper.php</a><br>
+		</div>
+
+
+		<table class="table" id="methods">
+			<tr>
+				<th class="table-heading sortable" colspan="3" title="Switch between natural and alphabetical order">Methods</th>
+			</tr>
+
+	<tr class="expandable collapsed" data-order="listen" id="_listen">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#5879-5891" title="Go to source code">listen</a>(<span><a href="Closure.html"><span title="Closure">Closure</span></a>|string|array <var>$events</var></span>, <span><a href="Closure.html"><span title="Closure">Closure</span></a>|string|array|null <var>$listener</var> = <span class="php-kw">null</span></span>): void</code>
+
+
+	<div class="expandable-collapsedView">
+		Register an event listener with the dispatcher.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Register an event listener with the dispatcher.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_listen">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="hasListeners" id="_hasListeners">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#5892-5903" title="Go to source code">hasListeners</a>(<span>string <var>$eventName</var></span>): bool</code>
+
+
+	<div class="expandable-collapsedView">
+		Determine if a given event has listeners.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Determine if a given event has listeners.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_hasListeners">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="hasWildcardListeners" id="_hasWildcardListeners">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#5904-5915" title="Go to source code">hasWildcardListeners</a>(<span>string <var>$eventName</var></span>): bool</code>
+
+
+	<div class="expandable-collapsedView">
+		Determine if the given event has any wildcard listeners.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Determine if the given event has any wildcard listeners.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_hasWildcardListeners">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="push" id="_push">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#5916-5928" title="Go to source code">push</a>(<span>string <var>$event</var></span>, <span>object|array <var>$payload</var> = []</span>): void</code>
+
+
+	<div class="expandable-collapsedView">
+		Register an event and payload to be fired later.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Register an event and payload to be fired later.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_push">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="flush" id="_flush">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#5929-5940" title="Go to source code">flush</a>(<span>string <var>$event</var></span>): void</code>
+
+
+	<div class="expandable-collapsedView">
+		Flush a set of pushed events.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Flush a set of pushed events.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_flush">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="subscribe" id="_subscribe">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#5941-5952" title="Go to source code">subscribe</a>(<span>object|string <var>$subscriber</var></span>): void</code>
+
+
+	<div class="expandable-collapsedView">
+		Register an event subscriber with the dispatcher.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Register an event subscriber with the dispatcher.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_subscribe">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="until" id="_until">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#5953-5965" title="Go to source code">until</a>(<span>string|object <var>$event</var></span>, <span>mixed <var>$payload</var> = []</span>): array|null</code>
+
+
+	<div class="expandable-collapsedView">
+		Fire an event until the first non-null response is returned.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Fire an event until the first non-null response is returned.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_until">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="dispatch" id="_dispatch">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#5966-5979" title="Go to source code">dispatch</a>(<span>string|object <var>$event</var></span>, <span>mixed <var>$payload</var> = []</span>, <span>bool <var>$halt</var> = <span class="php-kw">false</span></span>): array|null</code>
+
+
+	<div class="expandable-collapsedView">
+		Fire an event and call the listeners.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Fire an event and call the listeners.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_dispatch">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="getListeners" id="_getListeners">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#5980-5991" title="Go to source code">getListeners</a>(<span>string <var>$eventName</var></span>): array</code>
+
+
+	<div class="expandable-collapsedView">
+		Get all of the listeners for a given event name.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Get all of the listeners for a given event name.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_getListeners">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="makeListener" id="_makeListener">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#5992-6004" title="Go to source code">makeListener</a>(<span><a href="Closure.html"><span title="Closure">Closure</span></a>|string|array <var>$listener</var></span>, <span>bool <var>$wildcard</var> = <span class="php-kw">false</span></span>): <a href="Closure.html"><span title="Closure">Closure</span></a></code>
+
+
+	<div class="expandable-collapsedView">
+		Register an event listener with the dispatcher.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Register an event listener with the dispatcher.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_makeListener">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="createClassListener" id="_createClassListener">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#6005-6017" title="Go to source code">createClassListener</a>(<span>string <var>$listener</var></span>, <span>bool <var>$wildcard</var> = <span class="php-kw">false</span></span>): <a href="Closure.html"><span title="Closure">Closure</span></a></code>
+
+
+	<div class="expandable-collapsedView">
+		Create a class based listener using the IoC container.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Create a class based listener using the IoC container.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_createClassListener">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="forget" id="_forget">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#6018-6029" title="Go to source code">forget</a>(<span>string <var>$event</var></span>): void</code>
+
+
+	<div class="expandable-collapsedView">
+		Remove a set of listeners from the dispatcher.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Remove a set of listeners from the dispatcher.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_forget">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="forgetPushed" id="_forgetPushed">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#6030-6040" title="Go to source code">forgetPushed</a>(): void</code>
+
+
+	<div class="expandable-collapsedView">
+		Forget all of the pushed listeners.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Forget all of the pushed listeners.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_forgetPushed">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="setQueueResolver" id="_setQueueResolver">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#6041-6052" title="Go to source code">setQueueResolver</a>(<span>callable <var>$resolver</var></span>): <span title="Illuminate\Events\Dispatcher">Dispatcher</span></code>
+
+
+	<div class="expandable-collapsedView">
+		Set the queue resolver implementation.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Set the queue resolver implementation.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_setQueueResolver">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="getRawListeners" id="_getRawListeners">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#6053-6063" title="Go to source code">getRawListeners</a>(): array</code>
+
+
+	<div class="expandable-collapsedView">
+		Gets the raw, unprepared listeners.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Gets the raw, unprepared listeners.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_getRawListeners">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="macro" id="_macro">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#6064-6075" title="Go to source code">macro</a>(<span>string <var>$name</var></span>, <span>object|callable <var>$macro</var></span>): void</code>
+
+
+	<div class="expandable-collapsedView">
+		Register a custom macro.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Register a custom macro.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_macro">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="mixin" id="_mixin">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#6076-6088" title="Go to source code">mixin</a>(<span>object <var>$mixin</var></span>, <span>bool <var>$replace</var> = <span class="php-kw">true</span></span>): void</code>
+
+
+	<div class="expandable-collapsedView">
+		Mix another object into the class.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Mix another object into the class.</p>
+</div>
+
+
+
+							<h4>Throws</h4>
+							<table>
+									<tr>
+										<td><code><a href="ReflectionException.html"><span>ReflectionException</span></a></code>&nbsp;</td>
+										<td></td>
+									</tr>
+							</table>
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_mixin">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="hasMacro" id="_hasMacro">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#6089-6099" title="Go to source code">hasMacro</a>(<span>string <var>$name</var></span>): bool</code>
+
+
+	<div class="expandable-collapsedView">
+		Checks if macro is registered.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Checks if macro is registered.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_hasMacro">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="flushMacros" id="_flushMacros">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#6100-6109" title="Go to source code">flushMacros</a>(): void</code>
+
+
+	<div class="expandable-collapsedView">
+		Flush the existing macros.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Flush the existing macros.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_flushMacros">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="assertListening" id="_assertListening">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#6110-6122" title="Go to source code">assertListening</a>(<span>string <var>$expectedEvent</var></span>, <span>string|array <var>$expectedListener</var></span>): void</code>
+
+
+	<div class="expandable-collapsedView">
+		Assert if an event has a listener attached to it.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Assert if an event has a listener attached to it.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_assertListening">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="assertDispatched" id="_assertDispatched">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#6123-6135" title="Go to source code">assertDispatched</a>(<span>string|<a href="Closure.html"><span title="Closure">Closure</span></a> <var>$event</var></span>, <span>callable|int|null <var>$callback</var> = <span class="php-kw">null</span></span>): void</code>
+
+
+	<div class="expandable-collapsedView">
+		Assert if an event was dispatched based on a truth-test callback.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Assert if an event was dispatched based on a truth-test callback.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_assertDispatched">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="assertDispatchedTimes" id="_assertDispatchedTimes">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#6136-6148" title="Go to source code">assertDispatchedTimes</a>(<span>string <var>$event</var></span>, <span>int <var>$times</var> = <span class="php-num">1</span></span>): void</code>
+
+
+	<div class="expandable-collapsedView">
+		Assert if an event was dispatched a number of times.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Assert if an event was dispatched a number of times.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_assertDispatchedTimes">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="assertNotDispatched" id="_assertNotDispatched">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#6149-6161" title="Go to source code">assertNotDispatched</a>(<span>string|<a href="Closure.html"><span title="Closure">Closure</span></a> <var>$event</var></span>, <span>callable|null <var>$callback</var> = <span class="php-kw">null</span></span>): void</code>
+
+
+	<div class="expandable-collapsedView">
+		Determine if an event was dispatched based on a truth-test callback.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Determine if an event was dispatched based on a truth-test callback.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_assertNotDispatched">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="assertNothingDispatched" id="_assertNothingDispatched">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#6162-6172" title="Go to source code">assertNothingDispatched</a>(): void</code>
+
+
+	<div class="expandable-collapsedView">
+		Assert that no events were dispatched.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Assert that no events were dispatched.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_assertNothingDispatched">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="dispatched" id="_dispatched">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#6173-6185" title="Go to source code">dispatched</a>(<span>string <var>$event</var></span>, <span>callable|null <var>$callback</var> = <span class="php-kw">null</span></span>): <a href="Illuminate.Support.Collection.html"><span title="Illuminate\Support\Collection">Collection</span></a></code>
+
+
+	<div class="expandable-collapsedView">
+		Get all of the events matching a truth-test callback.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Get all of the events matching a truth-test callback.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_dispatched">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="hasDispatched" id="_hasDispatched">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-_ide_helper.html#6186-6197" title="Go to source code">hasDispatched</a>(<span>string <var>$event</var></span>): bool</code>
+
+
+	<div class="expandable-collapsedView">
+		Determine if the given event has been dispatched.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Determine if the given event has been dispatched.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_hasDispatched">#</a>
+		</td>
+	</tr>
+		</table>
+
+
+
+
+
+
+
+
+		</div>
+
+		<div class="layout-footer">
+			 API documentation generated by <a href="https://www.apigen.org">ApiGen dev-master</a>
+		</div>
+	</div>
+
+	<div class="layout-rest">
+		<div class="navbar"></div>
+	</div>
+</body>
+</html>

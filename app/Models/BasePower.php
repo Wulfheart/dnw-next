@@ -16,7 +16,6 @@ class BasePower extends Model
         'variant_id' => 'integer',
     ];
 
-
     public function variant(): \Illuminate\Database\Eloquent\Relations\BelongsTo
     {
         return $this->belongsTo(\App\Models\Variant::class);

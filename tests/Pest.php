@@ -11,18 +11,11 @@
 |
 */
 
-use App\Actions\Game\CreateGameAction;
-use App\Actions\Game\Fake\FakeFillGameAction;
-use App\Models\Game;
-use App\Models\PhasePowerData;
-use App\Models\Variant;
 use App\Utility\Game\AdjudicatorService;
 use App\Utility\Game\TestWithCachingAdjudicatorImplementation;
-use Carbon\CarbonInterface;
-use Database\Seeders\VariantSeeder;
 
 uses(Tests\TestCase::class)
-    ->beforeEach(fn() => app()->bind(AdjudicatorService::class, TestWithCachingAdjudicatorImplementation::class))
+    ->beforeEach(fn () => app()->bind(AdjudicatorService::class, TestWithCachingAdjudicatorImplementation::class))
     ->in('Feature', 'Unit');
 
 /*
@@ -51,5 +44,4 @@ expect()->extend('toBeOne', function () {
 |
 */
 
-
-include(__DIR__ . '/test_functions.php');
+include __DIR__.'/test_functions.php';

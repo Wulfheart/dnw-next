@@ -23,7 +23,7 @@ class SimulateGameCommand extends Command
     public function __construct()
     {
         parent::__construct();
-        $this->addOption('phases', 'p', InputOption::VALUE_OPTIONAL, "", 15);
+        $this->addOption('phases', 'p', InputOption::VALUE_OPTIONAL, '', 15);
     }
 
     /**
@@ -31,7 +31,7 @@ class SimulateGameCommand extends Command
      */
     public function handle(AdjudicatorService $adjudicator)
     {
-        $this->line("Starting game setup");
+        $this->line('Starting game setup');
         $variant = Variant::first();
 
         $game = Game::create([
@@ -42,7 +42,7 @@ class SimulateGameCommand extends Command
         ]);
 
         $game->load('variant.basePowers');
-        $game->variant->basePowers()->each(fn(BasePower $b) => Power::create([
+        $game->variant->basePowers()->each(fn (BasePower $b) => Power::create([
             'base_power_id' => $b->id,
             'game_id' => $game->id,
         ]));

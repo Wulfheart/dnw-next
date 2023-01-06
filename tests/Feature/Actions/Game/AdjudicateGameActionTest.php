@@ -1,7 +1,6 @@
 <?php
 
 use App\Actions\Game\AdjudicateGameAction;
-use App\Actions\Game\CreateGameAction;
 
 it('can adjudicate a game', function () {
     $game = setupGame();
@@ -18,5 +17,4 @@ it('can adjudicate a game', function () {
     expect($game->phases()->count())->toBe(2);
     expect($currentPhase->adjudication_at)->not()->toBeNull();
     expect($currentPhase->adjudication_at->greaterThan(now()))->toBeTrue();
-
 });

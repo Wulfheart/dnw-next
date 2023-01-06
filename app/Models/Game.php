@@ -5,8 +5,6 @@ namespace App\Models;
 use App\Builders\GameBuilder;
 use App\Collections\GameCollection;
 use App\Enums\GameStatusEnum;
-use Carbon\CarbonInterface;
-use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
@@ -40,7 +38,6 @@ class Game extends Model
     {
         return new GameCollection($models);
     }
-
 
     public function variant(): BelongsTo
     {
@@ -89,7 +86,6 @@ class Game extends Model
             return GameStatusEnum::FINISHED;
         }
 
-
         if ($this->powers->whereUserAssigned()->count() < $this->powers->count()) {
             return GameStatusEnum::PREGAME;
         }
@@ -97,7 +93,8 @@ class Game extends Model
         return GameStatusEnum::RUNNING;
     }
 
-    public function hasStarted(): bool {
+    public function hasStarted(): bool
+    {
         return $this->currentState() === GameStatusEnum::RUNNING;
     }
 
@@ -115,11 +112,12 @@ class Game extends Model
         return $adjudicationTime;
     }
 
-    public function hasUnreadMessagesForUserId(int $user_id): bool {
+    public function hasUnreadMessagesForUserId(int $user_id): bool
+    {
         // This may be solved a little bit more elegant but it is sufficient for now
         $this->loadMissing(['powers']);
         $power = Power::with('messageRooms')->where('user_id', $user_id)->where('game_id', $this->id)->first();
-        if($power === null) {
+        if ($power === null) {
             return false;
         }
         foreach ($power->messageRooms as $messageRoom) {

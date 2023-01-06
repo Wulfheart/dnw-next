@@ -15,6 +15,7 @@ class TestMailCommand extends Command
     {
         Mail::to($this->argument('email'))->send(new \App\Mail\TestMail());
         $this->info("Test email sent to {$this->argument('email')}");
+
         return 0;
     }
 }

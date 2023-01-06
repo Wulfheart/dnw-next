@@ -25,39 +25,38 @@ class ShowGameController extends Controller
             'currentPhase.phasePowerData.power.basePower',
             'currentPhase.phasePowerData.power.user',
             'phases' => function ($query) {
-                $query->select(collect(Schema::getColumnListing(app(Phase::class)->getTable()))->reject(fn(string $v
+                $query->select(collect(Schema::getColumnListing(app(Phase::class)->getTable()))->reject(fn (string $v
                 ) => $v === 'state_encoded')->toArray());
             },
         ]);
 
-        $phases = $game->phases->map(fn(Phase $phase) => collect()
-            ->when(!is_null($phase->svg_with_orders),
-                fn(Collection $c) => $c->put($phase->phase_name_short."_with_orders",
-                    PhaseDTO::factory()->setKey($phase->phase_name_short."_with_orders")->setSvg($phase->svg_with_orders)
+        $phases = $game->phases->map(fn (Phase $phase) => collect()
+            ->when(! is_null($phase->svg_with_orders),
+                fn (Collection $c) => $c->put($phase->phase_name_short.'_with_orders',
+                    PhaseDTO::factory()->setKey($phase->phase_name_short.'_with_orders')->setSvg($phase->svg_with_orders)
                 )
             )
-            ->when(!is_null($phase->svg_adjudicated),
-                fn(Collection $c) => $c->put($phase->phase_name_short."_adjudicated",
-                    PhaseDTO::factory()->setKey($phase->phase_name_short."_adjudicated")->setSvg($phase->svg_adjudicated)
+            ->when(! is_null($phase->svg_adjudicated),
+                fn (Collection $c) => $c->put($phase->phase_name_short.'_adjudicated',
+                    PhaseDTO::factory()->setKey($phase->phase_name_short.'_adjudicated')->setSvg($phase->svg_adjudicated)
                 )
             )
-        )->flatMap(fn($values) => $values);
+        )->flatMap(fn ($values) => $values);
 
         $user = auth()->user();
 
         /** @var PhasePowerData $userPhasePowerData */
-        $userPhasePowerData = $game->currentPhase->phasePowerData->filter(fn(PhasePowerData $ppd
+        $userPhasePowerData = $game->currentPhase->phasePowerData->filter(fn (PhasePowerData $ppd
         ) => $ppd->power->user_id == $user->id)->first();
 
-        $ordersSubmittable = !$userPhasePowerData?->ready_for_adjudication && $userPhasePowerData?->orders_needed;
+        $ordersSubmittable = ! $userPhasePowerData?->ready_for_adjudication && $userPhasePowerData?->orders_needed;
         $userIsMember = $game->currentState() == GameStatusEnum::RUNNING && $game->powers->contains('user_id',
-                $user->id);
+            $user->id);
         $adjudicationInProgress = $game->currentPhase->adjudicationStarted();
 
         $preloadImageUrl = $phases->pluck('svg')->first();
 
         $preload = \Storage::drive('public')->get($preloadImageUrl);
-
 
         $response = response()->view('game.show', [
             'is_still_creating' => is_null($game->currentPhase),
@@ -82,6 +81,5 @@ class ShowGameController extends Controller
         }
 
         return $response;
-
     }
 }

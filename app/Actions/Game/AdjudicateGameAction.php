@@ -17,14 +17,13 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 use Lorisleiva\Actions\Concerns\AsAction;
-use PhpParser\Node\Expr\AssignOp\Pow;
 use Ramsey\Uuid\Uuid;
 
 class AdjudicateGameAction
 {
     use AsAction;
 
-    public string $commandSignature = "dnw:game:adjudicate {--id=}";
+    public string $commandSignature = 'dnw:game:adjudicate {--id=}';
 
     public function __construct(public AdjudicatorService $adjudicator)
     {
@@ -43,7 +42,7 @@ class AdjudicateGameAction
             $gameResponse = $adjudicator->adjudicateGame(new AdjudicateGameRequestDTO(
                 previous_state_encoded: $currentPhase->state_encoded,
                 orders: $game->currentPhase->phasePowerData->map(
-                    fn(PhasePowerData $ppd) => new OrderDTO(
+                    fn (PhasePowerData $ppd) => new OrderDTO(
                         power: $ppd->power->basePower->api_name,
                         instructions: Str::of($ppd->orders)->split('/\r\n|\n|\r/')->toArray()
                     )
@@ -52,12 +51,11 @@ class AdjudicateGameAction
             ));
 
             if ($save_response) {
-                Storage::drive('gamedata')->put(Str::of($game->name.$game->id)->remove(" ")->lower()."/{$game->phases()->count()}_{$gameResponse->phase_short}.json",
+                Storage::drive('gamedata')->put(Str::of($game->name.$game->id)->remove(' ')->lower()."/{$game->phases()->count()}_{$gameResponse->phase_short}.json",
                     $gameResponse->json);
             }
 
-
-            $path = "maps/".Uuid::uuid4().".svg";
+            $path = 'maps/'.Uuid::uuid4().'.svg';
             Storage::drive('public')->put($path, $gameResponse->svg_with_orders);
 
             $currentPhase->update([
@@ -67,15 +65,13 @@ class AdjudicateGameAction
             foreach ($gameResponse->applied_orders as $applied_order) {
                 PhasePowerData::where('phase_id', $currentPhase->id)
                     ->where('power_id', $game->powers->filter(
-                        fn(Power $power) => $power->basePower->api_name == $applied_order->power
+                        fn (Power $power) => $power->basePower->api_name == $applied_order->power
                     )->first()->id)
                     ->update(['applied_orders' => collect($applied_order->orders)->implode('\n')]);
             }
 
-
-            $path = "maps/".Uuid::uuid4().".svg";
+            $path = 'maps/'.Uuid::uuid4().'.svg';
             Storage::drive('public')->put($path, $gameResponse->svg_adjudicated);
-
 
             $newPhase = Phase::create([
                 'game_id' => $game->id,
@@ -93,13 +89,13 @@ class AdjudicateGameAction
             foreach ($game->powers as $power) {
                 /** @var \App\Utility\Game\DTO\PhasePowerDataDTO $ppd */
                 $ppd = $gameResponse->phase_power_data->filter(
-                    fn(PhasePowerDataDTO $item) => $item->power == $power->basePower->api_name
+                    fn (PhasePowerDataDTO $item) => $item->power == $power->basePower->api_name
                 )->first();
                 $orders_needed = $gameResponse->possible_orders->filter(
-                        fn($item) => $item->power == $power->basePower->api_name
-                    )->first()->units->filter(
-                        fn($item) => count($item->possible_orders) > 0
-                    )->count() > 0;
+                    fn ($item) => $item->power == $power->basePower->api_name
+                )->first()->units->filter(
+                    fn ($item) => count($item->possible_orders) > 0
+                )->count() > 0;
                 /** @var PhasePowerData $phasePowerData */
                 $phasePowerData = PhasePowerData::create([
                     'phase_id' => $newPhase->id,
@@ -115,14 +111,12 @@ class AdjudicateGameAction
                 }
             }
 
-            $hasWinner = !empty($gameResponse->winners);
+            $hasWinner = ! empty($gameResponse->winners);
             if ($hasWinner) {
                 FinishGameAction::run($game, $gameResponse->winners);
-
-            } else if($game->currentState() == GameStatusEnum::RUNNING && $send_emails){
-                $game->powers->each(fn(Power $p) => $p->loadMissing('user')->user->notify(new GameAdjudicatedNotification($game)));
+            } elseif ($game->currentState() == GameStatusEnum::RUNNING && $send_emails) {
+                $game->powers->each(fn (Power $p) => $p->loadMissing('user')->user->notify(new GameAdjudicatedNotification($game)));
             }
-
         });
     }
 
@@ -131,8 +125,7 @@ class AdjudicateGameAction
         $game_id = $command->option('id');
         $game = Game::findOrFail($game_id);
 
-        $command->withProgressBar(1, fn() => $this->handle($game_id));
+        $command->withProgressBar(1, fn () => $this->handle($game_id));
         $command->line('');
-
     }
 }

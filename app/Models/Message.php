@@ -18,7 +18,6 @@ class Message extends Model
         'sender_id' => 'integer',
     ];
 
-
     public function sender(): BelongsTo
     {
         return $this->belongsTo(\App\Models\Power::class);

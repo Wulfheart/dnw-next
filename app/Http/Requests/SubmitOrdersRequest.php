@@ -25,7 +25,7 @@ class SubmitOrdersRequest extends FormRequest
     {
         return [
             'orders' => [],
-            'ready' => ['required', 'boolean']
+            'ready' => ['required', 'boolean'],
         ];
     }
 }

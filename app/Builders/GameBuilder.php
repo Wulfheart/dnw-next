@@ -9,27 +9,31 @@ class GameBuilder extends Builder
 {
     public function whereActive(): static
     {
-        $this->whereDoesntHave('powers', fn(Builder $query) => $query->whereNull('user_id'))
-            ->whereDoesntHave('powers', fn(Builder $query) => $query->where('is_winner', true));
+        $this->whereDoesntHave('powers', fn (Builder $query) => $query->whereNull('user_id'))
+            ->whereDoesntHave('powers', fn (Builder $query) => $query->where('is_winner', true));
+
         return $this;
     }
 
     public function whereUserIsMember(User $user): static
     {
-        $this->whereHas('powers', fn(Builder $query) => $query->where('user_id', $user->id));
+        $this->whereHas('powers', fn (Builder $query) => $query->where('user_id', $user->id));
+
         return $this;
     }
 
     public function whereNew(): static
     {
-        $this->whereHas('powers', fn(Builder $query) => $query->whereNull('user_id'))
+        $this->whereHas('powers', fn (Builder $query) => $query->whereNull('user_id'))
             ->has('phases', '=', 1);
+
         return $this;
     }
 
     public function whereFinished(): static
     {
-        $this->whereHas('powers', fn(Builder $query) => $query->where('is_winner', true));
+        $this->whereHas('powers', fn (Builder $query) => $query->where('is_winner', true));
+
         return $this;
     }
 
@@ -41,6 +45,7 @@ class GameBuilder extends Builder
             'variant.basePowers',
             'winners',
         ]);
+
         return $this;
     }
 
@@ -49,6 +54,7 @@ class GameBuilder extends Builder
         $this->with('currentPhase')->whereHas('currentPhase', function (Builder $builder) {
             $builder->whereNull('locked_for_adjudication_at')->where('adjudication_at', '<=', now());
         });
+
         return $this;
     }
 
@@ -57,6 +63,7 @@ class GameBuilder extends Builder
         $this->with('currentPhase')->whereHas('currentPhase', function (Builder $builder) {
             $builder->whereNull('locked_for_adjudication_at');
         });
+
         return $this;
     }
 }

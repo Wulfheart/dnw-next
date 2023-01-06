@@ -29,7 +29,7 @@ class GameStartedNotification extends Notification implements ShouldQueue
             ->subject('Spiel gestartet')
             ->markdown('mail.markdown.game.started', [
                 'gameName' => $this->game->name,
-                'url' => route('games.show', $this->game)
+                'url' => route('games.show', $this->game),
             ]);
     }
 
