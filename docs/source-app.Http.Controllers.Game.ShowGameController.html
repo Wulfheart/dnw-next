@@ -1,304 +1,0 @@
-
-<!doctype html>
-<html lang="en">
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width">
-	<title>File app/Http/Controllers/Game/ShowGameController.php |  API</title>
-	<link rel="stylesheet" href="assets/main.css">
-	<script src="assets/main.js" defer></script>
-</head>
-
-<body class="layout">
-	<div class="layout-aside">
-	<div class="menu">
-			<div class="menu-section">
-				<h3>Namespaces</h3>
-	<ul>
-			<li class="menuGroup-item active">
-				<a href="namespace-App.html">App</a>
-	<ul>
-			<li class="menuGroup-item">
-				<a href="namespace-App.Actions.html">Actions</a>
-			</li>
-			<li class="menuGroup-item">
-				<a href="namespace-App.Builders.html">Builders</a>
-			</li>
-			<li class="menuGroup-item">
-				<a href="namespace-App.Collections.html">Collections</a>
-			</li>
-			<li class="menuGroup-item">
-				<a href="namespace-App.Console.html">Console</a>
-			</li>
-			<li class="menuGroup-item">
-				<a href="namespace-App.DTO.html">DTO</a>
-			</li>
-			<li class="menuGroup-item">
-				<a href="namespace-App.Enums.html">Enums</a>
-			</li>
-			<li class="menuGroup-item">
-				<a href="namespace-App.Events.html">Events</a>
-			</li>
-			<li class="menuGroup-item">
-				<a href="namespace-App.Exceptions.html">Exceptions</a>
-			</li>
-			<li class="menuGroup-item">
-				<a href="namespace-App.Filament.html">Filament</a>
-			</li>
-			<li class="menuGroup-item active">
-				<a href="namespace-App.Http.html">Http</a>
-	<ul>
-			<li class="menuGroup-item active">
-				<a href="namespace-App.Http.Controllers.html">Controllers</a>
-	<ul>
-			<li class="menuGroup-item active">
-				<a href="namespace-App.Http.Controllers.Game.html">Game</a>
-	<ul>
-			<li class="menuGroup-item">
-				<a href="namespace-App.Http.Controllers.Game.Category.html">Category</a>
-			</li>
-	</ul>
-			</li>
-	</ul>
-			</li>
-			<li class="menuGroup-item">
-				<a href="namespace-App.Http.Livewire.html">Livewire</a>
-			</li>
-			<li class="menuGroup-item">
-				<a href="namespace-App.Http.Middleware.html">Middleware</a>
-			</li>
-			<li class="menuGroup-item">
-				<a href="namespace-App.Http.Requests.html">Requests</a>
-			</li>
-	</ul>
-			</li>
-			<li class="menuGroup-item">
-				<a href="namespace-App.Mail.html">Mail</a>
-			</li>
-			<li class="menuGroup-item">
-				<a href="namespace-App.Models.html">Models</a>
-			</li>
-			<li class="menuGroup-item">
-				<a href="namespace-App.Notifications.html">Notifications</a>
-			</li>
-			<li class="menuGroup-item">
-				<a href="namespace-App.Policies.html">Policies</a>
-			</li>
-			<li class="menuGroup-item">
-				<a href="namespace-App.Providers.html">Providers</a>
-			</li>
-			<li class="menuGroup-item">
-				<a href="namespace-App.Queries.html">Queries</a>
-			</li>
-			<li class="menuGroup-item">
-				<a href="namespace-App.Utility.html">Utility</a>
-			</li>
-			<li class="menuGroup-item">
-				<a href="namespace-App.View.html">View</a>
-			</li>
-			<li class="menuGroup-item">
-				<a href="namespace-App.ViewModels.html">ViewModels</a>
-			</li>
-	</ul>
-			</li>
-			<li class="menuGroup-item">
-				<a href="namespace-BeyondCode.html">BeyondCode</a>
-	<ul>
-			<li class="menuGroup-item">
-				<a href="namespace-BeyondCode.ServerTiming.html">ServerTiming</a>
-			</li>
-	</ul>
-			</li>
-			<li class="menuGroup-item">
-				<a href="namespace-Clockwork.html">Clockwork</a>
-	<ul>
-			<li class="menuGroup-item">
-				<a href="namespace-Clockwork.Support.html">Support</a>
-			</li>
-	</ul>
-			</li>
-			<li class="menuGroup-item">
-				<a href="namespace-Database.html">Database</a>
-	<ul>
-			<li class="menuGroup-item">
-				<a href="namespace-Database.Factories.html">Factories</a>
-			</li>
-			<li class="menuGroup-item">
-				<a href="namespace-Database.Seeders.html">Seeders</a>
-			</li>
-	</ul>
-			</li>
-			<li class="menuGroup-item">
-				<a href="namespace-Illuminate.html">Illuminate</a>
-	<ul>
-			<li class="menuGroup-item">
-				<a href="namespace-Illuminate.Database.html">Database</a>
-			</li>
-			<li class="menuGroup-item">
-				<a href="namespace-Illuminate.Filesystem.html">Filesystem</a>
-			</li>
-			<li class="menuGroup-item">
-				<a href="namespace-Illuminate.Http.html">Http</a>
-			</li>
-			<li class="menuGroup-item">
-				<a href="namespace-Illuminate.Support.html">Support</a>
-			</li>
-			<li class="menuGroup-item">
-				<a href="namespace-Illuminate.Testing.html">Testing</a>
-			</li>
-			<li class="menuGroup-item">
-				<a href="namespace-Illuminate.View.html">View</a>
-			</li>
-	</ul>
-			</li>
-			<li class="menuGroup-item">
-				<a href="namespace-Jenssegers.html">Jenssegers</a>
-	<ul>
-			<li class="menuGroup-item">
-				<a href="namespace-Jenssegers.Agent.html">Agent</a>
-			</li>
-	</ul>
-			</li>
-			<li class="menuGroup-item">
-				<a href="namespace-Livewire.html">Livewire</a>
-	<ul>
-			<li class="menuGroup-item">
-				<a href="namespace-Livewire.Testing.html">Testing</a>
-			</li>
-	</ul>
-			</li>
-			<li class="menuGroup-item">
-				<a href="namespace-Lorisleiva.html">Lorisleiva</a>
-	<ul>
-			<li class="menuGroup-item">
-				<a href="namespace-Lorisleiva.Actions.html">Actions</a>
-			</li>
-			<li class="menuGroup-item">
-				<a href="namespace-Lorisleiva.Lody.html">Lody</a>
-			</li>
-	</ul>
-			</li>
-			<li class="menuGroup-item">
-				<a href="namespace-Spatie.html">Spatie</a>
-	<ul>
-			<li class="menuGroup-item">
-				<a href="namespace-Spatie.LaravelIgnition.html">LaravelIgnition</a>
-			</li>
-	</ul>
-			</li>
-			<li class="menuGroup-item">
-				<a href="namespace-Tests.html">Tests</a>
-	<ul>
-			<li class="menuGroup-item">
-				<a href="namespace-Tests.Browser.html">Browser</a>
-			</li>
-			<li class="menuGroup-item">
-				<a href="namespace-Tests.Feature.html">Feature</a>
-			</li>
-	</ul>
-			</li>
-			<li class="menuGroup-item">
-				<a href="namespace-none.html">none</a>
-			</li>
-	</ul>
-			</div>
-
-		<div class="menu-section">
-			<h3>Classes</h3>
-			<ul>
-					<li>
-						<a href="App.Http.Controllers.Game.CreateGameController.html">
-							CreateGameController
-						</a>
-					</li>
-					<li>
-						<a href="App.Http.Controllers.Game.IndexGameController.html">
-							IndexGameController
-						</a>
-					</li>
-					<li>
-						<a href="App.Http.Controllers.Game.IndexMessagesController.html">
-							IndexMessagesController
-						</a>
-					</li>
-					<li>
-						<a href="App.Http.Controllers.Game.JoinGameController.html">
-							JoinGameController
-						</a>
-					</li>
-					<li>
-						<a href="App.Http.Controllers.Game.LeaveGameController.html">
-							LeaveGameController
-						</a>
-					</li>
-					<li class="active">
-						<a href="App.Http.Controllers.Game.ShowGameController.html">
-							ShowGameController
-						</a>
-					</li>
-					<li>
-						<a href="App.Http.Controllers.Game.ShowMessagesController.html">
-							ShowMessagesController
-						</a>
-					</li>
-					<li>
-						<a href="App.Http.Controllers.Game.StoreGameController.html">
-							StoreGameController
-						</a>
-					</li>
-					<li>
-						<a href="App.Http.Controllers.Game.SubmitOrdersController.html">
-							SubmitOrdersController
-						</a>
-					</li>
-			</ul>
-		</div>
-
-
-
-
-
-	</div>
-	</div>
-
-	<div class="layout-main">
-		<div class="layout-navbar">
-	<nav class="navbar">
-		<div class="navbar-left">
-			<ul class="navbar-links">
-				<li>
-					<a href="index.html">Overview</a>
-				</li>
-				<li>
-					
-						<a href="namespace-App.Http.Controllers.Game.html">Namespace</a>
-					
-				</li>
-<li class="active"><a href="App.Http.Controllers.Game.ShowGameController.html">Class</a></li>				<li>
-					<a href="tree.html">Tree</a>
-				</li>
-			</ul>
-		</div>
-		<div class="navbar-right">
-	<div class="search" data-elements="assets/elements.js">
-		<input class="search-input" placeholder="Search class, function or namespace" autofocus>
-		<ul class="search-results"></ul>
-	</div>
-		</div>
-	</nav>
-		</div>
-
-		<div class="layout-content">
-	<table class="source"><tr id="1" class="source-line"><td><a class="source-lineNum" href="#1"> 1: </a></td><td><span class="php-tag">&lt;?php</span></td></tr><tr id="2" class="source-line"><td><a class="source-lineNum" href="#2"> 2: </a></td><td><span class="php-tag"></span></td></tr><tr id="3" class="source-line"><td><a class="source-lineNum" href="#3"> 3: </a></td><td><span class="php-kw">namespace</span> App\Http\Controllers\Game;</td></tr><tr id="4" class="source-line"><td><a class="source-lineNum" href="#4"> 4: </a></td><td></td></tr><tr id="5" class="source-line"><td><a class="source-lineNum" href="#5"> 5: </a></td><td><span class="php-kw">use</span> App\DTO\Views\PhaseDTO;</td></tr><tr id="6" class="source-line"><td><a class="source-lineNum" href="#6"> 6: </a></td><td><span class="php-kw">use</span> App\Enums\GameStatusEnum;</td></tr><tr id="7" class="source-line"><td><a class="source-lineNum" href="#7"> 7: </a></td><td><span class="php-kw">use</span> App\Http\Controllers\Controller;</td></tr><tr id="8" class="source-line"><td><a class="source-lineNum" href="#8"> 8: </a></td><td><span class="php-kw">use</span> App\Models\Game;</td></tr><tr id="9" class="source-line"><td><a class="source-lineNum" href="#9"> 9: </a></td><td><span class="php-kw">use</span> App\Models\Phase;</td></tr><tr id="10" class="source-line"><td><a class="source-lineNum" href="#10">10: </a></td><td><span class="php-kw">use</span> App\Models\PhasePowerData;</td></tr><tr id="11" class="source-line"><td><a class="source-lineNum" href="#11">11: </a></td><td><span class="php-kw">use</span> Illuminate\Http\Request;</td></tr><tr id="12" class="source-line"><td><a class="source-lineNum" href="#12">12: </a></td><td><span class="php-kw">use</span> Illuminate\Support\Collection;</td></tr><tr id="13" class="source-line"><td><a class="source-lineNum" href="#13">13: </a></td><td><span class="php-kw">use</span> Illuminate\Support\Facades\Schema;</td></tr><tr id="14" class="source-line"><td><a class="source-lineNum" href="#14">14: </a></td><td></td></tr><tr id="15" class="source-line"><td><a class="source-lineNum" href="#15">15: </a></td><td><span class="php-kw">class</span> ShowGameController <span class="php-kw">extends</span> Controller</td></tr><tr id="16" class="source-line"><td><a class="source-lineNum" href="#16">16: </a></td><td>{</td></tr><tr id="17" class="source-line"><td><a class="source-lineNum" href="#17">17: </a></td><td>    <span class="php-kw">public</span> <span class="php-kw">function</span> __invoke(Request <span class="php-var">$request</span>, Game <span class="php-var">$game</span>)</td></tr><tr id="18" class="source-line"><td><a class="source-lineNum" href="#18">18: </a></td><td>    {</td></tr><tr id="19" class="source-line"><td><a class="source-lineNum" href="#19">19: </a></td><td>        <span class="php-comment">// $this-&gt;authorize(&#039;view&#039;, $game);</span></td></tr><tr id="20" class="source-line"><td><a class="source-lineNum" href="#20">20: </a></td><td></td></tr><tr id="21" class="source-line"><td><a class="source-lineNum" href="#21">21: </a></td><td>        <span class="php-var">$game</span>-&gt;load([</td></tr><tr id="22" class="source-line"><td><a class="source-lineNum" href="#22">22: </a></td><td>            <span class="php-str">&#039;powers.basePower&#039;</span>,</td></tr><tr id="23" class="source-line"><td><a class="source-lineNum" href="#23">23: </a></td><td>            <span class="php-str">&#039;powers.user&#039;</span>,</td></tr><tr id="24" class="source-line"><td><a class="source-lineNum" href="#24">24: </a></td><td>            <span class="php-str">&#039;winners&#039;</span>,</td></tr><tr id="25" class="source-line"><td><a class="source-lineNum" href="#25">25: </a></td><td>            <span class="php-str">&#039;currentPhase.phasePowerData.power.basePower&#039;</span>,</td></tr><tr id="26" class="source-line"><td><a class="source-lineNum" href="#26">26: </a></td><td>            <span class="php-str">&#039;currentPhase.phasePowerData.power.user&#039;</span>,</td></tr><tr id="27" class="source-line"><td><a class="source-lineNum" href="#27">27: </a></td><td>            <span class="php-str">&#039;phases&#039;</span> =&gt; <span class="php-kw">function</span> (<span class="php-var">$query</span>) {</td></tr><tr id="28" class="source-line"><td><a class="source-lineNum" href="#28">28: </a></td><td>                <span class="php-var">$query</span>-&gt;select(collect(Schema::getColumnListing(app(Phase::class)-&gt;getTable()))-&gt;reject(<span class="php-kw">fn</span>(string <span class="php-var">$v</span></td></tr><tr id="29" class="source-line"><td><a class="source-lineNum" href="#29">29: </a></td><td>                ) =&gt; <span class="php-var">$v</span> === <span class="php-str">&#039;state_encoded&#039;</span>)-&gt;toArray());</td></tr><tr id="30" class="source-line"><td><a class="source-lineNum" href="#30">30: </a></td><td>            },</td></tr><tr id="31" class="source-line"><td><a class="source-lineNum" href="#31">31: </a></td><td>        ]);</td></tr><tr id="32" class="source-line"><td><a class="source-lineNum" href="#32">32: </a></td><td></td></tr><tr id="33" class="source-line"><td><a class="source-lineNum" href="#33">33: </a></td><td>        <span class="php-var">$phases</span> = <span class="php-var">$game</span>-&gt;phases-&gt;map(<span class="php-kw">fn</span>(Phase <span class="php-var">$phase</span>) =&gt; collect()</td></tr><tr id="34" class="source-line"><td><a class="source-lineNum" href="#34">34: </a></td><td>            -&gt;when(!is_null(<span class="php-var">$phase</span>-&gt;svg_with_orders),</td></tr><tr id="35" class="source-line"><td><a class="source-lineNum" href="#35">35: </a></td><td>                <span class="php-kw">fn</span>(Collection <span class="php-var">$c</span>) =&gt; <span class="php-var">$c</span>-&gt;put(<span class="php-var">$phase</span>-&gt;phase_name_short.<span class="php-str">&quot;_with_orders&quot;</span>,</td></tr><tr id="36" class="source-line"><td><a class="source-lineNum" href="#36">36: </a></td><td>                    PhaseDTO::factory()-&gt;setKey(<span class="php-var">$phase</span>-&gt;phase_name_short.<span class="php-str">&quot;_with_orders&quot;</span>)-&gt;setSvg(<span class="php-var">$phase</span>-&gt;svg_with_orders)</td></tr><tr id="37" class="source-line"><td><a class="source-lineNum" href="#37">37: </a></td><td>                )</td></tr><tr id="38" class="source-line"><td><a class="source-lineNum" href="#38">38: </a></td><td>            )</td></tr><tr id="39" class="source-line"><td><a class="source-lineNum" href="#39">39: </a></td><td>            -&gt;when(!is_null(<span class="php-var">$phase</span>-&gt;svg_adjudicated),</td></tr><tr id="40" class="source-line"><td><a class="source-lineNum" href="#40">40: </a></td><td>                <span class="php-kw">fn</span>(Collection <span class="php-var">$c</span>) =&gt; <span class="php-var">$c</span>-&gt;put(<span class="php-var">$phase</span>-&gt;phase_name_short.<span class="php-str">&quot;_adjudicated&quot;</span>,</td></tr><tr id="41" class="source-line"><td><a class="source-lineNum" href="#41">41: </a></td><td>                    PhaseDTO::factory()-&gt;setKey(<span class="php-var">$phase</span>-&gt;phase_name_short.<span class="php-str">&quot;_adjudicated&quot;</span>)-&gt;setSvg(<span class="php-var">$phase</span>-&gt;svg_adjudicated)</td></tr><tr id="42" class="source-line"><td><a class="source-lineNum" href="#42">42: </a></td><td>                )</td></tr><tr id="43" class="source-line"><td><a class="source-lineNum" href="#43">43: </a></td><td>            )</td></tr><tr id="44" class="source-line"><td><a class="source-lineNum" href="#44">44: </a></td><td>        )-&gt;flatMap(<span class="php-kw">fn</span>(<span class="php-var">$values</span>) =&gt; <span class="php-var">$values</span>);</td></tr><tr id="45" class="source-line"><td><a class="source-lineNum" href="#45">45: </a></td><td></td></tr><tr id="46" class="source-line"><td><a class="source-lineNum" href="#46">46: </a></td><td>        <span class="php-var">$user</span> = auth()-&gt;user();</td></tr><tr id="47" class="source-line"><td><a class="source-lineNum" href="#47">47: </a></td><td></td></tr><tr id="48" class="source-line"><td><a class="source-lineNum" href="#48">48: </a></td><td>        <span class="php-comment">/** @var PhasePowerData $userPhasePowerData */</span></td></tr><tr id="49" class="source-line"><td><a class="source-lineNum" href="#49">49: </a></td><td>        <span class="php-var">$userPhasePowerData</span> = <span class="php-var">$game</span>-&gt;currentPhase-&gt;phasePowerData-&gt;filter(<span class="php-kw">fn</span>(PhasePowerData <span class="php-var">$ppd</span></td></tr><tr id="50" class="source-line"><td><a class="source-lineNum" href="#50">50: </a></td><td>        ) =&gt; <span class="php-var">$ppd</span>-&gt;power-&gt;user_id == <span class="php-var">$user</span>-&gt;id)-&gt;first();</td></tr><tr id="51" class="source-line"><td><a class="source-lineNum" href="#51">51: </a></td><td></td></tr><tr id="52" class="source-line"><td><a class="source-lineNum" href="#52">52: </a></td><td>        <span class="php-var">$ordersSubmittable</span> = !<span class="php-var">$userPhasePowerData</span>?-&gt;ready_for_adjudication &amp;&amp; <span class="php-var">$userPhasePowerData</span>?-&gt;orders_needed;</td></tr><tr id="53" class="source-line"><td><a class="source-lineNum" href="#53">53: </a></td><td>        <span class="php-var">$userIsMember</span> = <span class="php-var">$game</span>-&gt;currentState() == GameStatusEnum::RUNNING &amp;&amp; <span class="php-var">$game</span>-&gt;powers-&gt;contains(<span class="php-str">&#039;user_id&#039;</span>,</td></tr><tr id="54" class="source-line"><td><a class="source-lineNum" href="#54">54: </a></td><td>                <span class="php-var">$user</span>-&gt;id);</td></tr><tr id="55" class="source-line"><td><a class="source-lineNum" href="#55">55: </a></td><td>        <span class="php-var">$adjudicationInProgress</span> = <span class="php-var">$game</span>-&gt;currentPhase-&gt;adjudicationStarted();</td></tr><tr id="56" class="source-line"><td><a class="source-lineNum" href="#56">56: </a></td><td></td></tr><tr id="57" class="source-line"><td><a class="source-lineNum" href="#57">57: </a></td><td>        <span class="php-var">$preloadImageUrl</span> = <span class="php-var">$phases</span>-&gt;pluck(<span class="php-str">&#039;svg&#039;</span>)-&gt;first();</td></tr><tr id="58" class="source-line"><td><a class="source-lineNum" href="#58">58: </a></td><td></td></tr><tr id="59" class="source-line"><td><a class="source-lineNum" href="#59">59: </a></td><td>        <span class="php-var">$preload</span> = \Storage::drive(<span class="php-str">&#039;public&#039;</span>)-&gt;get(<span class="php-var">$preloadImageUrl</span>);</td></tr><tr id="60" class="source-line"><td><a class="source-lineNum" href="#60">60: </a></td><td></td></tr><tr id="61" class="source-line"><td><a class="source-lineNum" href="#61">61: </a></td><td></td></tr><tr id="62" class="source-line"><td><a class="source-lineNum" href="#62">62: </a></td><td>        <span class="php-var">$response</span> = response()-&gt;view(<span class="php-str">&#039;game.show&#039;</span>, [</td></tr><tr id="63" class="source-line"><td><a class="source-lineNum" href="#63">63: </a></td><td>            <span class="php-str">&#039;is_still_creating&#039;</span> =&gt; is_null(<span class="php-var">$game</span>-&gt;currentPhase),</td></tr><tr id="64" class="source-line"><td><a class="source-lineNum" href="#64">64: </a></td><td>            <span class="php-str">&#039;preloadLink&#039;</span> =&gt; <span class="php-var">$phases</span>-&gt;pluck(<span class="php-str">&#039;svg&#039;</span>)-&gt;first(),</td></tr><tr id="65" class="source-line"><td><a class="source-lineNum" href="#65">65: </a></td><td>            <span class="php-str">&#039;phases&#039;</span> =&gt; <span class="php-var">$phases</span>,</td></tr><tr id="66" class="source-line"><td><a class="source-lineNum" href="#66">66: </a></td><td>            <span class="php-str">&#039;preloadPhaseSvg&#039;</span> =&gt; <span class="php-var">$preload</span>,</td></tr><tr id="67" class="source-line"><td><a class="source-lineNum" href="#67">67: </a></td><td>            <span class="php-str">&#039;phase_keys&#039;</span> =&gt; <span class="php-var">$phases</span>-&gt;keys(),</td></tr><tr id="68" class="source-line"><td><a class="source-lineNum" href="#68">68: </a></td><td>            <span class="php-str">&#039;game&#039;</span> =&gt; <span class="php-var">$game</span>,</td></tr><tr id="69" class="source-line"><td><a class="source-lineNum" href="#69">69: </a></td><td>            <span class="php-str">&#039;gameState&#039;</span> =&gt; <span class="php-var">$game</span>-&gt;currentState(),</td></tr><tr id="70" class="source-line"><td><a class="source-lineNum" href="#70">70: </a></td><td>            <span class="php-str">&#039;ordersSubmittable&#039;</span> =&gt; <span class="php-var">$ordersSubmittable</span>,</td></tr><tr id="71" class="source-line"><td><a class="source-lineNum" href="#71">71: </a></td><td>            <span class="php-str">&#039;userIsMember&#039;</span> =&gt; <span class="php-var">$userIsMember</span>,</td></tr><tr id="72" class="source-line"><td><a class="source-lineNum" href="#72">72: </a></td><td>            <span class="php-str">&#039;ordersNeeded&#039;</span> =&gt; <span class="php-var">$userPhasePowerData</span>?-&gt;orders_needed,</td></tr><tr id="73" class="source-line"><td><a class="source-lineNum" href="#73">73: </a></td><td>            <span class="php-str">&#039;ordersReady&#039;</span> =&gt; <span class="php-var">$userPhasePowerData</span>?-&gt;ready_for_adjudication,</td></tr><tr id="74" class="source-line"><td><a class="source-lineNum" href="#74">74: </a></td><td>            <span class="php-str">&#039;orders&#039;</span> =&gt; <span class="php-var">$userPhasePowerData</span>?-&gt;orders,</td></tr><tr id="75" class="source-line"><td><a class="source-lineNum" href="#75">75: </a></td><td>            <span class="php-str">&#039;adjudicationInProgress&#039;</span> =&gt; <span class="php-var">$adjudicationInProgress</span>,</td></tr><tr id="76" class="source-line"><td><a class="source-lineNum" href="#76">76: </a></td><td>            <span class="php-str">&#039;userPower&#039;</span> =&gt; <span class="php-var">$userPhasePowerData</span>?-&gt;power,</td></tr><tr id="77" class="source-line"><td><a class="source-lineNum" href="#77">77: </a></td><td>            <span class="php-str">&#039;user&#039;</span> =&gt; <span class="php-var">$user</span>,</td></tr><tr id="78" class="source-line"><td><a class="source-lineNum" href="#78">78: </a></td><td>        ]);</td></tr><tr id="79" class="source-line"><td><a class="source-lineNum" href="#79">79: </a></td><td></td></tr><tr id="80" class="source-line"><td><a class="source-lineNum" href="#80">80: </a></td><td>        <span class="php-kw">if</span> (<span class="php-var">$game</span>-&gt;currentPhase-&gt;adjudication_at) {</td></tr><tr id="81" class="source-line"><td><a class="source-lineNum" href="#81">81: </a></td><td>            <span class="php-var">$response</span>-&gt;header(<span class="php-str">&#039;Refresh&#039;</span>, <span class="php-var">$game</span>-&gt;currentPhase-&gt;adjudication_at-&gt;diffInSeconds() + <span class="php-num">5</span>);</td></tr><tr id="82" class="source-line"><td><a class="source-lineNum" href="#82">82: </a></td><td>        }</td></tr><tr id="83" class="source-line"><td><a class="source-lineNum" href="#83">83: </a></td><td></td></tr><tr id="84" class="source-line"><td><a class="source-lineNum" href="#84">84: </a></td><td>        <span class="php-kw">return</span> <span class="php-var">$response</span>;</td></tr><tr id="85" class="source-line"><td><a class="source-lineNum" href="#85">85: </a></td><td></td></tr><tr id="86" class="source-line"><td><a class="source-lineNum" href="#86">86: </a></td><td>    }</td></tr><tr id="87" class="source-line"><td><a class="source-lineNum" href="#87">87: </a></td><td>}</td></tr><tr id="88" class="source-line"><td><a class="source-lineNum" href="#88">88: </a></td><td></td></tr></table>
-		</div>
-
-		<div class="layout-footer">
-			 API documentation generated by <a href="https://www.apigen.org">ApiGen dev-master</a>
-		</div>
-	</div>
-
-	<div class="layout-rest">
-		<div class="navbar"></div>
-	</div>
-</body>
-</html>
