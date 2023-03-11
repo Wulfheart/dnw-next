@@ -8,9 +8,6 @@ use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\HasManyThrough;
 
-/**
- * @mixin IdeHelperMessageRoom
- */
 class MessageRoom extends Model
 {
     use HasFactory;

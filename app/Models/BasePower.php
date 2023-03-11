@@ -4,9 +4,6 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
-/**
- * @mixin IdeHelperBasePower
- */
 class BasePower extends Model
 {
     use HasFactory;

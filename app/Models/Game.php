@@ -14,9 +14,6 @@ use Illuminate\Database\Eloquent\Relations\HasManyThrough;
 use Illuminate\Database\Eloquent\Relations\HasOne;
 use Illuminate\Support\Carbon;
 
-/**
- * @mixin IdeHelperGame
- */
 class Game extends Model
 {
     use HasFactory;

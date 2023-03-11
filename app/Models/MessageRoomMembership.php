@@ -5,9 +5,6 @@ namespace App\Models;
 use App\Collections\MessageRoomMembershipCollection;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
-/**
- * @mixin IdeHelperMessageRoomMembership
- */
 class MessageRoomMembership extends Model
 {
     use HasFactory;

@@ -5,10 +5,6 @@ namespace App\Models;
 use App\Collections\PowerCollection;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
-
-/**
- * @mixin IdeHelperPower
- */
 class Power extends Model
 {
     use HasFactory;
