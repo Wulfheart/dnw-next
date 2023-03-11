@@ -14,9 +14,9 @@ it('can adjudicate a game', function () {
 
     $game->load('currentPhase');
     $currentPhase = $game->currentPhase;
-    expect($previousPhase)->not->toBe($currentPhase);
-    expect($game->phases()->count())->toBe(2);
-    expect($currentPhase->adjudication_at)->not()->toBeNull();
-    expect($currentPhase->adjudication_at->greaterThan(now()))->toBeTrue();
+    expect($previousPhase)->not->toBe($currentPhase)
+        ->and($game->phases()->count())->toBe(2)
+        ->and($currentPhase->adjudication_at)->not()->toBeNull()
+        ->and($currentPhase->adjudication_at->greaterThan(now()))->toBeTrue();
 
 });

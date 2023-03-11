@@ -28,7 +28,7 @@ class AdjudicateGameAction
     {
     }
 
-    public function handle(int $game_id, bool $save_response = false, bool $send_emails = true)
+    public function handle(int $game_id, bool $save_response = false, bool $send_emails = true): void
     {
         /** @var Game $game */
         $game = Game::with([
@@ -89,7 +89,7 @@ class AdjudicateGameAction
 
             /** @var Power $power */
             foreach ($game->powers as $power) {
-                /** @var \App\Utility\Game\DTO\PhasePowerDataDTO $ppd */
+                /** @var PhasePowerDataDTO $ppd */
                 $ppd = $gameResponse->phase_power_data->filter(
                     fn(PhasePowerDataDTO $item) => $item->power == $power->basePower->api_name
                 )->first();

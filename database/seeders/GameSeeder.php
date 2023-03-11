@@ -21,7 +21,9 @@ class GameSeeder extends Seeder
      *
      * @return void
      */
-    public function run()
+    public function run(
+        InitializeGameAction $initializeGameAction
+    )
     {
 
         foreach ([0,6] as $i) {
@@ -47,7 +49,7 @@ class GameSeeder extends Seeder
             $powers->each(fn(Power $p) => $p->update(['user_id' => User::factory()->create()->id]));
 
 
-            InitializeGameAction::run($game->id);
+            $initializeGameAction->handle($game->id);
         }
 
     }

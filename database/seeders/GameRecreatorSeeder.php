@@ -16,6 +16,7 @@ use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Str;
 use League\Csv\Reader;
 use League\Csv\Statement;
 
@@ -27,7 +28,10 @@ class GameRecreatorSeeder extends Seeder
      * @return void
      * @throws \League\Csv\Exception
      */
-    public function run(): void
+    public function run(
+        InitializeGameAction $initializeGameAction,
+        AdjudicateGameAction $adjudicateGameAction
+    ): void
     {
         $files = [
             '18741.dnw',
@@ -69,7 +73,7 @@ class GameRecreatorSeeder extends Seeder
                 'game_id' => $game->id,
                 'user_id' => User::factory()->create()->id,
             ]));
-            InitializeGameAction::run($game->id, false);
+            $initializeGameAction->handle($game->id, false);
             $this->command->line("");
 
 
@@ -96,9 +100,9 @@ class GameRecreatorSeeder extends Seeder
                         $territory = $order['territory'];
                         $fromTerritory = $order['fromTerritory'];
                         $toTerritory = $order['toTerritory'];
-                        $convoy = \Str::lower($order['viaConvoy']) == 'yes' ? 'VIA' : '';
+                        $convoy = Str::lower($order['viaConvoy']) == 'yes' ? 'VIA' : '';
 
-                        $match = \Str::of($order['type'])->lower()->toString();
+                        $match = Str::of($order['type'])->lower()->toString();
                         $orders[] = match ($match) {
                             'move' => "$unitType $territory - $toTerritory $convoy",
                             'hold' => "$unitType $territory H",
@@ -128,7 +132,7 @@ class GameRecreatorSeeder extends Seeder
                 $pnl = $game->currentPhase->phase_name_long;
 
                 $this->command->info("Adjudicating $pnl");
-                AdjudicateGameAction::run($game->id, true, false);
+                $adjudicateGameAction->handle($game->id, true, false);
 
                 $phaseName = $game->currentPhase->phase_name_long;
                 $phaseTurnName = $order['turn_phase'];
@@ -143,7 +147,7 @@ class GameRecreatorSeeder extends Seeder
 
         // Some additional saving to make sure the game is saved correctly
         while ($game->load('currentPhase')->currentPhase->type !== PhaseTypeEnum::ADJUSTMENT) {
-            AdjudicateGameAction::run($game->id, true, true);
+            $adjudicateGameAction->handle($game->id, true, true);
         }
     }
 }

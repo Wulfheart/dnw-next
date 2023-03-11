@@ -9,6 +9,6 @@ it('parses the phase type correctly into the enum', function () {
         'type' => 'M',
     ]);
 
-    expect($phase->type)->toBeInstanceOf(PhaseTypeEnum::class);
-    expect($phase->type)->toEqual(PhaseTypeEnum::MOVEMENT);
+    expect($phase->type)->toBeInstanceOf(PhaseTypeEnum::class)
+        ->and($phase->type)->toEqual(PhaseTypeEnum::MOVEMENT);
 });

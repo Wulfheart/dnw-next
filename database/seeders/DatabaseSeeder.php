@@ -22,7 +22,7 @@ class DatabaseSeeder extends Seeder
             'email' => 'test@test.de',
             'is_admin' => true,
             'email_verified_at' => now(),
-            'password' => \Hash::make('123'),
+            'password' => bcrypt('123'),
         ]);
 
         app()->bind(AdjudicatorService::class, TestWithCachingAdjudicatorImplementation::class);
