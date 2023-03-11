@@ -9,15 +9,11 @@ use Lorisleiva\Actions\Concerns\AsAction;
 
 class FinishGameAction
 {
-    use AsAction;
 
     /**
-     * @param  \App\Models\Game  $game
      * @param  array<string>  $winners
-     * @param  bool  $send_email
-     * @return void
      */
-    public function handle(Game $game, array $winners, bool $send_email = true)
+    public function handle(Game $game, array $winners, bool $send_email = true): void
     {
         $game->loadMissing('powers.basePower');
 

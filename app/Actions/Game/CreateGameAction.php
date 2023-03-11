@@ -15,10 +15,7 @@ use Lorisleiva\Actions\Concerns\AsAction;
 
 class CreateGameAction
 {
-    use AsAction;
-
     public string $commandSignature = 'dnw:game:create';
-
     public function handle(
         User $user,
         string $name,

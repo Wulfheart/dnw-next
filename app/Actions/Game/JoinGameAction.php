@@ -11,8 +11,6 @@ use Illuminate\Http\Request;
 
 class JoinGameAction
 {
-    use AsAction;
-
     public function handle(User $user, Game $game): void
     {
         $game->powers()

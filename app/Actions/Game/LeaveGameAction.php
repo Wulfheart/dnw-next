@@ -8,8 +8,6 @@ use Lorisleiva\Actions\Concerns\AsAction;
 
 class LeaveGameAction
 {
-    use AsAction;
-
     public function handle(User $user, Game $game): void
     {
         $game->powers()

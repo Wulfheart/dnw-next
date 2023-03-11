@@ -8,8 +8,6 @@ use Lorisleiva\Actions\Concerns\AsAction;
 
 class CheckForAdjudicationReady
 {
-    use AsAction;
-
     public function handle(Game $game)
     {
         $game->loadMissing(['currentPhase.phasePowerData.power']);

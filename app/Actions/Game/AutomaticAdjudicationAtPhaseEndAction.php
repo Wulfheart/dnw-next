@@ -8,8 +8,6 @@ use Lorisleiva\Actions\Concerns\AsAction;
 
 class AutomaticAdjudicationAtPhaseEndAction
 {
-    use AsAction;
-
     public function handle()
     {
         $games = Game::whereCanBeAjdudicated()->get();

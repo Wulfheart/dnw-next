@@ -18,13 +18,11 @@ use Ramsey\Uuid\Uuid;
 
 class InitializeGameAction
 {
-    use AsAction;
-
     public function __construct(public AdjudicatorService $adjudicator)
     {
     }
 
-    public function handle(int $game_id, bool $save_response = false)
+    public function handle(int $game_id, bool $save_response = false): void
     {
         $adjudicator = $this->adjudicator;
         DB::transaction(function () use ($adjudicator, $game_id, $save_response) {

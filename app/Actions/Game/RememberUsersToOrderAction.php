@@ -13,8 +13,6 @@ use Lorisleiva\Actions\Concerns\AsAction;
 
 class RememberUsersToOrderAction
 {
-    use AsAction;
-
     public function handle()
     {
 
