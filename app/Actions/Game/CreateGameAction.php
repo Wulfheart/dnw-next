@@ -11,7 +11,6 @@ use App\Models\User;
 use App\Models\Variant;
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Response;
-use Lorisleiva\Actions\Concerns\AsAction;
 
 class CreateGameAction
 {
