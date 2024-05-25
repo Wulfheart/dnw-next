@@ -29,7 +29,6 @@ class StoreGameRequest extends FormRequest
             'phase_length' => ['integer', 'gte:5'],
             'no_adjudication' => ['array', function($attribute, $value, $fail){
                 $sum = collect($value)->values()->sum();
-                ray($sum);
                 if($sum > 6){
                     $fail("Cannot pause on all seven days of the week");
                 }
